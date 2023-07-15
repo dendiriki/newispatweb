@@ -100,7 +100,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        Return view('admin.layout.edit',[
+           'post' => $post
+        ]);
     }
 
     /**
