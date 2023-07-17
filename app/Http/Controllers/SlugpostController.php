@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Slugpost;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreSlugpostRequest;
 use App\Http\Requests\UpdateSlugpostRequest;
 
@@ -13,7 +14,10 @@ class SlugpostController extends Controller
      */
     public function index()
     {
-        //
+        Return view('admin.layout.adminslug',[
+            'slugs' => Slugpost::all(),
+
+        ]);
     }
 
     /**
@@ -21,15 +25,21 @@ class SlugpostController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.layout.createslug');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSlugpostRequest $request)
+    public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => ['required','max:255'],
+            'value' => ['required','unique:slugposts'],
+        ]);
+
+        Slugpost::create($validatedData);
+        return redirect('/admin/slug')->with('success','New Post has been created');
     }
 
     /**

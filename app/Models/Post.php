@@ -11,9 +11,15 @@ class Post extends Model
 
     protected $guarded = ['id'];
 
+    public function slug(){
+        return $this->belongsTo(Slugpost::class,'slug_id');
+    }
+
     public function getRouteKeyName()
     {
         return 'slug';
     }
+
+
 
 }

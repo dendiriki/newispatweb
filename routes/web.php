@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SlugPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,7 @@ Route::get('/', function () {
     return view('layout.home.index');
 });
 
+//Admin routes
 Route::resource('admin/posts', PostController::class);
+Route::resource('admin/slug',SlugPostController::class);
+

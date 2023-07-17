@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Slugpost;
 use Illuminate\Http\Request;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
@@ -26,7 +27,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        Return view('admin.layout.create');
+        Return view('admin.layout.create',[
+        'slugs' => Slugpost::all(),
+        ]);
     }
 
     /**
@@ -40,7 +43,7 @@ class PostController extends Controller
         $rules=[
             'title' => ['required'],
             'name' => ['required'] ,
-            'slug' => ['required','unique:posts'],
+            'slug_id' => ['required'],
             'content' => ['required']
         ];
 
@@ -75,7 +78,7 @@ class PostController extends Controller
     $article = Post::create([
         'title' => $request->title,
         'name' => $request->name,
-        'slug' => $request->slug,
+        'slug_id' => $request->slug_id,
         'content' => $dom->saveHTML()
 
     ]);

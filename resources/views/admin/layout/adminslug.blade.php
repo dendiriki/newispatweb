@@ -13,31 +13,29 @@
     @endif
 
     <div class="table-responsive col-lg-8">
-        <a href="/admin/posts/create" class="btn btn-primary mb-3"> Create New Post</a>
+        <a href="/admin/slug/create" class="btn btn-primary mb-3"> Create New Menu</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Title</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Slug</th>
+                    <th scope="col">Link</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($posts as $post)
+                @foreach ($slugs as $slug)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $post->title }}</td>
-                        <td>{{ $post->name }}</td>
-                        <td>{{ $post->slug->name}}</td>
+                        <td>{{ $slug->name }}</td>
+                        <td>{{ $slug->value }}</td>
                         <td>
-                            <a href="/admin/posts/{{ $post->slug }}" class="btn btn-info">view
+                            <a href="/admin/slug/{{ $slug->value }}" class="btn btn-info">view
 
                             </a>
-                            <a href="/admin/posts/{{ $post->slug }}/edit" class="btn btn-warning">edit
+                            <a href="/admin/slug/{{ $slug->value }}/edit" class="btn btn-warning">edit
 
                             </a>
-                            <form action="/admin/posts/{{ $post->slug }}" method="post" class="d-inline">
+                            <form action="/admin/slug/{{ $slug->value }}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
                                 <button class="border-0 btn btn-danger" onclick="return confirm('yakin mau hapus')">hapus</button>
