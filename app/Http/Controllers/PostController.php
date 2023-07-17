@@ -104,16 +104,63 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         Return view('admin.layout.edit',[
-           'post' => $post
+           'post' => $post,
+           'slugs' => Slugpost::all(),
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePostRequest $request, Post $post)
+    public function update(Request $request, Post $post)
     {
-        //
+        $rules=[
+            'title' => ['required'],
+            'name' => ['required'] ,
+            'slug_id' => ['required'],
+            'content' => ['required']
+        ];
+
+        $this->validate($request,$rules);
+
+        $storage="storage/content";
+        $dom=new \DOMDocument();
+        libxml_use_internal_errors(true);
+        $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
+        libxml_clear_errors();
+        $images=$dom->getElementsByTagName('img');
+        foreach($images as $img){
+            $src=$img->getAttribute('src');
+            if(preg_match('/data:image/',$src)){
+                preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
+                $mimetype=$groups['mime'];
+                $fileNameContent = uniqid();
+                $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
+                $filepath=("$storage/$fileNameContentRand.$mimetype");
+                $image = Image::make($src)
+                ->resize(1200,1200)
+                ->encode($mimetype,100)
+                ->save(public_path($filepath));
+                $new_src=asset($filepath);
+                $img->removeAttribute('src');
+                $img->setAttribute('src',$new_src);
+                $img->setAttribute('class','img-responsive');
+        }
+
+    }
+
+
+    Post::where('id',$post->id)->update([
+        'title' => $request->title,
+        'name' => $request->name,
+        'slug_id' => $request->slug_id,
+        'content' => $dom->saveHTML()
+
+    ]);
+
+    return
+    redirect('/admin/posts');
+
     }
 
     /**
@@ -121,6 +168,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        Post::destroy($post->id);
+        return redirect('/admin/posts')->with('success',' Post has been deleted');
     }
 }
