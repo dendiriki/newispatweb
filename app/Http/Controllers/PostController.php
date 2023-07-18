@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\Slugpost;
 use Illuminate\Http\Request;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
@@ -28,7 +27,6 @@ class PostController extends Controller
     public function create()
     {
         Return view('admin.layout.create',[
-        'slugs' => Slugpost::all(),
         ]);
     }
 
@@ -43,7 +41,7 @@ class PostController extends Controller
         $rules=[
             'title' => ['required'],
             'name' => ['required'] ,
-            'slug_id' => ['required'],
+            'slug' => ['required','unique:posts'],
             'content' => ['required']
         ];
 
@@ -64,7 +62,6 @@ class PostController extends Controller
                 $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
                 $filepath=("$storage/$fileNameContentRand.$mimetype");
                 $image = Image::make($src)
-                ->resize(1200,1200)
                 ->encode($mimetype,100)
                 ->save(public_path($filepath));
                 $new_src=asset($filepath);
@@ -78,7 +75,7 @@ class PostController extends Controller
     $article = Post::create([
         'title' => $request->title,
         'name' => $request->name,
-        'slug_id' => $request->slug_id,
+        'slug' => $request->slug,
         'content' => $dom->saveHTML()
 
     ]);
@@ -105,7 +102,7 @@ class PostController extends Controller
     {
         Return view('admin.layout.edit',[
            'post' => $post,
-           'slugs' => Slugpost::all(),
+           'content' => $post->content
         ]);
     }
 
@@ -117,7 +114,7 @@ class PostController extends Controller
         $rules=[
             'title' => ['required'],
             'name' => ['required'] ,
-            'slug_id' => ['required'],
+            'slug' => ['required',],
             'content' => ['required']
         ];
 
@@ -138,7 +135,6 @@ class PostController extends Controller
                 $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
                 $filepath=("$storage/$fileNameContentRand.$mimetype");
                 $image = Image::make($src)
-                ->resize(1200,1200)
                 ->encode($mimetype,100)
                 ->save(public_path($filepath));
                 $new_src=asset($filepath);
@@ -153,7 +149,7 @@ class PostController extends Controller
     Post::where('id',$post->id)->update([
         'title' => $request->title,
         'name' => $request->name,
-        'slug_id' => $request->slug_id,
+        'slug' => $request->slug,
         'content' => $dom->saveHTML()
 
     ]);

@@ -29,15 +29,15 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $post->title }}</td>
                         <td>{{ $post->name }}</td>
-                        <td>{{ $post->slugpost->name}}</td>
+                        <td>{{ $post->slug}}</td>
                         <td>
-                            <a href="/admin/posts/{{ $post->slug_id }}" class="btn btn-info">view
-
+                            <a href="/admin/posts/{{ $post->slug }}" class="btn btn-info">view
+                                <span></span>
                             </a>
-                            <a href="/admin/posts/{{ $post->slug_id}}/edit" class="btn btn-warning">edit
-
+                            <a href="/admin/posts/{{ $post->slug}}/edit" class="btn btn-warning">edit
+                                <span></span>
                             </a>
-                            <form action="/admin/posts/{{ $post->slug_id}}" method="post" class="d-inline">
+                            <form action="/admin/posts/{{ $post->slug}}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
                                 <button class="border-0 btn btn-danger" onclick="return confirm('yakin mau hapus')">hapus</button>

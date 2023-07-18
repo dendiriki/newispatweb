@@ -11,13 +11,13 @@ class Post extends Model
 
     protected $guarded = ['id'];
 
-    public function slugpost(){
-        return $this->belongsTo(Slugpost::class,'slug_id');
-    }
+    // public function slugpost(){
+    //     return $this->belongsTo(Slugpost::class,'slug_id');
+    // }
 
     public function getRouteKeyName()
     {
-        return 'slug_id';
+        return 'slug';
     }
 
 

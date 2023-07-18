@@ -2,8 +2,6 @@
 
 @section('content')
 
-<p>data di sini</p>
-
     <!-- Blog Page Title & Breadcrumbs -->
 
               <h1>{{ $post->title }}</h1>
