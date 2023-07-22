@@ -18,28 +18,28 @@
             <thead>
                 <tr>
                     <th scope="col">No</th>
+                    <th scope="col">Option</th>
+                    <th scope="col">About</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Link</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telphone</th>
+                    <th scope="col">Detail</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($slugs as $slug)
+                @foreach ($customers as $customer)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $slug->name }}</td>
-                        <td>{{ $slug->value }}</td>
+                        <td>{{ $customer->option }}</td>
+                        <td>{{ $customer->About }}</td>
+                        <td>{{ $customer->name }}</td>
+                        <td>{{ $customer->company }}</td>
+                        <td>{{ $customer->email }}</td>
+                        <td>{{ $customer->telphone }}</td>
                         <td>
-                            <a href="/admin/slug/{{ $slug->value }}" class="btn btn-info">view
-
+                            <a href="/admin/customer/{{ $customer->id }}" class="btn btn-info">Detail
                             </a>
-                            <a href="/admin/slug/{{ $slug->value }}/edit" class="btn btn-warning">edit
-
-                            </a>
-                            <form action="/admin/slug/{{ $slug->value }}" method="post" class="d-inline">
-                                @method('delete')
-                                @csrf
-                                <button class="border-0 btn btn-danger" onclick="return confirm('yakin mau hapus')">hapus</button>
-                            </form>
                         </td>
                     </tr>
                 @endforeach

@@ -1,6 +1,15 @@
 <div class="text-pramiry">
     <hr class="border border-primary border-3 opacity-75">
-  </div>
+</div>
+<style>
+    .foo {
+    color: #ffffff; /* Fallback for older browsers */
+    color: rgba(255, 255, 255, 0.1);
+
+    font-size: 16pt;
+    font-family: Arial, sans-serif;
+}
+</style>
 <footer class="container py-5">
     <div class="row">
       <div class="col-12 col-md">
@@ -19,7 +28,7 @@
         </ul>
       </div>
       <div class="col-6 col-md">
-        <h5>Resources</h5>
+        <h5 class="foo">.</h5>
         <ul class="list-unstyled text-small">
           <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
           <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>

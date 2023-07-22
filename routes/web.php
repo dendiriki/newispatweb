@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\SlugPostController;
+use App\Http\Controllers\CustomerController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +21,17 @@ Route::get('/', function () {
     return view('layout.home.index');
 });
 
+//Uji Coba test template tanpa DRL
+Route::get('/test', function () {
+    return view('layout');
+});
+
+Route::get('/when-you-admin-please-login-and-input-username-password',[LoginCOntroller::class, 'index']);
+
 //Admin routes
 Route::resource('admin/posts', PostController::class);
-Route::resource('admin/slug',SlugPostController::class);
+Route::resource('admin/customer', CustomerController::class);
+
+//layout Rutes
+Route::get('/customer-center',[LayoutController::class,'customer']);
 

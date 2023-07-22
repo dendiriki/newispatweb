@@ -13,12 +13,12 @@
             My Post
           </a>
         </li>
-        {{-- <li class="nav-item">
-            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/slug">
+        <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/customer">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Creatre Menu
             </a>
-          </li> --}}
+          </li>
       </ul>
     </div>
   </nav>
