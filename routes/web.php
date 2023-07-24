@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -26,7 +27,7 @@ Route::get('/test', function () {
     return view('layout');
 });
 
-Route::get('/when-you-admin-please-login-and-input-username-password',[LoginCOntroller::class, 'index']);
+Route::get('/when-you-admin-please-login-and-input-username-password',[LoginCOntroller::class, 'index'])->middleware('guest')->name('login');
 
 //Admin routes
 Route::resource('admin/posts', PostController::class);

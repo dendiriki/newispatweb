@@ -37,7 +37,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        // dd($request);
         $rules=[
             'title' => ['required'],
             'name' => ['required'] ,
