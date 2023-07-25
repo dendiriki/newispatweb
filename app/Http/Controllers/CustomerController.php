@@ -57,7 +57,7 @@ class CustomerController extends Controller
             'massage' => ['required'],
         ]);
 
-        // Customer::create($validatedData);
+        Customer::create($validatedData);
 
         $email = new SendEmail();
         Mail::to('dendirikirahmawan@gmail.com')->send($email);
