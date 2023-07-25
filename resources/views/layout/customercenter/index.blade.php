@@ -4,14 +4,24 @@
 
   <!-- ====== Content dari customer center -->
 
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+
+
+
+
+ <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <br><br>
+
+  <section>
 
   <div class="container">
     <div class="row">
         <div class="col-10">
             <h3>Customer Center</h3>
   <br>
-  <form method="POST" action="/admin/customer">
+  <form method="POST" action="/customer-post">
     @csrf
   <div class="mt-3">
     <div class="row">
@@ -217,6 +227,7 @@
 </div>
 </div>
 </div>
+</section>
 
 
 @endsection

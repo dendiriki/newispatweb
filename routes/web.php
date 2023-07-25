@@ -5,6 +5,7 @@ use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
+use Illuminate\Http\Request;
 
 
 /*
@@ -26,13 +27,18 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('layout');
 });
-
+//Login
 Route::get('/when-you-admin-please-login-and-input-username-password',[LoginCOntroller::class, 'index'])->middleware('guest')->name('login');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 //Admin routes
-Route::resource('admin/posts', PostController::class);
-Route::resource('admin/customer', CustomerController::class);
+Route::resource('admin/posts', PostController::class)->middleware('auth');
+Route::resource('admin/customer', CustomerController::class)->middleware('auth');
 
 //layout Rutes
-Route::get('/customer-center',[LayoutController::class,'customer']);
+Route::get('/customer-center',[LayoutController::class,'customer'])->middleware('guest');
+Route::post('/customer-post',[LayoutController::class,'postcustomer'])->middleware('guest');
+
+//email
 

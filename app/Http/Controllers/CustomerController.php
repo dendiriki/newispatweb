@@ -6,6 +6,9 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendEmail;
 
 class CustomerController extends Controller
 {
@@ -53,10 +56,8 @@ class CustomerController extends Controller
             'issue' => ['required'],
             'massage' => ['required'],
         ]);
-
-
-
         Customer::create($validatedData);
+        Mail::to('silvianavivi2611@gmail.com')->send(new SendEmail);
         return redirect('/admin/customer')->with('success','New Post has been created');
     }
 

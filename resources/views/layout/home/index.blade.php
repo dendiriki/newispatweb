@@ -85,6 +85,16 @@
 
 <main>
 
+
+
+    @if (session()->has('success'))
+    <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
+        <br>
+        {{ session('success') }}
+        <button type="button" class="btn-close mb-0 mt-3 pt-4" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
