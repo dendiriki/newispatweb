@@ -6,6 +6,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendEmail;
 
 
 /*
@@ -42,3 +44,9 @@ Route::post('/customer-post',[LayoutController::class,'postcustomer'])->middlewa
 
 //email
 
+Route::get('send-email',function(){
+    $email = new SendEmail();
+    Mail::to('dendirikirahmawan@gmail.com')->send($email);
+
+    return 'success';
+});
