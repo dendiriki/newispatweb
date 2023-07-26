@@ -8,21 +8,35 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use App\Models\Customer;
 
 class SendEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
+
+
+
     /**
-     * Create a new message instance.
+     *  @var \App\Models\CustomerCreate
+     *
      */
-    public function __construct()
+
+        public $customer;
+
+
+    /**
+     * @param \App\Models\Customer $customer
+     * @return void
+     */
+
+    public function __construct(Customer $customer)
     {
-        //
+        $this->customer = $customer;
     }
 
     /**
-     * Get the message envelope.
+     * @return $this
      */
     public function envelope(): Envelope
     {

@@ -44,9 +44,9 @@ Route::post('/customer-post',[LayoutController::class,'postcustomer'])->middlewa
 
 //email
 
-Route::get('send-email',function(){
-    $email = new SendEmail();
-    Mail::to('dendirikirahmawan@gmail.com')->send($email);
+// Route::get('send-email',function(){
+//     $email = new SendEmail();
+//     Mail::to('dendirikirahmawan@gmail.com')->send($email);
 
-    return 'success';
-});
+//     return redirect('/admin/customer')->with('success','New Post has been created');
+// });

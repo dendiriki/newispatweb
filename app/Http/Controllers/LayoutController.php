@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendEmail;
 
 class LayoutController extends Controller
 {
@@ -34,7 +36,10 @@ class LayoutController extends Controller
 
 
 
-        Customer::create($validatedData);
+        $data = Customer::create($validatedData);
+
+
+        Mail::to('dendirikirahmawan@gmail.com')->cc(['silvianavivi2611@gmail.com','rockynroll071297@gmail.com'])->send(new SendEmail($data));
         return redirect('/')->with('success','Successfully send massage');
     }
 }

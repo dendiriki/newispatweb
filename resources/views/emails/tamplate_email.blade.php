@@ -10,5 +10,6 @@
     <h1>Ini Adalah Tes Email dari Program</h1>
     <p>saya mengirimakn email ini melalui program apakah bisa di</p>
     <p>jika email ini bisa di kirim ke pak hary dan mas vicky maka tahap berikutnya adalah mengirimkan data</p>
+    <p>Customer : {{ $customer->name }}</p>
 </body>
 </html>

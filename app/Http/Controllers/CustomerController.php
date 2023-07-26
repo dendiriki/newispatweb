@@ -36,32 +36,32 @@ class CustomerController extends Controller
     public function store(Request $request)
     {
 
-        $validatedData = $request->validate([
-            'option' => ['required','max:255'],
-            'name' => ['max:255'],
-            'company' => ['max:255'],
-            'email' => ['max:255'],
-            'about' => ['max:255'],
-            'telphone' => ['max:255'],
-            'country' => ['max:255'],
-            'location' => ['max:255'],
-            'category1' => ['max:255'],
-            'category2' => ['max:255'],
-            'category3' => ['max:255'],
-            'grade1' => ['max:255'],
-            'grade2' => ['max:255'],
-            'grade3' => ['max:255'],
-            'size' => ['required'],
-            'end' => ['required'],
-            'issue' => ['required'],
-            'massage' => ['required'],
-        ]);
+        // $validatedData = $request->validate([
+        //     'option' => ['required','max:255'],
+        //     'name' => ['max:255'],
+        //     'company' => ['max:255'],
+        //     'email' => ['max:255'],
+        //     'about' => ['max:255'],
+        //     'telphone' => ['max:255'],
+        //     'country' => ['max:255'],
+        //     'location' => ['max:255'],
+        //     'category1' => ['max:255'],
+        //     'category2' => ['max:255'],
+        //     'category3' => ['max:255'],
+        //     'grade1' => ['max:255'],
+        //     'grade2' => ['max:255'],
+        //     'grade3' => ['max:255'],
+        //     'size' => ['required'],
+        //     'end' => ['required'],
+        //     'issue' => ['required'],
+        //     'massage' => ['required'],
+        // ]);
 
-        Customer::create($validatedData);
+        // Customer::create($validatedData);
 
-        $email = new SendEmail();
-        Mail::to('dendirikirahmawan@gmail.com')->send($email);
-        return redirect('/admin/customer')->with('success','New Post has been created');
+        // $email = new SendEmail();
+        // Mail::to('dendirikirahmawan@gmail.com')->send($email);
+        // return redirect('/send-email');
     }
 
     /**
