@@ -39,7 +39,7 @@ class LayoutController extends Controller
         $data = Customer::create($validatedData);
 
 
-        Mail::to('dendirikirahmawan@gmail.com')->cc(['silvianavivi2611@gmail.com','rockynroll071297@gmail.com'])->send(new SendEmail($data));
+        Mail::to('dendirikirahmawan@gmail.com')->cc(['hary.purwantoro@mittalsteel.com','vicky.ardiansyah@mittalsteel.com'])->send(new SendEmail($data));
         return redirect('/')->with('success','Successfully send massage');
     }
 }
