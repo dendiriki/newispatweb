@@ -50,13 +50,13 @@
   ======================================================== -->
 </head>
 
-<body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
+<body class="blog-page" data-bs-spy="scroll" data-bs-target="#navmenu">
 
     <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top d-flex align-items-center">
-        <div class="container-fluid d-flex align-items-center justify-content-between">
+    <header id="header" class="header sticky-top d-flex align-items-center">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
 
-            <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+        <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
                 <h1>ISPAT INDO</h1>
