@@ -31,7 +31,7 @@ class LayoutController extends Controller
             'size' => ['max:255'],
             'end' => ['max:255'],
             'issue' => ['max:255'],
-            'massage' => ['Max:255'],
+            'massage' => ['min:3'],
         ]);
 
 
@@ -39,7 +39,7 @@ class LayoutController extends Controller
         $data = Customer::create($validatedData);
 
 
-        Mail::to('dendirikirahmawan@gmail.com')->cc(['hary.purwantoro@mittalsteel.com','vicky.ardiansyah@mittalsteel.com'])->send(new SendEmail($data));
+        Mail::to('dendirikirahmawan@gmail.com')->cc(['dendi.riki@mittalsteel.com'])->send(new SendEmail($data));
         return redirect('/')->with('success','Successfully send massage');
     }
 }
