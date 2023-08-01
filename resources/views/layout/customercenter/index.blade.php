@@ -123,33 +123,6 @@
   </div>
 
   <div class="mt-3">
-    <h6>Category</h6>
-    <div class="d-flex flex-row">
-      <select class="form-control mr-2" name="category1">
-        <option selected disabled>Select Category</option>
-        <option>Option 1-1</option>
-        <option>Option 1-2</option>
-        <option>Option 1-3</option>
-      </select>
-
-      <select class="form-control mr-2" name="category2">
-        <option selected disabled>Select Category</option>
-        <option>Option 2-1</option>
-        <option>Option 2-2</option>
-        <option>Option 2-3</option>
-      </select>
-
-      <select class="form-control" name="category3">
-        <option selected disabled>Select Category</option>
-        <option>Option 3-1</option>
-        <option>Option 3-2</option>
-        <option>Option 3-3</option>
-      </select>
-    </div>
-  </div>
-
-
-  <div class="mt-3">
     <h6>Grade</h6>
     <div class="d-flex flex-row">
       <select class="form-control mr-2" name="grade1">

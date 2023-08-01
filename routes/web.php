@@ -5,6 +5,7 @@ use App\Http\Controllers\LayoutController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\EnglishController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
@@ -36,6 +37,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 //Admin routes
 Route::resource('admin/posts', PostController::class)->middleware('auth');
+Route::resource('admin/english',EnglishController::class)->middleware('auth');
 Route::resource('admin/customer', CustomerController::class)->middleware('auth');
 
 //layout Rutes

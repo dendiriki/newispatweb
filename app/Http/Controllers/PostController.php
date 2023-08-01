@@ -17,6 +17,7 @@ class PostController extends Controller
     public function index()
     {
         Return view('admin.layout.admin',[
+            'title' => 'My Post In Indonesia',
             'posts' => Post::all(),
         ]);
     }

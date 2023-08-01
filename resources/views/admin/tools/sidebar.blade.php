@@ -8,11 +8,11 @@
     <div class="position-sticky pt-3 sidebar-sticky">
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link {{Request::is('dashboard') ? 'active' : ''}} "aria-current="page" href="/dashboard">
-            <span data-feather="home" class="align-text-bottom"></span>
-            Dashboard
-          </a>
-        </li>
+            <a class="nav-link {{Request::is('dashboard') ? 'active' : ''}} "aria-current="page" href="/admin/grade">
+              <span data-feather="home" class="align-text-bottom"></span>
+              Grade
+            </a>
+          </li>
         <li class="nav-item">
           <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/posts">
             <span data-feather="file-text" class="align-text-bottom"></span>
@@ -20,9 +20,15 @@
           </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/english">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              My Post In English
+            </a>
+          </li>
+        <li class="nav-item">
             <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/customer">
               <span data-feather="file-text" class="align-text-bottom"></span>
-              Creatre Menu
+              Customer
             </a>
           </li>
           <li class="nav-item">
