@@ -39,7 +39,7 @@ class EnglishController extends Controller
         $rules=[
             'title' => ['required'],
             'name' => ['required'] ,
-            'slug' => ['required','unique:posts'],
+            'slug' => ['required','unique:englishes'],
             'content' => ['required']
         ];
 
@@ -79,7 +79,7 @@ class EnglishController extends Controller
     ]);
 
 
-     return redirect('/admin/posts');
+     return redirect('/admin/english');
     }
 
     /**
@@ -87,8 +87,8 @@ class EnglishController extends Controller
      */
     public function show(English $english)
     {
-        return View ('admin.layout.show',[
-            'post' => $english
+        return View ('admin.layout.englishshow',[
+            'english' => $english
         ]);
     }
 
@@ -97,7 +97,10 @@ class EnglishController extends Controller
      */
     public function edit(English $english)
     {
-        //
+        Return view('admin.layout.englishedit',[
+            'post' => $english,
+            'content' => $english->content
+         ]);
     }
 
     /**
@@ -105,7 +108,51 @@ class EnglishController extends Controller
      */
     public function update(Request $request, English $english)
     {
-        //
+        $rules=[
+            'title' => ['required'],
+            'name' => ['required'] ,
+            'slug' => ['required',],
+            'content' => ['required']
+        ];
+
+        $this->validate($request,$rules);
+
+        $storage="storage/content";
+        $dom=new \DOMDocument();
+        libxml_use_internal_errors(true);
+        $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
+        libxml_clear_errors();
+        $images=$dom->getElementsByTagName('img');
+        foreach($images as $img){
+            $src=$img->getAttribute('src');
+            if(preg_match('/data:image/',$src)){
+                preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
+                $mimetype=$groups['mime'];
+                $fileNameContent = uniqid();
+                $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
+                $filepath=("$storage/$fileNameContentRand.$mimetype");
+                $image = Image::make($src)
+                ->encode($mimetype,100)
+                ->save(public_path($filepath));
+                $new_src=asset($filepath);
+                $img->removeAttribute('src');
+                $img->setAttribute('src',$new_src);
+                $img->setAttribute('class','img-responsive');
+        }
+
+    }
+
+
+    English::where('id',$post->id)->update([
+        'title' => $request->title,
+        'name' => $request->name,
+        'slug' => $request->slug,
+        'content' => $dom->saveHTML()
+
+    ]);
+
+    return
+    redirect('/admin/english');
     }
 
     /**
@@ -113,6 +160,7 @@ class EnglishController extends Controller
      */
     public function destroy(English $english)
     {
-        //
+        Post::destroy($english->id);
+        return redirect('/admin/posts')->with('success',' Post has been deleted');
     }
 }

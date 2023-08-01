@@ -3,49 +3,46 @@
 @section('content')
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Create New Post In English</h1>
+        <h1 class="h2">Create New Post</h1>
 
     </div>
     <div class="col-lg-8">
-        <form method="POST" action="/admin/english" class="mb-5" enctype="multipart/form-data">
+        <form method="POST" action="/admin/posts/{{$post->slug}}" class="mb-5" enctype="multipart/form-data">
+            @method('put')
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                    name="title" required autofocus>
+                    name="title" value="{{ $post->title }}" required autofocus>
 
             </div>
             <div class="mb-3">
                 <label for="name" class="form-label">name created</label>
                 <input type="text" class="form-control form-select @error('name') is-invalid @enderror" id="name" name="name"
-                    required autofocus >
+                    value="{{ $post->name }}" required autofocus >
             </div>
+
             <div class="mb-3">
                 <label for="slug" class="form-label">Slug</label>
                 <select type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug"
-                    required >
-                    @error('slug')
-                    <div class="invalid-feedback">
-                        {{ messages }}
-                    </div>
-                @enderror
-                    <option value="">---</option>
-                    <option value="COMPANYPROFILE">COMPANY PROFILE</option>
-                    <option value="COMPANYBOARDOFDIRECTORS">COMPANY BOARD OF DIRECTORS</option>
-                    <option value="COMPANYVISION,MISSION&VALUES">COMPANY VISION, MISSION & VALUES</option>
-                    <option value="COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW">COMPANY HIGHLIGHTS & ACHIEVEMENTS OVERVIEW</option>
-                    <option value="COMPANYKANCERTIFICATION">COMPANY KAN CERTIFICATION</option>
-                    <option value="COMPANYJISCERTIFICATION">COMPANY JIS CERTIFICATION</option>
-                    <option value="COMPANYSNICERTIFICATION">COMPANY SNI CERTIFICATION</option>
-                    <option value="COMPANYSIRIMCERTIFICATION">COMPANY SIRIM CERTIFICATION</option>
-                    <option value="COMPANYISOCERTIFICATION">COMPANY ISO CERTIFICATION</option>
-                    <option value="COMPANYTKDNCERTIFICATION">COMPANY TKDN CERTIFICATION</option>
-                    <option value="COMPANYGROUPVIDEO">COMPANY GROUP VIDEO</option>
-                    <option value="COMPANYMANAGEMENTSYSTEM">COMPANY MANAGEMENT SYSTEM</option>
-                    <option value="COMPANYSHE">COMPANY SHE</option>
-                    <option value="PRODUCTHIGHCARBONSTEEL">COMPANY GROUP VIDEO</option>
-                    <option value="PRODUCTLOWCARBONSTEEL">COMPANY GROUP VIDEO</option>
-                    <option value="PRODUCTCOLDHEADINGQUALITYSTEEL">PRODUCT COLD HEADING QUALITY STEEL</option>
+                    required>
+                    <option value="{{ $post->slug }}">{{ $post->slug }}</option>
+                    <option value="COMPANY PROFILE">COMPANY PROFILE</option>
+                    <option value="COMPANY BOARD OF DIRECTORS">COMPANY BOARD OF DIRECTORS</option>
+                    <option value="COMPANY VISION, MISSION & VALUES">COMPANY VISION, MISSION & VALUES</option>
+                    <option value="COMPANY HIGHLIGHTS & ACHIEVEMENTS OVERVIEW">COMPANY HIGHLIGHTS & ACHIEVEMENTS OVERVIEW</option>
+                    <option value="COMPANY KAN CERTIFICATION">COMPANY KAN CERTIFICATION</option>
+                    <option value="COMPANY JIS CERTIFICATION">COMPANY JIS CERTIFICATION</option>
+                    <option value="COMPANY SNI CERTIFICATION">COMPANY SNI CERTIFICATION</option>
+                    <option value="COMPANY SIRIM CERTIFICATION">COMPANY SIRIM CERTIFICATION</option>
+                    <option value="COMPANY ISO CERTIFICATION">COMPANY ISO CERTIFICATION</option>
+                    <option value="COMPANY TKDN CERTIFICATION">COMPANY TKDN CERTIFICATION</option>
+                    <option value="COMPANY GROUP VIDEO">COMPANY GROUP VIDEO</option>
+                    <option value="COMPANY MANAGEMENT SYSTEM">COMPANY MANAGEMENT SYSTEM</option>
+                    <option value="COMPANY SHE">COMPANY SHE</option>
+                    <option value="PRODUCT HIGH CARBON STEEL">COMPANY GROUP VIDEO</option>
+                    <option value="PRODUCT LOW CARBON STEEL">COMPANY GROUP VIDEO</option>
+                    <option value="PRODUCT COLD HEADING QUALITY STEEL">PRODUCT COLD HEADING QUALITY STEEL</option>
                     <option value="PRODUCT GENERAL PURPOSE WR">PRODUCT GENERAL PURPOSE WR</option>
                     <option value="PRODUCT WELDING ELECTRODE">PRODUCT WELDING ELECTRODE</option>
                     <option value="PRODUCT PLAIN / DEFORM BAR">PRODUCT PLAIN / DEFORM BAR</option>
@@ -67,13 +64,11 @@
                     <option value="BROCHURE PT. ISPAT PANCA PUTRA">BROCHURE PT. ISPAT PANCA PUTRA</option>
                     <option value="BROCHURE PT. ISPAT BUKIT BAJA">BROCHURE PT. ISPAT BUKIT BAJA</option>
                     <option value="CAREERS">CAREERS</option>
-
-
                 </select>
             </div>
             <div class="mb-3">
                 <label for="summernote" class="form-label">Content</label>
-                <textarea id="summernote" class="form-control" name="content"></textarea>
+                <textarea id="summernote" class="form-control" name="content">{{ $post->content }}</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Create Post</button>
         </form>

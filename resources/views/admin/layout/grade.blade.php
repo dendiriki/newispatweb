@@ -13,31 +13,28 @@
     @endif
 
     <div class="table-responsive col-lg-8">
-        <a href="/admin/english/create" class="btn btn-primary mb-3"> Create New Post</a>
+        <a href="/admin/grade/create" class="btn btn-primary mb-3"> Create New Grade</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Title</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Slug</th>
+                    <th scope="col"> Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($posts as $post)
+                @foreach ($grades as $grade)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $post->title }}</td>
-                        <td>{{ $post->name }}</td>
-                        <td>{{ $post->slug}}</td>
+                        <td>{{ $grade->name }}</td>
                         <td>
-                            <a href="/admin/english/{{ $post->slug }}" class="btn btn-info">view
+                            <a href="/admin/grade/{{ $grade->id }}" class="btn btn-info">view
                                 <span></span>
                             </a>
-                            <a href="/admin/english/{{ $post->slug}}/edit" class="btn btn-warning">edit
+                            <a href="/admin/grade/{{ $grade->id}}/edit" class="btn btn-warning">edit
                                 <span></span>
                             </a>
-                            <form action="/admin/english/{{ $post->slug}}" method="post" class="d-inline">
+                            <form action="/admin/grade/{{ $grade->id}}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
                                 <button class="border-0 btn btn-danger" onclick="return confirm('yakin mau hapus')">hapus</button>

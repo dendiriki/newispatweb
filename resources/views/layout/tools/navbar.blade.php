@@ -1,6 +1,6 @@
 <style>
     .navbar-custom {
-      background-color: #e3f2fd;
+      background-color: rgb(165, 210, 249)
     }
 
     .dropdown:hover > .dropdown-menu .dropright:hover > .dropdown-menu{

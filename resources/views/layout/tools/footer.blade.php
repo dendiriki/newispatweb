@@ -1,5 +1,5 @@
 <div class="text-pramiry">
-    <hr class="border border-primary border-3 opacity-75">
+    <hr class="border border-primary border-5 opacity-99">
 </div>
 <style>
     .foo {
