@@ -125,18 +125,24 @@
   <div class="mt-3">
     <h6>Grade</h6>
     <div class="d-flex flex-row">
-      <select class="form-control mr-2" name="grade1">
-        <option selected disabled>Select Grae</option>
-        <option>Option 1-1</option>
-        <option>Option 1-2</option>
-        <option>Option 1-3</option>
-      </select>
+      <select class="form-select mr-2" name="grade">
+            @foreach ($grades as $grade)
+                @if (old('grade') == $grade->id)
+                    <option value="{{ $grade->id }}" selected>{{ $grade->name }}</option>
+                @else
+                    <option value="{{ $grade->id }}">{{ $grade->name }}</option>
+                @endif
+            @endforeach
+        </select>
 
       <select class="form-control mr-2" name="grade2">
-        <option selected disabled>Select Grade</option>
-        <option>Option 2-1</option>
-        <option>Option 2-2</option>
-        <option>Option 2-3</option>
+        @foreach ($grades as $grade)
+                @if (old('grade') == $grade->id)
+                    <option value="{{ $grade->id }}" selected>{{ $grade->name }}</option>
+                @else
+                    <option value="{{ $grade->id }}">{{ $grade->name }}</option>
+                @endif
+            @endforeach
       </select>
 
       <select class="form-control" name="grade3">

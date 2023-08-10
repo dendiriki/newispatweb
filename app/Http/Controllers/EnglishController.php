@@ -98,7 +98,7 @@ class EnglishController extends Controller
     public function edit(English $english)
     {
         Return view('admin.layout.englishedit',[
-            'post' => $english,
+            'english' => $english,
             'content' => $english->content
          ]);
     }
@@ -143,7 +143,7 @@ class EnglishController extends Controller
     }
 
 
-    English::where('id',$post->id)->update([
+    English::where('id',$english->id)->update([
         'title' => $request->title,
         'name' => $request->name,
         'slug' => $request->slug,
@@ -161,6 +161,6 @@ class EnglishController extends Controller
     public function destroy(English $english)
     {
         Post::destroy($english->id);
-        return redirect('/admin/posts')->with('success',' Post has been deleted');
+        return redirect('/admin/english')->with('success',' Post has been deleted');
     }
 }

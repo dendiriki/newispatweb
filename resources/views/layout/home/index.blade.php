@@ -3,90 +3,7 @@
 @section('content')
 <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
 
-
-
-
-
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-    </style>
-
-<main>
-
-
-
     @if (session()->has('success'))
     <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
         <br>
@@ -95,79 +12,51 @@
     </div>
 @endif
 
-    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-          <div class="container">
-            <div class="carousel-caption text-start">
-              <h1>Example headline.</h1>
-              <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-            </div>
-          </div>
+<section id="hero" class="hero">
+
+    <img src="assets/img/product3.png" alt="" data-aos="fade-in">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <h2 class="text-white" data-aos="fade-up" data-aos-delay="100">PT. ISPAT INDO</h2>
+          <p data-aos="fade-up" data-aos-delay="200">international steel company since 1976</p>
         </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Some representative placeholder content for the second slide of the carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <h1>One more for good measure.</h1>
-              <p>Some representative placeholder content for the third slide of this carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-            </div>
-          </div>
+        <div class="col-lg-5">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
+
+  </section>
 
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
+
+
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
+        <br><br>
+      <h1 class="text-center fw-normal">About Us</h1>
+      <br><br>
+
       <div class="row">
         <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-          <h2 class="fw-normal">Heading</h2>
-          <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+          <h2 class="fw-normal">Products</h2>
+          <p>High Carbon Steel Wire Rod, Low Carbon Steel Wire Rod, Cold Heading Quality Steel Wire Rod...</p>
           <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-          <h2 class="fw-normal">Heading</h2>
-          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+          <h2 class="fw-normal">Our Achievements</h2>
+          <p>ISO Certificatr, JIS Certificatr, Steel Bar in Coil, KAN, Zero Accident, SMK3 Approval Certificatr, SIRIM...</p>
           <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
-          <h2 class="fw-normal">Heading</h2>
-          <p>And lastly this, the third column of representative placeholder content.</p>
+          <h2 class="fw-normal">Industrial Process</h2>
+          <p>Electric Arc Furnace, Ladle Refining Furnace, Continuous Casting Machine with...</p>
           <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
@@ -178,24 +67,99 @@
       <hr class="featurette-divider">
 
       <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
-          <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">PT. ISPAT INDO</h2>
+          <p class="font-content">PT. Ispat Indo was established in Indonesia in 1976. The Company was set up as a 60,000 tpa Greenfield project, for rolling. Today, Ispat Indo has an annual Production capacity in excess of 700,000 tons...</p>
+
+          <div class="row font-content">
+            <div class="col-6 ">
+                <h5 class="font-content">Product</h5>
+                <ul>
+                    <li>High Carbon Steel Wire Rod</li>
+                    <li>Low Carbon Steel Wire Rod</li>
+                    <li>Cold Heading Quality Steel Wire Rod</li>
+                    <li>Welding Electrode Grades Steel Wire Rod</li>
+                    <li>Bar in Coil for Concrete Reinforcement</li>
+                  </ul>
+            </div>
+            <div class="col-6 ">
+                <h5 class="font-content">Industrial Process</h5>
+                <ul>
+                    <li>Electric Arc Furnace</li>
+                    <li>Ladle Refining Furnace</li>
+                    <li>Continuous Casting Machine with (M-Electro Magnetic Stire)</li>
+                    <li>Wire Rod Mill</li>
+                  </ul>
+            </div>
+            <div class="bottomright">
+                <a class="btn btn-primary" href="profilindo" role="button">More Details</a>
+          </div>
+          </div>
         </div>
-        <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+        <div class="col-md-5 order-md-1">
+            <img src="assets/img/Ispat_Front.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="500px" alt="">
         </div>
       </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">PT. Ispat Wire Products</h2>
+          <p class="font-content">PT. Ispat Wire Products was established in 1991 which is the largest nail producer in Indonesia. Our working philosophy is guided towards continuous improvement in the quality of our products and services so as to surpass the best standards in the industry...</p>
+
+          <div class="row font-content">
+            <div class="col-6 ">
+                <h5 class="font-content">Product</h5>
+                <ul>
+                    <li>Nails for Local</li>
+                    <li>Nails for Export</li>
+                    <li>Straight Bars</li>
+                    <li>Steel wire / nail wire</li>
+                  </ul>
+            </div>
+            <div class="col-6 ">
+                <h5 class="font-content">Industrial Process</h5>
+                <ul>
+                    <li>Wire Drawing</li>
+                    <li>Nail Making</li>
+                    <li>Cutting & Straightening</li>
+                  </ul>
+            </div>
+            <div class="bottomright">
+                <a class="btn btn-primary" href="#" role="button">More Details</a>
+          </div>
+          </div>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img src="assets/img/iwp_profle_images_01.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="500px" alt="">
+        </div>
+      </div>
+
 
       <hr class="featurette-divider">
 
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
-          <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          <h2 class="featurette-heading fw-normal lh-1">PT. Ispat Panca Putera</h2>
+          <p class="font-content">PT. Ispat Panca Putera is located in the Gresik Industrial Estate on East Java...</p>
+
+          <div class="row font-content">
+            <div class="col-6 ">
+                <h5 class="font-content">Product</h5>
+                <ul>
+                    <li>Round Bar 06 mm - 32 mm</li>
+                    <li>Deformed Bar 06 mm - 32 mm</li>
+                    <li>Shafting Bar 06 mm - 32 mm</li>
+                  </ul>
+            </div>
+            <div class="bottomright">
+                <a class="btn btn-primary" href="#" role="button">More Details</a>
+          </div>
+          </div>
         </div>
         <div class="col-md-5 order-md-1">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            <img src="assets/img/ipp_profle_images_01.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="500px" alt="">
         </div>
       </div>
 
@@ -203,11 +167,26 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
-          <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+          <h2 class="featurette-heading fw-normal lh-1">PT. Ispat Bukit Baja</h2>
+          <p class="font-content">PT. Ispat Bukit Baja was established in 1994, as a steel manufacturer that produces steel long products i.e. Steel Angle Bars, Steel Channel, Round Bars and Steel Strips...</p>
+
+          <div class="row font-content">
+            <div class="col-10 ">
+                <h5 class="font-content">Product</h5>
+                <ul>
+                    <li>Equal Angle Bars (SNI 07-2054-2006 Equivalent to JIS G 3101 and JIS G 3192)</li>
+                    <li>Flat Bars (JIS G 3101 for structural steel)</li>
+                    <li>U-Channel (SNI 07-0052-2006 Equivalent to JIS G 3101 and JIS G 3192)</li>
+                    <li>Steel Strips</li>
+                  </ul>
+            </div>
+            <div class="bottomright">
+                <a class="btn btn-primary" href="#" role="button">More Details</a>
+          </div>
+          </div>
         </div>
-        <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+        <div class="col-md-5 order-md-1">
+            <img src="assets/img/ibb_profle_images_01.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="500px" alt="">
         </div>
       </div>
 

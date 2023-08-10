@@ -45,7 +45,12 @@ Route::resource('admin/customer', CustomerController::class)->middleware('auth')
 //layout Rutes
 Route::get('/customer-center',[LayoutController::class,'customer'])->middleware('guest');
 Route::post('/customer-post',[LayoutController::class,'postcustomer'])->middleware('guest');
-
+Route::get('bod',[LayoutController::class,'bod'])->middleware('guest');
+Route::get('profilindo',[LayoutController::class,'profilindo'])->middleware('guest');
+Route::get('vision',[LayoutController::class,'vision'])->middleware('guest');
+Route::get('highlight',[LayoutController::class,'highlight'])->middleware('guest');
+Route::get('highcarbon',[LayoutController::class,'highcarbon'])->middleware('guest');
+Route::get('lowcarbon',[LayoutController::class,'lowcarbon'])->middleware('guest');
 //email
 
 // Route::get('send-email',function(){

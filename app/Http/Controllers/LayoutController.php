@@ -5,6 +5,7 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
+use App\Models\English;
 
 class LayoutController extends Controller
 {
@@ -39,4 +40,46 @@ class LayoutController extends Controller
         Mail::to('dendirikirahmawan@gmail.com')->cc(['dendi.riki@mittalsteel.com'])->send(new SendEmail($data));
         return redirect('/')->with('success','Successfully send massage');
     }
+
+    public function bod(){
+        return View ('layout.company.index',[
+            'english' => English::firstWhere('slug','COMPANYBOARDOFDIRECTORS'),
+        ]);
+    }
+
+    public function profilindo() {
+
+        return View ('layout.company.index',[
+            'english' => English::firstWhere('slug','COMPANYPROFILE'),
+        ]);
+
+    }
+
+    public function vision(){
+
+        return View ('layout.company.index',[
+            'english' => English::firstWhere('slug','COMPANYVISION,MISSION&VALUES'),
+        ]);
+
+    }
+
+    public function highlight(){
+
+        return View ('layout.company.index',[
+            'english' => English::firstWhere('slug','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'),
+        ]);
+    }
+
+    public function highcarbon(){
+        return View ('layout.product.index',[
+            'english' => English::firstWhere('slug','PRODUCTHIGHCARBONSTEEL'),
+        ]);
+    }
+
+    public function lowcarbon(){
+        return View ('layout.product.index',[
+            'english' => English::firstWhere('slug','PRODUCTLOWCARBONSTEEL'),
+        ]);
+    }
+
 }

@@ -48,7 +48,9 @@ class GradeController extends Controller
      */
     public function show(Grade $grade)
     {
-        //
+        return View ('admin.layout.gradeshow',[
+            'grade' => $grade
+        ]);
     }
 
     /**
@@ -56,7 +58,10 @@ class GradeController extends Controller
      */
     public function edit(Grade $grade)
     {
-        //
+        Return view('admin.layout.gradeedit',[
+            'grade' => $grade
+
+         ]);
     }
 
     /**
@@ -64,7 +69,21 @@ class GradeController extends Controller
      */
     public function update(Request $request, Grade $grade)
     {
-        //
+        $rules = [
+            'name' => ['required','max:255'],
+            'description' => ['required'],
+        ];
+
+        $this->validate($request,$rules);
+
+        Grade::where('id',$grade->id)->update([
+            'name' => $request->name,
+            'description' => $request->description,
+
+        ]);
+
+        return
+        redirect('/admin/grade');
     }
 
     /**
@@ -72,6 +91,7 @@ class GradeController extends Controller
      */
     public function destroy(Grade $grade)
     {
-        //
+        Grade::destroy($grade->id);
+        return redirect('/admin/grade')->with('success',' Post has been deleted');
     }
 }

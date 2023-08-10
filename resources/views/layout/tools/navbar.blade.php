@@ -1,6 +1,6 @@
 <style>
     .navbar-custom {
-      background-color: rgb(165, 210, 249)
+      background-color: rgb(194, 219, 254)
     }
 
     .dropdown:hover > .dropdown-menu .dropright:hover > .dropdown-menu{
@@ -35,10 +35,10 @@
                   Company
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Board Of Directors</a></li>
-                <li><a class="dropdown-item" href="#">Vision, Mission & Values</a></li>
-                <li><a class="dropdown-item" href="#">Highlights & Achievments</a></li>
+                <li><a class="dropdown-item" href="profilindo">Profile</a></li>
+                <li><a class="dropdown-item" href="bod">Board Of Directors</a></li>
+                <li><a class="dropdown-item" href="vision">Vision, Mission & Values</a></li>
+                <li><a class="dropdown-item" href="highlight">Highlights & Achievments</a></li>
                 <li><a class="dropdown-item" href="#">Group Video</a></li>
                 <li><a class="dropdown-item" href="#">Company Milestone</a></li>
             </ul>
@@ -48,8 +48,8 @@
                   Product
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">High Carbon Steel</a></li>
-                <li><a class="dropdown-item" href="#">Low Carbon Steel</a></li>
+                <li><a class="dropdown-item" href="highcarbon">High Carbon Steel</a></li>
+                <li><a class="dropdown-item" href="lowcarbon">Low Carbon Steel</a></li>
                 <li><a class="dropdown-item" href="#">Cold Heading Quality Steel</a></li>
                 <li><a class="dropdown-item" href="#">General Purpose WR (SIRIM)</a></li>
                 <li><a class="dropdown-item" href="#">Welding Electrode</a></li>

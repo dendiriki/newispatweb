@@ -4,8 +4,12 @@
 
     <!-- Blog Page Title & Breadcrumbs -->
 
-              <h1>{{ $english->title }}</h1>
+              <h1>{{ $grade->name }}</h1>
+
+
     <!-- Blog Section - Blog Page -->
-               <div>{!! $english->content !!}</div>
+
+
+               <div>{!! $grade->description !!}</div>
 
 @endsection
