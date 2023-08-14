@@ -6,6 +6,8 @@ use App\Models\Grade;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreGradeRequest;
 use App\Http\Requests\UpdateGradeRequest;
+use Path\To\DOMDocument;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class GradeController extends Controller
 {
@@ -34,14 +36,50 @@ class GradeController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'name' => ['required','max:255'],
-            'description' => ['required'],
-        ]);
+        $rules=[
+            'name' => ['required'] ,
+            'category' => ['required'],
+            'description' => ['required']
+        ];
 
-        $data = Grade::create($validatedData);
-        return redirect('/admin/grade')->with('success','Successfully send massage');
+        $this->validate($request,$rules);
+
+        $storage="storage/product";
+        $dom=new \DOMDocument();
+        libxml_use_internal_errors(true);
+        $dom->loadHTML($request->description,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
+        libxml_clear_errors();
+        $images=$dom->getElementsByTagName('img');
+        foreach($images as $img){
+            $src=$img->getAttribute('src');
+            if(preg_match('/data:image/',$src)){
+                preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
+                $mimetype=$groups['mime'];
+                $fileNameContent = uniqid();
+                $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
+                $filepath=("$storage/$fileNameContentRand.$mimetype");
+                $image = Image::make($src)
+                ->encode($mimetype,100)
+                ->save(public_path($filepath));
+                $new_src=asset($filepath);
+                $img->removeAttribute('src');
+                $img->setAttribute('src',$new_src);
+                $img->setAttribute('class','img-responsive');
+        }
+
     }
+
+    $grade = Grade::create([
+        'name' => $request->name,
+        'category' => $request->category,
+        'description' => $dom->saveHTML()
+
+    ]);
+
+
+     return redirect('/admin/grade');
+    }
+
 
     /**
      * Display the specified resource.
@@ -69,21 +107,49 @@ class GradeController extends Controller
      */
     public function update(Request $request, Grade $grade)
     {
-        $rules = [
-            'name' => ['required','max:255'],
-            'description' => ['required'],
+        $rules=[
+            'name' => ['required'] ,
+            'category' => ['required',],
+            'description' => ['required']
         ];
 
         $this->validate($request,$rules);
 
-        Grade::where('id',$grade->id)->update([
-            'name' => $request->name,
-            'description' => $request->description,
+        $storage="storage/product";
+        $dom=new \DOMDocument();
+        libxml_use_internal_errors(true);
+        $dom->loadHTML($request->description,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
+        libxml_clear_errors();
+        $images=$dom->getElementsByTagName('img');
+        foreach($images as $img){
+            $src=$img->getAttribute('src');
+            if(preg_match('/data:image/',$src)){
+                preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
+                $mimetype=$groups['mime'];
+                $fileNameContent = uniqid();
+                $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
+                $filepath=("$storage/$fileNameContentRand.$mimetype");
+                $image = Image::make($src)
+                ->encode($mimetype,100)
+                ->save(public_path($filepath));
+                $new_src=asset($filepath);
+                $img->removeAttribute('src');
+                $img->setAttribute('src',$new_src);
+                $img->setAttribute('class','img-responsive');
+        }
 
-        ]);
+    }
 
-        return
-        redirect('/admin/grade');
+
+    grade::where('id',$grade->id)->update([
+        'name' => $request->name,
+        'category' => $request->category,
+        'description' => $dom->saveHTML()
+
+    ]);
+
+    return
+    redirect('/admin/grade');
     }
 
     /**

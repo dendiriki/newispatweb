@@ -160,7 +160,7 @@ class EnglishController extends Controller
      */
     public function destroy(English $english)
     {
-        Post::destroy($english->id);
+        English::destroy($english->id);
         return redirect('/admin/english')->with('success',' Post has been deleted');
     }
 }
