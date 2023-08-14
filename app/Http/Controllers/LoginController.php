@@ -19,7 +19,7 @@ class LoginController extends Controller
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended('/admin/posts');
+            return redirect()->intended('/admin/english');
         }
 
         return back()->with('loginError','Maaf Email atau Kata Sandi Salah');
@@ -31,3 +31,5 @@ class LoginController extends Controller
         return redirect('/');
     }
 }
+
+

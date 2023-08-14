@@ -51,6 +51,7 @@ Route::get('vision',[LayoutController::class,'vision'])->middleware('guest');
 Route::get('highlight',[LayoutController::class,'highlight'])->middleware('guest');
 Route::get('highcarbon',[LayoutController::class,'highcarbon'])->middleware('guest');
 Route::get('lowcarbon',[LayoutController::class,'lowcarbon'])->middleware('guest');
+Route::get('clodheading',[LayoutController::class,'clodheading'])->middleware('guest');
 //email
 
 // Route::get('send-email',function(){

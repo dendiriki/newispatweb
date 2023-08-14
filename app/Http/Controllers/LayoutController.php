@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Grade;
 use App\Mail\SendEmail;
 use App\Models\English;
 
 class LayoutController extends Controller
 {
     public function customer() {
-        return view('layout.customercenter.index');
+        return view('layout.customercenter.index',[
+            'grades' => Grade::all()
+        ]);
+
     }
 
     public function postcustomer(Request $request) {
@@ -79,6 +83,12 @@ class LayoutController extends Controller
     public function lowcarbon(){
         return View ('layout.product.index',[
             'english' => English::firstWhere('slug','PRODUCTLOWCARBONSTEEL'),
+        ]);
+    }
+
+    public function clodheading(){
+        return view('layout.product.index',[
+            'english' => English::firstWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
         ]);
     }
 

@@ -46,7 +46,7 @@
                     <option value="PRODUCTCOLDHEADINGQUALITYSTEEL">PRODUCT COLD HEADING QUALITY STEEL</option>
                     <option value="PRODUCTGENERALPURPOSEWR">PRODUCT GENERAL PURPOSE WR</option>
                     <option value="PRODUCTWELDINGELECTRODE">PRODUCT WELDING ELECTRODE</option>
-                    <option value="PRODUCTPLAIN/DEFORM BAR">PRODUCT PLAIN / DEFORM BAR</option>
+                    <option value="PRODUCTPLAINDEFORM BAR">PRODUCT PLAIN / DEFORM BAR</option>
                     <option value="PRODUCTGENERALSTRUCTURE">PRODUCT GENERAL STRUCTURE</option>
                     <option value="PRODUCTNAILS&NAILWIRE">PRODUCT NAILS & NAIL WIRE</option>
                     <option value="PRODUCTSCRAPPROVIDER">PRODUCT SCRAP PROVIDER</option>
