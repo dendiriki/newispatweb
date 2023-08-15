@@ -104,6 +104,9 @@
           <li class="nav-item">
             <a class="nav-link active" href="#">Careers</a>
           </li>
+          <li>
+            <a href="{{$url}}_indo" class="btn btn-primary">indonesia</a>
+          </li>
         </ul>
       </div>
     </div>

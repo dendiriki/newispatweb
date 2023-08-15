@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Grade;
 use App\Mail\SendEmail;
 use App\Models\English;
+use App\Models\Post;
 
 class LayoutController extends Controller
 {
@@ -55,6 +56,7 @@ class LayoutController extends Controller
 
         return View ('layout.company.index',[
             'english' => English::firstWhere('slug','COMPANYPROFILE'),
+            'url' => 'profilindo'
         ]);
 
     }
@@ -63,6 +65,7 @@ class LayoutController extends Controller
 
         return View ('layout.company.index',[
             'english' => English::firstWhere('slug','COMPANYVISION,MISSION&VALUES'),
+            'url' => 'vision'
         ]);
 
     }
@@ -71,24 +74,34 @@ class LayoutController extends Controller
 
         return View ('layout.company.index',[
             'english' => English::firstWhere('slug','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'),
+            'url' => 'highlight'
         ]);
     }
 
     public function highcarbon(){
         return View ('layout.product.index',[
             'english' => English::firstWhere('slug','PRODUCTHIGHCARBONSTEEL'),
+            'url' => 'highcarbon'
         ]);
     }
 
     public function lowcarbon(){
         return View ('layout.product.index',[
             'english' => English::firstWhere('slug','PRODUCTLOWCARBONSTEEL'),
+            'url' =>    'lowcarbon'
         ]);
     }
 
     public function clodheading(){
         return view('layout.product.index',[
             'english' => English::firstWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
+            'url'  => 'clodheading'
+        ]);
+    }
+
+    public function generalpw(){
+        return view('layout.product.index',[
+            'english' => English::firsWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
         ]);
     }
 

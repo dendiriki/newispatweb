@@ -7,6 +7,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\EnglishController;
 use App\Http\Controllers\GradeController;
+use App\Http\Controllers\LayoutIndoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
@@ -24,7 +25,9 @@ use App\Mail\SendEmail;
 */
 
 Route::get('/', function () {
-    return view('layout.home.index');
+    return view('layout.home.index',[
+        'url' => ''
+    ]);
 });
 
 //Uji Coba test template tanpa DRL
@@ -52,6 +55,10 @@ Route::get('highlight',[LayoutController::class,'highlight'])->middleware('guest
 Route::get('highcarbon',[LayoutController::class,'highcarbon'])->middleware('guest');
 Route::get('lowcarbon',[LayoutController::class,'lowcarbon'])->middleware('guest');
 Route::get('clodheading',[LayoutController::class,'clodheading'])->middleware('guest');
+
+//indonesia
+Route::get('profilindo_indo',[LayoutIndoController::class,'profilindo_indo'])->middleware('guest');
+Route::get('bod_indo',[LayoutIndoController::class,'bod_indo'])->middleware('guest');
 //email
 
 // Route::get('send-email',function(){
