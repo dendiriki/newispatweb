@@ -1,54 +1,99 @@
-<div class="text-pramiry">
-    <hr class="border border-primary border-5 opacity-99">
-</div>
-<style>
-    .foo {
-    color: #ffffff; /* Fallback for older browsers */
-    color: rgba(255, 255, 255, 0.1);
-
-    font-size: 16pt;
-    font-family: Arial, sans-serif;
-}
-</style>
-<footer class="container py-5">
-    <div class="row">
-      <div class="col-12 col-md">
-        <small class="d-block mb-3 text-body-secondary">&copy; PT. ISPAT INDO</small>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Achievements</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary text-decoration-none" href="#">ISO 9001 Certificatr</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">ISO 14001 Certificatr</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">ISO 45001 Certificatr</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">ISO 50001 Certificatr</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Steel Bar in Coil</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Steel Bar for Reinforcement</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5 class="foo">.</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary text-decoration-none" href="#">JIS Certificatr</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">IDN Accreditation by KAN</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Zero Accident Certificatr</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Proper Certificatr</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">SMK3 Certificatr</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">SIRIM Certificatr</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Call Us</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary text-decoration-none" href="mailto:ispatindo@mittalsteel.com">Ispat Indo</a></li>
-          <li><a class="link-secondary text-decoration-none" href="mailto:marketing.indo@mittalsteel.com">Sales & Marketing</a></li>
-          <li><a class="link-secondary text-decoration-none" href="mailto:custsupp.indo@mittalsteel.com">Customer Support</a></li>
-          <li><a class="link-secondary text-decoration-none" href="mailto:hrd.indo@mittalsteel.com">Career</a></li>
-          <li><a class="link-secondary text-decoration-none" href="mailto:webmaster.indo@mittalsteel.com">Web Master</a></li>
-          <li><a class="link-secondary text-decoration-none" href="https://web.whatsapp.com/send?phone=628155152222&text=Hi%2c%20Ispatindo.com">WhatsApp</a></li>
-        </ul>
-      </div>
+<!-- info section -->
+<section class="info_section ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 info_links">
+                <h4>
+                    Menu
+                </h4>
+                <ul>
+                    <li class="active">
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="job.html">
+                            Jobs
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="freelancer.html">
+                            Freelancers
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>
+                    Jobs
+                </h4>
+                <p>
+                    Established fact that a reader will be distracted by the readable content of a page when looking at
+                    its
+                    layout. The point of using Lorem Ipsum
+                </p>
+            </div>
+            <div class="col-md-3">
+                <div class="info_social">
+                    <h4>
+                        Social Link
+                    </h4>
+                    <div class="social_container">
+                        <div>
+                            <a href="">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info_form">
+                    <h4>
+                        Newsletter
+                    </h4>
+                    <form action="">
+                        <input type="text" placeholder="Enter Your Email" />
+                        <button type="submit">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
+</section>
+<!-- end info_section -->
 
-  </body>
+
+<!-- footer section -->
+<footer class="footer_section">
+    <div class="container">
+        <p>
+            &copy; <span id="displayYear"></span> All Rights Reserved By
+            <a href="https://html.design/">Free Html Templates</a>
+        </p>
+    </div>
+</footer>
+<!-- footer section -->

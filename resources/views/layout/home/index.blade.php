@@ -1,200 +1,626 @@
 @extends('layout.tools.main')
 
 @section('content')
-<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
-
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     @if (session()->has('success'))
-    <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
-        <br>
-        {{ session('success') }}
-        <button type="button" class="btn-close mb-0 mt-3 pt-4" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
+            <br>
+            {{ session('success') }}
+            <button type="button" class="btn-close mb-0 mt-3 pt-4" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
+
+    <!-- slider section -->
+    <section class="slider_section ">
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-7 col-md-8 mx-auto">
+                    <div class="detail-box">
+                        <h1>
+                            PT. ISPAT INDO <br>
+                        </h1>
+                        <p>
+                            Was Established in Indonesia in 1976
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- end slider section -->
     </div>
-@endif
-
-<section id="hero" class="hero">
-
-    <img src="assets/img/product3.png" alt="" data-aos="fade-in">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10">
-          <h2 class="text-white" data-aos="fade-up" data-aos-delay="100">PT. ISPAT INDO</h2>
-          <p data-aos="fade-up" data-aos-delay="200">international steel company since 1976</p>
-        </div>
-        <div class="col-lg-5">
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
 
 
 
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-        <br><br>
-      <h1 class="text-center fw-normal">About Us</h1>
-      <br><br>
-
-      <div class="row">
-        <div class="col-lg-4">
-          <h2 class="fw-normal">Products</h2>
-          <p>High Carbon Steel Wire Rod, Low Carbon Steel Wire Rod, Cold Heading Quality Steel Wire Rod...</p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <h2 class="fw-normal">Our Achievements</h2>
-          <p>ISO Certificatr, JIS Certificatr, Steel Bar in Coil, KAN, Zero Accident, SMK3 Approval Certificatr, SIRIM...</p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <h2 class="fw-normal">Industrial Process</h2>
-          <p>Electric Arc Furnace, Ladle Refining Furnace, Continuous Casting Machine with...</p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
 
 
-      <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1">PT. ISPAT INDO</h2>
-          <p class="font-content">PT. Ispat Indo was established in Indonesia in 1976. The Company was set up as a 60,000 tpa Greenfield project, for rolling. Today, Ispat Indo has an annual Production capacity in excess of 700,000 tons...</p>
+    <!-- category section -->
 
-          <div class="row font-content">
-            <div class="col-6 ">
-                <h5 class="font-content">Product</h5>
-                <ul>
-                    <li>High Carbon Steel Wire Rod</li>
-                    <li>Low Carbon Steel Wire Rod</li>
-                    <li>Cold Heading Quality Steel Wire Rod</li>
-                    <li>Welding Electrode Grades Steel Wire Rod</li>
-                    <li>Bar in Coil for Concrete Reinforcement</li>
-                  </ul>
+    <!-- end category section -->
+
+
+    <!-- about section -->
+
+    <section class="about_section layout_padding ">
+        <div class="container p-bottom-80">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>
+                                About Us
+                            </h2>
+                        </div>
+                        <p>
+                            Normal distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look like
+                            readable
+                            English. Many desktop publishing packages and web page editors
+                        </p>
+                        <a href="">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="img-box">
+                        <img src="assets/img/about-img.jpg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="col-6 ">
-                <h5 class="font-content">Industrial Process</h5>
-                <ul>
-                    <li>Electric Arc Furnace</li>
-                    <li>Ladle Refining Furnace</li>
-                    <li>Continuous Casting Machine with (M-Electro Magnetic Stire)</li>
-                    <li>Wire Rod Mill</li>
-                  </ul>
+        </div>
+
+        <br><br><br>
+
+        <div class="container p-bottom-80">
+            <div class="row">
+                <div class="col-md-6 order-md-1">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>
+                                About Us
+                            </h2>
+                        </div>
+                        <p>
+                            Normal distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look like
+                            readable
+                            English. Many desktop publishing packages and web page editors
+                        </p>
+                        <a href="">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-2">
+                    <div class="img-box">
+                        <img src="assets/img/about-img.jpg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="bottomright">
-                <a class="btn btn-primary" href="profilindo" role="button">More Details</a>
-          </div>
-          </div>
         </div>
-        <div class="col-md-5 order-md-1">
-            <img src="assets/img/Ispat_Front.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="500px" alt="">
-        </div>
-      </div>
 
-      <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">PT. Ispat Wire Products</h2>
-          <p class="font-content">PT. Ispat Wire Products was established in 1991 which is the largest nail producer in Indonesia. Our working philosophy is guided towards continuous improvement in the quality of our products and services so as to surpass the best standards in the industry...</p>
+        <br><br><br>
 
-          <div class="row font-content">
-            <div class="col-6 ">
-                <h5 class="font-content">Product</h5>
-                <ul>
-                    <li>Nails for Local</li>
-                    <li>Nails for Export</li>
-                    <li>Straight Bars</li>
-                    <li>Steel wire / nail wire</li>
-                  </ul>
+        <div class="container p-bottom-80">
+            <div class="row">
+                <div class="col-md-6 order-md-2">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>
+                                About Us
+                            </h2>
+                        </div>
+                        <p>
+                            Normal distribution of letters, as opposed to using 'Content here, content here', making it look
+                            like
+                            readable English. Many desktop publishing packages and web page editors has a more-or-less
+                            normal
+                            distribution of letters, as opposed to using 'Content here, content here', making it look like
+                            readable
+                            English. Many desktop publishing packages and web page editors
+                        </p>
+                        <a href="">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="img-box">
+                        <img src="assets/img/about-img.jpg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="col-6 ">
-                <h5 class="font-content">Industrial Process</h5>
-                <ul>
-                    <li>Wire Drawing</li>
-                    <li>Nail Making</li>
-                    <li>Cutting & Straightening</li>
-                  </ul>
+        </div>
+
+
+
+    </section>
+
+    <!-- end about section -->
+
+
+
+    <!-- Start client -->
+    <!-- Start client -->
+    <section id="client" class="light-bg p-top-80 p-bottom-80">
+
+        <!-- Section Title -->
+        <div class="section-title text-center m-bottom-40">
+            <h2>OUR PRODUCTS</h2>
+            <div class="divider-center-small"></div>
+        </div>
+
+        <!-- === Clients === -->
+        <div class="container ">
+            <div class="row">
+
+                <div id="owl-clients" class="owl-carousel owl-theme client text-center">
+
+                    <!-- === Client 1 === -->
+                    <div class="client-item text-center">
+                        <a href="">
+                            <img class="img-responsive" src="assets/img/SVG.png" alt="">
+                            <h5>High Carbon Steel</h5>
+                        </a>
+                    </div>
+
+                    <!-- === Client 2 === -->
+                    <div class="client-item text-center">
+                        <a href="">
+                            <img class="img-responsive" src="assets/img/SVG-1.png" alt="">
+                            <h5>Low Carbon Steel</h5>
+                        </a>
+                    </div>
+
+                    <!-- === Client 3 === -->
+                    <div class="client-item text-center">
+                        <a href="">
+                            <img class="img-responsive" src="assets/img/SVG-2.png" alt="">
+                            <h5>GH Quality Steel</h5>
+                        </a>
+                    </div>
+
+                    <!-- === Client 4 === -->
+                    <div class="client-item text-center">
+                        <a href="">
+                            <img class="img-responsive" src="assets/img/SVG-3.png" alt="">
+                            <h5>General Purpose WR</h5>
+                        </a>
+                    </div>
+
+                    <!-- === Client 5 === -->
+                    <div class="client-item text-center">
+                        <a href="">
+                            <img class="img-responsive" src="assets/img/SVG-4.png" alt="">
+                            <h5>Welding Electrode</h5>
+                        </a>
+                    </div>
+
+                    <!-- === Client 6 === -->
+                    <div class="client-item text-center">
+                        <a href="">
+                            <img class="img-responsive" src="assets/img/SVG-5.png" alt="">
+                            <h5>Plain / Deform Bar</h5>
+                        </a>
+                    </div>
+
+                    <!-- === Client 7 === -->
+                    <div class="client-item text-center">
+                        <a href="">
+                            <img class="img-responsive" src="assets/img/SVG-6.png" alt="">
+                            <h5>Structural Steel</h5>
+                        </a>
+                    </div>
+
+                    <!-- === Client 8 === -->
+                    <div class="client-item text-center">
+                        <a href="">
+                            <img class="img-responsive" src="assets/img/SVG-7.png" alt="">
+                            <h5>Nail & Nail Wire</h5>
+                        </a>
+                    </div>
+
+
+                    <!-- === Pagination dengan kelas custom-owl-dots === -->
+                    <!-- <div class="owl-dots custom-owl-dots"></div> -->
+
+                </div><!-- /#owl-testimonials -->
+
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+
+    </section>
+
+
+
+
+
+    <!-- job section -->
+    <section class="job_section layout_padding">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2>
+                    RECENT & FEATURED JOBS
+                </h2>
             </div>
-            <div class="bottomright">
-                <a class="btn btn-primary" href="#" role="button">More Details</a>
-          </div>
-          </div>
-        </div>
-        <div class="col-md-5 order-md-1">
-            <img src="assets/img/iwp_profle_images_01.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="500px" alt="">
-        </div>
-      </div>
-
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1">PT. Ispat Panca Putera</h2>
-          <p class="font-content">PT. Ispat Panca Putera is located in the Gresik Industrial Estate on East Java...</p>
-
-          <div class="row font-content">
-            <div class="col-6 ">
-                <h5 class="font-content">Product</h5>
-                <ul>
-                    <li>Round Bar 06 mm - 32 mm</li>
-                    <li>Deformed Bar 06 mm - 32 mm</li>
-                    <li>Shafting Bar 06 mm - 32 mm</li>
-                  </ul>
+            <div class="job_container">
+                <h4 class="job_heading">
+                    Featured Jobs
+                </h4>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="box">
+                            <div class="job_content-box">
+                                <div class="img-box">
+                                    <img src="assets/img/job_logo1.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        Development Team Lead
+                                    </h5>
+                                    <div class="detail-info">
+                                        <h6>
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <span>
+                                                Washington. D.C.
+                                            </span>
+                                        </h6>
+                                        <h6>
+                                            <i class="fa fa-money" aria-hidden="true"></i>
+                                            <span>
+                                                $1200 - $1300
+                                            </span>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option-box">
+                                <button class="fav-btn">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </button>
+                                <a href="" class="apply-btn">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="box">
+                            <div class="job_content-box">
+                                <div class="img-box">
+                                    <img src="assets/img/job_logo2.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        Make my website responsive device compatible
+                                    </h5>
+                                    <div class="detail-info">
+                                        <h6>
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <span>
+                                                New York
+                                            </span>
+                                        </h6>
+                                        <h6>
+                                            <i class="fa fa-money" aria-hidden="true"></i>
+                                            <span>
+                                                $200 - $340
+                                            </span>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option-box">
+                                <button class="fav-btn">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </button>
+                                <a href="" class="apply-btn">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bottomright">
-                <a class="btn btn-primary" href="#" role="button">More Details</a>
-          </div>
-          </div>
-        </div>
-        <div class="col-md-5 order-md-1">
-            <img src="assets/img/ipp_profle_images_01.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="500px" alt="">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">PT. Ispat Bukit Baja</h2>
-          <p class="font-content">PT. Ispat Bukit Baja was established in 1994, as a steel manufacturer that produces steel long products i.e. Steel Angle Bars, Steel Channel, Round Bars and Steel Strips...</p>
-
-          <div class="row font-content">
-            <div class="col-10 ">
-                <h5 class="font-content">Product</h5>
-                <ul>
-                    <li>Equal Angle Bars (SNI 07-2054-2006 Equivalent to JIS G 3101 and JIS G 3192)</li>
-                    <li>Flat Bars (JIS G 3101 for structural steel)</li>
-                    <li>U-Channel (SNI 07-0052-2006 Equivalent to JIS G 3101 and JIS G 3192)</li>
-                    <li>Steel Strips</li>
-                  </ul>
+            <div class="job_container">
+                <h4 class="job_heading">
+                    Recent Jobs
+                </h4>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="box">
+                            <div class="job_content-box">
+                                <div class="img-box">
+                                    <img src="assets/img/job_logo3.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        Looking Graphic Designer (Logo + UI)
+                                    </h5>
+                                    <div class="detail-info">
+                                        <h6>
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <span>
+                                                Washington. D.C.
+                                            </span>
+                                        </h6>
+                                        <h6>
+                                            <i class="fa fa-money" aria-hidden="true"></i>
+                                            <span>
+                                                $1200/mo
+                                            </span>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option-box">
+                                <button class="fav-btn">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </button>
+                                <a href="" class="apply-btn">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="box">
+                            <div class="job_content-box">
+                                <div class="img-box">
+                                    <img src="assets/img/job_logo6.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        Are you Typography Expert?
+                                    </h5>
+                                    <div class="detail-info">
+                                        <h6>
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <span>
+                                                New York
+                                            </span>
+                                        </h6>
+                                        <h6>
+                                            <i class="fa fa-money" aria-hidden="true"></i>
+                                            <span>
+                                                $56 - $90
+                                            </span>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option-box">
+                                <button class="fav-btn">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </button>
+                                <a href="" class="apply-btn">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="box">
+                            <div class="job_content-box">
+                                <div class="img-box">
+                                    <img src="assets/img/job_logo5.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        Looking WordPress Developer for ThemeForest
+                                    </h5>
+                                    <div class="detail-info">
+                                        <h6>
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <span>
+                                                Washington. D.C.
+                                            </span>
+                                        </h6>
+                                        <h6>
+                                            <i class="fa fa-money" aria-hidden="true"></i>
+                                            <span>
+                                                $400 - $540
+                                            </span>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option-box">
+                                <button class="fav-btn">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </button>
+                                <a href="" class="apply-btn">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="box">
+                            <div class="job_content-box">
+                                <div class="img-box">
+                                    <img src="assets/img/job_logo4.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        Hiring Web Designer for Project
+                                    </h5>
+                                    <div class="detail-info">
+                                        <h6>
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <span>
+                                                Washington. D.C.
+                                            </span>
+                                        </h6>
+                                        <h6>
+                                            <i class="fa fa-money" aria-hidden="true"></i>
+                                            <span>
+                                                $350 - $450
+                                            </span>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option-box">
+                                <button class="fav-btn">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </button>
+                                <a href="" class="apply-btn">
+                                    Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bottomright">
-                <a class="btn btn-primary" href="#" role="button">More Details</a>
-          </div>
-          </div>
+            <div class="btn-box">
+                <a href="">
+                    View All
+                </a>
+            </div>
         </div>
-        <div class="col-md-5 order-md-1">
-            <img src="assets/img/ibb_profle_images_01.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="500px" alt="">
+    </section>
+    <!-- end job section -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- expert section -->
+
+    <section class="expert_section layout_padding">
+        <div class="container">
+            <div class="heading_container heading_center">
+                <h2>
+                    LOOKING FOR EXPERTS?
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed quam nulla
+                    mauris
+                    iaculis. Erat eget vitae malesuada, tortor tincidunt porta lorem lectus.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="assets/img/e1.jpg" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <a href="">
+                                Martin Anderson
+                            </a>
+                            <h6 class="expert_position">
+                                <span>
+                                    Web Anaylzer
+                                </span>
+                                <span>
+                                    41 Jobs Done
+                                </span>
+                            </h6>
+                            <span class="expert_rating">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed
+                                quam
+                                nulla
+                                mauris iaculis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="assets/img/e2.jpg" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <a href="">
+                                Semanta Klores
+                            </a>
+                            <h6 class="expert_position">
+                                <span>
+                                    Graphic Designer
+                                </span>
+                                <span>
+                                    32 Jobs Done
+                                </span>
+                            </h6>
+                            <span class="expert_rating">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed
+                                quam
+                                nulla
+                                mauris iaculis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="images/e3.jpg" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <a href="">
+                                Ryan Martines
+                            </a>
+                            <h6 class="expert_position">
+                                <span>
+                                    SEO Expert
+                                </span>
+                                <span>
+                                    27 Jobs Done
+                                </span>
+                            </h6>
+                            <span class="expert_rating">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet, non odio tincidunt ut ante, lorem a euismod suspendisse vel, sed
+                                quam
+                                nulla
+                                mauris iaculis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <a href="">
+                    View All Freelancers
+                </a>
+            </div>
         </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-    </div
-
+    </section>
 @endsection
-
