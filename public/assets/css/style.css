@@ -133,6 +133,11 @@ a:focus {
   color: #fff;
 }
 
+.transparant-text {
+    color :#08135c;
+    opacity: 0.9; /* Nilai opacity bisa diatur dari 0 (sepenuhnya transparan) hingga 1 (tidak transparan) */
+  }
+
 /*--------------------------------------------------
     19. Client
 ---------------------------------------------------*/
@@ -817,9 +822,11 @@ a:focus {
           align-items: center;
 }
 
-.about_section .img-box img {
+.about_section .img-box iframe {
   width: 100%;
   border-radius: 15px;
+  background-color: transparent;
+  outline: none;
 }
 
 .about_section .detail-box p {

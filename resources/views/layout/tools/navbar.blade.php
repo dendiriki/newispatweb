@@ -77,7 +77,7 @@
                         </li>
                         <li class="topnav">
                             <div class="login-container">
-                                <a href="{{ $url }}_indo">ENGLISH</a>
+                                <a href="{{ $url }}_indo">ENG to IND</a>
                             </div>
                         </li>
                     </ul>

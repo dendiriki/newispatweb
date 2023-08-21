@@ -4,40 +4,47 @@
         <div class="row">
             <div class="col-md-2 info_links">
                 <h4>
-                    Menu
+                    Mail To
                 </h4>
                 <ul>
-                    <li class="active">
-                        <a href="index.html">
-                            Home
+                    <li class="">
+                        <a href="mailto:ispatindo@mittalsteel.com">
+                            Ispat Indo
                         </a>
                     </li>
                     <li>
-                        <a href="about.html">
-                            About
+                        <a href="mailto:marketing.indo@mittalsteel.com">
+                            Sales & Marketing
                         </a>
                     </li>
                     <li>
-                        <a class="" href="job.html">
-                            Jobs
-                        </a>
-                    </li>
-                    <li>
-                        <a class="" href="freelancer.html">
-                            Freelancers
+                        <a class="" href="mailto:custsupp.indo@mittalsteel.com">
+                            Tim CS
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-3">
-                <h4>
-                    Jobs
+            <div class="col-md-3 info_links">
+                <h4 class="transparant-text ">
+                    .
                 </h4>
-                <p>
-                    Established fact that a reader will be distracted by the readable content of a page when looking at
-                    its
-                    layout. The point of using Lorem Ipsum
-                </p>
+                <ul>
+                    <li class="">
+                        <a href="mailto:hrd.indo@mittalsteel.com">
+                            Career
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:webmaster.indo@mittalsteel.com">
+                            Web Master
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="https://web.whatsapp.com/send?phone=628155152222&text=Hi%2c%20Ispatindo.com">
+                            WhatsApp
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="col-md-3">
                 <div class="info_social">
@@ -70,15 +77,7 @@
             </div>
             <div class="col-md-4">
                 <div class="info_form">
-                    <h4>
-                        Newsletter
-                    </h4>
-                    <form action="">
-                        <input type="text" placeholder="Enter Your Email" />
-                        <button type="submit">
-                            Subscribe
-                        </button>
-                    </form>
+
                 </div>
             </div>
         </div>
@@ -91,8 +90,8 @@
 <footer class="footer_section">
     <div class="container">
         <p>
-            &copy; <span id="displayYear"></span> All Rights Reserved By
-            <a href="https://html.design/">Free Html Templates</a>
+            &copy; <span id="displayYear"></span> By
+            <a href="">PT. ISPAT INDO</a>
         </p>
     </div>
 </footer>
