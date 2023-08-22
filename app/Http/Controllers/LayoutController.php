@@ -14,7 +14,8 @@ class LayoutController extends Controller
     public function customer() {
         return view('layout.customercenter.index',[
             'grades' => Grade::all(),
-            'class' => 'sub_page'
+            'class' => 'sub_page',
+            'navbar' =>''
         ]);
 
     }
@@ -58,7 +59,8 @@ class LayoutController extends Controller
         return View ('layout.company.index',[
             'english' => English::firstWhere('slug','COMPANYPROFILE'),
             'url' => 'profilindo',
-            'class' => 'sub_page'
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
 
         ]);
 

@@ -2,6 +2,10 @@
 
 @section('content')
 
+<div class="timpanav">
+
+</div>
+
     <div class="container py-5">
     <div class="row">
       <div class="col-lg">
@@ -11,9 +15,9 @@
       </div>
     </div>
 
-    <script>
+    {{-- <script>
             const classname = document.querySelector('.img-responsive')
             classname.setAttribute('class', 'img-fluid');
-    </script>
+    </script> --}}
 
 @endsection

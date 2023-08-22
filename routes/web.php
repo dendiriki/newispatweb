@@ -27,7 +27,8 @@ use App\Mail\SendEmail;
 Route::get('/', function () {
     return view('layout.home.index',[
         'url' => '',
-        'class' => ''
+        'class' => '',
+        'navbar' =>'hero_area'
     ]);
 });
 
