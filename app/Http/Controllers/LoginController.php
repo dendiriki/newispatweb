@@ -9,7 +9,9 @@ class LoginController extends Controller
 {
     public function index(){
         return view('admin.login.index',[
-            'url' => ''
+            'url' => '',
+            'class' => '',
+            'navbar' =>'hero_area'
         ]);
     }
 

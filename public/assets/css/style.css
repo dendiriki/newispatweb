@@ -1691,9 +1691,15 @@ body {
 
   .timpanav{
     background-color: #08135c;
-    height: 30px;
+    height: 35px;
   }
 
   .navbar-mobile-scroll{
     background-color: #08135c;
+  }
+
+  .transparant-text{
+    /* Ubah nilai 0.5 sesuai kebutuhan Anda */
+    color: rgba(8, 19, 92,0.5); /* Warna teks */
+    /* padding: 20px; */
   }

@@ -44,13 +44,16 @@ class LayoutController extends Controller
         $data = Customer::create($validatedData);
 
 
-        Mail::to('dendirikirahmawan@gmail.com')->cc(['dendi.riki@mittalsteel.com'])->send(new SendEmail($data));
+        Mail::to('marketing.indo@mittalsteel.com')->cc(['dendi.riki@mittalsteel.com'])->send(new SendEmail($data));
         return redirect('/')->with('success','Successfully send massage');
     }
 
     public function bod(){
         return View ('layout.company.index',[
             'english' => English::firstWhere('slug','COMPANYBOARDOFDIRECTORS'),
+            'url' => 'bod',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
         ]);
     }
 
@@ -70,7 +73,9 @@ class LayoutController extends Controller
 
         return View ('layout.company.index',[
             'english' => English::firstWhere('slug','COMPANYVISION,MISSION&VALUES'),
-            'url' => 'vision'
+            'url' => 'vision',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
         ]);
 
     }
@@ -79,35 +84,113 @@ class LayoutController extends Controller
 
         return View ('layout.company.index',[
             'english' => English::firstWhere('slug','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'),
-            'url' => 'highlight'
+            'url' => 'highlight',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function milestone(){
+        return view('layout.company.index',[
+            'english' => English::firstWhere('slug','COMPANYMANAGEMENTSYSTEM'),
+            'url' => 'milestone',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function she(){
+        return view('layout.company.index',[
+            'english' => English::firstWhere('slug','COMPANYSHE'),
+            'url' => 'she',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
         ]);
     }
 
     public function highcarbon(){
         return View ('layout.product.index',[
             'english' => English::firstWhere('slug','PRODUCTHIGHCARBONSTEEL'),
-            'url' => 'highcarbon'
+            'url' => 'highcarbon',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
         ]);
     }
 
     public function lowcarbon(){
         return View ('layout.product.index',[
             'english' => English::firstWhere('slug','PRODUCTLOWCARBONSTEEL'),
-            'url' =>    'lowcarbon'
+            'url' =>    'lowcarbon',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
         ]);
     }
 
     public function clodheading(){
         return view('layout.product.index',[
             'english' => English::firstWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
-            'url'  => 'clodheading'
+            'url'  => 'clodheading',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
         ]);
     }
 
     public function generalpw(){
         return view('layout.product.index',[
-            'english' => English::firsWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
+            'english' => English::firstWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
+            'url'  => 'generalpw',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+
         ]);
     }
+
+    public function welding(){
+        return view('layout.product.index',[
+            'english' => English::firstWhere('slug','PRODUCTWELDINGELECTRODE'),
+            'url'  => 'welding',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function pline(){
+        return view('layout.product.index',[
+            'english' => English::firstWhere('slug','PRODUCTPLAINDEFORMBAR'),
+            'url'  => 'pline',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function structure(){
+        return view('layout.product.index',[
+            'english' => English::firstWhere('slug','PRODUCTGENERALSTRUCTURE'),
+            'url'  => 'structure',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function nails(){
+        return view('layout.product.index',[
+            'english' => English::firstWhere('slug','PRODUCTNAILS&NAILWIRE'),
+            'url'  => 'nails',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function ispatwireproduct(){
+        return view('layout.product.index',[
+        'english' => English::firstWhere('slug','SUBSIDIARIESPT.ISPATWIREPRODUCT'),
+        'url'  => 'nails',
+        'class' => 'sub_page',
+        'navbar' =>'timpanav'
+
+        ]);
+
+    }
+
 
 }

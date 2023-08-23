@@ -54,9 +54,21 @@ Route::get('bod',[LayoutController::class,'bod'])->middleware('guest');
 Route::get('profilindo',[LayoutController::class,'profilindo'])->middleware('guest');
 Route::get('vision',[LayoutController::class,'vision'])->middleware('guest');
 Route::get('highlight',[LayoutController::class,'highlight'])->middleware('guest');
+Route::get('milestone',[LayoutController::class,'milestone'])->middleware('guest');
+Route::get('she',[LayoutController::class,'she'])->middleware('guest');
+
+
 Route::get('highcarbon',[LayoutController::class,'highcarbon'])->middleware('guest');
 Route::get('lowcarbon',[LayoutController::class,'lowcarbon'])->middleware('guest');
 Route::get('clodheading',[LayoutController::class,'clodheading'])->middleware('guest');
+Route::get('generalpw',[LayoutController::class,'generalpw'])->middleware('guest');
+Route::get('welding',[LayoutController::class,'welding'])->middleware('guest');
+Route::get('pline',[LayoutController::class,'pline'])->middleware('guest');
+Route::get('structure',[LayoutController::class,'structure'])->middleware('guest');
+Route::get('nails',[LayoutController::class,'nails'])->middleware('guest');
+
+
+Route::get('ispatwireproduct',[LayoutController::class,'ispatwireproduct'])->middleware('guest');
 
 //indonesia
 Route::get('profilindo_indo',[LayoutIndoController::class,'profilindo_indo'])->middleware('guest');
