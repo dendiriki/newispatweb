@@ -69,6 +69,18 @@ Route::get('nails',[LayoutController::class,'nails'])->middleware('guest');
 
 
 Route::get('ispatwireproduct',[LayoutController::class,'ispatwireproduct'])->middleware('guest');
+Route::get('ispatpancaputra',[LayoutController::class,'ispatpancaputra'])->middleware('guest');
+Route::get('ispatbukitbaja',[LayoutController::class,'ispatbukitbaja'])->middleware('guest');
+
+
+Route::get('fasilitas',[LayoutController::class,'fasilitas'])->middleware('guest');
+Route::get('steelmaking',[LayoutController::class,'steelmaking'])->middleware('guest');
+Route::get('rolling',[LayoutController::class,'rolling'])->middleware('guest');
+Route::get('fasilitaspancaputra',[LayoutController::class,'fasilitaspancaputra'])->middleware('guest');
+Route::get('fasilitasbukitnaja',[LayoutController::class,'fasilitasbukitnaja'])->middleware('guest');
+Route::get('fasilitaswire',[LayoutController::class,'fasilitaswire'])->middleware('guest');
+
+Route::get('karir',[LayoutController::class,'karir'])->middleware('guest');
 
 //indonesia
 Route::get('profilindo_indo',[LayoutIndoController::class,'profilindo_indo'])->middleware('guest');

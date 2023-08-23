@@ -31,7 +31,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="customer-center">
                                 <span>
                                     Customer Center
                                 </span>
@@ -42,12 +42,12 @@
                             <div class="dropdown">
                                 <a class="nav-link" type="button" data-toggle="dropdown">Industrial Process</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Facilities</a>
-                                    <a class="dropdown-item" href="#">Process Flowchart of Steel Making</a>
-                                    <a class="dropdown-item" href="#">Process Flowchart of Wire Rod Rolling</a>
-                                    <a class="dropdown-item" href="#">Process Ispat Panca Putera Facilities</a>
-                                    <a class="dropdown-item" href="#">Process Ispat Bukit Baja Facilities</a>
-                                    <a class="dropdown-item" href="#">Process Ispat Wire Products Facilities</a>
+                                    <a class="dropdown-item" href="fasilitas">Facilities</a>
+                                    <a class="dropdown-item" href="steelmaking">Process Flowchart of Steel Making</a>
+                                    <a class="dropdown-item" href="rolling">Process Flowchart of Wire Rod Rolling</a>
+                                    <a class="dropdown-item" href="fasilitaspancaputra">Process Ispat Panca Putera Facilities</a>
+                                    <a class="dropdown-item" href="fasilitasbukitnaja">Process Ispat Bukit Baja Facilities</a>
+                                    <a class="dropdown-item" href="fasilitaswire">Process Ispat Wire Products Facilities</a>
                                 </div>
                             </div>
                         </li>
@@ -58,13 +58,13 @@
                                 <a class="nav-link" type="button" data-toggle="dropdown">Subsidiaries</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="ispatwireproduct">PT Ispat Wire Product</a>
-                                    <a class="dropdown-item" href="#">PT Ispat Panca Putera</a>
-                                    <a class="dropdown-item" href="#">PT Ispat Bukit Baja</a>
+                                    <a class="dropdown-item" href="ispatpancaputra">PT Ispat Panca Putera</a>
+                                    <a class="dropdown-item" href="ispatbukitbaja">PT Ispat Bukit Baja</a>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="karir">
                                 <span>
                                     Careers
                                 </span>
