@@ -213,66 +213,194 @@ class LayoutController extends Controller
 
 
     public function fasilitas(){
-        return view('layout.subsidiaries.index',[
-            'english' => English::firstWhere('slug','INDUSTRIALPROCESSFACILITAS'),
+        $isexist = English::select("*")
+        ->where("slug","INDUSTRIALPROCESSFACILITAS")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index',[
+            'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSFACILITAS'),
             'url'  => 'fasilitas',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+
+        // return view('layout.subsidiaries.index',[
+        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSFACILITAS'),
+        //     'url'  => 'fasilitas',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function steelmaking() {
-        return view('layout.subsidiaries.index',[
-            'english' => English::firstWhere('slug','INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING'),
+        $isexist = English::select("*")
+        ->where("slug","INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index',[
+            'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING'),
             'url'  => 'steelmaking',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return view('layout.subsidiaries.index',[
+        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING'),
+        //     'url'  => 'steelmaking',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function rolling(){
-        return view('layout.subsidiaries.index',[
-            'english' => English::firstWhere('slug','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING'),
+        $isexist = English::select("*")
+        ->where("slug","INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index',[
+            'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING'),
             'url'  => 'rolling',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+
+        // return view('layout.subsidiaries.index',[
+        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING'),
+        //     'url'  => 'rolling',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function fasilitaspancaputra(){
-        return view('layout.subsidiaries.index',[
-            'english' => English::firstWhere('slug','INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS'),
+        $isexist = English::select("*")
+        ->where("slug","INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index',[
+            'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS'),
             'url'  => 'fasilitaspancaputra',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return view('layout.subsidiaries.index',[
+        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS'),
+        //     'url'  => 'fasilitaspancaputra',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function fasilitasbukitnaja(){
-        return view('layout.subsidiaries.index',[
-            'english' => English::firstWhere('slug','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS'),
+        $isexist = English::select("*")
+        ->where("slug","INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index',[
+            'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS'),
             'url'  => 'fasilitasbukitnaja',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return view('layout.subsidiaries.index',[
+        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS'),
+        //     'url'  => 'fasilitasbukitnaja',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function fasilitaswire(){
-        return view('layout.subsidiaries.index',[
-            'english' => English::firstWhere('slug','INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS'),
+        $isexist = English::select("*")
+        ->where("slug","INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index',[
+            'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS'),
             'url'  => 'fasilitaswire',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return view('layout.subsidiaries.index',[
+        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS'),
+        //     'url'  => 'fasilitaswire',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function karir(){
-        return view('layout.karir.index',[
-            'english' => English::firstWhere('slug','CAREERS'),
+        $isexist = English::select("*")
+        ->where("slug","CAREERS")->exists();
+
+        if($isexist){
+             return View('layout.karir.index',[
+            'english' => English::firstWhere('slug','=','CAREERS'),
             'url'  => 'karir',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+
+        // return view('layout.karir.index',[
+        //     'english' => English::firstWhere('slug','CAREERS'),
+        //     'url'  => 'karir',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
 

@@ -15,7 +15,7 @@ class LayoutIndoController extends Controller
 
         if($isexist){
              return View ('layout.company.index_indo',[
-            'post' => Post::where('slug','=','COMPANYBOARDOFDIRECTORS'),
+            'post' => Post::firstWhere('slug','=','COMPANYBOARDOFDIRECTORS'),
             'url' => 'bod'
         ]);
         }else{
