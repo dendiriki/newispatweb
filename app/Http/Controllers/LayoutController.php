@@ -183,32 +183,86 @@ class LayoutController extends Controller
     }
 
     public function ispatwireproduct(){
-        return view('layout.subsidiaries.index',[
-        'english' => English::firstWhere('slug','SUBSIDIARIESPT.ISPATWIREPRODUCT'),
-        'url'  => 'ispatwireproduct',
-        'class' => 'sub_page',
-        'navbar' =>'timpanav'
 
+        $isexist = English::select("*")
+        ->where("slug","SUBSIDIARIESPT.ISPATWIREPRODUCT")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index',[
+            'english' => English::firstWhere('slug','=','SUBSIDIARIESPT.ISPATWIREPRODUCT'),
+            'url'  => 'ispatwireproduct',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return view('layout.subsidiaries.index',[
+        // 'english' => English::firstWhere('slug','SUBSIDIARIESPT.ISPATWIREPRODUCT'),
+        // 'url'  => 'ispatwireproduct',
+        // 'class' => 'sub_page',
+        // 'navbar' =>'timpanav'
+
+        // ]);
 
     }
 
     public function ispatpancaputra(){
-        return view('layout.subsidiaries.index',[
-            'english' => English::firstWhere('slug','SUBSIDIARIESPT.ISPATPANCAPUTRA'),
+
+        $isexist = English::select("*")
+        ->where("slug","SUBSIDIARIESPT.ISPATPANCAPUTRA")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index',[
+            'english' => English::firstWhere('slug','=','SUBSIDIARIESPT.ISPATPANCAPUTRA'),
             'url'  => 'ispatpancaputra',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return view('layout.subsidiaries.index',[
+        //     'english' => English::firstWhere('slug','SUBSIDIARIESPT.ISPATPANCAPUTRA'),
+        //     'url'  => 'ispatpancaputra',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function ispatbukitbaja(){
-        return view('layout.subsidiaries.index',[
-            'english' => English::firstWhere('slug','SUBSIDIARIESPT.ISPATBUKITBAJA'),
+        $isexist = English::select("*")
+        ->where("slug","SUBSIDIARIESPT.ISPATBUKITBAJA")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index',[
+            'english' => English::firstWhere('slug','=','SUBSIDIARIESPT.ISPATBUKITBAJA'),
             'url'  => 'ispatbukitbaja',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return view('layout.subsidiaries.index',[
+        //     'english' => English::firstWhere('slug','SUBSIDIARIESPT.ISPATBUKITBAJA'),
+        //     'url'  => 'ispatbukitbaja',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
 
