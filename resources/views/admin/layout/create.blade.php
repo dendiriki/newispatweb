@@ -39,32 +39,30 @@
                     <option value="COMPANYGROUPVIDEO">COMPANY GROUP VIDEO</option>
                     <option value="COMPANYMANAGEMENTSYSTEM">COMPANY MANAGEMENT SYSTEM</option>
                     <option value="COMPANYSHE">COMPANY SHE</option>
-                    <option value="PRODUCTHIGHCARBONSTEEL">COMPANY GROUP VIDEO</option>
-                    <option value="PRODUCTLOWCARBONSTEEL">COMPANY GROUP VIDEO</option>
+                    <option value="PRODUCTHIGHCARBONSTEEL">PRODUCT HIGH CARBON STEEL</option>
+                    <option value="PRODUCTLOWCARBONSTEEL">PRODUCT LOW CARBON STEEL</option>
                     <option value="PRODUCTCOLDHEADINGQUALITYSTEEL">PRODUCT COLD HEADING QUALITY STEEL</option>
-                    <option value="PRODUCT GENERAL PURPOSE WR">PRODUCT GENERAL PURPOSE WR</option>
-                    <option value="PRODUCT WELDING ELECTRODE">PRODUCT WELDING ELECTRODE</option>
-                    <option value="PRODUCT PLAIN / DEFORM BAR">PRODUCT PLAIN / DEFORM BAR</option>
-                    <option value="PRODUCT GENERAL STRUCTURE">PRODUCT GENERAL STRUCTURE</option>
-                    <option value="PRODUCT NAILS & NAIL WIRE">PRODUCT NAILS & NAIL WIRE</option>
-                    <option value="PRODUCT SCRAP PROVIDER">PRODUCT SCRAP PROVIDER</option>
-                    <option value="INDUSTRIAL PROCESS FACILITAS">INDUSTRIAL PROCESS FACILITAS</option>
-                    <option value="INDUSTRIAL PROCESS FLOWCHART OF STEEL MAKING">INDUSTRIAL PROCESS FLOWCHART OF STEEL MAKING</option>
-                    <option value="INDUSTRIAL PROCESS FLOWCHART OF WIRE ROD ROLING">INDUSTRIAL PROCESS FLOWCHART OF WIRE ROD ROLING</option>
-                    <option value="INDUSTRIAL PROCESS ISPAT PANCA PUTRA FACILITAS">INDUSTRIAL PROCESS ISPAT PANCA PUTRA FACILITAS</option>
-                    <option value="INDUSTRIAL PROCESS ISPAT BUKIT BAJA FACILITAS">INDUSTRIAL PROCESS ISPAT BUKIT BAJA FACILITAS</option>
-                    <option value="INDUSTRIAL PROCESS ISPAT WIRE PRODUCTS FACILITAS">INDUSTRIAL PROCESS ISPAT WIRE PRODUCTS FACILITAS</option>
-                    <option value="SUBSIDIARIES PT. ISPAT WIRE PRODUCT">SUBSIDIARIES PT. ISPAT WIRE PRODUCT</option>
-                    <option value="SUBSIDIARIES PT. ISPAT PANCA PUTRA">SUBSIDIARIES PT. ISPAT PANCA PUTRA</option>
-                    <option value="SUBSIDIARIES PT. ISPAT BUKIT BAJA">SUBSIDIARIES PT. ISPAT BUKIT BAJA</option>
+                    <option value="PRODUCTGENERALPURPOSEWR">PRODUCT GENERAL PURPOSE WR</option>
+                    <option value="PRODUCTWELDINGELECTRODE">PRODUCT WELDING ELECTRODE</option>
+                    <option value="PRODUCTPLAINDEFORMBAR">PRODUCT PLAIN / DEFORM BAR</option>
+                    <option value="PRODUCTGENERALSTRUCTURE">PRODUCT GENERAL STRUCTURE</option>
+                    <option value="PRODUCTNAILS&NAILWIRE">PRODUCT NAILS & NAIL WIRE</option>
+                    <option value="PRODUCTSCRAPPROVIDER">PRODUCT SCRAP PROVIDER</option>
+                    <option value="INDUSTRIALPROCESSFACILITAS">INDUSTRIAL PROCESS FACILITAS</option>
+                    <option value="INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING">INDUSTRIAL PROCESS FLOWCHART OF STEEL MAKING</option>
+                    <option value="INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING">INDUSTRIAL PROCESS FLOWCHART OF WIRE ROD ROLING</option>
+                    <option value="INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS">INDUSTRIAL PROCESS ISPAT PANCA PUTRA FACILITAS</option>
+                    <option value="INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS">INDUSTRIAL PROCESS ISPAT BUKIT BAJA FACILITAS</option>
+                    <option value="INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS">INDUSTRIAL PROCESS ISPAT WIRE PRODUCTS FACILITAS</option>
+                    <option value="SUBSIDIARIESPT.ISPATWIREPRODUCT">SUBSIDIARIES PT. ISPAT WIRE PRODUCT</option>
+                    <option value="SUBSIDIARIESPT.ISPATPANCAPUTRA">SUBSIDIARIES PT. ISPAT PANCA PUTRA</option>
+                    <option value="SUBSIDIARIESPT.ISPATBUKITBAJA">SUBSIDIARIES PT. ISPAT BUKIT BAJA</option>
                     <option value="ENVIRONMENT">ENVIRONMENT</option>
-                    <option value="BROCHURE PT. ISPAT INDO">BROCHURE PT. ISPAT INDO</option>
-                    <option value="BROCHURE PT. ISPAT WIRE PRODUCT">BROCHURE PT. ISPAT WIRE PRODUCT</option>
-                    <option value="BROCHURE PT. ISPAT PANCA PUTRA">BROCHURE PT. ISPAT PANCA PUTRA</option>
-                    <option value="BROCHURE PT. ISPAT BUKIT BAJA">BROCHURE PT. ISPAT BUKIT BAJA</option>
+                    <option value="BROCHUREPT.ISPATINDO">BROCHURE PT. ISPAT INDO</option>
+                    <option value="BROCHUREPT.ISPATWIREPRODUCT">BROCHURE PT. ISPAT WIRE PRODUCT</option>
+                    <option value="BROCHUREPT.ISPATPANCAPUTRA">BROCHURE PT. ISPAT PANCA PUTRA</option>
+                    <option value="BROCHUREPT.ISPATBUKITBAJA">BROCHURE PT. ISPAT BUKIT BAJA</option>
                     <option value="CAREERS">CAREERS</option>
-
-
                 </select>
             </div>
             <div class="mb-3">

@@ -40,146 +40,398 @@ class LayoutController extends Controller
             'massage' => ['min:3'],
         ]);
 
-
-
         $data = Customer::create($validatedData);
-
 
         Mail::to('marketing.indo@mittalsteel.com')->cc(['dendi.riki@mittalsteel.com'])->send(new SendEmail($data));
         return redirect('/')->with('success','Successfully send massage');
     }
 
     public function bod(){
-        return View ('layout.company.index',[
-            'english' => English::firstWhere('slug','COMPANYBOARDOFDIRECTORS'),
-            'url' => 'bod',
+
+        $isexist = English::select("*")
+        ->where("slug","COMPANYBOARDOFDIRECTORS")->exists();
+
+        if($isexist){
+             return View('layout.company.index',[
+            'english' => English::firstWhere('slug','=','COMPANYBOARDOFDIRECTORS'),
+            'url'  => 'bod',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return View ('layout.company.index',[
+        //     'english' => English::firstWhere('slug','COMPANYBOARDOFDIRECTORS'),
+        //     'url' => 'bod',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function profilindo() {
 
-        return View ('layout.company.index',[
-            'english' => English::firstWhere('slug','COMPANYPROFILE'),
-            'url' => 'profilindo',
+        $isexist = English::select("*")
+        ->where("slug","COMPANYPROFILE")->exists();
+
+        if($isexist){
+             return View('layout.company.index',[
+            'english' => English::firstWhere('slug','=','COMPANYPROFILE'),
+            'url'  => 'profilindo',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
-
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'url'  => 'profilindo',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return View ('layout.company.index',[
+        //     'english' => English::firstWhere('slug','COMPANYPROFILE'),
+        //     'url' => 'profilindo',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+
+        // ]);
 
     }
 
     public function vision(){
 
-        return View ('layout.company.index',[
-            'english' => English::firstWhere('slug','COMPANYVISION,MISSION&VALUES'),
-            'url' => 'vision',
+        $isexist = English::select("*")
+        ->where("slug","COMPANYVISION,MISSION&VALUES")->exists();
+
+        if($isexist){
+             return View('layout.company.index',[
+            'english' => English::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES'),
+            'url'  => 'vision',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return View ('layout.company.index',[
+        //     'english' => English::firstWhere('slug','COMPANYVISION,MISSION&VALUES'),
+        //     'url' => 'vision',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
 
     }
 
     public function highlight(){
 
-        return View ('layout.company.index',[
-            'english' => English::firstWhere('slug','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'),
-            'url' => 'highlight',
+        $isexist = English::select("*")
+        ->where("slug","COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'),
+            'url'  => 'highlight',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return View ('layout.company.index',[
+        //     'english' => English::firstWhere('slug','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'),
+        //     'url' => 'highlight',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function milestone(){
-        return view('layout.company.index',[
-            'english' => English::firstWhere('slug','COMPANYMANAGEMENTSYSTEM'),
-            'url' => 'milestone',
+
+        $isexist = English::select("*")
+        ->where("slug","COMPANYMANAGEMENTSYSTEM")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','COMPANYMANAGEMENTSYSTEM'),
+            'url'  => 'milestone',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return view('layout.company.index',[
+        //     'english' => English::firstWhere('slug','COMPANYMANAGEMENTSYSTEM'),
+        //     'url' => 'milestone',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function she(){
-        return view('layout.company.index',[
-            'english' => English::firstWhere('slug','COMPANYSHE'),
-            'url' => 'she',
+
+        $isexist = English::select("*")
+        ->where("slug","COMPANYSHE")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','COMPANYSHE'),
+            'url'  => 'she',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return view('layout.company.index',[
+        //     'english' => English::firstWhere('slug','COMPANYSHE'),
+        //     'url' => 'she',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function highcarbon(){
-        return View ('layout.product.index',[
-            'english' => English::firstWhere('slug','PRODUCTHIGHCARBONSTEEL'),
-            'url' => 'highcarbon',
+
+        $isexist = English::select("*")
+        ->where("slug","PRODUCTHIGHCARBONSTEEL")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','PRODUCTHIGHCARBONSTEEL'),
+            'url'  => 'highcarbon',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return View ('layout.product.index',[
+        //     'english' => English::firstWhere('slug','PRODUCTHIGHCARBONSTEEL'),
+        //     'url' => 'highcarbon',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function lowcarbon(){
-        return View ('layout.product.index',[
-            'english' => English::firstWhere('slug','PRODUCTLOWCARBONSTEEL'),
-            'url' =>    'lowcarbon',
+
+        $isexist = English::select("*")
+        ->where("slug","PRODUCTLOWCARBONSTEEL")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','PRODUCTLOWCARBONSTEEL'),
+            'url'  => 'lowcarbon',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return View ('layout.product.index',[
+        //     'english' => English::firstWhere('slug','PRODUCTLOWCARBONSTEEL'),
+        //     'url' =>    'lowcarbon',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function clodheading(){
-        return view('layout.product.index',[
-            'english' => English::firstWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
+
+        $isexist = English::select("*")
+        ->where("slug","PRODUCTCOLDHEADINGQUALITYSTEEL")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','PRODUCTCOLDHEADINGQUALITYSTEEL'),
             'url'  => 'clodheading',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return view('layout.product.index',[
+        //     'english' => English::firstWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
+        //     'url'  => 'clodheading',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function generalpw(){
-        return view('layout.product.index',[
-            'english' => English::firstWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
+
+        $isexist = English::select("*")
+        ->where("slug","PRODUCTGENERALPURPOSEWR")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','PRODUCTGENERALPURPOSEWR'),
             'url'  => 'generalpw',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
-
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return view('layout.product.index',[
+        //     'english' => English::firstWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
+        //     'url'  => 'generalpw',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+
+        // ]);
     }
 
     public function welding(){
-        return view('layout.product.index',[
-            'english' => English::firstWhere('slug','PRODUCTWELDINGELECTRODE'),
+        $isexist = English::select("*")
+        ->where("slug","PRODUCTWELDINGELECTRODE")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','PRODUCTWELDINGELECTRODE'),
             'url'  => 'welding',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return view('layout.product.index',[
+        //     'english' => English::firstWhere('slug','PRODUCTWELDINGELECTRODE'),
+        //     'url'  => 'welding',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function pline(){
-        return view('layout.product.index',[
-            'english' => English::firstWhere('slug','PRODUCTPLAINDEFORMBAR'),
+        $isexist = English::select("*")
+        ->where("slug","PRODUCTPLAINDEFORMBAR")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','PRODUCTPLAINDEFORMBAR'),
             'url'  => 'pline',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+
+        // return view('layout.product.index',[
+        //     'english' => English::firstWhere('slug','PRODUCTPLAINDEFORMBAR'),
+        //     'url'  => 'pline',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function structure(){
-        return view('layout.product.index',[
-            'english' => English::firstWhere('slug','PRODUCTGENERALSTRUCTURE'),
+
+        $isexist = English::select("*")
+        ->where("slug","PRODUCTGENERALSTRUCTURE")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','PRODUCTGENERALSTRUCTURE'),
             'url'  => 'structure',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return view('layout.product.index',[
+        //     'english' => English::firstWhere('slug','PRODUCTGENERALSTRUCTURE'),
+        //     'url'  => 'structure',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function nails(){
-        return view('layout.product.index',[
-            'english' => English::firstWhere('slug','PRODUCTNAILS&NAILWIRE'),
+
+        $isexist = English::select("*")
+        ->where("slug","PRODUCTNAILS&NAILWIRE")->exists();
+
+        if($isexist){
+             return View('layout.product.index',[
+            'english' => English::firstWhere('slug','=','PRODUCTNAILS&NAILWIRE'),
             'url'  => 'nails',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return view('layout.product.index',[
+        //     'english' => English::firstWhere('slug','PRODUCTNAILS&NAILWIRE'),
+        //     'url'  => 'nails',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
     }
 
     public function ispatwireproduct(){
@@ -271,7 +523,7 @@ class LayoutController extends Controller
         ->where("slug","INDUSTRIALPROCESSFACILITAS")->exists();
 
         if($isexist){
-             return View('layout.subsidiaries.index',[
+             return View('layout.industrila.index',[
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSFACILITAS'),
             'url'  => 'fasilitas',
             'class' => 'sub_page',
@@ -299,7 +551,7 @@ class LayoutController extends Controller
         ->where("slug","INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING")->exists();
 
         if($isexist){
-             return View('layout.subsidiaries.index',[
+             return View('layout.industrila.index',[
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING'),
             'url'  => 'steelmaking',
             'class' => 'sub_page',
@@ -325,7 +577,7 @@ class LayoutController extends Controller
         ->where("slug","INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING")->exists();
 
         if($isexist){
-             return View('layout.subsidiaries.index',[
+             return View('layout.industrila.index',[
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING'),
             'url'  => 'rolling',
             'class' => 'sub_page',
@@ -353,7 +605,7 @@ class LayoutController extends Controller
         ->where("slug","INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS")->exists();
 
         if($isexist){
-             return View('layout.subsidiaries.index',[
+             return View('layout.industrila.index',[
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS'),
             'url'  => 'fasilitaspancaputra',
             'class' => 'sub_page',
@@ -380,7 +632,7 @@ class LayoutController extends Controller
         ->where("slug","INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS")->exists();
 
         if($isexist){
-             return View('layout.subsidiaries.index',[
+             return View('layout.industrila.index',[
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS'),
             'url'  => 'fasilitasbukitnaja',
             'class' => 'sub_page',
@@ -407,7 +659,7 @@ class LayoutController extends Controller
         ->where("slug","INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS")->exists();
 
         if($isexist){
-             return View('layout.subsidiaries.index',[
+             return View('layout.industrila.index',[
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS'),
             'url'  => 'fasilitaswire',
             'class' => 'sub_page',
@@ -415,6 +667,7 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'fasilitaswire',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
@@ -442,6 +695,7 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'karir',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);

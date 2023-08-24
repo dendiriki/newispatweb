@@ -11,9 +11,9 @@
 
 
 
-    <div class="{{ $navbar }}">
 
-    </div>
+
+
 
 
     <!-- slider section -->
@@ -33,11 +33,15 @@
         </div>
         </section>
         <!-- end slider section -->
-    </div>
 
 
+</div>
+
+</div>
 
 
+    <div class="timpahero"></div>
+<div>
 
 
     <!-- about section -->
@@ -72,6 +76,9 @@
         </div>
     </section>
 
+    <div class="timpaau">
+
+    </div>
     <!-- end about section -->
 
 

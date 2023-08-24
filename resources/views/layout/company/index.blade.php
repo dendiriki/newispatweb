@@ -1,7 +1,7 @@
 @extends('layout.tools.main')
 
 @section('content')
-    <div class="timpanav">
+    {{-- <div class="timpanav"> --}}
 
     </div>
 
@@ -13,7 +13,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-9 ms-sm-auto col-lg-8 px-md-4">
+                        <div class="col-md-9 ms-sm-auto col-lg-12 px-md-4">
                             <h1>{{ $english->title }}</h1>
                             <br><br>
                             <div>{!! $english->content !!}</div>

@@ -1,9 +1,10 @@
 <div class="{{ $navbar }}">
+
     <!-- header section strats -->
 
     <header class="header_section">
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container fixed-top">
+            <nav class="navbar navbar-expand-lg custom_nav-container fixed-top navbar navbar-expand-lg avbar-light bg-light">
                 <a class="navbar-brand" href="/">
                     <img src="assets/img/logo-ispat.png" alt="Logo" />
                     <span>
@@ -63,13 +64,16 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="karir">
-                                <span>
-                                    Careers
-                                </span>
-                            </a>
-                        </li>
+                        <li class="topnav">
+                            <div class="login-container">
+
+                                <a href="{{$url}}_indo">INDONESIA
+                                <img src="assets/img/logo/indo.png"  alt="logo"/>
+
+                                </a>
+
+                              </div>
+                          </li>
                         {{-- <li class="topnav">
                             <div class="login-container">
                                 <a href="{{ $url }}_indo" ">ENGLISH</a>

@@ -1,113 +1,86 @@
-<style>
-    .navbar-custom {
-      background-color: rgb(194, 219, 254)
-    }
+<div class="{{ $navbar }}">
 
-    .dropdown:hover > .dropdown-menu .dropright:hover > .dropdown-menu{
-      display: block;
-    }
+    <!-- header section strats -->
 
-    .fontcolor{
-      color: black;
-    }
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container fixed-top navbar navbar-expand-lg avbar-light bg-light">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/img/logo-ispat.png" alt="Logo" />
+                    <span>
+                        ISPAT INDO
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav  ml-auto">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link" type="button" data-toggle="dropdown">Company</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="profilindo_indo">Profile</a>
+                                    <a class="dropdown-item" href="bod_indo">Board od Directors</a>
+                                    <a class="dropdown-item" href="vision">Visin, Mision & Value</a>
+                                    <a class="dropdown-item" href="highlight">Achivements</a>
+                                    <a class="dropdown-item" href="milestone">Management System</a>
+                                    <a class="dropdown-item" href="she">Safety, Healty and Environment</a>
+                                </div>
+                            </div>
+                        </li>
 
-    .peding-nav{
-        padding-right: 60px;
-    }
+                        <li class="nav-item">
+                            <a class="nav-link" href="customer-center">
+                                <span>
+                                    Customer Center
+                                </span>
+                            </a>
+                        </li>
 
-  </style>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link" type="button" data-toggle="dropdown">Industrial Process</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="fasilitas">Facilities</a>
+                                    <a class="dropdown-item" href="steelmaking">Process Flowchart of Steel Making</a>
+                                    <a class="dropdown-item" href="rolling">Process Flowchart of Wire Rod Rolling</a>
+                                    <a class="dropdown-item" href="fasilitaspancaputra">Process Ispat Panca Putera Facilities</a>
+                                    <a class="dropdown-item" href="fasilitasbukitnaja">Process Ispat Bukit Baja Facilities</a>
+                                    <a class="dropdown-item" href="fasilitaswire">Process Ispat Wire Products Facilities</a>
+                                </div>
+                            </div>
+                        </li>
 
-<nav class="navbar navbar-custom navbar-expand-lg fixed-top">
-    <div class="container-fluid">
-    <a class="logo-font peding-nav " href="/">
-        <img src="assets/img/logobiru.png" alt="" width="65" height="50"><p class="d-inline px-2">ISPAT INDO</p>
-    </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse navab-font" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-                <a class="nav-link active" href="/">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Company
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="profilindo_indo">Profile</a></li>
-                <li><a class="dropdown-item" href="bod_indo">Board Of Directors</a></li>
-                <li><a class="dropdown-item" href="vision">Vision, Mission & Values</a></li>
-                <li><a class="dropdown-item" href="highlight">Highlights & Achievments</a></li>
-                <li><a class="dropdown-item" href="#">Group Video</a></li>
-                <li><a class="dropdown-item" href="#">Company Milestone</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Product
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="highcarbon">High Carbon Steel</a></li>
-                <li><a class="dropdown-item" href="lowcarbon">Low Carbon Steel</a></li>
-                <li><a class="dropdown-item" href="clodheading">Cold Heading Quality Steel</a></li>
-                <li><a class="dropdown-item" href="#">General Purpose WR (SIRIM)</a></li>
-                <li><a class="dropdown-item" href="#">Welding Electrode</a></li>
-                <li><a class="dropdown-item" href="#">Plain / Deform Bar</a></li>
-                <li><a class="dropdown-item" href="#">General </a></li>
-                <li><a class="dropdown-item" href="#">Plain / Deform Bar</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Industrial Process
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Facilities</a></li>
-                <li><a class="dropdown-item" href="#">Process Flowchart of Steel Making</a></li>
-                <li><a class="dropdown-item" href="#">Process Flowchart of Wire Rod Rolling</a></li>
-                <li><a class="dropdown-item" href="#">Process Ispat Panca Putera Facilities</a></li>
-                <li><a class="dropdown-item" href="#">Process Ispat Bukit Baja Facilities</a></li>
-                <li><a class="dropdown-item" href="#">Process Ispat Wire Products Facilities</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Subsidiaries
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">PT. Ispat Wire Product</a></li>
-                <li><a class="dropdown-item" href="#">PT. Ispat Panca Putera</a></li>
-                <li><a class="dropdown-item" href="#">PT. Ispat Bukit Baja</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Scrap Provider</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="customer-center">Customer Center</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Environment</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Brochure
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">PT. Ispat Indo</a></li>
-              <li><a class="dropdown-item" href="#">PT. Ispat Wire Product</a></li>
-              <li><a class="dropdown-item" href="#">PT. Ispat Panca Putra</a></li>
-              <li><a class="dropdown-item" href="#">PT. Ispat Bukit Baja</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Careers</a>
-          </li>
-          <li>
-            <a href="{{$url}}" class="btn btn-primary">English</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+                        </form>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link" type="button" data-toggle="dropdown">Subsidiaries</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="ispatwireproduct">PT Ispat Wire Product</a>
+                                    <a class="dropdown-item" href="ispatpancaputra">PT Ispat Panca Putera</a>
+                                    <a class="dropdown-item" href="ispatbukitbaja">PT Ispat Bukit Baja</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="topnav">
+                            <div class="login-container">
+
+                                <a href="{{$url}}">ENGLISH
+                                <img src="assets/img/logo/english.png"  alt="logo"/>
+
+                                </a>
+
+                              </div>
+                          </li>
+                        {{-- <li class="topnav">
+                            <div class="login-container">
+                                <a href="{{ $url }}_indo" ">ENGLISH</a>
+                            </div>
+                        </li> --}}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>

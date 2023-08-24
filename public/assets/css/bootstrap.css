@@ -6573,7 +6573,9 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #213092 !important;
+  opacity: 1;
+  height: 70px;
 }
 
 a.bg-light:hover, a.bg-light:focus,

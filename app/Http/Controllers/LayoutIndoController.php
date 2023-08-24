@@ -16,10 +16,16 @@ class LayoutIndoController extends Controller
         if($isexist){
              return View ('layout.company.index_indo',[
             'post' => Post::firstWhere('slug','=','COMPANYBOARDOFDIRECTORS'),
-            'url' => 'bod'
+            'url' => 'bod',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
         ]);
         }else{
-            return view('layout');
+            return view('layout.notfound.index',[
+                'url' => 'bod',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
         }
 
         // return View ('layout.company.index_indo',[
@@ -30,10 +36,30 @@ class LayoutIndoController extends Controller
 
     public function profilindo_indo() {
 
-        return View ('layout.company.index_indo',[
-            'post' => Post::firstWhere('slug','COMPANYPROFILE'),
-            'url' => 'profilindo'
+        $isexist = Post::select("*")
+        ->where("slug","COMPANYPROFILE")->exists();
+
+        if($isexist){
+             return View ('layout.company.index_indo',[
+            'post' => Post::firstWhere('slug','=','COMPANYPROFILE'),
+            'url' => 'profilindo',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
         ]);
+        }else{
+            return view('layout.notfound.index',[
+                'url' => 'profilindo',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+        // return View ('layout.company.index_indo',[
+        //     'post' => Post::firstWhere('slug','COMPANYPROFILE'),
+        //     'url' => 'profilindo',
+        //     'class' => 'sub_page',
+        //     'navbar' =>'timpanav'
+        // ]);
 
     }
 

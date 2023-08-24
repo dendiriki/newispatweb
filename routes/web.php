@@ -32,6 +32,14 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('_indo', function () {
+    return view('layout.home.index_indo',[
+        'url' =>'/',
+        'class' => '',
+        'navbar' =>'hero_area'
+    ]);
+});
+
 //Uji Coba test template tanpa DRL
 Route::get('/test', function () {
     return view('layout');
@@ -47,7 +55,7 @@ Route::resource('admin/posts', PostController::class)->middleware('auth');
 Route::resource('admin/english',EnglishController::class)->middleware('auth');
 Route::resource('admin/customer', CustomerController::class)->middleware('auth');
 
-//layout Rutes
+//layout Rutes english
 Route::get('/customer-center',[LayoutController::class,'customer'])->middleware('guest');
 Route::post('/customer-post',[LayoutController::class,'postcustomer'])->middleware('guest');
 Route::get('bod',[LayoutController::class,'bod'])->middleware('guest');
@@ -82,7 +90,7 @@ Route::get('fasilitaswire',[LayoutController::class,'fasilitaswire'])->middlewar
 
 Route::get('karir',[LayoutController::class,'karir'])->middleware('guest');
 
-//indonesia
+////layout Rutes indonesia
 Route::get('profilindo_indo',[LayoutIndoController::class,'profilindo_indo'])->middleware('guest');
 Route::get('bod_indo',[LayoutIndoController::class,'bod_indo'])->middleware('guest');
 //email
