@@ -1,7 +1,6 @@
-@extends('layout.tools.main')
+@extends('layout.tools.main_indo')
 
 @section('content')
-    <!-- ====== Content dari customer center -->
     <section class="expert_section layout_padding">
         <div class="container">
             <div class="heading_container ">

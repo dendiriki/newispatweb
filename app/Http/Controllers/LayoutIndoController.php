@@ -4,10 +4,22 @@ namespace App\Http\Controllers;
 
 namespace App\Http\Controllers;
 use App\Models\Post;
+use App\Models\Grade;
 use Illuminate\Http\Request;
 
 class LayoutIndoController extends Controller
 {
+
+    public function customer_indo() {
+        return view('layout.customercenter.index_indo',[
+            'grades' => Grade::all(),
+            'url'  => 'customer-center',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+
+    }
+
     public function bod_indo(){
 
         $isexist = Post::select("*")
@@ -27,11 +39,6 @@ class LayoutIndoController extends Controller
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return View ('layout.company.index_indo',[
-        //     'post' => Post::where('slug','=','COMPANYBOARDOFDIRECTORS'),
-        //     'url' => 'bod'
-        // ]);
     }
 
     public function profilindo_indo() {
@@ -53,14 +60,6 @@ class LayoutIndoController extends Controller
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return View ('layout.company.index_indo',[
-        //     'post' => Post::firstWhere('slug','COMPANYPROFILE'),
-        //     'url' => 'profilindo',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
-
     }
 
     public function vision_indo(){

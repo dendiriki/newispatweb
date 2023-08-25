@@ -7,14 +7,13 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Grade;
 use App\Mail\SendEmail;
 use App\Models\English;
-use App\Models\Post;
 
 class LayoutController extends Controller
 {
     public function customer() {
         return view('layout.customercenter.index',[
             'grades' => Grade::all(),
-            'url'  => 'customer',
+            'url'  => 'customer-center',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);
@@ -60,17 +59,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'bod',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return View ('layout.company.index',[
-        //     'english' => English::firstWhere('slug','COMPANYBOARDOFDIRECTORS'),
-        //     'url' => 'bod',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function profilindo() {
@@ -92,15 +85,6 @@ class LayoutController extends Controller
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return View ('layout.company.index',[
-        //     'english' => English::firstWhere('slug','COMPANYPROFILE'),
-        //     'url' => 'profilindo',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-
-        // ]);
-
     }
 
     public function vision(){
@@ -117,19 +101,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'vision',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-        // return View ('layout.company.index',[
-        //     'english' => English::firstWhere('slug','COMPANYVISION,MISSION&VALUES'),
-        //     'url' => 'vision',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
-
     }
 
     public function highlight(){
@@ -146,18 +122,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'highlight',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-        // return View ('layout.company.index',[
-        //     'english' => English::firstWhere('slug','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'),
-        //     'url' => 'highlight',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function milestone(){
@@ -174,18 +143,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'milestone',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-        // return view('layout.company.index',[
-        //     'english' => English::firstWhere('slug','COMPANYMANAGEMENTSYSTEM'),
-        //     'url' => 'milestone',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function she(){
@@ -202,17 +164,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'she',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return view('layout.company.index',[
-        //     'english' => English::firstWhere('slug','COMPANYSHE'),
-        //     'url' => 'she',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function highcarbon(){
@@ -229,17 +185,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'highcarbon',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return View ('layout.product.index',[
-        //     'english' => English::firstWhere('slug','PRODUCTHIGHCARBONSTEEL'),
-        //     'url' => 'highcarbon',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function lowcarbon(){
@@ -256,18 +206,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'lowcarbon',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-        // return View ('layout.product.index',[
-        //     'english' => English::firstWhere('slug','PRODUCTLOWCARBONSTEEL'),
-        //     'url' =>    'lowcarbon',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function clodheading(){
@@ -284,17 +227,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'clodheading',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return view('layout.product.index',[
-        //     'english' => English::firstWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
-        //     'url'  => 'clodheading',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function generalpw(){
@@ -311,19 +248,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'generalpw',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-        // return view('layout.product.index',[
-        //     'english' => English::firstWhere('slug','PRODUCTCOLDHEADINGQUALITYSTEEL'),
-        //     'url'  => 'generalpw',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-
-        // ]);
     }
 
     public function welding(){
@@ -339,18 +268,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'welding',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-        // return view('layout.product.index',[
-        //     'english' => English::firstWhere('slug','PRODUCTWELDINGELECTRODE'),
-        //     'url'  => 'welding',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function pline(){
@@ -366,18 +288,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'pline',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-        // return view('layout.product.index',[
-        //     'english' => English::firstWhere('slug','PRODUCTPLAINDEFORMBAR'),
-        //     'url'  => 'pline',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function structure(){
@@ -394,17 +309,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'structure',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return view('layout.product.index',[
-        //     'english' => English::firstWhere('slug','PRODUCTGENERALSTRUCTURE'),
-        //     'url'  => 'structure',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function nails(){
@@ -421,17 +330,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'nails',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return view('layout.product.index',[
-        //     'english' => English::firstWhere('slug','PRODUCTNAILS&NAILWIRE'),
-        //     'url'  => 'nails',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function ispatwireproduct(){
@@ -448,19 +351,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'ispatwireproduct',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return view('layout.subsidiaries.index',[
-        // 'english' => English::firstWhere('slug','SUBSIDIARIESPT.ISPATWIREPRODUCT'),
-        // 'url'  => 'ispatwireproduct',
-        // 'class' => 'sub_page',
-        // 'navbar' =>'timpanav'
-
-        // ]);
-
     }
 
     public function ispatpancaputra(){
@@ -477,17 +372,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'ispatpancaputra',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return view('layout.subsidiaries.index',[
-        //     'english' => English::firstWhere('slug','SUBSIDIARIESPT.ISPATPANCAPUTRA'),
-        //     'url'  => 'ispatpancaputra',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function ispatbukitbaja(){
@@ -503,18 +392,12 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'ispatbukitbaja',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
 
-
-        // return view('layout.subsidiaries.index',[
-        //     'english' => English::firstWhere('slug','SUBSIDIARIESPT.ISPATBUKITBAJA'),
-        //     'url'  => 'ispatbukitbaja',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
 
@@ -531,19 +414,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'fasilitas',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-
-        // return view('layout.subsidiaries.index',[
-        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSFACILITAS'),
-        //     'url'  => 'fasilitas',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function steelmaking() {
@@ -559,17 +434,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'steelmaking',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-        // return view('layout.subsidiaries.index',[
-        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING'),
-        //     'url'  => 'steelmaking',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function rolling(){
@@ -585,19 +454,12 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'rolling',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
 
-
-
-        // return view('layout.subsidiaries.index',[
-        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING'),
-        //     'url'  => 'rolling',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function fasilitaspancaputra(){
@@ -613,18 +475,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'fasilitaspancaputra',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-        // return view('layout.subsidiaries.index',[
-        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS'),
-        //     'url'  => 'fasilitaspancaputra',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function fasilitasbukitnaja(){
@@ -640,18 +495,11 @@ class LayoutController extends Controller
         ]);
         }else{
             return view('layout.notfound.index',[
+                'url'  => 'fasilitasbukitnaja',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-        // return view('layout.subsidiaries.index',[
-        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS'),
-        //     'url'  => 'fasilitasbukitnaja',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function fasilitaswire(){
@@ -672,14 +520,6 @@ class LayoutController extends Controller
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-        // return view('layout.subsidiaries.index',[
-        //     'english' => English::firstWhere('slug','INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS'),
-        //     'url'  => 'fasilitaswire',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
 
     public function karir(){
@@ -700,21 +540,7 @@ class LayoutController extends Controller
                 'navbar' =>'timpanav'
             ]);
         }
-
-
-
-        // return view('layout.karir.index',[
-        //     'english' => English::firstWhere('slug','CAREERS'),
-        //     'url'  => 'karir',
-        //     'class' => 'sub_page',
-        //     'navbar' =>'timpanav'
-        // ]);
     }
-
-
-
-
-
 
 
 
