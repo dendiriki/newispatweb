@@ -94,6 +94,7 @@ Route::get('karir',[LayoutController::class,'karir'])->middleware('guest');
 Route::get('/customer-center_indo',[LayoutIndoController::class,'customer_indo'])->middleware('guest');
 Route::get('profilindo_indo',[LayoutIndoController::class,'profilindo_indo'])->middleware('guest');
 Route::get('bod_indo',[LayoutIndoController::class,'bod_indo'])->middleware('guest');
+Route::get('vision_indo',[LayoutIndoController::class,'vision_indo'])->middleware('guest');
 //email
 
 // Route::get('send-email',function(){

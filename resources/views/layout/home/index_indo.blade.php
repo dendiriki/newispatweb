@@ -65,7 +65,7 @@
                                 sebesar 60.000 ton pertahunnya, saat ini kapasitas produksi Ispat Indo mencapai
                                 600.000 ton...
                             </p>
-                            <a href="profilindo">
+                            <a href="profilindo_indo">
                                 Read More
                             </a>
                         </div>

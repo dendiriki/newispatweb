@@ -4,8 +4,8 @@
 
     <header class="header_section">
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container fixed-top navbar navbar-expand-lg avbar-light bg-light">
-                <a class="navbar-brand" href="/">
+            <nav class="navbar navbar-expand-lg custom_nav-container fixed-top navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="_indo">
                     <img src="assets/img/logo-ispat.png" alt="Logo" />
                     <span>
                         ISPAT INDO
@@ -23,7 +23,7 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="profilindo_indo">Profile</a>
                                     <a class="dropdown-item" href="bod_indo">Board od Directors</a>
-                                    <a class="dropdown-item" href="vision">Visin, Mision & Value</a>
+                                    <a class="dropdown-item" href="vision_indo">Visin, Mision & Value</a>
                                     <a class="dropdown-item" href="highlight">Achivements</a>
                                     <a class="dropdown-item" href="milestone">Management System</a>
                                     <a class="dropdown-item" href="she">Safety, Healty and Environment</a>

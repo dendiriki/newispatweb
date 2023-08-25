@@ -4,7 +4,7 @@
 
     <header class="header_section">
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container fixed-top navbar navbar-expand-lg avbar-light bg-light">
+            <nav class="navbar navbar-expand-lg custom_nav-container fixed-top navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="/">
                     <img src="assets/img/logo-ispat.png" alt="Logo" />
                     <span>
