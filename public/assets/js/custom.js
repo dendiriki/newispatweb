@@ -15,6 +15,10 @@ $(document).ready(function () {
 
 //css riki
 
+// function myFunctioning() {
+//     alert("Successfully send massage");
+//  }
+
 
 // $(document).ready(function() {
 //     var $navbar = $('.navbar');

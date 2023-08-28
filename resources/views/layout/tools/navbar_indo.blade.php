@@ -24,15 +24,15 @@
                                     <a class="dropdown-item" href="profilindo_indo">Profile</a>
                                     <a class="dropdown-item" href="bod_indo">Board od Directors</a>
                                     <a class="dropdown-item" href="vision_indo">Visin, Mision & Value</a>
-                                    <a class="dropdown-item" href="highlight">Achivements</a>
-                                    <a class="dropdown-item" href="milestone">Management System</a>
-                                    <a class="dropdown-item" href="she">Safety, Healty and Environment</a>
+                                    <a class="dropdown-item" href="highlight_indo">Achivements</a>
+                                    <a class="dropdown-item" href="milestone_indo">Management System</a>
+                                    <a class="dropdown-item" href="she_indo">Safety, Healty and Environment</a>
                                 </div>
                             </div>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="customer-center">
+                            <a class="nav-link" href="customer-center_indo">
                                 <span>
                                     Customer Center
                                 </span>
@@ -43,12 +43,12 @@
                             <div class="dropdown">
                                 <a class="nav-link" type="button" data-toggle="dropdown">Industrial Process</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="fasilitas">Facilities</a>
-                                    <a class="dropdown-item" href="steelmaking">Process Flowchart of Steel Making</a>
-                                    <a class="dropdown-item" href="rolling">Process Flowchart of Wire Rod Rolling</a>
-                                    <a class="dropdown-item" href="fasilitaspancaputra">Process Ispat Panca Putera Facilities</a>
-                                    <a class="dropdown-item" href="fasilitasbukitnaja">Process Ispat Bukit Baja Facilities</a>
-                                    <a class="dropdown-item" href="fasilitaswire">Process Ispat Wire Products Facilities</a>
+                                    <a class="dropdown-item" href="fasilitas_indo">Facilities</a>
+                                    <a class="dropdown-item" href="steelmaking_indo">Process Flowchart of Steel Making</a>
+                                    <a class="dropdown-item" href="rolling_indo">Process Flowchart of Wire Rod Rolling</a>
+                                    <a class="dropdown-item" href="fasilitaspancaputra_indo">Process Ispat Panca Putera Facilities</a>
+                                    <a class="dropdown-item" href="fasilitasbukitnaja_indo">Process Ispat Bukit Baja Facilities</a>
+                                    <a class="dropdown-item" href="fasilitaswire_indo">Process Ispat Wire Products Facilities</a>
                                 </div>
                             </div>
                         </li>
@@ -58,9 +58,9 @@
                             <div class="dropdown">
                                 <a class="nav-link" type="button" data-toggle="dropdown">Subsidiaries</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="ispatwireproduct">PT Ispat Wire Product</a>
-                                    <a class="dropdown-item" href="ispatpancaputra">PT Ispat Panca Putera</a>
-                                    <a class="dropdown-item" href="ispatbukitbaja">PT Ispat Bukit Baja</a>
+                                    <a class="dropdown-item" href="ispatwireproduct_indo">PT Ispat Wire Product</a>
+                                    <a class="dropdown-item" href="ispatpancaputra_indo">PT Ispat Panca Putera</a>
+                                    <a class="dropdown-item" href="ispatbukitbaja_indo">PT Ispat Bukit Baja</a>
                                 </div>
                             </div>
                         </li>

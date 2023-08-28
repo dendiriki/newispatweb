@@ -41,9 +41,11 @@ class LayoutController extends Controller
 
         $data = Customer::create($validatedData);
 
-        Mail::to('marketing.indo@mittalsteel.com')->cc(['dendi.riki@mittalsteel.com'])->send(new SendEmail($data));
+        Mail::to('dendirikirahmawan@gmail.com')->cc(['dendi.riki@mittalsteel.com'])->send(new SendEmail($data));
         return redirect('/')->with('success','Successfully send massage');
     }
+
+    // marketing.indo@mittalsteel.com
 
     public function bod(){
 
@@ -541,7 +543,5 @@ class LayoutController extends Controller
             ]);
         }
     }
-
-
 
 }

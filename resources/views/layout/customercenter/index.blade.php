@@ -124,10 +124,10 @@
                                         <select class="form-select mr-2" name="grade">
                                             @foreach ($grades as $grade)
                                                 @if (old('grade') == $grade->id)
-                                                    <option value="{{ $grade->id }}" selected>{{ $grade->name }}
+                                                    <option value="{{ $grade->name }}" selected>{{ $grade->name }}
                                                     </option>
                                                 @else
-                                                    <option value="{{ $grade->id }}">{{ $grade->name }}</option>
+                                                    <option value="{{ $grade->name }}">{{ $grade->name }}</option>
                                                 @endif
                                             @endforeach
                                         </select>
@@ -135,10 +135,10 @@
                                         <select class="form-control mr-2" name="grade2">
                                             @foreach ($grades as $grade)
                                                 @if (old('grade') == $grade->id)
-                                                    <option value="{{ $grade->id }}" selected>{{ $grade->name }}
+                                                    <option value="{{ $grade->name }}" selected>{{ $grade->name }}
                                                     </option>
                                                 @else
-                                                    <option value="{{ $grade->id }}">{{ $grade->name }}</option>
+                                                    <option value="{{ $grade->name }}">{{ $grade->name }}</option>
                                                 @endif
                                             @endforeach
                                         </select>
@@ -146,10 +146,10 @@
                                         <select class="form-control mr-2" name="grade3">
                                             @foreach ($grades as $grade)
                                                 @if (old('grade') == $grade->id)
-                                                    <option value="{{ $grade->id }}" selected>{{ $grade->name }}
+                                                    <option value="{{ $grade->name }}" selected>{{ $grade->name }}
                                                     </option>
                                                 @else
-                                                    <option value="{{ $grade->id }}">{{ $grade->name }}</option>
+                                                    <option value="{{ $grade->name }}">{{ $grade->name }}</option>
                                                 @endif
                                             @endforeach
                                         </select>
@@ -205,7 +205,7 @@
                                 </div>
 
                                 <div class="mt-4">
-                                    <button type="submit" class="btn btn-primary "> Button </button>
+                                    <button onclick="myFunctioning()" type="submit" class="btn btn-primary "> Button </button>
                                 </div>
 
                             </form>

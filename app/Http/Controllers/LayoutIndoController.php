@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Grade;
+use App\Models\Customer;
 use Illuminate\Http\Request;
+use App\Mail\SendEmail;
+use Illuminate\Support\Facades\Mail;
+
 
 class LayoutIndoController extends Controller
 {
@@ -19,6 +23,33 @@ class LayoutIndoController extends Controller
         ]);
 
     }
+
+    public function postcustomer_indo(Request $request) {
+        $validatedData = $request->validate([
+            'option' => ['required','max:255'],
+            'name' => ['max:255'],
+            'company' => ['max:255'],
+            'email' => ['max:255'],
+            'about' => ['max:255'],
+            'telphone' => ['max:255'],
+            'country' => ['max:255'],
+            'location' => ['max:255'],
+            'grade1' => ['max:255'],
+            'grade2' => ['max:255'],
+            'grade3' => ['max:255'],
+            'size' => ['max:255'],
+            'end' => ['max:255'],
+            'issue' => ['max:255'],
+            'massage' => ['min:3'],
+        ]);
+
+        $data = Customer::create($validatedData);
+
+        Mail::to('dendirikirahmawan@gmail.com')->cc(['dendi.riki@mittalsteel.com'])->send(new SendEmail($data));
+        return redirect('_indo')->with('success','Successfully send massage');
+    }
+
+    // marketing.indo@mittalsteel.com
 
     public function bod_indo(){
 
@@ -102,6 +133,49 @@ class LayoutIndoController extends Controller
         }
     }
 
+    public function milestone_indo(){
+
+        $isexist = Post::select("*")
+        ->where("slug","COMPANYMANAGEMENTSYSTEM")->exists();
+
+        if($isexist){
+             return View('layout.product.index_indo',[
+            'post' => Post::firstWhere('slug','=','COMPANYMANAGEMENTSYSTEM'),
+            'url'  => 'milestone',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'milestone',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+
+    public function she_indo(){
+
+        $isexist = Post::select("*")
+        ->where("slug","COMPANYSHE")->exists();
+
+        if($isexist){
+             return View('layout.product.index_indo',[
+            'post' => Post::firstWhere('slug','=','COMPANYSHE'),
+            'url'  => 'she',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'she',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
     public function highcarbon_indo(){
         $isexist = Post::select("*")
         ->where("slug","PRODUCTHIGHCARBONSTEEL")->exists();
@@ -161,4 +235,347 @@ class LayoutIndoController extends Controller
             ]);
         }
     }
+
+
+    public function generalpw_indo(){
+        $isexist = Post::select("*")
+        ->where("slug","PRODUCTGENERALPURPOSEWR")->exists();
+
+        if($isexist){
+             return View ('layout.product.index_indo',[
+            'post' => Post::firstWhere('slug','=','PRODUCTGENERALPURPOSEWR'),
+            'url' => 'generalpw',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url' => 'generalpw',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+
+    public function welding_indo(){
+        $isexist = Post::select("*")
+        ->where("slug","PRODUCTWELDINGELECTRODE")->exists();
+
+        if($isexist){
+             return View('layout.product.index_indo',[
+            'post' => Post::firstWhere('slug','=','PRODUCTWELDINGELECTRODE'),
+            'url'  => 'welding',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'welding',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+
+    public function pline_indo(){
+        $isexist = Post::select("*")
+        ->where("slug","PRODUCTPLAINDEFORMBAR")->exists();
+
+        if($isexist){
+             return View('layout.product.index_indo',[
+            'post' => Post::firstWhere('slug','=','PRODUCTPLAINDEFORMBAR'),
+            'url'  => 'pline',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'pline',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+    public function structure_indo(){
+
+        $isexist = Post::select("*")
+        ->where("slug","PRODUCTGENERALSTRUCTURE")->exists();
+
+        if($isexist){
+             return View('layout.product.index_indo',[
+            'post' => Post::firstWhere('slug','=','PRODUCTGENERALSTRUCTURE'),
+            'url'  => 'structure',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'structure',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+    public function nails_indo(){
+
+        $isexist = Post::select("*")
+        ->where("slug","PRODUCTNAILS&NAILWIRE")->exists();
+
+        if($isexist){
+             return View('layout.product.index_indo',[
+            'post' => Post::firstWhere('slug','=','PRODUCTNAILS&NAILWIRE'),
+            'url'  => 'nails',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'nails',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+    public function ispatwireproduct_indo(){
+
+        $isexist = Post::select("*")
+        ->where("slug","SUBSIDIARIESPT.ISPATWIREPRODUCT")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index_indo',[
+            'post' => Post::firstWhere('slug','=','SUBSIDIARIESPT.ISPATWIREPRODUCT'),
+            'url'  => 'ispatwireproduct',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'ispatwireproduct',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+    public function ispatpancaputra_indo(){
+
+        $isexist = Post::select("*")
+        ->where("slug","SUBSIDIARIESPT.ISPATPANCAPUTRA")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index_indo',[
+            'post' => Post::firstWhere('slug','=','SUBSIDIARIESPT.ISPATPANCAPUTRA'),
+            'url'  => 'ispatpancaputra',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'ispatpancaputra',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+    public function ispatbukitbaja_indo(){
+        $isexist = Post::select("*")
+        ->where("slug","SUBSIDIARIESPT.ISPATBUKITBAJA")->exists();
+
+        if($isexist){
+             return View('layout.subsidiaries.index_indo',[
+            'post' => Post::firstWhere('slug','=','SUBSIDIARIESPT.ISPATBUKITBAJA'),
+            'url'  => 'ispatbukitbaja',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'ispatbukitbaja',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+    }
+
+    public function fasilitas_indo(){
+        $isexist = Post::select("*")
+        ->where("slug","INDUSTRIALPROCESSFACILITAS")->exists();
+
+        if($isexist){
+             return View('layout.industrila.index_indo',[
+            'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSFACILITAS'),
+            'url'  => 'fasilitas',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'fasilitas',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+
+    public function steelmaking_indo() {
+        $isexist = Post::select("*")
+        ->where("slug","INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING")->exists();
+
+        if($isexist){
+             return View('layout.industrila.index_indo',[
+            'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING'),
+            'url'  => 'steelmaking',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'steelmaking',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+    public function rolling_indo(){
+        $isexist = Post::select("*")
+        ->where("slug","INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING")->exists();
+
+        if($isexist){
+             return View('layout.industrila.index_indo',[
+            'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING'),
+            'url'  => 'rolling',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'rolling',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+
+    }
+
+    public function fasilitaspancaputra_indo(){
+        $isexist = Post::select("*")
+        ->where("slug","INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS")->exists();
+
+        if($isexist){
+             return View('layout.industrila.index_indo',[
+            'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS'),
+            'url'  => 'fasilitaspancaputra',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'fasilitaspancaputra',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+    public function fasilitasbukitnaja_indo(){
+        $isexist = Post::select("*")
+        ->where("slug","INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS")->exists();
+
+        if($isexist){
+             return View('layout.industrila.index_indo',[
+            'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS'),
+            'url'  => 'fasilitasbukitnaja',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'fasilitasbukitnaja',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+
+    public function fasilitaswire_indo(){
+        $isexist = Post::select("*")
+        ->where("slug","INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS")->exists();
+
+        if($isexist){
+             return View('layout.industrila.index_indo',[
+            'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS'),
+            'url'  => 'fasilitaswire',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'fasilitaswire',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+    public function karir_indo(){
+        $isexist = Post::select("*")
+        ->where("slug","CAREERS")->exists();
+
+        if($isexist){
+             return View('layout.karir.index_indo',[
+            'post' => Post::firstWhere('slug','=','CAREERS'),
+            'url'  => 'karir',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+        }else{
+            return view('layout.notfound.index_indo',[
+                'url'  => 'karir',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+            ]);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

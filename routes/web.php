@@ -92,9 +92,40 @@ Route::get('karir',[LayoutController::class,'karir'])->middleware('guest');
 
 ////layout Rutes indonesia
 Route::get('/customer-center_indo',[LayoutIndoController::class,'customer_indo'])->middleware('guest');
+Route::post('/customer-post_indo',[LayoutIndoController::class,'postcustomer_indo'])->middleware('guest');
+
 Route::get('profilindo_indo',[LayoutIndoController::class,'profilindo_indo'])->middleware('guest');
 Route::get('bod_indo',[LayoutIndoController::class,'bod_indo'])->middleware('guest');
 Route::get('vision_indo',[LayoutIndoController::class,'vision_indo'])->middleware('guest');
+Route::get('highlight_indo',[LayoutIndoController::class,'highlight_indo'])->middleware('guest');
+Route::get('milestone_indo',[LayoutIndoController::class,'milestone_indo'])->middleware('guest');
+Route::get('she_indo',[LayoutIndoController::class,'she_indo'])->middleware('guest');
+
+Route::get('highcarbon_indo',[LayoutIndoController::class,'highcarbon_indo'])->middleware('guest');
+Route::get('lowcarbon_indo',[LayoutIndoController::class,'lowcarbon_indo'])->middleware('guest');
+Route::get('clodheading_indo',[LayoutIndoController::class,'clodheading_indo'])->middleware('guest');
+Route::get('generalpw_indo',[LayoutIndoCOntroller::class,'generalpw_indo'])->middleware('guest');
+Route::get('welding_indo',[LayoutIndoCOntroller::class,'welding_indo'])->middleware('guest');
+Route::get('pline_indo',[LayoutIndoController::Class,'pline_indo'])->middleware('guest');
+Route::get('structure_indo',[LayoutIndoController::class,'structure_indo'])->middleware('guest');
+Route::get('nails_indo',[LayuotIndoController::class,'nails_indo'])->middleware('guest');
+
+Route::get('ispatwireproduct_indo',[LayoutIndoController::class,'ispatwireproduct_indo'])->middleware('guest');
+Route::get('ispatpancaputra_indo',[LayoutIndoController::class,'ispatpancaputra_indo'])->middleware('guest');
+Route::get('ispatbukitbaja_indo',[LayoutIndoController::class,'ispatbukitbaja_indo'])->middleware('guest');
+
+Route::get('fasilitas_indo',[LayoutIndoController::class,'fasilitas_indo'])->middleware('guest');
+Route::get('steelmaking_indo',[LayoutIndoController::class,'steelmaking_indo'])->middleware('guest');
+Route::get('rolling_indo',[LayoutIndoController::class,'rolling_indo'])->middleware('guest');
+Route::get('fasilitaspancaputra_indo',[LayoutIndoController::class,'fasilitaspancaputra_indo'])->middleware('guest');
+Route::get('fasilitasbukitnaja_indo',[LayoutIndoController::class,'fasilitasbukitnaja_indo'])->middleware('guest');
+Route::get('fasilitaswire_indo',[LayoutIndoController::class,'fasilitaswire_indo'])->middleware('guest');
+Route::get('karir_indo',[LayoutIndoController::class,'karir_indo'])->middleware('guest');
+
+
+
+
+
 //email
 
 // Route::get('send-email',function(){
@@ -103,3 +134,5 @@ Route::get('vision_indo',[LayoutIndoController::class,'vision_indo'])->middlewar
 
 //     return redirect('/admin/customer')->with('success','New Post has been created');
 // });
+
+

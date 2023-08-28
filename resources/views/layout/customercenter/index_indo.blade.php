@@ -9,7 +9,7 @@
                         <div class="col-10">
                             <h3 class="hider-font">Customer Center</h3>
                             <br>
-                            <form method="POST" action="/customer-post">
+                            <form method="POST" action="/customer-post_indo">
                                 @csrf
                                 <div class="mt-3">
                                     <div class="row">
@@ -123,10 +123,10 @@
                                         <select class="form-select mr-2" name="grade">
                                             @foreach ($grades as $grade)
                                                 @if (old('grade') == $grade->id)
-                                                    <option value="{{ $grade->id }}" selected>{{ $grade->name }}
+                                                    <option value="{{ $grade->name }}" selected>{{ $grade->name }}
                                                     </option>
                                                 @else
-                                                    <option value="{{ $grade->id }}">{{ $grade->name }}</option>
+                                                    <option value="{{ $grade->name }}">{{ $grade->name }}</option>
                                                 @endif
                                             @endforeach
                                         </select>
@@ -134,10 +134,10 @@
                                         <select class="form-control mr-2" name="grade2">
                                             @foreach ($grades as $grade)
                                                 @if (old('grade') == $grade->id)
-                                                    <option value="{{ $grade->id }}" selected>{{ $grade->name }}
+                                                    <option value="{{ $grade->name }}" selected>{{ $grade->name }}
                                                     </option>
                                                 @else
-                                                    <option value="{{ $grade->id }}">{{ $grade->name }}</option>
+                                                    <option value="{{ $grade->name }}">{{ $grade->name }}</option>
                                                 @endif
                                             @endforeach
                                         </select>
@@ -145,10 +145,10 @@
                                         <select class="form-control mr-2" name="grade3">
                                             @foreach ($grades as $grade)
                                                 @if (old('grade') == $grade->id)
-                                                    <option value="{{ $grade->id }}" selected>{{ $grade->name }}
+                                                    <option value="{{ $grade->name }}" selected>{{ $grade->name }}
                                                     </option>
                                                 @else
-                                                    <option value="{{ $grade->id }}">{{ $grade->name }}</option>
+                                                    <option value="{{ $grade->name }}">{{ $grade->name }}</option>
                                                 @endif
                                             @endforeach
                                         </select>
