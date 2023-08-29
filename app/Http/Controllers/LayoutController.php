@@ -173,6 +173,30 @@ class LayoutController extends Controller
         }
     }
 
+    Public function isocertification(){
+        return view('layout.company.isocertification',[
+                'url'  => 'link',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function jisapproval(){
+        return view('layout.company.jisapproval',[
+                'url'  => 'link',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function sni(){
+        return view('layout.company.sni',[
+            'url'  => 'link',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
     public function highcarbon(){
 
         $isexist = English::select("*")

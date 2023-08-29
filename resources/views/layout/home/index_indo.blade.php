@@ -204,202 +204,233 @@
         </section>
         <!-- End client -->
 
-        <!-- expert section -->
-
-        <section class="expert_section layout_padding">
-            <div class="container">
-                <div class="heading_container heading_center">
-                    <h2>
-                        Prestasi Kami di Ispat Indo
-                    </h2>
-                    <p>
-                        Di Ispat Indo, kami mengukir sejarah prestasi yang mencerminkan komitmen kami
-                        terhadap keunggulan, inovasi, dan kualitas tinggi:
+        {{-- data expert yang baru --}}
 
 
-                    </p>
-                    <P>
-                        Dari pencapaian rekor produksi hingga pengakuan industri, kami terus
-                        membuktikan dedikasi kami dalam menghadirkan yang terbaik.
+  <section class="expert_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+            Prestasi Kami di Ispat Indo
+        </h2>
+        <p>
+            Di Ispat Indo, kami mengukir sejarah prestasi yang mencerminkan komitmen kami
+            terhadap keunggulan, inovasi, dan kualitas tinggi:
 
-                        Prestasi kami adalah bukti nyata dari kerja keras tim kami dan tekad
-                        kami untuk menjadi pemimpin di industri baja. Kami terus berinovasi
-                        untuk masa depan yang lebih sukses.
-                    </P>
-                </div>
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/ISO_14001_NEW.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>ISO 44001 Approval</h6>
-                                <h6>Certificate</h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/ISO_45001_NEW.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>ISO 50001 Approval</h6>
-                                <h6>Certificate</h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
+        </p>
+        <P>
+            Dari pencapaian rekor produksi hingga pengakuan industri, kami terus
+            membuktikan dedikasi kami dalam menghadirkan yang terbaik.
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/ISO_50001_NEW.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>SMK3 Approval</h6>
-                                <h6>Certificate</h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/ISO_9001_NEW.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>ISO 9001 Approval</h6>
-                                <h6>Certificate</h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/jis.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>JIS Approval</h6>
-                                <h6>Certificate</h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/SNI-07-2052-2017.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>Steel Bar for</h6>
-                                <h6>Reinforcement</h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/SNI 07-0954-2005.jpeg" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>Steel Bar In Coil</h6>
-                                <h6></h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/kan.jpeg" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>LP - 455 – IDN</h6>
-                                <h6>Accreditation by KAN</h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/SMK3 LOGO.jpeg" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>SMK3 Approval</h6>
-                                <h6>Certificate</h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/proper.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>Proper Approval</h6>
-                                <h6>Certificate</h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/logo zero accident.jpg" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>Zero Accident</h6>
-                                <h6>Approval Certificate</h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <div class="box">
-                            <div class="img-box">
-                                <img src="assets/img/logo/sirim.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>SIRIM Approval</h6>
-                                <h6></h6>
-                                <a href="">
-                                    <p>Read More >></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
+            Prestasi kami adalah bukti nyata dari kerja keras tim kami dan tekad
+            kami untuk menjadi pemimpin di industri baja. Kami terus berinovasi
+            untuk masa depan yang lebih sukses.
+        </P>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+            <div class="box">
+              <div class="img-box">
+                <img src="assets/img/logo/ISO_14001_NEW.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>ISO 4001 Approval Certificate</h6>
+                <h6></h6>
+                <a href="">
+                  <p class="pkebawah">Read More >></p>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/ISO_45001_NEW.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>ISO 50001 Approval Certificate</h6>
+              <h6></h6>
+              <a href="">
+                <p class="pkebawah">Read More >></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/ISO_50001_NEW.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>SMK3 Approval Certificate</h6>
+              <h6></h6>
+              <a href="">
+                <p class="pkebawah">Read More >></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/ISO_9001_NEW.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>ISO 9001 Approval Certificate</h6>
+              <h6></h6>
+              <a href="">
+                <p class="pkebawah">Read More >></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/jis.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>JIS Approval Certificate</h6>
+              <h6></h6>
+              <a href="">
+                <p class="pkebawah">Read More >></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/SNI-07-2052-2017.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>Steel Bar for Reinforcement</h6>
+              <h6></h6>
+              <a href="">
+                <p class="pkebawah">Read More >></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/SNI 07-0954-2005.jpeg" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>Steel Bar In Coil</h6>
+              <h6></h6>
+              <a href="">
+                <p class="pkebawah">Read More >></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/kan.jpeg" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>LP - 455 – IDN Accreditation by KAN</h6>
+              <h6></h6>
+              <a href="">
+                <p class="pkebawah">Read More >></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/SMK3 LOGO.jpeg" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>SMK3 Approval ertificate</h6>
+              <h6></h6>
 
-        <!-- end expert section -->
+                <a href="">
+                  <p class="pkebawah">Read More >></p>
+                </a>
+
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/proper.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>Proper Approval Certificate</h6>
+              <h6></h6>
+              <a href="">
+                <p class="pkebawah">Read More >></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/logo zero accident.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>Zero Accident Approval Certificate</h6>
+              <h6></h6>
+              <a href="">
+                <p class="pkebawah">Read More >></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="card text-center">
+          <div class="box">
+            <div class="img-box">
+              <img src="assets/img/logo/sirim.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>SIRIM Approval</h6>
+              <h6></h6>
+              <a href="">
+                <p class="pkebawah">Read More >></p>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!--
+      </div>
+      <div class="btn-box">
+        <a href="">
+          View All Achivements
+        </a>
+      </div>-->
+    </div>
+  </section>
     @endsection

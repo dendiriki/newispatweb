@@ -64,7 +64,9 @@ Route::get('vision',[LayoutController::class,'vision'])->middleware('guest');
 Route::get('highlight',[LayoutController::class,'highlight'])->middleware('guest');
 Route::get('milestone',[LayoutController::class,'milestone'])->middleware('guest');
 Route::get('she',[LayoutController::class,'she'])->middleware('guest');
-
+Route::get('isocertification',[LayoutController::class,'isocertification'])->middleware('guest');
+Route::get('jisapproval',[LayoutCOntroller::class,'jisapproval'])->middleware('guest');
+Route::get('sni',[LayoutController::class,'sni'])->middleware('guest');
 
 Route::get('highcarbon',[LayoutController::class,'highcarbon'])->middleware('guest');
 Route::get('lowcarbon',[LayoutController::class,'lowcarbon'])->middleware('guest');

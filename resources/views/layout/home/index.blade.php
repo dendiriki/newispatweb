@@ -2,11 +2,20 @@
 
 @section('content')
     @if (session()->has('success'))
+
+{{--
         <div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
             <br>
             {{ session('success') }}
             <button type="button" class="btn-close mb-0 mt-3 pt-4" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+        </div> --}}
+      <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
     @endif
 
 
@@ -231,9 +240,9 @@
                 <img src="assets/img/logo/ISO_14001_NEW.png" alt="">
               </div>
               <div class="detail-box">
-                <h6>ISO 4001 Approval Certificate</h6>
+                <h6>ISO 14001 Approval Certificate</h6>
                 <h6></h6>
-                <a href="">
+                <a href="isocertification">
                   <p class="pkebawah">Read More >></p>
                 </a>
             </div>
@@ -247,9 +256,9 @@
               <img src="assets/img/logo/ISO_45001_NEW.png" alt="">
             </div>
             <div class="detail-box">
-              <h6>ISO 50001 Approval Certificate</h6>
+              <h6>ISO 45001 Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="isocertification">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -263,9 +272,9 @@
               <img src="assets/img/logo/ISO_50001_NEW.png" alt="">
             </div>
             <div class="detail-box">
-              <h6>SMK3 Approval Certificate</h6>
+              <h6>ISO 50001 Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="isocertification">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -281,7 +290,7 @@
             <div class="detail-box">
               <h6>ISO 9001 Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="isocertification">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -297,7 +306,7 @@
             <div class="detail-box">
               <h6>JIS Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="jisapproval">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -313,7 +322,7 @@
             <div class="detail-box">
               <h6>Steel Bar for Reinforcement</h6>
               <h6></h6>
-              <a href="">
+              <a href="sni">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -329,7 +338,7 @@
             <div class="detail-box">
               <h6>Steel Bar In Coil</h6>
               <h6></h6>
-              <a href="">
+              <a href="sni">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
