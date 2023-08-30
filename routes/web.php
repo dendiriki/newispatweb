@@ -67,6 +67,9 @@ Route::get('she',[LayoutController::class,'she'])->middleware('guest');
 Route::get('isocertification',[LayoutController::class,'isocertification'])->middleware('guest');
 Route::get('jisapproval',[LayoutCOntroller::class,'jisapproval'])->middleware('guest');
 Route::get('sni',[LayoutController::class,'sni'])->middleware('guest');
+Route::get('kan',[LayoutController::class,'kan'])->middleware('guest');
+Route::get('tkdn',[LayoutController::class,'tkdn'])->middleware('guest');
+Route::get('sirim',[LayoutCOntroller::class,'sirim'])->middleware('guest');
 
 Route::get('highcarbon',[LayoutController::class,'highcarbon'])->middleware('guest');
 Route::get('lowcarbon',[LayoutController::class,'lowcarbon'])->middleware('guest');
@@ -102,6 +105,12 @@ Route::get('vision_indo',[LayoutIndoController::class,'vision_indo'])->middlewar
 Route::get('highlight_indo',[LayoutIndoController::class,'highlight_indo'])->middleware('guest');
 Route::get('milestone_indo',[LayoutIndoController::class,'milestone_indo'])->middleware('guest');
 Route::get('she_indo',[LayoutIndoController::class,'she_indo'])->middleware('guest');
+Route::get('isocertification_indo',[LayoutIndoController::class,'isocertification_indo'])->middleware('guest');
+Route::get('jisapproval_indo',[LayoutIndoController::class,'jisapproval_indo'])->middleware('guest');
+Route::get('sni_indo',[LayoutIndoController::class,'sni_indo'])->middleware('guest');
+Route::get('kan_indo',[LayoutIndoController::class,'kan_indo'])->middleware('guest');
+Route::get('tkdn_indo',[LayoutIndoController::class,'tkdn_indo'])->middleware('guest');
+Route::get('sirim_indo',[LayoutIndoController::class,'sirim_indo'])->middleware('guest');
 
 Route::get('highcarbon_indo',[LayoutIndoController::class,'highcarbon_indo'])->middleware('guest');
 Route::get('lowcarbon_indo',[LayoutIndoController::class,'lowcarbon_indo'])->middleware('guest');

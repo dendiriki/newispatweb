@@ -238,7 +238,7 @@
               <div class="detail-box">
                 <h6>ISO 4001 Approval Certificate</h6>
                 <h6></h6>
-                <a href="">
+                <a href="isocertification_indo">
                   <p class="pkebawah">Read More >></p>
                 </a>
             </div>
@@ -252,9 +252,9 @@
               <img src="assets/img/logo/ISO_45001_NEW.png" alt="">
             </div>
             <div class="detail-box">
-              <h6>ISO 50001 Approval Certificate</h6>
+              <h6>ISO 45001 Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="isocertification_indo">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -268,9 +268,9 @@
               <img src="assets/img/logo/ISO_50001_NEW.png" alt="">
             </div>
             <div class="detail-box">
-              <h6>SMK3 Approval Certificate</h6>
+              <h6>ISO 50001 Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="isocertification_indo">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -286,7 +286,7 @@
             <div class="detail-box">
               <h6>ISO 9001 Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="isocertification_indo">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -302,7 +302,7 @@
             <div class="detail-box">
               <h6>JIS Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="jisapproval_indo">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -318,7 +318,7 @@
             <div class="detail-box">
               <h6>Steel Bar for Reinforcement</h6>
               <h6></h6>
-              <a href="">
+              <a href="sni_indo">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -334,7 +334,7 @@
             <div class="detail-box">
               <h6>Steel Bar In Coil</h6>
               <h6></h6>
-              <a href="">
+              <a href="sni_indo">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -350,7 +350,7 @@
             <div class="detail-box">
               <h6>LP - 455 – IDN Accreditation by KAN</h6>
               <h6></h6>
-              <a href="">
+              <a href="kan_indo">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -367,7 +367,7 @@
               <h6>SMK3 Approval ertificate</h6>
               <h6></h6>
 
-                <a href="">
+                <a href="sirim_indo">
                   <p class="pkebawah">Read More >></p>
                 </a>
 
@@ -384,7 +384,7 @@
             <div class="detail-box">
               <h6>Proper Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="tkdn_indo">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -400,7 +400,7 @@
             <div class="detail-box">
               <h6>Zero Accident Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="sni_indo">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -416,7 +416,7 @@
             <div class="detail-box">
               <h6>SIRIM Approval</h6>
               <h6></h6>
-              <a href="">
+              <a href="sirim_indo">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>

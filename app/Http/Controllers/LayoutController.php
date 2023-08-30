@@ -175,7 +175,7 @@ class LayoutController extends Controller
 
     Public function isocertification(){
         return view('layout.company.isocertification',[
-                'url'  => 'link',
+                'url'  => 'isocertification',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
         ]);
@@ -183,7 +183,7 @@ class LayoutController extends Controller
 
     public function jisapproval(){
         return view('layout.company.jisapproval',[
-                'url'  => 'link',
+                'url'  => 'jisapproval',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav'
         ]);
@@ -191,7 +191,31 @@ class LayoutController extends Controller
 
     public function sni(){
         return view('layout.company.sni',[
-            'url'  => 'link',
+            'url'  => 'sni',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function kan(){
+        return view('layout.company.kan',[
+            'url'  => 'kan',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function tkdn(){
+        return view('layout.company.tkdn',[
+            'url'  => 'tkdn',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function sirim(){
+        return view('layout.company.sirim',[
+            'url'  => 'sirim',
             'class' => 'sub_page',
             'navbar' =>'timpanav'
         ]);

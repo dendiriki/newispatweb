@@ -176,6 +176,55 @@ class LayoutIndoController extends Controller
         }
     }
 
+
+    Public function isocertification_indo(){
+        return view('layout.company.isocertification_indo',[
+                'url'  => 'isocertification',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function jisapproval_indo(){
+        return view('layout.company.jisapproval_indo',[
+                'url'  => 'jisapproval',
+                'class' => 'sub_page',
+                'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function sni_indo(){
+        return view('layout.company.sni_indo',[
+            'url'  => 'sni',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function kan_indo(){
+        return view('layout.company.kan_indo',[
+            'url'  => 'kan',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function tkdn_indo(){
+        return view('layout.company.tkdn_indo',[
+            'url'  => 'tkdn',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
+    public function sirim_indo(){
+        return view('layout.company.sirim_indo',[
+            'url'  => 'sirim',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav'
+        ]);
+    }
+
     public function highcarbon_indo(){
         $isexist = Post::select("*")
         ->where("slug","PRODUCTHIGHCARBONSTEEL")->exists();

@@ -354,7 +354,7 @@
             <div class="detail-box">
               <h6>LP - 455 – IDN Accreditation by KAN</h6>
               <h6></h6>
-              <a href="">
+              <a href="kan">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -371,7 +371,7 @@
               <h6>SMK3 Approval ertificate</h6>
               <h6></h6>
 
-                <a href="">
+                <a href="sirim">
                   <p class="pkebawah">Read More >></p>
                 </a>
 
@@ -388,7 +388,7 @@
             <div class="detail-box">
               <h6>Proper Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="tkdn">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -404,7 +404,7 @@
             <div class="detail-box">
               <h6>Zero Accident Approval Certificate</h6>
               <h6></h6>
-              <a href="">
+              <a href="sni">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -420,7 +420,7 @@
             <div class="detail-box">
               <h6>SIRIM Approval</h6>
               <h6></h6>
-              <a href="">
+              <a href="sirim">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
