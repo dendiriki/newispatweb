@@ -64,6 +64,13 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="karir">
+                                <span>
+                                    Careers
+                                </span>
+                            </a>
+                        </li>
                         <li class="topnav">
                             <div class="login-container">
 

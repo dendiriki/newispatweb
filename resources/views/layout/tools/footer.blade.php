@@ -48,31 +48,7 @@
             </div>
             <div class="col-md-3">
                 <div class="info_social">
-                    <h4>
-                        Social Link
-                    </h4>
-                    <div class="social_container">
-                        <div>
-                            <a href="">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="col-md-4">

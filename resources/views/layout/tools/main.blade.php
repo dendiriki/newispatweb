@@ -10,7 +10,12 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <link rel="icon" href="assets/img/title.png" type="images/x-icon">
+
     <title>ISPAT INDO</title>
+    {{-- <link href="assets/img/ispat.ico" rel="icon"> --}}
+
+
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
 
