@@ -15,7 +15,8 @@ class LayoutController extends Controller
             'grades' => Grade::all(),
             'url'  => 'customer-center',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
 
     }
@@ -57,13 +58,17 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','COMPANYBOARDOFDIRECTORS'),
             'url'  => 'bod',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
+
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'bod',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
+
             ]);
         }
     }
@@ -78,13 +83,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','COMPANYPROFILE'),
             'url'  => 'profilindo',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'profilindo',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -99,13 +106,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES'),
             'url'  => 'vision',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'vision',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -120,13 +129,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'),
             'url'  => 'highlight',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'highlight',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -141,13 +152,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','COMPANYMANAGEMENTSYSTEM'),
             'url'  => 'milestone',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'milestone',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -162,13 +175,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','COMPANYSHE'),
             'url'  => 'she',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'she',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -177,7 +192,8 @@ class LayoutController extends Controller
         return view('layout.company.isocertification',[
                 'url'  => 'isocertification',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
         ]);
     }
 
@@ -185,7 +201,8 @@ class LayoutController extends Controller
         return view('layout.company.jisapproval',[
                 'url'  => 'jisapproval',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
         ]);
     }
 
@@ -193,7 +210,8 @@ class LayoutController extends Controller
         return view('layout.company.sni',[
             'url'  => 'sni',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
     }
 
@@ -201,7 +219,8 @@ class LayoutController extends Controller
         return view('layout.company.kan',[
             'url'  => 'kan',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
     }
 
@@ -209,7 +228,8 @@ class LayoutController extends Controller
         return view('layout.company.tkdn',[
             'url'  => 'tkdn',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
     }
 
@@ -217,7 +237,8 @@ class LayoutController extends Controller
         return view('layout.company.sirim',[
             'url'  => 'sirim',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
     }
 
@@ -231,13 +252,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','PRODUCTHIGHCARBONSTEEL'),
             'url'  => 'highcarbon',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'highcarbon',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -252,13 +275,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','PRODUCTLOWCARBONSTEEL'),
             'url'  => 'lowcarbon',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'lowcarbon',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -273,13 +298,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','PRODUCTCOLDHEADINGQUALITYSTEEL'),
             'url'  => 'clodheading',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'clodheading',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -294,13 +321,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','PRODUCTGENERALPURPOSEWR'),
             'url'  => 'generalpw',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'generalpw',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -314,13 +343,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','PRODUCTWELDINGELECTRODE'),
             'url'  => 'welding',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'welding',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -334,13 +365,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','PRODUCTPLAINDEFORMBAR'),
             'url'  => 'pline',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'pline',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -355,13 +388,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','PRODUCTGENERALSTRUCTURE'),
             'url'  => 'structure',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'structure',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -376,13 +411,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','PRODUCTNAILS&NAILWIRE'),
             'url'  => 'nails',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'nails',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -397,13 +434,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','SUBSIDIARIESPT.ISPATWIREPRODUCT'),
             'url'  => 'ispatwireproduct',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'ispatwireproduct',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -418,13 +457,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','SUBSIDIARIESPT.ISPATPANCAPUTRA'),
             'url'  => 'ispatpancaputra',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'ispatpancaputra',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -438,13 +479,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','SUBSIDIARIESPT.ISPATBUKITBAJA'),
             'url'  => 'ispatbukitbaja',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'ispatbukitbaja',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
 
@@ -460,13 +503,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSFACILITAS'),
             'url'  => 'fasilitas',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'fasilitas',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -480,13 +525,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING'),
             'url'  => 'steelmaking',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'steelmaking',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -500,13 +547,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING'),
             'url'  => 'rolling',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'rolling',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
 
@@ -521,13 +570,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS'),
             'url'  => 'fasilitaspancaputra',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'fasilitaspancaputra',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -541,13 +592,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS'),
             'url'  => 'fasilitasbukitnaja',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'fasilitasbukitnaja',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -561,13 +614,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS'),
             'url'  => 'fasilitaswire',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'fasilitaswire',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }
@@ -581,13 +636,15 @@ class LayoutController extends Controller
             'english' => English::firstWhere('slug','=','CAREERS'),
             'url'  => 'karir',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
         ]);
         }else{
             return view('layout.notfound.index',[
                 'url'  => 'karir',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'EN',
             ]);
         }
     }

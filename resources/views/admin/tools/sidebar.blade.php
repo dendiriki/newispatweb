@@ -32,6 +32,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/news">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              News
+            </a>
+          </li>
+          <li class="nav-item">
             <form action="/logout" method="POST">
                 @csrf
                 <button type="submit" class="nav-link border-0 bordertransform">

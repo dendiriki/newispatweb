@@ -65,20 +65,29 @@
                             </div>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="news_indo">
+                              <span>
+                                News
+                              </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="karir_indo">
                                 <span>
                                     Careers
                                 </span>
                             </a>
                         </li>
-                        <li class="topnav">
-                            <div class="login-container">
-
-                                <a href="{{$url}}">ENGLISH
-                                <img src="assets/img/logo/english.png"  alt="logo"/>
-
-                                </a>
-
+                        <li class="nav-item">
+                            <div class="dropdown">
+                              <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">
+                                <img src="assets/img/Web.png" alt="logo" style="max-width: 2rem; position: relative; bottom: 7px; left: 0px;">
+                                {{ $sub }}
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{ $url }}">ENGLISH</a>
+                                <a class="dropdown-item" href="{{ $url }}_indo">INDONESIAN</a>
+                              </div>
                               </div>
                           </li>
                         {{-- <li class="topnav">

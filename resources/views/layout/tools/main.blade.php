@@ -10,7 +10,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="icon" href="assets/img/title.png" type="images/x-icon">
+    <link rel="icon" href="assets/img/title2.png" type="images/x-icon">
 
     <title>ISPAT INDO</title>
     {{-- <link href="assets/img/ispat.ico" rel="icon"> --}}
@@ -24,8 +24,6 @@
 
   <!-- font awesome style -->
   <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-  <!-- nice select -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
 
   <!-- Custom styles for this template -->
   <link href="assets/css/style.css" rel="stylesheet" />
@@ -44,8 +42,6 @@
   <script src="assets/js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
   <script src="assets/js/bootstrap.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
   <!-- custom js -->
   <script src="assets/js/custom.js"></script>
 </body>

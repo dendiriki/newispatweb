@@ -11,7 +11,8 @@ class LoginController extends Controller
         return view('admin.login.index',[
             'url' => '',
             'class' => '',
-            'navbar' =>'hero_area'
+            'navbar' =>'hero_area',
+            'sub' => 'AM'
         ]);
     }
 

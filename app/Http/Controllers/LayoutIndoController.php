@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Grade;
 use App\Models\Customer;
+use App\Models\News;
 use Illuminate\Http\Request;
 use App\Mail\SendEmail;
 use Illuminate\Support\Facades\Mail;
@@ -19,7 +20,8 @@ class LayoutIndoController extends Controller
             'grades' => Grade::all(),
             'url'  => 'customer-center',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
 
     }
@@ -61,13 +63,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','COMPANYBOARDOFDIRECTORS'),
             'url' => 'bod',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url' => 'bod',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -82,13 +86,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','COMPANYPROFILE'),
             'url' => 'profilindo',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url' => 'profilindo',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -102,13 +108,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES'),
             'url' => 'vision',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url' => 'vision',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -122,13 +130,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'),
             'url' => 'highlight',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url' => 'highlight',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -143,13 +153,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','COMPANYMANAGEMENTSYSTEM'),
             'url'  => 'milestone',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'milestone',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -165,13 +177,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','COMPANYSHE'),
             'url'  => 'she',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'she',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -181,7 +195,8 @@ class LayoutIndoController extends Controller
         return view('layout.company.isocertification_indo',[
                 'url'  => 'isocertification',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
         ]);
     }
 
@@ -189,7 +204,8 @@ class LayoutIndoController extends Controller
         return view('layout.company.jisapproval_indo',[
                 'url'  => 'jisapproval',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
         ]);
     }
 
@@ -197,7 +213,8 @@ class LayoutIndoController extends Controller
         return view('layout.company.sni_indo',[
             'url'  => 'sni',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
     }
 
@@ -205,7 +222,8 @@ class LayoutIndoController extends Controller
         return view('layout.company.kan_indo',[
             'url'  => 'kan',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
     }
 
@@ -213,7 +231,8 @@ class LayoutIndoController extends Controller
         return view('layout.company.tkdn_indo',[
             'url'  => 'tkdn',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
     }
 
@@ -221,7 +240,8 @@ class LayoutIndoController extends Controller
         return view('layout.company.sirim_indo',[
             'url'  => 'sirim',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
     }
 
@@ -234,13 +254,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','PRODUCTHIGHCARBONSTEEL'),
             'url' => 'highcarbon',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url' => 'highcarbon',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -254,13 +276,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','PRODUCTLOWCARBONSTEEL'),
             'url' => 'lowcarbon',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url' => 'lowcarbon',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -274,13 +298,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','PRODUCTCOLDHEADINGQUALITYSTEEL'),
             'url' => 'clodheading',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url' => 'clodheading',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -295,13 +321,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','PRODUCTGENERALPURPOSEWR'),
             'url' => 'generalpw',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url' => 'generalpw',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -316,13 +344,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','PRODUCTWELDINGELECTRODE'),
             'url'  => 'welding',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'welding',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -337,13 +367,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','PRODUCTPLAINDEFORMBAR'),
             'url'  => 'pline',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'pline',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -358,13 +390,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','PRODUCTGENERALSTRUCTURE'),
             'url'  => 'structure',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'structure',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -379,13 +413,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','PRODUCTNAILS&NAILWIRE'),
             'url'  => 'nails',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'nails',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -400,13 +436,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','SUBSIDIARIESPT.ISPATWIREPRODUCT'),
             'url'  => 'ispatwireproduct',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'ispatwireproduct',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -421,13 +459,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','SUBSIDIARIESPT.ISPATPANCAPUTRA'),
             'url'  => 'ispatpancaputra',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'ispatpancaputra',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -441,13 +481,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','SUBSIDIARIESPT.ISPATBUKITBAJA'),
             'url'  => 'ispatbukitbaja',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'ispatbukitbaja',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
 
@@ -462,13 +504,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSFACILITAS'),
             'url'  => 'fasilitas',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'fasilitas',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -483,13 +527,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING'),
             'url'  => 'steelmaking',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'steelmaking',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -503,13 +549,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING'),
             'url'  => 'rolling',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'rolling',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
 
@@ -524,13 +572,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS'),
             'url'  => 'fasilitaspancaputra',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'fasilitaspancaputra',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -544,13 +594,15 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS'),
             'url'  => 'fasilitasbukitnaja',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'fasilitasbukitnaja',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -571,7 +623,8 @@ class LayoutIndoController extends Controller
             return view('layout.notfound.index_indo',[
                 'url'  => 'fasilitaswire',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
     }
@@ -585,15 +638,28 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','CAREERS'),
             'url'  => 'karir',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
                 'url'  => 'karir',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav'
+                'navbar' =>'timpanav',
+                'sub' => 'IN',
             ]);
         }
+    }
+
+    public function News_indo(){
+        return view('layout.news.index_indo',[
+            'news' => News::all(),
+            'url'  => 'news_indo',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
+        ]);
+
     }
 
 

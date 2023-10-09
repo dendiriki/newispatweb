@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\EnglishController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\LayoutIndoController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
@@ -28,7 +29,8 @@ Route::get('/', function () {
     return view('layout.home.index',[
         'url' => '',
         'class' => '',
-        'navbar' =>'hero_area'
+        'navbar' =>'hero_area',
+        'sub' => 'EN',
     ]);
 });
 
@@ -36,7 +38,8 @@ Route::get('_indo', function () {
     return view('layout.home.index_indo',[
         'url' =>'/',
         'class' => '',
-        'navbar' =>'hero_area'
+        'navbar' =>'hero_area',
+        'sub' => 'IN',
     ]);
 });
 
@@ -54,6 +57,7 @@ Route::resource('admin/grade', GradeController::class);
 Route::resource('admin/posts', PostController::class)->middleware('auth');
 Route::resource('admin/english',EnglishController::class)->middleware('auth');
 Route::resource('admin/customer', CustomerController::class)->middleware('auth');
+Route::resource('admin/news', NewsController::class)->middleware('auth');
 
 //layout Rutes english
 Route::get('/customer-center',[LayoutController::class,'customer'])->middleware('guest');
@@ -132,18 +136,12 @@ Route::get('fasilitaspancaputra_indo',[LayoutIndoController::class,'fasilitaspan
 Route::get('fasilitasbukitnaja_indo',[LayoutIndoController::class,'fasilitasbukitnaja_indo'])->middleware('guest');
 Route::get('fasilitaswire_indo',[LayoutIndoController::class,'fasilitaswire_indo'])->middleware('guest');
 Route::get('karir_indo',[LayoutIndoController::class,'karir_indo'])->middleware('guest');
+Route::get('news_indo',[LayoutIndoController::class,'news_indo'])->middleware('guest');
 
 
 
 
 
-//email
 
-// Route::get('send-email',function(){
-//     $email = new SendEmail();
-//     Mail::to('dendirikirahmawan@gmail.com')->send($email);
-
-//     return redirect('/admin/customer')->with('success','New Post has been created');
-// });
 
 
