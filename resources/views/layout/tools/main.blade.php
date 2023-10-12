@@ -10,25 +10,25 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="icon" href="assets/img/title2.png" type="images/x-icon">
+    <link rel="icon" href="{{ asset('assets/img/title2.png') }}" type="images/x-icon">
 
     <title>ISPAT INDO</title>
     {{-- <link href="assets/img/ispat.ico" rel="icon"> --}}
 
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}"/>
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
 
   <!-- font awesome style -->
-  <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="assets/css/responsive.css" rel="stylesheet" />
+  <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
 </head>
 
 <body class="{{ $class }}">
@@ -39,11 +39,11 @@
     @include('layout.tools.footer')
 
       <!-- jQery -->
-  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="{{ asset('assets/js/jquery-3.4.1.min.js') }}" ></script>
   <!-- bootstrap js -->
-  <script src="assets/js/bootstrap.js"></script>
+  <script src= "{{ asset('assets/js/bootstrap.js') }}" ></script>
   <!-- custom js -->
-  <script src="assets/js/custom.js"></script>
+  <script src="{{ asset('assets/js/custom.js') }}"></script>
 </body>
 
 </html>
