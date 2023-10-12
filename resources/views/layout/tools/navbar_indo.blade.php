@@ -5,8 +5,8 @@
     <header class="header_section">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg custom_nav-container fixed-top navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="_indo">
-                    <img src="assets/img/logo-ispat.png" alt="Logo" />
+                <a class="navbar-brand" href="{{ route('home_indo') }}">
+                    <img src="{{ asset('assets/img/logo-ispat.png') }}"  alt="Logo" />
                     <span>
                         ISPAT INDO
                     </span>
@@ -65,14 +65,14 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="news_indo">
+                            <a class="nav-link" href="{{ route('news_indo') }}">
                               <span>
                                 News
                               </span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="karir_indo">
+                            <a class="nav-link" href="{{ route('karir_indo') }}">
                                 <span>
                                     Careers
                                 </span>
@@ -81,12 +81,17 @@
                         <li class="nav-item">
                             <div class="dropdown">
                               <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">
-                                <img src="assets/img/Web.png" alt="logo" style="max-width: 2rem; position: relative; bottom: 7px; left: 0px;">
+                                <img src="{{ asset('assets/img/Web.png') }}" alt="logo" style="max-width: 2rem; position: relative; bottom: 7px; left: 0px;">
                                 {{ $sub }}
                               </a>
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{ $url }}">ENGLISH</a>
-                                <a class="dropdown-item" href="{{ $url }}_indo">INDONESIAN</a>
+                                @if(request()->routeIs('detailnews','detailnews_indo'))
+                                <a class="dropdown-item" href="{{ route($url, ['news' => $news->link]) }}">ENGLISH</a>
+                                <a class="dropdown-item" href="{{ route($url.'_indo', ['news' => $news->link]) }}">INDONESIAN</a>
+                             @else
+                                <a class="dropdown-item" href="{{ route($url) }}">ENGLISH</a>
+                                <a class="dropdown-item" href="{{ route($url) }}_indo">INDONESIAN</a>
+                             @endif
                               </div>
                               </div>
                           </li>

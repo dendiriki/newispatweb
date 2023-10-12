@@ -9,4 +9,10 @@ class News extends Model
 {
     protected $guarded = ['id'];
     use HasFactory;
+
+    public function getRouteKeyName()
+    {
+        return 'link';
+    }
+
 }

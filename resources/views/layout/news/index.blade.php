@@ -1,4 +1,4 @@
-@extends('layout.tools.main_indo')
+@extends('layout.tools.main')
 
 @section('content')
 <section class="about_section layout_padding">
@@ -32,13 +32,13 @@
                   <p class="card-text">{{ substr(strip_tags($new->description), 0, 120) }}
                     @if (strlen(strip_tags($new->description)) > 120)
                         ...
-                    @endif
+   link                 @endif
 
-                  <a href="{{ route('detailnews_indo', $new->link) }}" style="position: relative; bottom: 1px;">Read More</a>
+                  <a href="{{ route('detailnews',$new->link) }}" style="position: relative; bottom: 1px;">Read More</a>
                 </div>
                 <div class="card-footer bg-transparent ">
                   <small class="text-muted">{{ $new->created_at }}</small>
-                  <small class="text-muted warp-right">By <a href= "{{ route('detailnews_indo', $new->link) }}">{{ $new->penulist }}</a></small>
+                  <small class="text-muted warp-right">By <a href= "{{ route('detailnews',$new->link) }}">{{ $new->penulist }}</a></small>
                 </div>
               </div>
             </div>

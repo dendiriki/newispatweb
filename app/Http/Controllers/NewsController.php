@@ -49,7 +49,9 @@ class NewsController extends Controller
      */
     public function show(News $news)
     {
-        //
+        // return View ('admin.layout.englishshow',[
+        //     'english' => $english
+        // ]);
     }
 
     /**

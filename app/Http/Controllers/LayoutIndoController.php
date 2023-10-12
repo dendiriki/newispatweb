@@ -651,13 +651,25 @@ class LayoutIndoController extends Controller
         }
     }
 
-    public function News_indo(){
+    public function news_indo(){
         return view('layout.news.index_indo',[
             'news' => News::all(),
-            'url'  => 'news_indo',
+            'url'  => 'news',
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'IN',
+        ]);
+
+    }
+
+    public function detailnews_indo(News $news) {
+        return view('layout.news.detail_indo',[
+            'news' =>$news,
+            'url'  => 'detailnews',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
+
         ]);
 
     }

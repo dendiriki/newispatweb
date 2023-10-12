@@ -1,6 +1,6 @@
 @extends('layout.tools.main')
 
-@section('content')
+{{-- @section('content')
     @if (session()->has('success'))
       <div class="alert alert-primary alert-dismissible fade show" role="alert">
         {{ session('success') }}
@@ -9,7 +9,25 @@
         </button>
       </div>
 
-    @endif
+    @endif --}}
+
+     <!-- end about section -->
+     @section('content')
+    @if (session()->has('success'))
+  <div class="Message Message--green alert" role="alert">
+    <div class="Message-icon">
+      <i class="fa fa-check"></i>
+    </div>
+    <div class="Message-body">
+      <h4>Success!</h4>
+      <p>coba dulu</p>
+      <p>  {{ session('success') }}</p>
+    </div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  @endif
 
 
 
@@ -86,15 +104,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
         <!-- Start client -->
         <section class="job_section layout_padding">
             <section id="client" class="light-bg p-top-80 p-bottom-80">
@@ -114,7 +123,7 @@
 
                             <!-- === Client 1 === -->
                             <div class="client-item text-center">
-                                <a href="highcarbon">
+                                <a href="{{ route('highcarbon') }}">
                                     <img class="img-responsive" src="assets/img/SVG.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -124,7 +133,7 @@
 
                             <!-- === Client 2 === -->
                             <div class="client-item text-center">
-                                <a href="lowcarbon">
+                                <a href="{{ route('lowcarbon') }}">
                                     <img class="img-responsive" src="assets/img/SVG-1.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -134,7 +143,7 @@
 
                             <!-- === Client 3 === -->
                             <div class="client-item text-center">
-                                <a href="clodheading">
+                                <a href="{{ route('clodheading') }}">
                                     <img class="img-responsive" src="assets/img/SVG-2.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -144,7 +153,7 @@
 
                             <!-- === Client 4 === -->
                             <div class="client-item text-center">
-                                <a href="generalpw">
+                                <a href="{{ route('generalpw') }}">
                                     <img class="img-responsive" src="assets/img/SVG-3.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -154,7 +163,7 @@
 
                             <!-- === Client 5 === -->
                             <div class="client-item text-center">
-                                <a href="welding">
+                                <a href="{{ route('welding') }}">
                                     <img class="img-responsive" src="assets/img/SVG-4.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -164,7 +173,7 @@
 
                             <!-- === Client 6 === -->
                             <div class="client-item text-center">
-                                <a href="pline">
+                                <a href="{{ route('pline') }}">
                                     <img class="img-responsive" src="assets/img/SVG-5.png" alt="">
                                     <a></a>
                                     <h1></h1>
@@ -174,7 +183,7 @@
 
                             <!-- === Client 7 === -->
                             <div class="client-item text-center">
-                                <a href="structure">
+                                <a href="{{ route('structure') }}">
                                     <img class="img-responsive" src="assets/img/SVG-6.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -184,7 +193,7 @@
 
                             <!-- === Client 8 === -->
                             <div class="client-item text-center">
-                                <a href="nails">
+                                <a href="{{ route('nails') }}">
                                     <img class="img-responsive" src="assets/img/SVG-7.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -235,7 +244,7 @@
               <div class="detail-box">
                 <h6>ISO 14001 Approval Certificate</h6>
                 <h6></h6>
-                <a href="isocertification">
+                <a href="{{ route('isocertification') }}">
                   <p class="pkebawah">Read More >></p>
                 </a>
             </div>
@@ -251,7 +260,7 @@
             <div class="detail-box">
               <h6>ISO 45001 Approval Certificate</h6>
               <h6></h6>
-              <a href="isocertification">
+              <a href="{{ route('isocertification') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -267,7 +276,7 @@
             <div class="detail-box">
               <h6>ISO 50001 Approval Certificate</h6>
               <h6></h6>
-              <a href="isocertification">
+              <a href="{{ route('isocertification') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -283,7 +292,7 @@
             <div class="detail-box">
               <h6>ISO 9001 Approval Certificate</h6>
               <h6></h6>
-              <a href="isocertification">
+              <a href="{{ route('isocertification') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -299,7 +308,7 @@
             <div class="detail-box">
               <h6>JIS Approval Certificate</h6>
               <h6></h6>
-              <a href="jisapproval">
+              <a href="{{ route('jisapproval') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -315,7 +324,7 @@
             <div class="detail-box">
               <h6>Steel Bar for Reinforcement</h6>
               <h6></h6>
-              <a href="sni">
+              <a href="{{ route('sni') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -331,7 +340,7 @@
             <div class="detail-box">
               <h6>Steel Bar In Coil</h6>
               <h6></h6>
-              <a href="sni">
+              <a href="{{ route('sni') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -347,7 +356,7 @@
             <div class="detail-box">
               <h6>LP - 455 – IDN Accreditation by KAN</h6>
               <h6></h6>
-              <a href="kan">
+              <a href="{{ route('kan') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -364,7 +373,7 @@
               <h6>SMK3 Approval ertificate</h6>
               <h6></h6>
 
-                <a href="sirim">
+                <a href="{{ route('sirim') }}" >
                   <p class="pkebawah">Read More >></p>
                 </a>
 
@@ -381,7 +390,7 @@
             <div class="detail-box">
               <h6>Proper Approval Certificate</h6>
               <h6></h6>
-              <a href="tkdn">
+              <a href="{{ route('tkdn') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -397,7 +406,7 @@
             <div class="detail-box">
               <h6>Zero Accident Approval Certificate</h6>
               <h6></h6>
-              <a href="sni">
+              <a href="{{ route('sni') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -413,7 +422,7 @@
             <div class="detail-box">
               <h6>SIRIM Approval</h6>
               <h6></h6>
-              <a href="sirim">
+              <a href="{{ route('sirim') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -433,19 +442,7 @@
 
 
 
-<!-- Start news section -->
 
-<section class="news">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-12 col-xs-12">
-          <h1>Dirgahayu 78 Tahun Republik Indonesia</h1>
-          <h6>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h6>
-          <a href="">Read More</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- end news section -->
 
@@ -469,7 +466,7 @@
 
                       <div id="sidebar">
                         <img>
-                        <a href="customer-center">
+                        <a href="{{ route('customer-center') }}">
                             <p>Customer Services</p>
                         </a>
                       </div>

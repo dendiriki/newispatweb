@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Grade;
 use App\Mail\SendEmail;
 use App\Models\English;
+use App\Models\news;
 
 class LayoutController extends Controller
 {
@@ -647,6 +648,29 @@ class LayoutController extends Controller
                 'sub' => 'EN',
             ]);
         }
+    }
+
+    public function news(){
+        return view('layout.news.index',[
+            'news' => News::all(),
+            'url'  => 'news',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
+        ]);
+
+    }
+
+    public function detailnews(News $news) {
+        return view('layout.news.detail',[
+            'news' =>$news,
+            'url'  => 'detailnews',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
+
+        ]);
+
     }
 
 }

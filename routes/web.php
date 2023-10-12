@@ -25,23 +25,23 @@ use App\Mail\SendEmail;
 |
 */
 
-Route::get('/', function () {
+Route::get('home', function () {
     return view('layout.home.index',[
-        'url' => '',
+        'url' => 'home',
         'class' => '',
         'navbar' =>'hero_area',
         'sub' => 'EN',
     ]);
-});
+})->name('home');
 
-Route::get('_indo', function () {
+Route::get('home_indo', function () {
     return view('layout.home.index_indo',[
-        'url' =>'/',
+        'url' =>'home',
         'class' => '',
         'navbar' =>'hero_area',
         'sub' => 'IN',
     ]);
-});
+})->name('home_indo');
 
 //Uji Coba test template tanpa DRL
 Route::get('/test', function () {
@@ -60,44 +60,46 @@ Route::resource('admin/customer', CustomerController::class)->middleware('auth')
 Route::resource('admin/news', NewsController::class)->middleware('auth');
 
 //layout Rutes english
-Route::get('/customer-center',[LayoutController::class,'customer'])->middleware('guest');
+Route::get('/customer-center',[LayoutController::class,'customer'])->middleware('guest')->name('customer-center');
 Route::post('/customer-post',[LayoutController::class,'postcustomer'])->middleware('guest');
-Route::get('bod',[LayoutController::class,'bod'])->middleware('guest');
-Route::get('profilindo',[LayoutController::class,'profilindo'])->middleware('guest');
-Route::get('vision',[LayoutController::class,'vision'])->middleware('guest');
-Route::get('highlight',[LayoutController::class,'highlight'])->middleware('guest');
-Route::get('milestone',[LayoutController::class,'milestone'])->middleware('guest');
-Route::get('she',[LayoutController::class,'she'])->middleware('guest');
-Route::get('isocertification',[LayoutController::class,'isocertification'])->middleware('guest');
-Route::get('jisapproval',[LayoutCOntroller::class,'jisapproval'])->middleware('guest');
-Route::get('sni',[LayoutController::class,'sni'])->middleware('guest');
-Route::get('kan',[LayoutController::class,'kan'])->middleware('guest');
-Route::get('tkdn',[LayoutController::class,'tkdn'])->middleware('guest');
-Route::get('sirim',[LayoutCOntroller::class,'sirim'])->middleware('guest');
+Route::get('bod',[LayoutController::class,'bod'])->middleware('guest')->name('bod');
+Route::get('profilindo',[LayoutController::class,'profilindo'])->middleware('guest')->name('profilindo');
+Route::get('vision',[LayoutController::class,'vision'])->middleware('guest')->name('vision');
+Route::get('highlight',[LayoutController::class,'highlight'])->middleware('guest')->name('highlight');
+Route::get('milestone',[LayoutController::class,'milestone'])->middleware('guest')->name('milestone');
+Route::get('she',[LayoutController::class,'she'])->middleware('guest')->name('she');
+Route::get('isocertification',[LayoutController::class,'isocertification'])->middleware('guest')->name('isocertification');
+Route::get('jisapproval',[LayoutCOntroller::class,'jisapproval'])->middleware('guest')->name('jisapproval');
+Route::get('sni',[LayoutController::class,'sni'])->middleware('guest')->name('sni');
+Route::get('kan',[LayoutController::class,'kan'])->middleware('guest')->name('kan');
+Route::get('tkdn',[LayoutController::class,'tkdn'])->middleware('guest')->name('tkdn');
+Route::get('sirim',[LayoutCOntroller::class,'sirim'])->middleware('guest')->name('sirim');
 
-Route::get('highcarbon',[LayoutController::class,'highcarbon'])->middleware('guest');
-Route::get('lowcarbon',[LayoutController::class,'lowcarbon'])->middleware('guest');
-Route::get('clodheading',[LayoutController::class,'clodheading'])->middleware('guest');
-Route::get('generalpw',[LayoutController::class,'generalpw'])->middleware('guest');
-Route::get('welding',[LayoutController::class,'welding'])->middleware('guest');
-Route::get('pline',[LayoutController::class,'pline'])->middleware('guest');
-Route::get('structure',[LayoutController::class,'structure'])->middleware('guest');
-Route::get('nails',[LayoutController::class,'nails'])->middleware('guest');
-
-
-Route::get('ispatwireproduct',[LayoutController::class,'ispatwireproduct'])->middleware('guest');
-Route::get('ispatpancaputra',[LayoutController::class,'ispatpancaputra'])->middleware('guest');
-Route::get('ispatbukitbaja',[LayoutController::class,'ispatbukitbaja'])->middleware('guest');
+Route::get('highcarbon',[LayoutController::class,'highcarbon'])->middleware('guest')->name('highcarbon');
+Route::get('lowcarbon',[LayoutController::class,'lowcarbon'])->middleware('guest')->name('lowcarbon');
+Route::get('clodheading',[LayoutController::class,'clodheading'])->middleware('guest')->name('clodheading');
+Route::get('generalpw',[LayoutController::class,'generalpw'])->middleware('guest')->name('generalpw');
+Route::get('welding',[LayoutController::class,'welding'])->middleware('guest')->name('welding');
+Route::get('pline',[LayoutController::class,'pline'])->middleware('guest')->name('pline');
+Route::get('structure',[LayoutController::class,'structure'])->middleware('guest')->name('structure');
+Route::get('nails',[LayoutController::class,'nails'])->middleware('guest')->name('nails');
 
 
-Route::get('fasilitas',[LayoutController::class,'fasilitas'])->middleware('guest');
-Route::get('steelmaking',[LayoutController::class,'steelmaking'])->middleware('guest');
-Route::get('rolling',[LayoutController::class,'rolling'])->middleware('guest');
-Route::get('fasilitaspancaputra',[LayoutController::class,'fasilitaspancaputra'])->middleware('guest');
-Route::get('fasilitasbukitnaja',[LayoutController::class,'fasilitasbukitnaja'])->middleware('guest');
-Route::get('fasilitaswire',[LayoutController::class,'fasilitaswire'])->middleware('guest');
+Route::get('ispatwireproduct',[LayoutController::class,'ispatwireproduct'])->middleware('guest')->name('ispatwireproduct');
+Route::get('ispatpancaputra',[LayoutController::class,'ispatpancaputra'])->middleware('guest')->name('ispatpancaputra');
+Route::get('ispatbukitbaja',[LayoutController::class,'ispatbukitbaja'])->middleware('guest')->name('ispatbukitbaja');
 
-Route::get('karir',[LayoutController::class,'karir'])->middleware('guest');
+
+Route::get('fasilitas',[LayoutController::class,'fasilitas'])->middleware('guest')->name('fasilitas');
+Route::get('steelmaking',[LayoutController::class,'steelmaking'])->middleware('guest')->name('steelmaking');
+Route::get('rolling',[LayoutController::class,'rolling'])->middleware('guest')->name('rolling');
+Route::get('fasilitaspancaputra',[LayoutController::class,'fasilitaspancaputra'])->middleware('guest')->name('fasilitaspancaputra');
+Route::get('fasilitasbukitnaja',[LayoutController::class,'fasilitasbukitnaja'])->middleware('guest')->name('fasilitasbukitnaja');
+Route::get('fasilitaswire',[LayoutController::class,'fasilitaswire'])->middleware('guest')->name('fasilitaswire');
+
+Route::get('karir',[LayoutController::class,'karir'])->middleware('guest')->name('karir');
+Route::get('news',[LayoutController::class,'news'])->middleware('guest')->name('news');
+Route::get('detailnews/{news}',[LayoutController::class,'detailnews'])->middleware('guest')->name('detailnews');
 
 ////layout Rutes indonesia
 Route::get('/customer-center_indo',[LayoutIndoController::class,'customer_indo'])->middleware('guest');
@@ -123,7 +125,7 @@ Route::get('generalpw_indo',[LayoutIndoCOntroller::class,'generalpw_indo'])->mid
 Route::get('welding_indo',[LayoutIndoCOntroller::class,'welding_indo'])->middleware('guest');
 Route::get('pline_indo',[LayoutIndoController::Class,'pline_indo'])->middleware('guest');
 Route::get('structure_indo',[LayoutIndoController::class,'structure_indo'])->middleware('guest');
-Route::get('nails_indo',[LayuotIndoController::class,'nails_indo'])->middleware('guest');
+Route::get('nails_indo',[LayoutIndoController::class,'nails_indo'])->middleware('guest');
 
 Route::get('ispatwireproduct_indo',[LayoutIndoController::class,'ispatwireproduct_indo'])->middleware('guest');
 Route::get('ispatpancaputra_indo',[LayoutIndoController::class,'ispatpancaputra_indo'])->middleware('guest');
@@ -135,8 +137,9 @@ Route::get('rolling_indo',[LayoutIndoController::class,'rolling_indo'])->middlew
 Route::get('fasilitaspancaputra_indo',[LayoutIndoController::class,'fasilitaspancaputra_indo'])->middleware('guest');
 Route::get('fasilitasbukitnaja_indo',[LayoutIndoController::class,'fasilitasbukitnaja_indo'])->middleware('guest');
 Route::get('fasilitaswire_indo',[LayoutIndoController::class,'fasilitaswire_indo'])->middleware('guest');
-Route::get('karir_indo',[LayoutIndoController::class,'karir_indo'])->middleware('guest');
-Route::get('news_indo',[LayoutIndoController::class,'news_indo'])->middleware('guest');
+Route::get('karir_indo',[LayoutIndoController::class,'karir_indo'])->middleware('guest')->name('karir_indo');
+Route::get('news_indo',[LayoutIndoController::class,'news_indo'])->middleware('guest')->name('news_indo');
+Route::get('detailnews_indo/{news}',[LayoutIndoController::class,'detailnews_indo'])->middleware('guest')->name('detailnews_indo');
 
 
 
