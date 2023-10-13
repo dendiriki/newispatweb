@@ -9,7 +9,7 @@ class LoginController extends Controller
 {
     public function index(){
         return view('admin.login.index',[
-            'url' => '',
+            'url' => 'login',
             'class' => '',
             'navbar' =>'hero_area',
             'sub' => 'AM'
@@ -33,7 +33,7 @@ class LoginController extends Controller
     public function logout(Request $request){
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('home');
     }
 }
 
