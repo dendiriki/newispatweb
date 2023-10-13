@@ -1979,6 +1979,9 @@ body {
     text-align: left;
     justify-content: bottom;
   }
+  .container_CS p {
+    text-transform: none;
+  }
 
 
   .container_CS nav {

@@ -102,7 +102,7 @@ Route::get('news',[LayoutController::class,'news'])->middleware('guest')->name('
 Route::get('detailnews/{news}',[LayoutController::class,'detailnews'])->middleware('guest')->name('detailnews');
 
 ////layout Rutes indonesia
-Route::get('/customer-center_indo',[LayoutIndoController::class,'customer_indo'])->middleware('guest');
+Route::get('/customer-center_indo',[LayoutIndoController::class,'customer_indo'])->middleware('guest')->name('customer_indo');
 Route::post('/customer-post_indo',[LayoutIndoController::class,'postcustomer_indo'])->middleware('guest');
 
 Route::get('profilindo_indo',[LayoutIndoController::class,'profilindo_indo'])->middleware('guest')->name('profilindo_indo');

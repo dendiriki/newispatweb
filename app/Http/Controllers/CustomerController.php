@@ -69,7 +69,9 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        //
+        return View ('admin.layout.customershow',[
+            'customer' => $customer
+        ]);
     }
 
     /**

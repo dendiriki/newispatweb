@@ -122,7 +122,7 @@
 
                             <!-- === Client 1 === -->
                             <div class="client-item text-center">
-                                <a href="highcarbon_indo">
+                                <a href="{{ route('highcarbon_indo') }}">
                                     <img class="img-responsive" src="assets/img/SVG.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -132,7 +132,7 @@
 
                             <!-- === Client 2 === -->
                             <div class="client-item text-center">
-                                <a href="lowcarbon_indo">
+                                <a href="{{ route('lowcarbon_indo') }}">
                                     <img class="img-responsive" src="assets/img/SVG-1.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -142,7 +142,7 @@
 
                             <!-- === Client 3 === -->
                             <div class="client-item text-center">
-                                <a href="clodheading_indo">
+                                <a href="{{ route('clodheading_indo') }}">
                                     <img class="img-responsive" src="assets/img/SVG-2.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -152,7 +152,7 @@
 
                             <!-- === Client 4 === -->
                             <div class="client-item text-center">
-                                <a href="generalpw_indo">
+                                <a href="{{ route('generalpw_indo') }}">
                                     <img class="img-responsive" src="assets/img/SVG-3.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -162,7 +162,7 @@
 
                             <!-- === Client 5 === -->
                             <div class="client-item text-center">
-                                <a href="welding_indo">
+                                <a href="{{ route('welding_indo') }}">
                                     <img class="img-responsive" src="assets/img/SVG-4.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -172,7 +172,7 @@
 
                             <!-- === Client 6 === -->
                             <div class="client-item text-center">
-                                <a href="pline_indo">
+                                <a href="{{ route('pline_indo') }}">
                                     <img class="img-responsive" src="assets/img/SVG-5.png" alt="">
                                     <a></a>
                                     <h1></h1>
@@ -182,7 +182,7 @@
 
                             <!-- === Client 7 === -->
                             <div class="client-item text-center">
-                                <a href="structure_indo">
+                                <a href="{{ route('structure_indo') }}">
                                     <img class="img-responsive" src="assets/img/SVG-6.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -192,7 +192,7 @@
 
                             <!-- === Client 8 === -->
                             <div class="client-item text-center">
-                                <a href="nails_indo">
+                                <a href="{{ route('nails_indo') }}">
                                     <img class="img-responsive" src="assets/img/SVG-7.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
@@ -245,7 +245,7 @@
               <div class="detail-box">
                 <h6>ISO 4001 Approval Certificate</h6>
                 <h6></h6>
-                <a href="isocertification_indo">
+                <a href="{{ route('isocertification_indo') }}">
                   <p class="pkebawah">Read More >></p>
                 </a>
             </div>
@@ -261,7 +261,7 @@
             <div class="detail-box">
               <h6>ISO 45001 Approval Certificate</h6>
               <h6></h6>
-              <a href="isocertification_indo">
+              <a href="{{ route('isocertification_indo') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -277,7 +277,7 @@
             <div class="detail-box">
               <h6>ISO 50001 Approval Certificate</h6>
               <h6></h6>
-              <a href="isocertification_indo">
+              <a href="{{ route('isocertification_indo') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -293,7 +293,7 @@
             <div class="detail-box">
               <h6>ISO 9001 Approval Certificate</h6>
               <h6></h6>
-              <a href="isocertification_indo">
+              <a href="{{ route('isocertification_indo') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -309,7 +309,7 @@
             <div class="detail-box">
               <h6>JIS Approval Certificate</h6>
               <h6></h6>
-              <a href="jisapproval_indo">
+              <a href="{{ route('jisapproval_indo') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -325,7 +325,7 @@
             <div class="detail-box">
               <h6>Steel Bar for Reinforcement</h6>
               <h6></h6>
-              <a href="sni_indo">
+              <a href="{{ route('sni_indo') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -341,7 +341,7 @@
             <div class="detail-box">
               <h6>Steel Bar In Coil</h6>
               <h6></h6>
-              <a href="sni_indo">
+              <a href="{{ route('sni_indo') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -357,7 +357,7 @@
             <div class="detail-box">
               <h6>LP - 455 – IDN Accreditation by KAN</h6>
               <h6></h6>
-              <a href="kan_indo">
+              <a href="{{ route('kan_indo') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -374,7 +374,7 @@
               <h6>SMK3 Approval ertificate</h6>
               <h6></h6>
 
-                <a href="sirim_indo">
+                <a href="{{ route('sirim_indo') }}">
                   <p class="pkebawah">Read More >></p>
                 </a>
 
@@ -391,7 +391,7 @@
             <div class="detail-box">
               <h6>Proper Approval Certificate</h6>
               <h6></h6>
-              <a href="tkdn_indo">
+              <a href="{{ route('tkdn_indo') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -407,7 +407,7 @@
             <div class="detail-box">
               <h6>Zero Accident Approval Certificate</h6>
               <h6></h6>
-              <a href="sni_indo">
+              <a href="{{ route('sni_indo') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
@@ -423,25 +423,13 @@
             <div class="detail-box">
               <h6>SIRIM Approval</h6>
               <h6></h6>
-              <a href="sirim_indo">
+              <a href="{{ route('sirim_indo') }}">
                 <p class="pkebawah">Read More >></p>
               </a>
             </div>
           </div>
         </div>
         </div>
-
-
-
-
-
-        <!--
-      </div>
-      <div class="btn-box">
-        <a href="">
-          View All Achivements
-        </a>
-      </div>-->
     </div>
   </section>
 
@@ -468,7 +456,7 @@
 
                         <div id="sidebar">
                             <img>
-                            <a href="customer-center_indo">
+                            <a href="{{ route('customer_indo') }}">
                                 <p>Customer Services</p>
                             </a>
                         </div>
@@ -476,19 +464,19 @@
                       <div id="content1">
                         <img src="assets/img/icon/Markicon.png" alt="icon" style="max-width: 6rem;" >
                         <h1>Address</h1>
-                        <p>PV3+VC5, (Kec.)  Taman, <br>(Kab.) Sidoarjo : 61257</p>
+                        <p>Medaeng Kulon, Kedungturi, Kec. Taman, Kabupaten Sidoarjo, Jawa Timur 61257</p>
                       </div>
 
                       <div id="content2">
                         <img src="assets/img/icon/Phoneicon.png" alt="icon" style="max-width: 6rem;" >
                           <h1>Call Us</h1>
-                          <p>Telp : (62) 31-7887000 <br>Fax : (62) 31-7887500 (031)</p>
+                          <p>Telp : (62) 31-7887000 <br>Fax : (62) 31-7887500</p>
                       </div>
 
                       <div id="content3">
                         <img src="assets/img/icon/Emailicon.png" alt="icon" style="max-width: 6rem;" >
                           <h1>Email Us</h1>
-                          <p>sales@ispatindo.com <br>ispatindo.com</p>
+                          <p>marketing.indo@mittalsteel.com <br>custsupp.indo@mittalsteel.com</p>
                       </div>
 
                       <div id="content4">

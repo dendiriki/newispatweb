@@ -429,14 +429,6 @@
           </div>
         </div>
         </div>
-
-        <!--
-      </div>
-      <div class="btn-box">
-        <a href="">
-          View All Achivements
-        </a>
-      </div>-->
     </div>
   </section>
 
@@ -474,19 +466,19 @@
                       <div id="content1">
                         <img src="assets/img/icon/Markicon.png" alt="icon" style="max-width: 6rem;" >
                         <h1>Address</h1>
-                        <p>PV3+VC5, (Kec.)  Taman, <br>(Kab.) Sidoarjo : 61257</p>
+                        <p>Medaeng Kulon, Kedungturi, Kec. Taman, Kabupaten Sidoarjo, Jawa Timur 61257</p>
                       </div>
 
                       <div id="content2">
                         <img src="assets/img/icon/Phoneicon.png" alt="icon" style="max-width: 6rem;" >
                           <h1>Call Us</h1>
-                          <p>Telp : (62) 31-7887000 <br>Fax : (62) 31-7887500 (031)</p>
+                          <p>Telp : (62) 31-7887000 <br>Fax : (62) 31-7887500</p>
                       </div>
 
                       <div id="content3">
                         <img src="assets/img/icon/Emailicon.png" alt="icon" style="max-width: 6rem;" >
                           <h1>Email Us</h1>
-                          <p>sales@ispatindo.com <br>ispatindo.com</p>
+                          <p>marketing.indo@mittalsteel.com <br>custsupp.indo@mittalsteel.com</p>
                       </div>
 
                       <div id="content4">

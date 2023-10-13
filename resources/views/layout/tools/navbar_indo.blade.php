@@ -35,7 +35,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="customer-center_indo">
+                            <a class="nav-link" href="{{ route('customer_indo') }}">
                                 <span>
                                     Customer Center
                                 </span>
