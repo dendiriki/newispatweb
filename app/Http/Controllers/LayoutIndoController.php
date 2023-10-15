@@ -245,49 +245,63 @@ class LayoutIndoController extends Controller
         ]);
     }
 
-    public function highcarbon_indo(){
+    public function highcarbon_indo()
+    {
         $isexist = Post::select("*")
-        ->where("slug","PRODUCTHIGHCARBONSTEEL")->exists();
+            ->where("slug", "PRODUCTHIGHCARBONSTEEL")
+            ->exists();
 
-        if($isexist){
-             return View ('layout.product.index_indo',[
-            'post' => Post::firstWhere('slug','=','PRODUCTHIGHCARBONSTEEL'),
-            'url' => 'highcarbon',
-            'class' => 'sub_page',
-            'navbar' =>'timpanav',
-            'sub' => 'IN',
-        ]);
-        }else{
-            return view('layout.notfound.index_indo',[
+        if ($isexist) {
+            $post = Post::firstWhere('slug', 'PRODUCTHIGHCARBONSTEEL');
+            $grade = Grade::where('category', 'HIGHCARBON')->get();
+
+            return view('layout.product.highcarbon_indo', [
+                'post' => $post,
+                'grade' => $grade,
                 'url' => 'highcarbon',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav',
+                'navbar' => 'timpanav',
+                'sub' => 'IN',
+            ]);
+        } else {
+            return view('layout.notfound.index_indo', [
+                'url' => 'highcarbon',
+                'class' => 'sub_page',
+                'navbar' => 'timpanav',
                 'sub' => 'IN',
             ]);
         }
     }
 
-    public function lowcarbon_indo(){
-        $isexist = Post::select("*")
-        ->where("slug","PRODUCTLOWCARBONSTEEL")->exists();
 
-        if($isexist){
-             return View ('layout.product.index_indo',[
-            'post' => Post::firstWhere('slug','=','PRODUCTLOWCARBONSTEEL'),
-            'url' => 'lowcarbon',
-            'class' => 'sub_page',
-            'navbar' =>'timpanav',
-            'sub' => 'IN',
-        ]);
-        }else{
-            return view('layout.notfound.index_indo',[
+    public function lowcarbon_indo()
+    {
+        $isexist = Post::select("*")
+            ->where("slug", "PRODUCTLOWCARBONSTEEL")
+            ->exists();
+
+        if ($isexist) {
+            $post = Post::firstWhere('slug', 'PRODUCTLOWCARBONSTEEL');
+            $grade = Grade::where('category', 'LOWCARBON')->get();
+
+            return view('layout.product.lowcarbon_indo', [
+                'post' => $post,
+                'grade' => $grade,
                 'url' => 'lowcarbon',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav',
+                'navbar' => 'timpanav',
+                'sub' => 'IN',
+            ]);
+        } else {
+            return view('layout.notfound.index_indo', [
+                'url' => 'lowcarbon',
+                'class' => 'sub_page',
+                'navbar' => 'timpanav',
                 'sub' => 'IN',
             ]);
         }
     }
+
 
     public function clodheading_indo(){
         $isexist = Post::select("*")

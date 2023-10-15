@@ -25,6 +25,10 @@ use App\Mail\SendEmail;
 |
 */
 
+Route::get('/',function(){
+    return redirect('home');
+});
+
 Route::get('home', function () {
     return view('layout.home.index',[
         'url' => 'home',

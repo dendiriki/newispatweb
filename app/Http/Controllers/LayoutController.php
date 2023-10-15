@@ -243,51 +243,62 @@ class LayoutController extends Controller
         ]);
     }
 
-    public function highcarbon(){
-
+    public function highcarbon()
+    {
         $isexist = English::select("*")
-        ->where("slug","PRODUCTHIGHCARBONSTEEL")->exists();
+            ->where("slug", "PRODUCTHIGHCARBONSTEEL")
+            ->exists();
 
-        if($isexist){
-             return View('layout.product.index',[
-            'english' => English::firstWhere('slug','=','PRODUCTHIGHCARBONSTEEL'),
-            'url'  => 'highcarbon',
-            'class' => 'sub_page',
-            'navbar' =>'timpanav',
-            'sub' => 'EN',
-        ]);
-        }else{
-            return view('layout.notfound.index',[
-                'url'  => 'highcarbon',
+        if ($isexist) {
+            $english = English::firstWhere('slug', 'PRODUCTHIGHCARBONSTEEL');
+            $grade = Grade::where('category', 'HIGHCARBON')->get();
+
+            return view('layout.product.highcarbon', [
+                'english' => $english,
+                'grade' => $grade,
+                'url' => 'highcarbon',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav',
+                'navbar' => 'timpanav',
+                'sub' => 'EN',
+            ]);
+        } else {
+            return view('layout.notfound.index_indo', [
+                'url' => 'highcarbon',
+                'class' => 'sub_page',
+                'navbar' => 'timpanav',
                 'sub' => 'EN',
             ]);
         }
     }
 
-    public function lowcarbon(){
-
+    public function lowcarbon()
+    {
         $isexist = English::select("*")
-        ->where("slug","PRODUCTLOWCARBONSTEEL")->exists();
+            ->where("slug", "PRODUCTLOWCARBONSTEEL")
+            ->exists();
 
-        if($isexist){
-             return View('layout.product.index',[
-            'english' => English::firstWhere('slug','=','PRODUCTLOWCARBONSTEEL'),
-            'url'  => 'lowcarbon',
-            'class' => 'sub_page',
-            'navbar' =>'timpanav',
-            'sub' => 'EN',
-        ]);
-        }else{
-            return view('layout.notfound.index',[
-                'url'  => 'lowcarbon',
+        if ($isexist) {
+            $english = English::firstWhere('slug', 'PRODUCTLOWCARBONSTEEL');
+            $grade = Grade::where('category', 'LOWCARBON')->get();
+
+            return view('layout.product.lowcarbon', [
+                'english' => $english,
+                'grade' => $grade,
+                'url' => 'lowcarbon',
                 'class' => 'sub_page',
-                'navbar' =>'timpanav',
+                'navbar' => 'timpanav',
+                'sub' => 'EN',
+            ]);
+        } else {
+            return view('layout.notfound.index', [
+                'url' => 'lowcarbon',
+                'class' => 'sub_page',
+                'navbar' => 'timpanav',
                 'sub' => 'EN',
             ]);
         }
     }
+
 
     public function clodheading(){
 

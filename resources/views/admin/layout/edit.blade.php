@@ -17,12 +17,6 @@
 
             </div>
             <div class="mb-3">
-                <label for="name" class="form-label">name created</label>
-                <input type="text" class="form-control form-select @error('name') is-invalid @enderror" id="name" name="name"
-                    value="{{ $post->name }}" required autofocus >
-            </div>
-
-            <div class="mb-3">
                 <label for="slug" class="form-label">Slug</label>
                 <select type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug"
                     required>

@@ -41,7 +41,6 @@ class PostController extends Controller
         // dd($request);
         $rules=[
             'title' => ['required'],
-            'name' => ['required'] ,
             'slug' => ['required','unique:posts'],
             'content' => ['required']
         ];
@@ -75,7 +74,7 @@ class PostController extends Controller
 
     $article = Post::create([
         'title' => $request->title,
-        'name' => $request->name,
+        'name' => auth()->user()->name,
         'slug' => $request->slug,
         'content' => $dom->saveHTML()
 
@@ -114,7 +113,6 @@ class PostController extends Controller
     {
         $rules=[
             'title' => ['required'],
-            'name' => ['required'] ,
             'slug' => ['required',],
             'content' => ['required']
         ];
@@ -149,7 +147,7 @@ class PostController extends Controller
 
     Post::where('id',$post->id)->update([
         'title' => $request->title,
-        'name' => $request->name,
+        'name' => auth()->user()->name,
         'slug' => $request->slug,
         'content' => $dom->saveHTML()
 
