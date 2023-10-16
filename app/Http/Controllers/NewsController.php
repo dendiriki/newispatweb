@@ -14,7 +14,7 @@ class NewsController extends Controller
     {
         Return view('admin.layout.news',[
             'title' => 'My Post In News',
-            'posts' => News::all(),
+            'new' => News::all(),
         ]);
     }
 
@@ -49,9 +49,9 @@ class NewsController extends Controller
      */
     public function show(News $news)
     {
-        // return View ('admin.layout.englishshow',[
-        //     'english' => $english
-        // ]);
+        return View ('admin.layout.newsshow',[
+            'news' => $news
+        ]);
     }
 
     /**
@@ -59,7 +59,9 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        //
+        return View ('admin.layout.newsedit',[
+            'news' => $news
+        ]);
     }
 
     /**
@@ -67,7 +69,16 @@ class NewsController extends Controller
      */
     public function update(Request $request, News $news)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => ['required','max:255'],
+            'link' => ['required'],
+            'description' => ['required']
+        ]);
+
+        $validatedData['penulist'] = auth()->user()->name;
+
+        News::where('id', $news->id)->update($validatedData);
+        return redirect('/admin/news');
     }
 
     /**
@@ -75,6 +86,7 @@ class NewsController extends Controller
      */
     public function destroy(News $news)
     {
-        //
+        News::destroy($news->id);
+        return redirect('/admin/news')->with('success',' Post has been deleted');
     }
 }

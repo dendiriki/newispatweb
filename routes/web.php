@@ -87,6 +87,7 @@ Route::get('welding',[LayoutController::class,'welding'])->middleware('guest')->
 Route::get('pline',[LayoutController::class,'pline'])->middleware('guest')->name('pline');
 Route::get('structure',[LayoutController::class,'structure'])->middleware('guest')->name('structure');
 Route::get('nails',[LayoutController::class,'nails'])->middleware('guest')->name('nails');
+Route::get('detailproduk/{grade}',[LayoutController::class,'detailproduk'])->middleware('guest')->name('detailproduk');
 
 
 Route::get('ispatwireproduct',[LayoutController::class,'ispatwireproduct'])->middleware('guest')->name('ispatwireproduct');
@@ -130,6 +131,7 @@ Route::get('welding_indo',[LayoutIndoCOntroller::class,'welding_indo'])->middlew
 Route::get('pline_indo',[LayoutIndoController::class,'pline_indo'])->middleware('guest')->name('pline_indo');
 Route::get('structure_indo',[LayoutIndoController::class,'structure_indo'])->middleware('guest')->name('structure_indo');
 Route::get('nails_indo',[LayoutIndoController::class,'nails_indo'])->middleware('guest')->name('nails_indo');
+Route::get('detailproduk_indo/{grade}',[LayoutIndoController::class,'detailproduk_indo'])->middleware('guest')->name('detailproduk_indo');
 
 Route::get('ispatwireproduct_indo',[LayoutIndoController::class,'ispatwireproduct_indo'])->middleware('guest')->name('ispatwireproduct_indo');
 Route::get('ispatpancaputra_indo',[LayoutIndoController::class,'ispatpancaputra_indo'])->middleware('guest')->name('ispatpancaputra_indo');

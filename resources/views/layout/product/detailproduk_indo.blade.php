@@ -1,4 +1,4 @@
-@extends('layout.tools.main')
+@extends('layout.tools.main_indo')
 @section('content')
     <section class="expert_section layout_padding">
         <div class="container">
@@ -6,18 +6,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9 ms-sm-auto col-lg-12 px-md-4">
-                            <h1>{{ $english->title }}</h1>
+                            <h1>{{ $grade->name }}</h1>
+                            <h5>Article Publication Date : {{ $grade->created_at }}</h5>
                             <br><br>
-                            <div>{!! $english->content !!}</div>
+                            <div>{!! $grade->description !!}</div>
                         </div>
                     </div>
                 </div>
             </div>
     </section>
-    @foreach ($grade as $grades)
-        <li class="list-group-item"><a href="{{ route('detailproduk', $grades->name) }}">{{ $grades->name }}
-                ({{ $grades->category }})
-            </a>
-        </li>
-    @endforeach
 @endsection

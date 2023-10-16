@@ -685,9 +685,19 @@ class LayoutIndoController extends Controller
             'sub' => 'IN',
 
         ]);
-
     }
 
+    public function detailproduk_indo(Grade $grade) {
+        return view('layout.product.detailproduk_indo',[
+            'grade' =>$grade,
+            'url'  => 'detailproduk',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
+
+        ]);
+
+    }
 
 
 

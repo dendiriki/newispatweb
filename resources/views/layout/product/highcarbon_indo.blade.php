@@ -15,6 +15,9 @@
             </div>
     </section>
     @foreach ($grade as $grades)
-    <li class="list-group-item"><a href="certificate/JIS/Certificate_PT. ISPAT INDOüiJQID08008üj.pdf">{{ $grades->name }} ({{ $grades->category }}) </a></li>
+        <li class="list-group-item"><a href="{{ route('detailproduk_indo', $grades->name) }}">{{ $grades->name }}
+                ({{ $grades->category }})
+            </a>
+        </li>
     @endforeach
 @endsection

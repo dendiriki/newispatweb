@@ -104,6 +104,11 @@
                                             href="{{ route($url, ['news' => $news->link]) }}">ENGLISH</a>
                                         <a class="dropdown-item"
                                             href="{{ route($url . '_indo', ['news' => $news->link]) }}">INDONESIAN</a>
+                                    @elseif (request()->routeIs('detailproduk', 'detailproduk_indo'))
+                                        <a class="dropdown-item"
+                                            href="{{ route($url, ['grade' => $grade->name]) }}">ENGLISH</a>
+                                        <a class="dropdown-item"
+                                            href="{{ route($url . '_indo', ['grade' => $grade->name]) }}">INDONESIAN</a>
                                     @else
                                         <a class="dropdown-item" href="{{ route($url) }}">ENGLISH</a>
                                         <a class="dropdown-item" href="{{ route($url) }}_indo">INDONESIAN</a>

@@ -23,22 +23,23 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($posts as $post)
+                @foreach ($new as $news)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $post->title }}</td>
-                        <td>{{ $post->link}}</td>
+                        <td>{{ $news->title }}</td>
+                        <td>{{ $news->link }}</td>
                         <td>
-                            <a href="/admin/english/{{ $post->link }}" class="btn btn-info">view
+                            <a href="/admin/news/{{ $news->link }}" class="btn btn-info">view
                                 <span></span>
                             </a>
-                            <a href="/admin/english/{{ $post->link}}/edit" class="btn btn-warning">edit
+                            <a href="/admin/news/{{ $news->link }}/edit" class="btn btn-warning">edit
                                 <span></span>
                             </a>
-                            <form action="/admin/english/{{ $post->link}}" method="post" class="d-inline">
+                            <form action="/admin/news/{{ $news->link }}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
-                                <button class="border-0 btn btn-danger" onclick="return confirm('yakin mau hapus')">hapus</button>
+                                <button class="border-0 btn btn-danger"
+                                    onclick="return confirm('yakin mau hapus')">hapus</button>
                             </form>
                         </td>
                     </tr>

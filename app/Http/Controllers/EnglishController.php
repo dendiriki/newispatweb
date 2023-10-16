@@ -38,7 +38,6 @@ class EnglishController extends Controller
     {
         $rules=[
             'title' => ['required'],
-            'name' => ['required'] ,
             'slug' => ['required','unique:englishes'],
             'content' => ['required']
         ];
@@ -72,7 +71,7 @@ class EnglishController extends Controller
 
     $article = English::create([
         'title' => $request->title,
-        'name' => $request->name,
+        'name' => auth()->user()->name,
         'slug' => $request->slug,
         'content' => $dom->saveHTML()
 
@@ -110,7 +109,6 @@ class EnglishController extends Controller
     {
         $rules=[
             'title' => ['required'],
-            'name' => ['required'] ,
             'slug' => ['required',],
             'content' => ['required']
         ];
@@ -145,7 +143,7 @@ class EnglishController extends Controller
 
     English::where('id',$english->id)->update([
         'title' => $request->title,
-        'name' => $request->name,
+        'name' => auth()->user()->name,
         'slug' => $request->slug,
         'content' => $dom->saveHTML()
 

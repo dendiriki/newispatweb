@@ -684,4 +684,18 @@ class LayoutController extends Controller
 
     }
 
+    public function detailproduk(Grade $grade) {
+        return view('layout.product.detailproduk',[
+            'grade' =>$grade,
+            'url'  => 'detailproduk',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
+
+        ]);
+
+    }
+
 }
+
+
