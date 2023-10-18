@@ -40,7 +40,13 @@
                                 </span>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('environment') }}">
+                                <span>
+                                    ENVIRONMENT
+                                </span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link" type="button" data-toggle="dropdown">Industrial Process</a>

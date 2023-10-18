@@ -33,7 +33,6 @@
                                 </div>
                             </div>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('customer_indo') }}">
                                 <span>
@@ -41,7 +40,13 @@
                                 </span>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('environment_indo') }}">
+                                <span>
+                                    ENVIRONMENT
+                                </span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link" type="button" data-toggle="dropdown">Industrial Process</a>
@@ -114,7 +119,7 @@
                                             href="{{ route($url . '_indo', ['grade' => $grade->name]) }}">INDONESIAN</a>
                                     @else
                                         <a class="dropdown-item" href="{{ route($url) }}">ENGLISH</a>
-                                        <a class="dropdown-item" href="{{ route($url . '_indo') }}">INDONESIAN</a>
+                                        <a class="dropdown-item" href="{{ route($url) }}_indo">INDONESIAN</a>
                                     @endif
                                 </div>
                             </div>

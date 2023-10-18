@@ -23,7 +23,8 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
 
   <!-- font awesome style -->
-  <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet" />
+  {{-- <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet" /> --}}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
 
   <!-- Custom styles for this template -->
   <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />

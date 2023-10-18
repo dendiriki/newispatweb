@@ -79,6 +79,15 @@ Route::get('kan',[LayoutController::class,'kan'])->middleware('guest')->name('ka
 Route::get('tkdn',[LayoutController::class,'tkdn'])->middleware('guest')->name('tkdn');
 Route::get('sirim',[LayoutCOntroller::class,'sirim'])->middleware('guest')->name('sirim');
 
+route::get('environment', function(){
+    return view('layout.environment.index',[
+        'url' =>'environment',
+        'class' => 'sub_page',
+        'navbar' =>'timpanav',
+        'sub' => 'EN',
+    ]);
+})->name('environment');
+
 Route::get('highcarbon',[LayoutController::class,'highcarbon'])->middleware('guest')->name('highcarbon');
 Route::get('lowcarbon',[LayoutController::class,'lowcarbon'])->middleware('guest')->name('lowcarbon');
 Route::get('clodheading',[LayoutController::class,'clodheading'])->middleware('guest')->name('clodheading');
@@ -122,6 +131,15 @@ Route::get('sni_indo',[LayoutIndoController::class,'sni_indo'])->middleware('gue
 Route::get('kan_indo',[LayoutIndoController::class,'kan_indo'])->middleware('guest')->name('kan_indo');
 Route::get('tkdn_indo',[LayoutIndoController::class,'tkdn_indo'])->middleware('guest')->name('tkdn_indo');
 Route::get('sirim_indo',[LayoutIndoController::class,'sirim_indo'])->middleware('guest')->name('sirim_indo');
+
+route::get('environment_indo', function(){
+    return view('layout.environment.index_indo',[
+        'url' =>'environment',
+        'class' => 'sub_page',
+        'navbar' =>'timpanav',
+        'sub' => 'IN',
+    ]);
+})->name('environment_indo');
 
 Route::get('highcarbon_indo',[LayoutIndoController::class,'highcarbon_indo'])->middleware('guest')->name('highcarbon_indo');
 Route::get('lowcarbon_indo',[LayoutIndoController::class,'lowcarbon_indo'])->middleware('guest')->name('lowcarbon_indo');

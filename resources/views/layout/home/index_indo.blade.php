@@ -123,7 +123,7 @@
                             <!-- === Client 1 === -->
                             <div class="client-item text-center">
                                 <a href="{{ route('highcarbon_indo') }}">
-                                    <img class="img-responsive" src="assets/img/wirerod.png" alt="">
+                                    <img class="img-responsive" src="assets/img/product1.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
                                     <h6>High Carbon Steel</h6>
@@ -133,7 +133,7 @@
                             <!-- === Client 2 === -->
                             <div class="client-item text-center">
                                 <a href="{{ route('lowcarbon_indo') }}">
-                                    <img class="img-responsive" src="assets/img/wirerod.png" alt="">
+                                    <img class="img-responsive" src="assets/img/product2.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
                                     <h6>Low Carbon Steel</h6>
@@ -143,7 +143,7 @@
                             <!-- === Client 3 === -->
                             <div class="client-item text-center">
                                 <a href="{{ route('clodheading_indo') }}">
-                                    <img class="img-responsive" src="assets/img/SVG-2.png" alt="">
+                                    <img class="img-responsive" src="assets/img/product3.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
                                     <h6>CH Quality Steel</h6>
@@ -153,7 +153,7 @@
                             <!-- === Client 4 === -->
                             <div class="client-item text-center">
                                 <a href="{{ route('generalpw_indo') }}">
-                                    <img class="img-responsive" src="assets/img/SVG-3.png" alt="">
+                                    <img class="img-responsive" src="assets/img/product4.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
                                     <h6>General Purpose WR</h6>
@@ -163,7 +163,7 @@
                             <!-- === Client 5 === -->
                             <div class="client-item text-center">
                                 <a href="{{ route('welding_indo') }}">
-                                    <img class="img-responsive" src="assets/img/wirerod.png" alt="">
+                                    <img class="img-responsive" src="assets/img/product5.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
                                     <h6>Welding Electrode</h6>
@@ -173,7 +173,7 @@
                             <!-- === Client 6 === -->
                             <div class="client-item text-center">
                                 <a href="{{ route('pline_indo') }}">
-                                    <img class="img-responsive" src="assets/img/SVG-6.png" alt="">
+                                    <img class="img-responsive" src="assets/img/product6.png" alt="">
                                     <a></a>
                                     <h1></h1>
                                     <h6>Plain / Deform Bar</h6>
@@ -183,7 +183,7 @@
                             <!-- === Client 7 === -->
                             <div class="client-item text-center">
                                 <a href="{{ route('structure_indo') }}">
-                                    <img class="img-responsive" src="assets/img/C6.png" alt="">
+                                    <img class="img-responsive" src="assets/img/product7.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
                                     <h6>Structural Steel</h6>
@@ -193,7 +193,7 @@
                             <!-- === Client 8 === -->
                             <div class="client-item text-center">
                                 <a href="{{ route('nails_indo') }}">
-                                    <img class="img-responsive" src="assets/img/wirerod.png" alt="">
+                                    <img class="img-responsive" src="assets/img/product8.png" alt="">
                                     <h1></h1>
                                     <h1></h1>
                                     <h6>Nail & Nail Wire</h6>
@@ -471,7 +471,9 @@
                                 <div id="content2">
                                     <img src="assets/img/icon/Phoneicon.png" alt="icon" style="max-width: 6rem;">
                                     <h1>Call Us</h1>
-                                    <p>Telp : (62) 31-7887000 <br>Fax : (62) 31-7887500</p>
+                                    <p>Telp : (62) 31-7887000 <br>
+                                        Fax : (62) 31-7887500 <br>
+                                        WA  : (62) 8155152222</p>
                                 </div>
 
                                 <div id="content3">
