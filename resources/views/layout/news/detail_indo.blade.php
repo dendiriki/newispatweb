@@ -71,7 +71,7 @@
                 </div>
               </div>
               <!-- <img style="width: 960px; height: 540px; margin: auto; border-radius: 10px; border: transparent;" src=".."> -->
-                <p class="card-text">{{$news->description}}</p>
+              <p class="card-text">{!!$news->description!!}</p>
           </div>
 
 

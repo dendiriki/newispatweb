@@ -20,7 +20,6 @@
             </div>
             <div class="Message-body">
                 <h4>Success!</h4>
-                <p>coba dulu</p>
                 <p> {{ session('success') }}</p>
             </div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">

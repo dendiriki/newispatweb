@@ -28,13 +28,13 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $grade->name }}</td>
                         <td>
-                            <a href="/admin/grade/{{ $grade->id }}" class="btn btn-info">view
+                            <a href="/admin/grade/{{ $grade->name }}" class="btn btn-info">view
                                 <span></span>
                             </a>
-                            <a href="/admin/grade/{{ $grade->id}}/edit" class="btn btn-warning">edit
+                            <a href="/admin/grade/{{ $grade->name}}/edit" class="btn btn-warning">edit
                                 <span></span>
                             </a>
-                            <form action="/admin/grade/{{ $grade->id}}" method="post" class="d-inline">
+                            <form action="/admin/grade/{{ $grade->name}}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
                                 <button class="border-0 btn btn-danger" onclick="return confirm('yakin mau hapus')">hapus</button>
