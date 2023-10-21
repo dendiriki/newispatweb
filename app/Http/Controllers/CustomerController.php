@@ -18,7 +18,7 @@ class CustomerController extends Controller
     public function index()
     {
         return view('admin.layout.customer',[
-        'customers'=> Customer::all()
+        'customers'=> Customer::latest()->get()
         ]);
     }
 

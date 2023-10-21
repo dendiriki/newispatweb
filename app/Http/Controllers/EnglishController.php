@@ -18,7 +18,7 @@ class EnglishController extends Controller
     {
         Return view('admin.layout.english',[
             'title' => 'My Post In English',
-            'posts' => English::all(),
+            'posts' => English::latest()->paginate(7)
         ]);
     }
 
