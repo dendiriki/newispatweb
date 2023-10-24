@@ -73,9 +73,9 @@
                         <option value="PRODUCTNAILS&NAILWIRE">PRODUCT NAILS & NAIL WIRE</option>
                         <option value="PRODUCTSCRAPPROVIDER">PRODUCT SCRAP PROVIDER</option>
                     @endcan
-                   @can('personalia')
+                    @can('personalia')
                         <option value="CAREERS">CAREERS</option>
-                   @endcan
+                    @endcan
                 </select>
             </div>
             <div class="mb-3">

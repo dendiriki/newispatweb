@@ -19,11 +19,11 @@ class AdminUserSeeder extends Seeder
         //     'password' => bcrypt('passwordisvalid'),
         // ]);
 
-        // User::create([
-        //     'name' => 'DendiRiki',
-        //     'email' => 'dendirikirahmawan@gmail.com',
-        //     'password' => bcrypt('passwordisvalid'),
-        // ]);
+        User::create([
+            'name' => 'DendiRiki',
+            'email' => 'dendirikirahmawan@gmail.com',
+            'password' => bcrypt('passwordisvalid'),
+        ]);
 
         User::create([
             'name' => 'MarketingUser',

@@ -22,7 +22,7 @@ class PostController extends Controller
             'posts' => Post::all(),
         ];
 
-        var_dump($data);
+        dd($data);
 
         return view('admin.layout.admin', $data);
 

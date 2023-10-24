@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css">
 
 
-    </head>
+</head>
 
-    </head>
+</head>
 
 <body>
 
@@ -38,7 +38,7 @@
     <script src="/js/dashboard.js"></script>
     <script>
         $(document).ready(function() {
-        $('#summernote').summernote();
+            $('#summernote').summernote();
         });
     </script>
 </body>

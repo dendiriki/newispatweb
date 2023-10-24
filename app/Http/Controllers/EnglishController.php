@@ -16,40 +16,36 @@ class EnglishController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-{
-    $user = auth()->user(); // Mengambil pengguna saat ini
+    {
+        $user = auth()->user(); // Mengambil pengguna saat ini
 
-    $requestedSlugs = [];
+        $requestedSlugs = [];
 
-    if (Gate::allows('admin')) {
-        $requestedSlugs = ['COMPANYPROFILE', 'COMPANYBOARD'];
-    } elseif (Gate::allows('she')) {
-        $requestedSlugs = ['ENVIRONMENT', 'COMPANYSHE'];
-    } elseif (Gate::allows('personalia')) {
-        $requestedSlugs = ['CAREERS'];
-    } elseif (Gate::allows('qualitycontrol')) {
-        $requestedSlugs = ['PRODUCTHIGHCARBONSTEEL', 'PRODUCTLOWCARBONSTEEL'];
-    } else {
-        // Logic jika pengguna tidak memiliki izin yang sesuai
-        abort(403); // Akses ditolak
+        if (Gate::allows('admin')) {
+            $requestedSlugs = ['COMPANYPROFILE', 'COMPANYBOARDOFDIRECTORS', 'COMPANYVISION,MISSION&VALUES'];
+        } elseif (Gate::allows('she')) {
+            $requestedSlugs = ['ENVIRONMENT', 'COMPANYSHE'];
+        } elseif (Gate::allows('personalia')) {
+            $requestedSlugs = ['CAREERS'];
+        } elseif (Gate::allows('qualitycontrol')) {
+            $requestedSlugs = ['PRODUCTHIGHCARBONSTEEL', 'PRODUCTLOWCARBONSTEEL'];
+        } else {
+            // Logic jika pengguna tidak memiliki izin yang sesuai
+            abort(403); // Akses ditolak
+        }
+
+        // Mengambil data English yang sesuai dengan slug dan name pengguna saat ini
+        $posts = English::whereIn('slug', $requestedSlugs)
+            ->latest()
+            ->paginate(7);
+
+        return view('admin.layout.english', [
+            'title' => 'My Posts In English',
+            'posts' => $posts,
+            'user' => $user->name
+        ]);
     }
 
-
-
-    // Mengambil data English yang sesuai dengan slug dan ID pengguna saat ini
-    $posts = English::where('slug', $requestedSlugs)
-        ->where('name', $user->name)
-        ->latest()
-        ->paginate(7);
-
-        var_dump( $posts); // Tambahkan ini untuk memeriksa nilai variabel
-
-    return view('admin.layout.english', [
-        'title' => 'My Posts In English',
-        'posts' => $posts,
-        'user' => $user->name
-    ]);
-}
 
 
 
