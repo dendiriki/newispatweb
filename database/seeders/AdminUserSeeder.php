@@ -19,10 +19,46 @@ class AdminUserSeeder extends Seeder
         //     'password' => bcrypt('passwordisvalid'),
         // ]);
 
+        // User::create([
+        //     'name' => 'DendiRiki',
+        //     'email' => 'dendirikirahmawan@gmail.com',
+        //     'password' => bcrypt('passwordisvalid'),
+        // ]);
+
         User::create([
-            'name' => 'DendiRiki',
-            'email' => 'dendirikirahmawan@gmail.com',
-            'password' => bcrypt('passwordisvalid'),
+            'name' => 'MarketingUser',
+            'email' => 'marketing@gmail.com',
+            'password' => bcrypt('marketingpassword'),
         ]);
+
+        User::create([
+            'name' => 'SHEUser',
+            'email' => 'safetyhealthenvironment@gmail.com',
+            'password' => bcrypt('shepassword'),
+        ]);
+
+        User::create([
+            'name' => 'INTUser',
+            'email' => 'ispatnewsteam@gmail.com',
+            'password' => bcrypt('intpassword'),
+        ]);
+
+        User::create([
+            'name' => 'PersonaliaUser',
+            'email' => 'personalia@gmail.com',
+            'password' => bcrypt('personaliapassword'),
+        ]);
+
+        User::create([
+            'name' => 'QualityControlUser',
+            'email' => 'quality@gmail.com',
+            'password' => bcrypt('qualitypassword'),
+        ]);
+
+
+
     }
+
+
+
 }

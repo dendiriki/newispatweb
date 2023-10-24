@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\English;
+use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\StoreEnglishRequest;
 use App\Http\Requests\UpdateEnglishRequest;
 use Illuminate\Http\Request;
@@ -15,12 +16,42 @@ class EnglishController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        Return view('admin.layout.english',[
-            'title' => 'My Post In English',
-            'posts' => English::latest()->paginate(7)
-        ]);
+{
+    $user = auth()->user(); // Mengambil pengguna saat ini
+
+    $requestedSlugs = [];
+
+    if (Gate::allows('admin')) {
+        $requestedSlugs = ['COMPANYPROFILE', 'COMPANYBOARD'];
+    } elseif (Gate::allows('she')) {
+        $requestedSlugs = ['ENVIRONMENT', 'COMPANYSHE'];
+    } elseif (Gate::allows('personalia')) {
+        $requestedSlugs = ['CAREERS'];
+    } elseif (Gate::allows('qualitycontrol')) {
+        $requestedSlugs = ['PRODUCTHIGHCARBONSTEEL', 'PRODUCTLOWCARBONSTEEL'];
+    } else {
+        // Logic jika pengguna tidak memiliki izin yang sesuai
+        abort(403); // Akses ditolak
     }
+
+
+
+    // Mengambil data English yang sesuai dengan slug dan ID pengguna saat ini
+    $posts = English::where('slug', $requestedSlugs)
+        ->where('name', $user->name)
+        ->latest()
+        ->paginate(7);
+
+        var_dump( $posts); // Tambahkan ini untuk memeriksa nilai variabel
+
+    return view('admin.layout.english', [
+        'title' => 'My Posts In English',
+        'posts' => $posts,
+        'user' => $user->name
+    ]);
+}
+
+
 
     /**
      * Show the form for creating a new resource.

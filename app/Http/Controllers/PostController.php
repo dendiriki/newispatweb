@@ -16,10 +16,17 @@ class PostController extends Controller
      */
     public function index()
     {
-        Return view('admin.layout.admin',[
+
+        $data = [
             'title' => 'My Post In Indonesia',
             'posts' => Post::all(),
-        ]);
+        ];
+
+        var_dump($data);
+
+        return view('admin.layout.admin', $data);
+
+
     }
 
     /**
