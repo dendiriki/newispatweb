@@ -24,20 +24,23 @@
                         </div>
                     @enderror
                     <option value="">---</option>
-                    <option value="COMPANYPROFILE">COMPANY PROFILE</option>
-                    <option value="COMPANYBOARDOFDIRECTORS">COMPANY BOARD OF DIRECTORS</option>
-                    <option value="COMPANYVISION,MISSION&VALUES">COMPANY VISION, MISSION & VALUES</option>
-                    <option value="COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW">COMPANY HIGHLIGHTS & ACHIEVEMENTS OVERVIEW
-                    </option>
-                    <option value="COMPANYKANCERTIFICATION">COMPANY KAN CERTIFICATION</option>
-                    <option value="COMPANYJISCERTIFICATION">COMPANY JIS CERTIFICATION</option>
-                    <option value="COMPANYSNICERTIFICATION">COMPANY SNI CERTIFICATION</option>
-                    <option value="COMPANYSIRIMCERTIFICATION">COMPANY SIRIM CERTIFICATION</option>
-                    <option value="COMPANYISOCERTIFICATION">COMPANY ISO CERTIFICATION</option>
-                    <option value="COMPANYTKDNCERTIFICATION">COMPANY TKDN CERTIFICATION</option>
-                    <option value="COMPANYGROUPVIDEO">COMPANY GROUP VIDEO</option>
-                    <option value="COMPANYMANAGEMENTSYSTEM">COMPANY MANAGEMENT SYSTEM</option>
-                    <option value="COMPANYSHE">COMPANY SHE</option>
+                    @can('admin')
+                        <option value="COMPANYPROFILE">COMPANY PROFILE</option>
+                        <option value="COMPANYBOARDOFDIRECTORS">COMPANY BOARD OF DIRECTORS</option>
+                        <option value="COMPANYVISION,MISSION&VALUES">COMPANY VISION, MISSION & VALUES</option>
+                        <option value="COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW">COMPANY HIGHLIGHTS & ACHIEVEMENTS OVERVIEW
+                        </option>
+                        <option value="COMPANYKANCERTIFICATION">COMPANY KAN CERTIFICATION</option>
+                        <option value="COMPANYJISCERTIFICATION">COMPANY JIS CERTIFICATION</option>
+                        <option value="COMPANYSNICERTIFICATION">COMPANY SNI CERTIFICATION</option>
+                        <option value="COMPANYSIRIMCERTIFICATION">COMPANY SIRIM CERTIFICATION</option>
+                        <option value="COMPANYISOCERTIFICATION">COMPANY ISO CERTIFICATION</option>
+                        <option value="COMPANYTKDNCERTIFICATION">COMPANY TKDN CERTIFICATION</option>
+                        <option value="COMPANYGROUPVIDEO">COMPANY GROUP VIDEO</option>
+                        <option value="COMPANYMANAGEMENTSYSTEM">COMPANY MANAGEMENT SYSTEM</option>
+                        <option value="COMPANYSHE">COMPANY SHE</option>
+                    @endcan
+
                     <option value="PRODUCTHIGHCARBONSTEEL">PRODUCT HIGH CARBON STEEL</option>
                     <option value="PRODUCTLOWCARBONSTEEL">PRODUCT LOW CARBON STEEL</option>
                     <option value="PRODUCTCOLDHEADINGQUALITYSTEEL">PRODUCT COLD HEADING QUALITY STEEL</option>
