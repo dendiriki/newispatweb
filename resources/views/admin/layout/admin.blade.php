@@ -4,6 +4,7 @@
 @section('content')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">{{ $title }}</h1>
+        <h2>Username :{{$user}} </h2>
     </div>
 
     @if (session()->has('success'))
@@ -49,4 +50,5 @@
             </tbody>
         </table>
     </div>
+    {{ $posts->appends(request()->input())->links() }}
 @endsection

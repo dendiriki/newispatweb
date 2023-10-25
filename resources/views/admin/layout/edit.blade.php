@@ -49,7 +49,6 @@
                     <option value="SUBSIDIARIESPT.ISPATWIREPRODUCT">SUBSIDIARIES PT. ISPAT WIRE PRODUCT</option>
                     <option value="SUBSIDIARIESPT.ISPATPANCAPUTRA">SUBSIDIARIES PT. ISPAT PANCA PUTRA</option>
                     <option value="SUBSIDIARIESPT.ISPATBUKITBAJA">SUBSIDIARIES PT. ISPAT BUKIT BAJA</option>
-                    <option value="ENVIRONMENT">ENVIRONMENT</option>
                     <option value="BROCHUREPT.ISPATINDO">BROCHURE PT. ISPAT INDO</option>
                     <option value="BROCHUREPT.ISPATWIREPRODUCT">BROCHURE PT. ISPAT WIRE PRODUCT</option>
                     <option value="BROCHUREPT.ISPATPANCAPUTRA">BROCHURE PT. ISPAT PANCA PUTRA</option>
@@ -70,9 +69,9 @@
                     <option value="PRODUCTNAILS&NAILWIRE">PRODUCT NAILS & NAIL WIRE</option>
                     <option value="PRODUCTSCRAPPROVIDER">PRODUCT SCRAP PROVIDER</option>
                 @endcan
-               @can('personalia')
+                @can('personalia')
                     <option value="CAREERS">CAREERS</option>
-               @endcan
+                @endcan
                 </select>
             </div>
             <div class="mb-3">

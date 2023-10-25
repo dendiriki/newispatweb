@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
@@ -16,18 +17,48 @@ class PostController extends Controller
      */
     public function index()
     {
+            $user = auth()->user(); // Mengambil pengguna saat ini
 
-        $data = [
-            'title' => 'My Post In Indonesia',
-            'posts' => Post::all(),
-        ];
+            $requestedSlugs = [];
 
-        dd($data);
+            if (Gate::allows('admin')) {
+                $requestedSlugs = ['COMPANYPROFILE', 'COMPANYBOARDOFDIRECTORS',
+                'COMPANYVISION,MISSION&VALUES','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'
+                ,'COMPANYKANCERTIFICATION','COMPANYJISCERTIFICATION','COMPANYSNICERTIFICATION',
+                'COMPANYSIRIMCERTIFICATION','COMPANYISOCERTIFICATION','COMPANYTKDNCERTIFICATION',
+                'COMPANYGROUPVIDEO','COMPANYMANAGEMENTSYSTEM','INDUSTRIALPROCESSFACILITAS',
+                'INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING',
+                'INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS',
+                'INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS','SUBSIDIARIESPT.ISPATWIREPRODUCT',
+                'SUBSIDIARIESPT.ISPATPANCAPUTRA','SUBSIDIARIESPT.ISPATBUKITBAJA',
+                'BROCHUREPT.ISPATINDO','BROCHUREPT.ISPATWIREPRODUCT','BROCHUREPT.ISPATPANCAPUTRA',
+                'BROCHUREPT.ISPATBUKITBAJA'];
+            } elseif (Gate::allows('she')) {
+                $requestedSlugs = ['ENVIRONMENT', 'COMPANYSHE'];
+            } elseif (Gate::allows('personalia')) {
+                $requestedSlugs = ['CAREERS'];
+            } elseif (Gate::allows('qualitycontrol')) {
+                $requestedSlugs = ['PRODUCTHIGHCARBONSTEEL', 'PRODUCTLOWCARBONSTEEL','PRODUCTCOLDHEADINGQUALITYSTEEL',
+                'PRODUCTGENERALPURPOSEWR','PRODUCTWELDINGELECTRODE','PRODUCTPLAINDEFORMBAR','PRODUCTGENERALSTRUCTURE',
+                'PRODUCTNAILS&NAILWIRE','PRODUCTSCRAPPROVIDER'];
+            } else {
+                return redirect('/admin/news');
+            }
 
-        return view('admin.layout.admin', $data);
+            // Mengambil data English yang sesuai dengan slug dan name pengguna saat ini
+            $posts = Post::whereIn('slug', $requestedSlugs)
+                ->latest()
+                ->paginate(7);
+
+            return view('admin.layout.admin', [
+                'title' => 'My Posts In indonesia',
+                'posts' => $posts,
+                'user' => $user->name
+            ]);
+        }
 
 
-    }
+
 
     /**
      * Show the form for creating a new resource.
