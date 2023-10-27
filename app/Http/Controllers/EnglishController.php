@@ -82,7 +82,7 @@ class EnglishController extends Controller
 
         $this->validate($request,$rules);
 
-        $storage="storage/content";
+        $storage="file/content";
         $dom=new \DOMDocument();
         libxml_use_internal_errors(true);
         $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
@@ -153,7 +153,7 @@ class EnglishController extends Controller
 
         $this->validate($request,$rules);
 
-        $storage="storage/content";
+        $storage="file/content";
         $dom=new \DOMDocument();
         libxml_use_internal_errors(true);
         $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
