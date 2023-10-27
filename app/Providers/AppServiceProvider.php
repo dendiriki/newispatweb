@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 use App\Models\User;
 use Illuminate\Support\Facades\Gate;
 
@@ -41,6 +42,8 @@ class AppServiceProvider extends ServiceProvider
         Gate::define('qualitycontrol', function(User $user){
             return $user->name === 'QualityControlUser' || $user->name === 'DendiRiki';
         });
+
+        Paginator::useBootstrap();
 
 
     }
