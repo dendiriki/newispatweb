@@ -8,6 +8,7 @@ use App\Models\Grade;
 use App\Mail\SendEmail;
 use App\Models\English;
 use App\Models\news;
+use App\Models\Certificate;
 
 class LayoutController extends Controller
 {
@@ -235,11 +236,15 @@ class LayoutController extends Controller
     }
 
     public function sirim(){
+
+        $certificates = Certificate::where('type', 'SIRIM')->get();
+
         return view('layout.company.sirim',[
             'url'  => 'sirim',
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'EN',
+            'certificates' => $certificates
         ]);
     }
 

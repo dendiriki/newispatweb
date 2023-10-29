@@ -48,4 +48,5 @@
             </tbody>
         </table>
     </div>
+    {{ $new->appends(request()->input())->links() }}
 @endsection

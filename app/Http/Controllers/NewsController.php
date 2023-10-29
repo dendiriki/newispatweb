@@ -14,7 +14,7 @@ class NewsController extends Controller
     {
         Return view('admin.layout.news',[
             'title' => 'My Post In News',
-            'new' => News::all(),
+            'new' => News::latest()->paginate(7)
         ]);
     }
 

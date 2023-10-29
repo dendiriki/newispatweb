@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LayoutController;
+use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
@@ -58,6 +59,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 //Admin routes
 Route::resource('admin/grade', GradeController::class)->middleware('auth');
+Route::resource('admin/certificate', CertificateController::class)->middleware('auth');
 Route::resource('admin/posts', PostController::class)->middleware('auth');
 Route::resource('admin/english',EnglishController::class)->middleware('auth');
 Route::resource('admin/customer', CustomerController::class)->middleware('auth');
