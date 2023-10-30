@@ -1,70 +1,66 @@
 <div class="{{ $navbar }}">
-
     <!-- header section strats -->
 
-    <header class="header_section">
+    <header class="">
         <div class="container-fluid">
             <nav
-                class="navbar navbar-expand-lg custom_nav-container fixed-top navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="{{ asset('assets/img/logo-ispat.png') }}" alt="Logo" />
-                    <span>
-                        ISPAT INDO
-                    </span>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                class="navbar navbar-expand-lg custom_nav-container fixed-top navbar navbar-expand-lg navbar-light bg-light">
+                <div class="logo-container">
+                    <div class="logo-wrap local-scroll">
+                        <a href="index.html">
+                            <img class="logo" src="{{ asset('assets/img/logoispat.png') }}" alt="logo" data-rjs="2"
+                                style="width: 70px; height: 50px; position: relative; bottom: 5px;">
+                        </a>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav  ml-auto">
+                    <ul class="navbar-nav  ml-left">
                         <li class="nav-item">
                             <div class="dropdown">
-                                <a class="nav-link" type="button" data-toggle="dropdown">Company</a>
+                                <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">Company</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="{{ route('profilindo') }}">Profile</a>
-                                    <a class="dropdown-item" href="{{ route('bod') }}">Board od Directors</a>
-                                    <a class="dropdown-item" href="{{ route('vision') }}">Visin, Mision & Value</a>
-                                    <a class="dropdown-item" href="{{ route('highlight') }}">Achivements</a>
-                                    <a class="dropdown-item" href="{{ route('milestone') }}">Management System</a>
-                                    <a class="dropdown-item" href="{{ route('she') }}">Safety, Healty and
-                                        Environment</a>
+                                    <a class="dropdown-item" href="#">Profile</a>
+                                    <a class="dropdown-item" href="#">Board od Directors</a>
+                                    <a class="dropdown-item" href="#">Visin, Mision & Value</a>
+                                    <a class="dropdown-item" href="#">Achivements</a>
+                                    <a class="dropdown-item" href="#">Management System</a>
+                                    <a class="dropdown-item" href="#">Safety, Healty and Environment</a>
                                 </div>
                             </div>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('customer-center') }}">
-                                <span>
-                                    Customer Center
-                                </span>
-                            </a>
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">Product</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">High Carbon Steel</a>
+                                    <a class="dropdown-item" href="#">Low carbon Steel</a>
+                                    <a class="dropdown-item" href="#">Cold Heading Quality Steel</a>
+                                    <a class="dropdown-item" href="#">General Purpose WR (SIRIM)</a>
+                                    <a class="dropdown-item" href="#">Welding Electrode</a>
+                                    <a class="dropdown-item" href="#">Plain / Deform Bar</a>
+                                    <a class="dropdown-item" href="#">General Structure / Structural Steel</a>
+                                    <a class="dropdown-item" href="#">Nails & Nail Wire</a>
+                                </div>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('environment') }}">
-                                <span>
-                                    ENVIRONMENT
-                                </span>
-                            </a>
-                        </li>
+
                         <li class="nav-item">
                             <div class="dropdown">
-                                <a class="nav-link" type="button" data-toggle="dropdown">Industrial Process</a>
+                                <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">Industrial
+                                    Process</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="{{ route('fasilitas') }}">Facilities</a>
-                                    <a class="dropdown-item" href="{{ route('steelmaking') }}">Process Flowchart of
-                                        Steel Making</a>
-                                    <a class="dropdown-item" href="{{ route('rolling') }}">Process Flowchart of Wire
-                                        Rod Rolling</a>
-                                    <a class="dropdown-item" href="{{ route('fasilitaspancaputra') }}">Process Ispat
-                                        Panca Putera
-                                        Facilities</a>
-                                    <a class="dropdown-item" href="{{ route('fasilitasbukitnaja') }}">Process Ispat
-                                        Bukit Baja
-                                        Facilities</a>
-                                    <a class="dropdown-item" href="{{ route('fasilitaswire') }}">Process Ispat Wire
-                                        Products
-                                        Facilities</a>
+                                    <a class="dropdown-item" href="#">Facilities</a>
+                                    <a class="dropdown-item" href="#">Process Flowchart of Steel Making</a>
+                                    <a class="dropdown-item" href="#">Process Flowchart of Wire Rod Rolling</a>
+                                    <a class="dropdown-item" href="#">Process Ispat Panca Putera Facilities</a>
+                                    <a class="dropdown-item" href="#">Process Ispat Bukit Baja Facilities</a>
+                                    <a class="dropdown-item" href="#">Process Ispat Wire Products Facilities</a>
                                 </div>
                             </div>
                         </li>
@@ -72,57 +68,49 @@
                         </form>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <a class="nav-link" type="button" data-toggle="dropdown">Subsidiaries</a>
+                                <a class="nav-link dropdown-toggle" type="button"
+                                    data-toggle="dropdown">Subsidiaries</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="{{ route('ispatwireproduct') }}">PT Ispat Wire
-                                        Product</a>
-                                    <a class="dropdown-item" href="{{ route('ispatpancaputra') }}">PT Ispat Panca
-                                        Putera</a>
-                                    <a class="dropdown-item" href="{{ route('ispatbukitbaja') }}">PT Ispat Bukit
-                                        Baja</a>
+                                    <a class="dropdown-item" href="#">PT Ispat Wire Product</a>
+                                    <a class="dropdown-item" href="#">PT Ispat Bukit Baja</a>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('news') }}">
-                                <span>
-                                    News
-                                </span>
+                            <a class="nav-link" href="#">
+                                Ispat Now
                             </a>
                         </li>
+                    </ul>
+
+                    <ul class="navbar-nav  ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('karir') }}">
-                                <span>
-                                    Careers
-                                </span>
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-solid fa-suitcase" style="max-width: 1rem;"></i>
+                                Careers
                             </a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">
-                                    <img src="{{ asset('assets/img/Web.png') }}" alt="logo"
-                                        style="max-width: 2rem; position: relative; bottom: 7px; left: 0px;">
-                                    {{ $sub }}
+                                    <i class="fa fa-solid fa-globe"></i>
+                                    EN
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    @if (request()->routeIs('detailnews', 'detailnews_indo'))
-                                        <a class="dropdown-item"
-                                            href="{{ route($url, ['news' => $news->link]) }}">ENGLISH</a>
-                                        <a class="dropdown-item"
-                                            href="{{ route($url . '_indo', ['news' => $news->link]) }}">INDONESIAN</a>
-                                    @elseif (request()->routeIs('detailproduk', 'detailproduk_indo'))
-                                        <a class="dropdown-item"
-                                            href="{{ route($url, ['grade' => $grade->name]) }}">ENGLISH</a>
-                                        <a class="dropdown-item"
-                                            href="{{ route($url . '_indo', ['grade' => $grade->name]) }}">INDONESIAN</a>
-                                    @else
-                                        <a class="dropdown-item" href="{{ route($url) }}">ENGLISH</a>
-                                        <a class="dropdown-item" href="{{ route($url) }}_indo">INDONESIAN</a>
-                                    @endif
+                                    <a class="dropdown-item" href="#">ENGLISH</a>
+                                    <a class="dropdown-item" href="#">INDONESIAN</a>
                                 </div>
                             </div>
                         </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link " href="">
+                                    Contact us
+                                </a>
+                            </div>
+                        </li>
                     </ul>
+
                 </div>
             </nav>
         </div>
