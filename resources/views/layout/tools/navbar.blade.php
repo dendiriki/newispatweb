@@ -47,11 +47,14 @@
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="{{ route('highcarbon') }}">High Carbon Steel</a>
                                     <a class="dropdown-item" href="{{ route('lowcarbon') }}">Low carbon Steel</a>
-                                    <a class="dropdown-item" href="{{ route('clodheading') }}">Cold Heading Quality Steel</a>
-                                    <a class="dropdown-item" href="{{ route('generalpw') }}">General Purpose WR (SIRIM)</a>
+                                    <a class="dropdown-item" href="{{ route('clodheading') }}">Cold Heading Quality
+                                        Steel</a>
+                                    <a class="dropdown-item" href="{{ route('generalpw') }}">General Purpose WR
+                                        (SIRIM)</a>
                                     <a class="dropdown-item" href="{{ route('welding') }}">Welding Electrode</a>
                                     <a class="dropdown-item" href="{{ route('pline') }}">Plain / Deform Bar</a>
-                                    <a class="dropdown-item" href="{{ route('pline') }}">General Structure / Structural Steel</a>
+                                    <a class="dropdown-item" href="{{ route('structure') }}">General Structure /
+                                        Structural Steel</a>
                                     <a class="dropdown-item" href="{{ route('nails') }}">Nails & Nail Wire</a>
                                 </div>
                             </div>
@@ -63,11 +66,16 @@
                                     Process</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="{{ route('fasilitas') }}">Facilities</a>
-                                    <a class="dropdown-item" href="{{ route('steelmaking') }}">Process Flowchart of Steel Making</a>
-                                    <a class="dropdown-item" href="{{ route('rolling') }}">Process Flowchart of Wire Rod Rolling</a>
-                                    <a class="dropdown-item" href="{{ route('fasilitaspancaputra') }}">Process Ispat Panca Putera Facilities</a>
-                                    <a class="dropdown-item" href="{{ route('fasilitasbukitnaja') }}">Process Ispat Bukit Baja Facilities</a>
-                                    <a class="dropdown-item" href="{{ route('fasilitaswire') }}">Process Ispat Wire Products Facilities</a>
+                                    <a class="dropdown-item" href="{{ route('steelmaking') }}">Process Flowchart of
+                                        Steel Making</a>
+                                    <a class="dropdown-item" href="{{ route('rolling') }}">Process Flowchart of Wire
+                                        Rod Rolling</a>
+                                    <a class="dropdown-item" href="{{ route('fasilitaspancaputra') }}">Process Ispat
+                                        Panca Putera Facilities</a>
+                                    <a class="dropdown-item" href="{{ route('fasilitasbukitnaja') }}">Process Ispat
+                                        Bukit Baja Facilities</a>
+                                    <a class="dropdown-item" href="{{ route('fasilitaswire') }}">Process Ispat Wire
+                                        Products Facilities</a>
                                 </div>
                             </div>
                         </li>
@@ -78,8 +86,10 @@
                                 <a class="nav-link dropdown-toggle" type="button"
                                     data-toggle="dropdown">Subsidiaries</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="{{ route('ispatwireproduct') }}">PT Ispat Wire Product</a>
-                                    <a class="dropdown-item" href="{{ route('ispatbukitbaja') }}">PT Ispat Bukit Baja</a>
+                                    <a class="dropdown-item" href="{{ route('ispatwireproduct') }}">PT Ispat Wire
+                                        Product</a>
+                                    <a class="dropdown-item" href="{{ route('ispatbukitbaja') }}">PT Ispat Bukit
+                                        Baja</a>
                                 </div>
                             </div>
                         </li>

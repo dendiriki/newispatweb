@@ -13,6 +13,12 @@ $(document).ready(function () {
 });
 
 
+function closeCard() {
+    var card = document.querySelector('.ind-chat');
+    card.style.display = 'none';
+}
+
+
 
 
 

@@ -6,8 +6,11 @@
                 <img src="{{ asset('assets/img/logo-ispat.png') }}" style="max-width: 3em; padding-bottom: 10px;">
                 <H4>PT. Ispat Indo</H4>
                 <p>
-                    Ispat Indo, a steel industry pioneer, redefines excellence, driving innovation and setting global
+                    Ispat Indo, a steel industry pioneer,
+                    <br> redefines excellence, driving innovation and
+                    <br> setting global
                     standards.
+                    <br>
                 </p>
             </div>
             <div class="col-md-2 info_links">
@@ -121,11 +124,12 @@
 </section>
 <!-- end info_section -->
 
-<footer class="footer_section">
+<footer class="footer_section ">
     <div class="container">
         <p>
             &copy; <span id="displayYear"></span> By
             <a href="">PT. ISPAT INDO</a>
+            <br><br><br>
         </p>
     </div>
 </footer>

@@ -16,21 +16,22 @@
     {{-- <link href="assets/img/ispat.ico" rel="icon"> --}}
 
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}"/>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/grup.css') }}" />
 
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
 
-  <!-- font awesome style -->
-  {{-- <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet" /> --}}
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <!-- font awesome style -->
+    {{-- <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet" /> --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
 
-  <!-- Custom styles for this template -->
-  <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
 </head>
 
 <body class="{{ $class }}">
@@ -38,14 +39,15 @@
 
     @yield('content')
 
+
     @include('layout.tools.footer')
 
-      <!-- jQery -->
-  <script src="{{ asset('assets/js/jquery-3.4.1.min.js') }}" ></script>
-  <!-- bootstrap js -->
-  <script src= "{{ asset('assets/js/bootstrap.js') }}" ></script>
-  <!-- custom js -->
-  <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <!-- jQery -->
+    <script src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script>
+    <!-- bootstrap js -->
+    <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
+    <!-- custom js -->
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
 </body>
 
 </html>
