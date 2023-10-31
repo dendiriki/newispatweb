@@ -10,6 +10,7 @@ use App\Http\Controllers\EnglishController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\LayoutIndoController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\SheController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
@@ -34,7 +35,7 @@ Route::get('home', function () {
     return view('layout.home.index',[
         'url' => 'home',
         'class' => '',
-        'navbar' =>'hero_area',
+        'navbar' =>'',
         'sub' => 'EN',
     ]);
 })->name('home');
@@ -43,7 +44,7 @@ Route::get('home_indo', function () {
     return view('layout.home.index_indo',[
         'url' =>'home',
         'class' => '',
-        'navbar' =>'hero_area',
+        'navbar' =>'',
         'sub' => 'IN',
     ]);
 })->name('home_indo');
@@ -64,6 +65,14 @@ Route::resource('admin/posts', PostController::class)->middleware('auth');
 Route::resource('admin/english',EnglishController::class)->middleware('auth');
 Route::resource('admin/customer', CustomerController::class)->middleware('auth');
 Route::resource('admin/news', NewsController::class)->middleware('auth');
+Route::get('admin/she',[SheController::class,'index'])->middleware('auth');
+Route::middleware(['auth'])->group(function () {
+    Route::get('admin/nearmiss', [DataController::class, 'NearMiss'])->name('nearmiss');
+    Route::get('admin/firstaid', [DataController::class, 'FirstAID'])->name('firstaid');
+    Route::get('admin/medical', [DataController::class, 'MedicalTreatment'])->name('medical');
+    Route::get('admin/lostworkdays', [DataController::class, 'LostWorkdays'])->name('lostworkdays');
+});
+
 
 //layout Rutes english
 Route::get('/customer-center',[LayoutController::class,'customer'])->middleware('guest')->name('customer-center');

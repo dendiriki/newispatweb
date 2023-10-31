@@ -14,10 +14,10 @@
                 </div>
             </div>
     </section>
-    @foreach ($grade as $grades)
+    {{-- @foreach ($grade as $grades)
         <li class="list-group-item"><a href="{{ route('detailproduk', $grades->name) }}">{{ $grades->name }}
                 ({{ $grades->category }})
             </a>
         </li>
-    @endforeach
+    @endforeach --}}
 @endsection

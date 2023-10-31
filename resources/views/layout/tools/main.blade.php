@@ -18,7 +18,7 @@
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/grup.css') }}" />
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/grup.css') }}" /> --}}
 
 
     <!-- fonts style -->

@@ -142,7 +142,7 @@
                                 Greenfield Project, for rolling. Today Ispat Indo has an annual Product capacity in excess
                                 of 700.000 tons...
                             </p>
-                            <a href="">
+                            <a href="{{route('profilindo')}}">
                                 More on Our History
                             </a>
                         </div>
@@ -178,7 +178,7 @@
                                     Indonesia. Our working philosophy is guided towards continuous improvement in the
                                     quality of our
                                     products and services so as to surpass the best standards in the industry..</p>
-                                <a href="#">Read more</a>
+                                <a href="{{ route('ispatwireproduct') }}">Read more</a>
                             </div>
                         </div>
                         <div class="row no-gutters " style="border-bottom: 1px solid;">
@@ -192,7 +192,7 @@
                                     domestic and export requirements. Our working philosophy is aimed at continuous
                                     improvement in the quality of products and services so as to surpass the best standards
                                     in the industry.</p>
-                                <a href="#">Read more</a>
+                                <a href="{{ route('ispatbukitbaja') }}">Read more</a>
                             </div>
                         </div>
 

@@ -142,7 +142,7 @@
                                 Greenfield Project, for rolling. Today Ispat Indo has an annual Product capacity in excess
                                 of 700.000 tons...
                             </p>
-                            <a href="">
+                            <a href="{{route('profilindo_indo')}}">
                                 More on Our History
                             </a>
                         </div>
@@ -178,7 +178,7 @@
                                     Indonesia. Our working philosophy is guided towards continuous improvement in the
                                     quality of our
                                     products and services so as to surpass the best standards in the industry..</p>
-                                <a href="#">Read more</a>
+                                <a href="{{ route('ispatbukitbaja_indo') }}">Read more</a>
                             </div>
                         </div>
                         <div class="row no-gutters " style="border-bottom: 1px solid;">
@@ -192,7 +192,7 @@
                                     domestic and export requirements. Our working philosophy is aimed at continuous
                                     improvement in the quality of products and services so as to surpass the best standards
                                     in the industry.</p>
-                                <a href="#">Read more</a>
+                                <a href="{{ route('ispatbukitbaja_indo') }}">Read more</a>
                             </div>
                         </div>
 
@@ -326,7 +326,7 @@
 
                         <!-- === Client 1 === -->
                         <div class="client-item text-center">
-                            <a href="{{ route('highcarbon') }}">
+                            <a href="{{ route('highcarbon_indo') }}">
                                 <img class="img-responsive" src="assets/img/product1.png" alt="">
                                 <br>
                                 <h6>High Carbon Steel</h6>
@@ -335,7 +335,7 @@
 
                         <!-- === Client 2 === -->
                         <div class="client-item text-center">
-                            <a href="{{ route('lowcarbon') }}">
+                            <a href="{{ route('lowcarbon_indo') }}">
                                 <img class="img-responsive" src="assets/img/product2.png" alt="">
                                 <br>
                                 <h6>Low Carbon Steel</h6>
@@ -344,7 +344,7 @@
 
                         <!-- === Client 3 === -->
                         <div class="client-item text-center">
-                            <a href="{{ route('clodheading') }}">
+                            <a href="{{ route('clodheading_indo') }}">
                                 <img class="img-responsive" src="assets/img/product3.png" alt="">
                                 <br>
                                 <h6>CH Quality Steel</h6>
@@ -353,7 +353,7 @@
 
                         <!-- === Client 4 === -->
                         <div class="client-item text-center">
-                            <a href="{{ route('generalpw') }}">
+                            <a href="{{ route('generalpw_indo') }}">
                                 <img class="img-responsive" src="assets/img/product4.png" alt="">
                                 <br>
                                 <h6>General Purpose WR</h6>
@@ -362,7 +362,7 @@
 
                         <!-- === Client 5 === -->
                         <div class="client-item text-center">
-                            <a href="{{ route('welding') }}">
+                            <a href="{{ route('welding_indo') }}">
                                 <img class="img-responsive" src="assets/img/product5.png" alt="">
                                 <br>
                                 <h6>Welding Electrode</h6>
@@ -371,7 +371,7 @@
 
                         <!-- === Client 6 === -->
                         <div class="client-item text-center">
-                            <a href="{{ route('pline') }}">
+                            <a href="{{ route('pline_indo') }}">
                                 <img class="img-responsive" src="assets/img/product6.png" alt="">
                                 <br>
                                 <h6>Plain / Deform Bar</h6>
@@ -380,7 +380,7 @@
 
                         <!-- === Client 7 === -->
                         <div class="client-item text-center">
-                            <a href="{{ route('structure') }}">
+                            <a href="{{ route('structure_indo') }}">
                                 <img class="img-responsive" src="assets/img/product7.png" alt="">
                                 <br>
                                 <h6>Structural Steel</h6>
@@ -389,7 +389,7 @@
 
                         <!-- === Client 8 === -->
                         <div class="client-item text-center">
-                            <a href="{{ route('nails') }}">
+                            <a href="{{ route('nails_indo') }}">
                                 <img class="img-responsive" src="assets/img/product8.png" alt="">
                                 <br>
                                 <h6>Nail & Nail Wire</h6>
@@ -460,7 +460,7 @@
                                             <div class="detail-box">
                                                 <h6>ISO 4001 Approval Certificate</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('isocertification') }}">
+                                                <a href="{{ route('isocertification_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -476,7 +476,7 @@
                                             <div class="detail-box">
                                                 <h6>ISO 45001 Approval Certificate</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('isocertification') }}">
+                                                <a href="{{ route('isocertification_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -492,7 +492,7 @@
                                             <div class="detail-box">
                                                 <h6>ISO 50001 Approval Certificate</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('isocertification') }}">
+                                                <a href="{{ route('isocertification_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -513,7 +513,7 @@
                                             <div class="detail-box">
                                                 <h6>ISO 9001 Approval Certificate</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('isocertification') }}">
+                                                <a href="{{ route('isocertification_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -529,7 +529,7 @@
                                             <div class="detail-box">
                                                 <h6>JIS Approval Certificate</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('jisapproval') }}">
+                                                <a href="{{ route('jisapproval_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -545,7 +545,7 @@
                                             <div class="detail-box">
                                                 <h6>Steel Bar for Reinforcement</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('sni') }}">
+                                                <a href="{{ route('sni_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -566,7 +566,7 @@
                                             <div class="detail-box">
                                                 <h6>Steel Bar In Coil</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('sni') }}">
+                                                <a href="{{ route('sni_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -582,7 +582,7 @@
                                             <div class="detail-box">
                                                 <h6>LP - 455 – IDN Accreditation by KAN</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('kan') }}">
+                                                <a href="{{ route('kan_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -599,7 +599,7 @@
                                                 <h6>SMK3 Approval ertificate</h6>
                                                 <h6></h6>
 
-                                                <a href="{{ route('sirim') }}">
+                                                <a href="{{ route('sirim_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -620,7 +620,7 @@
                                             <div class="detail-box">
                                                 <h6>Proper Approval Certificate</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('tkdn') }}">
+                                                <a href="{{ route('tkdn_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -636,7 +636,7 @@
                                             <div class="detail-box">
                                                 <h6>Zero Accident Approval Certificate</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('sni') }}">
+                                                <a href="{{ route('sni_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>
@@ -652,7 +652,7 @@
                                             <div class="detail-box">
                                                 <h6>SIRIM Approval</h6>
                                                 <h6></h6>
-                                                <a href="{{ route('sirim') }}">
+                                                <a href="{{ route('sirim_indo') }}">
                                                     Read more
                                                 </a>
                                             </div>

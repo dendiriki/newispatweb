@@ -34,13 +34,13 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('customer_indo') }}">
                                 <span>
                                     Customer Center
                                 </span>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">Product</a>
@@ -116,12 +116,15 @@
                     </ul>
 
                     <ul class="navbar-nav  ml-auto">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('karir_indo')}}}">
                                 <i class="fa fa-solid fa-suitcase" style="max-width: 1rem;"></i>
                                 Careers
                             </a>
                         </li>
+
+
                         <li class="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">
@@ -148,7 +151,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <a class="nav-link " href="">
+                                <a class="nav-link " href="{{ route('customer_indo') }}">
                                     Contact us
                                 </a>
                             </div>
