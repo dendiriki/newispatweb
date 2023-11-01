@@ -2363,31 +2363,40 @@ body {
   }
 
   .group_section {
-    padding-bottom: 50px;
-    padding-top: 50px;
-
+    padding-bottom: 80px;
+  }
+  .group_section .detail-box {
+    padding: 30px 25px;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 8px 0 rgba(0, 0, 0, 0.1);
   }
 
-  .group_section button {
-    position: relative;
-    text-align: center;
-    border-radius: 5px;
-    background: #3F58DD;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all .3s;
-    color: white;
-    border-color: transparent;
-    width: 150px;
-    height: 45px;
-
-  }
-
-  .group_section button:hover {
-    background: #F7F7F7;
+  .group_section .detail-box h4 {
+    font-weight: 510;
     color: #3F58DD;
-    border-radius: 5px;
+    padding-bottom: 15px;
+  }
+  .group_section .detail-box p {
+    color: #252525;
+    opacity: 0.8;
+    padding-bottom: 15px;
+  }
 
+  .group_section  a {
+    padding : 10px 35px;
+    color: #fff;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    background-color: #3F58DD;
+    font-size: 12px;
+    border: 1.5px solid #3F58DD;
+  }
+  .group_section  a:hover {
+    background-color: transparent;
+    color: #3F58DD;
   }
 
   .product_section {
@@ -2962,4 +2971,10 @@ body {
     }
   }
 
+
+  .tengah {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 

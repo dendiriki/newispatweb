@@ -2,17 +2,20 @@
 <section class="info_section ">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <img src="{{ asset('assets/img/logo-ispat.png') }}" style="max-width: 3em; padding-bottom: 10px;">
-                <H4 style="margin-top: 10px">PT. Ispat Indo</H4>
+            <div class="col-md-4 ">
+                <img src="{{ asset('assets/img/logo-ispat.png') }}" style="max-width: 3em; display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%; margin-bottom: 10px;">
+                <h4 class="text-center"  style="margin-top: 10px">PT. Ispat Indo</h4>
                 <p>
                     Ispat Indo, a steel industry pioneer,
                     redefines excellence, driving innovation and
                     setting global
                     standards.
-
                 </p>
             </div>
+
             <div class="col-md-3 info_links">
                 <h5
                     style="font-weight: bold;
@@ -41,9 +44,13 @@
             </div>
 
             <div class="col-md-2 info_links">
-                <h5 style="color: transparent; margin-bottom: 18px;">
-                    .
-                </h5>
+                <h5
+                style="font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #ccc;">
+                Mail To
+            </h5>
                 <ul>
 
                     <li style="margin-bottom: 5px;">

@@ -273,46 +273,36 @@
                   </div>
                 </div>
 
-                  <div class="form-row">
+                <div class="form-row">
                     <div class="col-md-4 mb-3">
-                      <h6>Grade</h6>
+                      <h6>Wire Rod Product</h6>
                     <select class="form-control" name="grade1" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
-                      @foreach ($grades as $grade)
+                        <option value="LowCarbon">Low Carbon</option>
+                        <option value="HighCarbon">High Carbon</option>
+                        <option value="MediumCarbon">Medium Carbon</option>
+                        <option value="ElectrodeGrade">Electrode Grade</option>
+                        <option value="AlloyGrade">Alloy Grade</option>
+                        <option value="CHQGrade">CHQGrade</option>
+                        <option value="BarinCoil">Bar in Coil</option>
+                        <option value="Other">Other</option>
+                      {{-- @foreach ($grades as $grade)
                         @if (old('grade') == $grade->id)
                             <option value="{{ $grade->name }}" selected>{{ $grade->name }}
                             </option>
                         @else
                             <option value="{{ $grade->name }}">{{ $grade->name }}</option>
                         @endif
-                       @endforeach
+                       @endforeach --}}
                     </select>
                     </div>
                     <div class="col-md-4 mb-3">
                       <h6>Grade</h6>
-                    <select class="form-control" name="grade2" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
-                        @foreach ($grades as $grade)
-                        @if (old('grade') == $grade->id)
-                            <option value="{{ $grade->name }}" selected>{{ $grade->name }}
-                            </option>
-                        @else
-                            <option value="{{ $grade->name }}">{{ $grade->name }}</option>
-                        @endif
-                       @endforeach
-                    </select>
+                      <input type="text" class="form-control" name="grade2" id="validationDefault02" placeholder="Grade" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                     </div>
                     <div class="col-md-4 mb-3">
-                      <h6>Grade</h6>
-                    <select class="form-control" name="grade3" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
-                        @foreach ($grades as $grade)
-                        @if (old('grade') == $grade->id)
-                            <option value="{{ $grade->name }}" selected>{{ $grade->name }}
-                            </option>
-                        @else
-                            <option value="{{ $grade->name }}">{{ $grade->name }}</option>
-                        @endif
-                       @endforeach
-                    </select>
-                    </div>
+                        <h6>Total Quantity in MT</h6>
+                        <input type="text" class="form-control" name="grade3" id="validationDefault02" placeholder="Total Quantity in MT" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                      </div>
                   </div>
 
               <div class="form-row">
@@ -323,13 +313,6 @@
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault04">End Application</label>
                   <input type="text" class="form-control" name="end" id="validationDefault04" placeholder="End Application" required>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-md-12 mb-3">
-                  <label for="validationDefault03">Issue</label>
-                  <input type="text" class="form-control" name="issue" id="validationDefault03" placeholder="Issue" required>
                 </div>
               </div>
 
