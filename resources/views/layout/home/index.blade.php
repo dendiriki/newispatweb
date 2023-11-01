@@ -51,7 +51,7 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">From industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                                <h2 >Indonesia's Leading Steel wire Manufacturing With 2 Subsidiaries And 8 Exceptional Products</h2> -->
+                                                                                                                                                                                                                                                                                                                    <h2 >Indonesia's Leading Steel wire Manufacturing With 2 Subsidiaries And 8 Exceptional Products</h2> -->
                                             <a href="#">Discovery Our Company</a>
 
                                         </div>
@@ -70,7 +70,7 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">From industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                              <h2 >Premier Steel wire Factory Sets New Standards for Excellence</h2> -->
+                                                                                                                                                                                                                                                                                                                  <h2 >Premier Steel wire Factory Sets New Standards for Excellence</h2> -->
                                             <a href="#">Discovery Our Company</a>
 
                                         </div>
@@ -89,7 +89,7 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">From industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                              <h2 >sells 70% of  products to domestic market and 30% to export markets of Asia-Pacific region.</h2> -->
+                                                                                                                                                                                                                                                                                                                  <h2 >sells 70% of  products to domestic market and 30% to export markets of Asia-Pacific region.</h2> -->
                                             <a href="#">Discovery Our Company</a>
 
                                         </div>
@@ -142,7 +142,7 @@
                                 Greenfield Project, for rolling. Today Ispat Indo has an annual Product capacity in excess
                                 of 700.000 tons...
                             </p>
-                            <a href="{{route('profilindo')}}">
+                            <a href="{{ route('profilindo') }}">
                                 More on Our History
                             </a>
                         </div>
@@ -197,32 +197,32 @@
                         </div>
 
                         <!-- <div class="form-row">
-                                                                                    <div class="col-md-6 mb-3">
-                                                                                      <div class="card" style="margin: 5px; background: #f7f7f7;">
-                                                                                        <img src="images/news.png" class="card-img-top" alt="img-box">
-                                                                                        <div class="card-body">
-                                                                                          <h5 class="card-title">Card title</h5>
-                                                                                          <small class="text-muted">Last updated 3 mins ago</small>
-                                                                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                                                                          <a href="#">Read More</a>
+                                                                                        <div class="col-md-6 mb-3">
+                                                                                          <div class="card" style="margin: 5px; background: #f7f7f7;">
+                                                                                            <img src="images/news.png" class="card-img-top" alt="img-box">
+                                                                                            <div class="card-body">
+                                                                                              <h5 class="card-title">Card title</h5>
+                                                                                              <small class="text-muted">Last updated 3 mins ago</small>
+                                                                                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                                                              <a href="#">Read More</a>
+                                                                                            </div>
+                                                                                          </div>
                                                                                         </div>
-                                                                                      </div>
-                                                                                    </div>
 
-                                                                                    <div class="col-md-6 mb-3">
-                                                                                      <div class="card" style="margin: 5px; background: #f7f7f7;">
-                                                                                        <img src="images/news.png" class="card-img-top" alt="img-box">
-                                                                                        <div class="card-body">
-                                                                                          <h5 class="card-title">Card title</h5>
-                                                                                          <small class="text-muted">Last updated 3 mins ago</small>
-                                                                                          <br>
-                                                                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                                                                          <a href="#">Read More</a>
+                                                                                        <div class="col-md-6 mb-3">
+                                                                                          <div class="card" style="margin: 5px; background: #f7f7f7;">
+                                                                                            <img src="images/news.png" class="card-img-top" alt="img-box">
+                                                                                            <div class="card-body">
+                                                                                              <h5 class="card-title">Card title</h5>
+                                                                                              <small class="text-muted">Last updated 3 mins ago</small>
+                                                                                              <br>
+                                                                                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                                                              <a href="#">Read More</a>
+                                                                                            </div>
+                                                                                          </div>
                                                                                         </div>
-                                                                                      </div>
-                                                                                    </div>
 
-                                                                                  </div> -->
+                                                                                      </div> -->
 
                     </div>
                 </div>
@@ -415,267 +415,221 @@
 
 
         <!-- expert section -->
-
         <section class="expert_section layout_padding">
             <div class="container">
+                <div class="heading_container heading_center">
+                    <h2>
+                        Our Achivements
+                    </h2>
+                    <p>
+                        "Our Achievements" at Ispat Indo showcase our notable accomplishments and successes that we have
+                        attained over the years.
+                        These accomplishments reflect our dedication to excellence, innovation, and a commitment to
+                        delivering
+                        high-quality
+                        products and services. From surpassing production milestones to achieving industry recognition, our
+                        achievements are
+                        a testament to our team's hard work, strategic vision, and unwavering pursuit of excellence in the
+                        steel
+                        industry.
+                    </p>
+                </div>
                 <div class="row">
-                    <div class="heading_container heading_center col-md-8">
-                        <div class="col row sub-heading">
-                            <h2>
-                                Our Achivements
-                            </h2>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/ISO_14001_NEW.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>ISO 14001 Approval Certificate</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('isocertification') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-left">
-                            Our notable accomplishments and successes that we have attained over the years. These
-                            accomplishments reflect our dedication to excellence, innovation, and a commitment to
-                            delivering high-quality products and services.
-                        </p>
                     </div>
-                    <div class="col-4">
-                        <div class="btn-box">
-                            <a href="">
-                                View All Achivements
-                            </a>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/ISO_45001_NEW.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>ISO 45001 Approval Certificate</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('isocertification') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/ISO_50001_NEW.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>ISO 50001 Approval Certificate</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('isocertification') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/ISO_9001_NEW.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>ISO 9001 Approval Certificate</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('isocertification') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/jis.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>JIS Approval Certificate</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('jisapproval') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/SNI-07-2052-2017.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>Steel Bar for Reinforcement</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('sni') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/SNI 07-0954-2005.jpeg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>Steel Bar In Coil</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('sni') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/kan.jpeg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>LP - 455 – IDN Accreditation by KAN</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('kan') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/SMK3 LOGO.jpeg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>SMK3 Approval ertificate</h6>
+                                    <h6></h6>
+
+                                    <a href="{{ route('sirim') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/proper.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>Proper Approval Certificate</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('tkdn') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/logo zero accident.jpg" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>Zero Accident Approval Certificate</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('sni') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <div class="card text-center">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="assets/img/logo/sirim.png" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h6>SIRIM Approval</h6>
+                                    <h6></h6>
+                                    <a href="{{ route('sirim') }}">
+                                        <p class="pkebawah">Read More >></p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <br>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/ISO_14001_NEW.png" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>ISO 4001 Approval Certificate</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('isocertification') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/ISO_45001_NEW.png" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>ISO 45001 Approval Certificate</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('isocertification') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/ISO_50001_NEW.png" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>ISO 50001 Approval Certificate</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('isocertification') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/ISO_9001_NEW.png" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>ISO 9001 Approval Certificate</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('isocertification') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/jis.png" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>JIS Approval Certificate</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('jisapproval') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/SNI-07-2052-2017.png" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>Steel Bar for Reinforcement</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('sni') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/SNI 07-0954-2005.jpeg" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>Steel Bar In Coil</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('sni') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/kan.jpeg" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>LP - 455 – IDN Accreditation by KAN</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('kan') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/SMK3 LOGO.jpeg" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>SMK3 Approval ertificate</h6>
-                                                <h6></h6>
-
-                                                <a href="{{ route('sirim') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/proper.png" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>Proper Approval Certificate</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('tkdn') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/logo zero accident.jpg" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>Zero Accident Approval Certificate</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('sni') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center">
-                                    <div class=" text-center">
-                                        <div class="box">
-                                            <div class="img-box">
-                                                <img src="assets/img/logo/sirim.png" alt="">
-                                            </div>
-                                            <div class="detail-box">
-                                                <h6>SIRIM Approval</h6>
-                                                <h6></h6>
-                                                <a href="{{ route('sirim') }}">
-                                                    Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    {{-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a> --}}
-                </div>
-
         </section>
 
         <!-- end expert section -->
@@ -692,22 +646,22 @@
         <!-- Start news section -->
 
         <!-- <section class="news">
-                                                                                                                                                                                                                                                                                            <div class="container">
-                                                                                                                                                                                                                                                                                              <div class="heading_container col-md-12">
-                                                                                                                                                                                                                                                                                                <div class="col row sub-heading">
-                                                                                                                                                                                                                                                                                                  <h2 class="text-left">
-                                                                                                                                                                                                                                                                                                    Instant Steel Wire Solutions at Your Fingertips!
-                                                                                                                                                                                                                                                                                                  </h2>
+                                                                                                                                                                                                                                                                                                <div class="container">
+                                                                                                                                                                                                                                                                                                  <div class="heading_container col-md-12">
+                                                                                                                                                                                                                                                                                                    <div class="col row sub-heading">
+                                                                                                                                                                                                                                                                                                      <h2 class="text-left">
+                                                                                                                                                                                                                                                                                                        Instant Steel Wire Solutions at Your Fingertips!
+                                                                                                                                                                                                                                                                                                      </h2>
+                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                    <p class="col-md-7">
+                                                                                                                                                                                                                                                                                                      Stay Connected and Informed with Our Quick Contact Feature on the
+                                                                                                                                                                                                                                                                                                      Steel wire Factory Website. Reach Out to Us Anytime, Anywhere!"
+                                                                                                                                                                                                                                                                                                    </p>
+                                                                                                                                                                                                                                                                                                    <br>
+                                                                                                                                                                                                                                                                                                    <a href="">Contact us</a>
+                                                                                                                                                                                                                                                                                                  </div>
                                                                                                                                                                                                                                                                                                 </div>
-                                                                                                                                                                                                                                                                                                <p class="col-md-7">
-                                                                                                                                                                                                                                                                                                  Stay Connected and Informed with Our Quick Contact Feature on the
-                                                                                                                                                                                                                                                                                                  Steel wire Factory Website. Reach Out to Us Anytime, Anywhere!"
-                                                                                                                                                                                                                                                                                                </p>
-                                                                                                                                                                                                                                                                                                <br>
-                                                                                                                                                                                                                                                                                                <a href="">Contact us</a>
-                                                                                                                                                                                                                                                                                              </div>
-                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                          </section> -->
+                                                                                                                                                                                                                                                                                              </section> -->
 
         <!-- end news section -->
 
