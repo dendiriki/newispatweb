@@ -6,7 +6,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg">
+                        <div class="col-md-12 ms-sm-auto col-lg-12 px-md-4">
                             <h1>{{ $english->title }}</h1>
                             <br><br>
                             <div>{!! $english->content !!}</div>
