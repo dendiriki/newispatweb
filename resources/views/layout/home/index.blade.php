@@ -155,6 +155,26 @@
 
         <!-- end about section -->
 
+           <!-- Start client -->
+           <section class="product_section layout_padding mb-5">
+            <!-- Section Title -->
+            <div class="detail-box">
+                <div class="heading_container container">
+                    <div class="col row">
+                        <div class="sub-heading"></div>
+                        <h2>
+                            Our Product
+                        </h2>
+                    </div>
+                    <br>
+                    <p class="text-light">flsakfjdslfj</p>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- End client -->
+
 
         <section class="group_section">
             <div class="container">
@@ -204,80 +224,6 @@
               </div>
             </div>
           </section>
-
-        {{-- <div class="row no-gutters " style="border-bottom: 1px solid;">
-            <div class="col-md-6 mb-md-0 p-md-4">
-                <img src="{{ asset('assets/img/iwp_profle_images_01.png') }}" class="w-100" alt="images"
-                    style="max-width: 30rem;">
-            </div>
-            <div class="col-md-6 position-static p-4 pl-md-0">
-                <h5 class="mt-0">PT. Ispat Wire Products was established in 1991, which is the largest nail producer
-                    in
-                    Indonesia. Our working philosophy is guided towards continuous improvement in the quality of our
-                    products and services so as to surpass the best standards in the industry.</p>
-                    <a href="#">Read more</a>
-            </div>
-        </div>
-        <div class="row no-gutters " style="border-bottom: 1px solid;">
-            <div class="col-md-6  order-md-2 mt-4 mb-4">
-                <img src="{{ asset('assets/img/ibb_profle_images_01.png') }}" class="w-100" alt="images"
-                    style="max-width: 30rem;">
-            </div>
-            <div class="col-md-6 mb-md-0 p-md-4 position-static order-md-1 p-4 pl-md-0">
-                <h5 class="mt-0">PT. Ispat Bukit Baja Company Profile</h5> <br>
-                <p>PT. Ispat Bukit Baja was established in 1994 to produce Steel Angles and Channels for domestic and
-                    export requirements. Our working philosophy is aimed at continuous improvement in the quality of
-                    products and services so as to surpass the best standards in the industry.</p>
-                <a href="#">Read more</a>
-            </div>
-        </div>
-        <br><br><br><br> --}}
-
-        {{-- <!-- START THE FEATURETTES -->
-        <div class="container marketing">
-
-            <hr class="featurette-divider">
-
-            <h1 class="featurette-heading text-center" style="font-size: 36px; font-weight: bold;">Our Group</h1>
-            <br><br><br><br>
-
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">PT. Ispat Wire Products Company Profile</h2>
-                    <p class="lead">PT. Ispat Wire Products was established in 1991, which is the largest nail producer in
-                        Indonesia. Our working philosophy is guided towards continuous improvement in the quality of our
-                        products and services so as to surpass the best standards in the industry.</p>
-                </div>
-                <div class="col-md-5">
-                    <img src="{{ asset('assets/img/iwp_profle_images_01.png') }}" alt="Company Profile Image" width="450"
-                        height="450">
-                </div>
-            </div>
-
-
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">PT. Ispat Bukit Baja Company Profile
-                    </h2>
-                    <p class="lead">PT. Ispat Bukit Baja was established in 1994 to produce Steel Angles and Channels for
-                        domestic and export requirements. Our working philosophy is aimed at continuous improvement in the
-                        quality of products and services so as to surpass the best standards in the industry.</p>
-                </div>
-                <div class="col-md-5 order-md-1">
-                    <img src="{{ asset('assets/img/ibb_profle_images_01.png') }}" alt="Company Profile Image" width="450"
-                        height="450">
-
-                </div>
-            </div>
-
-            <hr class="featurette-divider"> --}}
-
-
-
-        <!-- /END THE FEATURETTES -->
 
         <!-- Start client -->
         <section class="product_section layout_padding">
@@ -607,54 +553,6 @@
                     </div>
                 </div>
         </section>
-
-        <!-- end expert section -->
-
-
-
-
-
-
-
-
-
-
-        <!-- Start news section -->
-
-        <!-- <section class="news">
-                                                                                                                                                                                                                                                                                                <div class="container">
-                                                                                                                                                                                                                                                                                                  <div class="heading_container col-md-12">
-                                                                                                                                                                                                                                                                                                    <div class="col row sub-heading">
-                                                                                                                                                                                                                                                                                                      <h2 class="text-left">
-                                                                                                                                                                                                                                                                                                        Instant Steel Wire Solutions at Your Fingertips!
-                                                                                                                                                                                                                                                                                                      </h2>
-                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                    <p class="col-md-7">
-                                                                                                                                                                                                                                                                                                      Stay Connected and Informed with Our Quick Contact Feature on the
-                                                                                                                                                                                                                                                                                                      Steel wire Factory Website. Reach Out to Us Anytime, Anywhere!"
-                                                                                                                                                                                                                                                                                                    </p>
-                                                                                                                                                                                                                                                                                                    <br>
-                                                                                                                                                                                                                                                                                                    <a href="">Contact us</a>
-                                                                                                                                                                                                                                                                                                  </div>
-                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                              </section> -->
-
-        <!-- end news section -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Start Stat -->
 <section id="stat" class="parallax-bg overlay-dark p-top-80 p-bottom-40 white-color" style="background-image:url(assets/img/wire7.png)" data-stellar-background-ratio="0.5">
