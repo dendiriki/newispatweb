@@ -54,7 +54,7 @@
                                     <a class="dropdown-item" href="{{ route('generalpw_indo') }}">General Purpose WR
                                         (SIRIM)</a>
                                     <a class="dropdown-item" href="{{ route('welding_indo') }}">Welding Electrode</a>
-                                    <a class="dropdown-item" href="{{ route('pline_indo') }}">Plain / Deform Bar</a>
+                                    <a class="dropdown-item" href="{{ route('pline_indo') }}">Plain / Deform Bars</a>
                                     <a class="dropdown-item" href="{{ route('structure_indo') }}">General Structure /
                                         Structural
                                         Steel</a>

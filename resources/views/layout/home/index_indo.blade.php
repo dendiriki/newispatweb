@@ -333,7 +333,7 @@
                             <a href="{{ route('pline_indo') }}">
                                 <img class="img-responsive" src="assets/img/product6.png" alt="">
                                 <br>
-                                <h6>Plain / Deform Bar</h6>
+                                <h6>Plain / Deform Bars</h6>
                             </a>
                         </div>
 

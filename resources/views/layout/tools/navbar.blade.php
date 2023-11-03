@@ -52,7 +52,7 @@
                                     <a class="dropdown-item" href="{{ route('generalpw') }}">General Purpose WR
                                         (SIRIM)</a>
                                     <a class="dropdown-item" href="{{ route('welding') }}">Welding Electrode</a>
-                                    <a class="dropdown-item" href="{{ route('pline') }}">Plain / Deform Bar</a>
+                                    <a class="dropdown-item" href="{{ route('pline') }}">Plain / Deform Bars</a>
                                     <a class="dropdown-item" href="{{ route('structure') }}">General Structure /
                                         Structural Steel</a>
                                     <a class="dropdown-item" href="{{ route('nails') }}">Nails & Nail Wire</a>
