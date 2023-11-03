@@ -51,7 +51,7 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">The Industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <h2 >Indonesia's Leading Steel wire Manufacturing With 2 Subsidiaries And 8 Exceptional Products</h2> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <h2 >Indonesia's Leading Steel wire Manufacturing With 2 Subsidiaries And 8 Exceptional Products</h2> -->
                                             <a href="{{ route('profilindo') }}">Discovery Our Company</a>
 
                                         </div>
@@ -70,7 +70,7 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">The Industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <h2 >Premier Steel wire Factory Sets New Standards for Excellence</h2> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <h2 >Premier Steel wire Factory Sets New Standards for Excellence</h2> -->
                                             <a href="{{ route('profilindo') }}">Discovery Our Company</a>
 
                                         </div>
@@ -89,7 +89,7 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">The Industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <h2 >sells 70% of  products to domestic market and 30% to export markets of Asia-Pacific region.</h2> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <h2 >sells 70% of  products to domestic market and 30% to export markets of Asia-Pacific region.</h2> -->
                                             <a href="{{ route('profilindo') }}">Discovery Our Company</a>
 
                                         </div>
@@ -690,98 +690,94 @@
             </div> <!-- /.container -->
         </section>
         <!-- End Stat -->
-        <!-- End Stat -->
 
 
 
 
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
 
+            <!--  Section Title -->
+            <div class="container">
+                <div class="row heading_container col-md-12">
+                    <div class="col row sub-heading">
+                        <h2 class="text-left">
+                            Contact us
+                        </h2>
+                    </div>
+                    <p class="col-md-7">
+                        We're here to help and answer any question you might have. We look forward to hearing from you.
+                    </p>
+                    <br>
+                </div>
+            </div>
 
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+                <div class="row gy-4">
 
+                    <div class="col-lg-6">
 
-
-
-
-        <section class="expert_section layout_padding">
-            <div class="about_section">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col">
-                            <div class="heading_container col-md-12">
-                                <div class="col row sub-heading">
-                                    <h2 class="text-left">
-                                        Contact us
-                                    </h2>
-                                </div>
-                                <p class="col-md-7">
-                                    We're here to help and answer any question you might have. We look forward to
-                                    hearing
-                                    from you.
-                                </p>
-                                <br>
-                            </div>
-
-
-                            <div class="container_CS">
-
-                                <div id="content1">
-                                    <img src="assets/img/icon/Markicon.png" alt="icon"
-                                        style="max-width: 6rem; padding: 15px;">
-                                    <h1>Address</h1>
-                                    <p>Plan and Office: <br> Desa Kedungturi, Taman Sidoarjo PO BOX 1083 Surabaya 60010 -
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <h3>Address</h3>
+                                    <p>Plan and Office: Desa Kedungturi, Taman Sidoarjo PO BOX 1083 Surabaya 60010 -
                                         Indonesia</p>
+                                    <p></p>
                                 </div>
+                            </div><!-- End Info Item -->
 
-                                <div id="content2">
-                                    <img src="assets/img/icon/Phoneicon.png" alt="icon"
-                                        style="max-width: 6rem; padding: 15px;">
-                                    <h1>Call Us</h1>
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <h3>Call Us</h3>
                                     <p>Telp : (62) 31-7887000 <br>
                                         Fax : (62) 31-7887500 <br>
                                         WA : (62) 8155152222</p>
                                 </div>
+                            </div><!-- End Info Item -->
 
-                                <div id="content3">
-                                    <img src="assets/img/icon/Emailicon.png" alt="icon"
-                                        style="max-width: 6rem; padding: 15px;">
-                                    <h1>Email Us</h1>
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <h3>Email Us</h3>
                                     <p>marketing.indo@mittalsteel.com <br>custsupp.indo@mittalsteel.com</p>
                                 </div>
+                            </div><!-- End Info Item -->
 
-                                <div id="content4">
-                                    <img src="assets/img/icon/Clockicon.png" alt="icon"
-                                        style="max-width: 6rem; padding: 15px;">
-                                    <h1>Open Hours</h1>
-                                    <p>Monday - Friday <br>9.00 - 18.00 WIB</p>
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <h3>Open Hours</h3>
+                                    <p>Monday - Friday</p>
+                                    <p>9:00AM - 05:00PM</p>
                                 </div>
-
-                                <div id="sidebar">
-                                    <!-- <img src="assets/img/contactus.png"> -->
-                                    <img alt="">
-                                    <a href="">Contact Us</a>
-                                </div>
-
-                            </div>
+                            </div><!-- End Info Item -->
 
                         </div>
+
                     </div>
+
+                    <div class="col-lg-6">
+                        <form method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                            <div class="row gy-4">
+
+
+                                <div class="col-md-12 text-center">
+                                    <img>
+                                    <a href="{{ route('customer-center') }}" class="btn btn-primary">Send Message</a>
+                                </div>
+
+
+                            </div>
+                        </form>
+                    </div><!-- End Contact Form -->
+
                 </div>
+
             </div>
-    </div>
-    </section>
 
-
-    {{-- <section class="safety_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-
-        </div>
-        <div class="col-md-6">
-
-        </div>
-      </div>
-    </div>
-  </section> --}}
-@endsection
+        </section><!-- End Contact Section -->
+    @endsection
