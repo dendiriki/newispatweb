@@ -11,6 +11,8 @@ use App\Http\Controllers\GradeController;
 use App\Http\Controllers\LayoutIndoController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SheController;
+use App\Models\English;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendEmail;
@@ -32,7 +34,15 @@ Route::get('/',function(){
 });
 
 Route::get('home', function () {
+
+    $about  = English::firstWhere('slug','=','COMPANYPROFILE');
+    $vision  = English::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES');
+    $quality   = English::firstWhere('slug','=','COMPANYGROUPVIDEO');
+
     return view('layout.home.index',[
+        'quality' => $quality,
+        'vision' => $vision,
+        'about' => $about,
         'url' => 'home',
         'class' => '',
         'navbar' =>'',
@@ -41,7 +51,16 @@ Route::get('home', function () {
 })->name('home');
 
 Route::get('home_indo', function () {
+
+
+    $about  = English::firstWhere('slug','=','COMPANYPROFILE');
+    $vision  = English::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES');
+    $quality   = English::firstWhere('slug','=','COMPANYGROUPVIDEO');
+
     return view('layout.home.index_indo',[
+        'quality' => $quality,
+        'vision' => $vision,
+        'about' => $about,
         'url' =>'home',
         'class' => '',
         'navbar' =>'',

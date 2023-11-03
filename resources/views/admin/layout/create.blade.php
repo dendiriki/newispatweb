@@ -32,7 +32,7 @@
                         <option value="COMPANYSIRIMCERTIFICATION">COMPANY SIRIM CERTIFICATION</option>
                         <option value="COMPANYISOCERTIFICATION">COMPANY ISO CERTIFICATION</option>
                         <option value="COMPANYTKDNCERTIFICATION">COMPANY TKDN CERTIFICATION</option>
-                        <option value="COMPANYGROUPVIDEO">COMPANY GROUP VIDEO</option>
+                        <option value="COMPANYGROUPVIDEO">Quality Policy</option>
                         <option value="COMPANYMANAGEMENTSYSTEM">COMPANY MANAGEMENT SYSTEM</option>
                         <option value="INDUSTRIALPROCESSFACILITAS">INDUSTRIAL PROCESS FACILITAS</option>
                         <option value="INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING">INDUSTRIAL PROCESS FLOWCHART OF STEEL MAKING

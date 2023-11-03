@@ -51,8 +51,8 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">From industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                                        <h2 >Indonesia's Leading Steel wire Manufacturing With 2 Subsidiaries And 8 Exceptional Products</h2> -->
-                                            <a href="{{route('profilindo')}}">Discovery Our Company</a>
+                                                                                                                                                                                                                                                                                                                                <h2 >Indonesia's Leading Steel wire Manufacturing With 2 Subsidiaries And 8 Exceptional Products</h2> -->
+                                            <a href="{{ route('profilindo') }}">Discovery Our Company</a>
 
                                         </div>
                                     </div>
@@ -70,8 +70,8 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">From industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                                      <h2 >Premier Steel wire Factory Sets New Standards for Excellence</h2> -->
-                                            <a href="{{route('profilindo')}}">Discovery Our Company</a>
+                                                                                                                                                                                                                                                                                                                              <h2 >Premier Steel wire Factory Sets New Standards for Excellence</h2> -->
+                                            <a href="{{ route('profilindo') }}">Discovery Our Company</a>
 
                                         </div>
                                     </div>
@@ -89,8 +89,8 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">From industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                                      <h2 >sells 70% of  products to domestic market and 30% to export markets of Asia-Pacific region.</h2> -->
-                                            <a href="{{route('profilindo')}}">Discovery Our Company</a>
+                                                                                                                                                                                                                                                                                                                              <h2 >sells 70% of  products to domestic market and 30% to export markets of Asia-Pacific region.</h2> -->
+                                            <a href="{{ route('profilindo') }}">Discovery Our Company</a>
 
                                         </div>
                                     </div>
@@ -138,9 +138,7 @@
                                 </div>
                             </div>
                             <p>
-                                PT. Ispat Indo was established in Indonesia in 1976. the company was set up as a 60.000 tpa
-                                Greenfield Project, for rolling. Today Ispat Indo has an annual Product capacity in excess
-                                of 700.000 tons...
+                                {!! Str::limit(preg_replace('/<img[^>]*>/', '', $about->content), 320, '...') !!}
                             </p>
                             <a href="{{ route('profilindo_indo') }}">
                                 More on Our History
@@ -155,54 +153,114 @@
 
         <!-- end about section -->
 
-        <section class="group_section">
+        <!-- Start client -->
+        <section id="service" class="p-top-80 p-bottom-80 p-bottom-40">
             <div class="container">
-              <div class="row">
-                <div class="col">
 
-                  <div class="heading_container col-md-12">
+                <div class="heading_container col-md-12">
                     <div class="col row sub-heading">
-                      <h2 class="text-left">
-                        Our Group
-                      </h2>
+                        <h2 class="text-left">
+                            Vision & Mision
+                        </h2>
                     </div>
-                  </div>
-                  <br>
+                </div>
+                <br>
+                <p>
+                    {!! Str::limit(preg_replace('/<img[^>]*>/', '', $vision->content), 1000, '...') !!}
+                </p>
+            </div> <!-- /.container -->
+        </section>
+        <!-- End Service -->
 
-                  <div class="row">
 
-                    <div class="col-md-6">
-                      <div class="no-gutters detail-box">
-                        <div class="col-md-12">
-                          <img src="{{ asset('assets/img/iwp_profle_images_02.png') }}" class="w-100" alt="images" style="max-width: 30rem; margin-bottom: 15px;">
-                        </div>
-                        <div class="col-md-12 position-static">
-                          <h4 class="mt-0">PT. Ispat Wire Products</h4>
-                          <p >PT. Ispat Wire Products was established in 1991 which is the largest nail producer in Indonesia. Our working philosophy is guided towards continuous improvement in the quality of our products and services so as to surpass the best standards in the industry...</p>
-                          <a href="{{ route('ispatwireproduct_indo') }}">Read more</a>
-                        </div>
-                      </div>
-                    </div>
 
-                    <div class="col-md-6">
-                      <div class=" no-gutters detail-box">
-                        <div class="col-md-12">
-                          <img src="{{ asset('assets/img/ibb_profle_images_03.png') }}" class="w-100" alt="images" style="max-width: 30rem; margin-bottom: 15px;">
-                        </div>
-                        <div class="col-md-12 position-static">
-                          <h4  class="mt-0">PT. Ispat Bukit Baja</h4>
-                          <p >PT. Ispat Bukit Baja was established in 1994 to produce Steel Angles and Channels for domestic and export requirements. Our working philosophy is aimed at continuous improvement in the quality of products and services so as to surpass the best standards...</p>
-                          <a href="{{ route('ispatbukitbaja_indo') }}">Read more</a>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
+        <section style="background-color: #3F58DD; height: 600px;">
+            <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+                <div class="col text-center" style="padding: 25px 45px; border-radius: 2px;">
+                    <i class="fa-solid fa-hand-holding-droplet"
+                        style="color: #fff; font-size: 4rem; padding-bottom: 15px;"></i>
+                    <h1 class="text-center" style="color: #fff; font-weight: 510; padding-bottom: 15px;">Quality Policy</h1>
 
                 </div>
-              </div>
+                @php
+                    $content = $quality->content;
+                    $content = preg_replace('/<h4><b>.*?<\/b><\/h4>/', '', $content); // Menghapus tag <h4><b> ... </b></h4
+                    preg_match_all('/<h[1-5]>(.*?)<\/h[1-5]|<p>(.*?)<\/p>/', $content, $matches); // Mengambil teks dalam tag <h1> sampai <h5> dan <p>
+                @endphp
+
+                @foreach ($matches[0] as $tag)
+                    @if (Str::startsWith($tag, '<h'))
+                        {!! $tag !!}
+                    @else
+                        <p class="text-light">{!! Str::limit(strip_tags($tag), 1000, '...') !!}</p>
+                    @endif
+                @endforeach
+
             </div>
-          </section>
+        </section>
+
+
+
+
+        <br><br><br>
+
+
+        <section class="group_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+                        <div class="heading_container col-md-12">
+                            <div class="col row sub-heading">
+                                <h2 class="text-left">
+                                    Our Group
+                                </h2>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="no-gutters detail-box">
+                                    <div class="col-md-12">
+                                        <img src="{{ asset('assets/img/iwp_profle_images_02.png') }}" class="w-100"
+                                            alt="images" style="max-width: 30rem; margin-bottom: 15px;">
+                                    </div>
+                                    <div class="col-md-12 position-static">
+                                        <h4 class="mt-0">PT. Ispat Wire Products</h4>
+                                        <p>PT. Ispat Wire Products was established in 1991 which is the largest nail
+                                            producer in Indonesia. Our working philosophy is guided towards continuous
+                                            improvement in the quality of our products and services so as to surpass the
+                                            best standards in the industry...</p>
+                                        <a href="{{ route('ispatwireproduct_indo') }}">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class=" no-gutters detail-box">
+                                    <div class="col-md-12">
+                                        <img src="{{ asset('assets/img/ibb_profle_images_03.png') }}" class="w-100"
+                                            alt="images" style="max-width: 30rem; margin-bottom: 15px;">
+                                    </div>
+                                    <div class="col-md-12 position-static">
+                                        <h4 class="mt-0">PT. Ispat Bukit Baja</h4>
+                                        <p>PT. Ispat Bukit Baja was established in 1994 to produce Steel Angles and Channels
+                                            for domestic and export requirements. Our working philosophy is aimed at
+                                            continuous improvement in the quality of products and services so as to surpass
+                                            the best standards...</p>
+                                        <a href="{{ route('ispatbukitbaja_indo') }}">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Start client -->
         <section class="product_section layout_padding">
@@ -535,104 +593,105 @@
                 </div>
         </section>
 
-<!-- Start Stat -->
-<section id="stat" class="parallax-bg overlay-dark p-top-80 p-bottom-40 white-color" style="background-image:url(assets/img/wire7.png)" data-stellar-background-ratio="0.5">
-    <div class="container">
+        <!-- Start Stat -->
+        <section id="stat" class="parallax-bg overlay-dark p-top-80 p-bottom-40 white-color"
+            style="background-image:url(assets/img/wire7.png)" data-stellar-background-ratio="0.5">
+            <div class="container">
 
 
 
-        <div class="row">
+                <div class="row">
 
-          <div class="heading_container col-md-12" style="padding-top: 40px;">
-            <div class="col row sub-heading">
-              <h2 class="text-left" style="color: #fff;">
-                Safety Performance Board
-              </h2>
-            </div>
-            <br>
-          </div>
+                    <div class="heading_container col-md-12" style="padding-top: 40px;">
+                        <div class="col row sub-heading">
+                            <h2 class="text-left" style="color: #fff;">
+                                Safety Performance Board
+                            </h2>
+                        </div>
+                        <br>
+                    </div>
 
-            <!-- === Stats Item 1 === -->
-            <div class="col ">
-                <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                    <div class="stat-item-icon">
-                      <i class="fa-solid fa-person-falling"></i>
-                    </div>
-                    <div class="stat-item-number">
-                        2
-                    </div>
-                    <div class="stat-item-text">
-                        Near Miss Cases
-                    </div>
-                </div>
-            </div> <!-- /.col -->
+                    <!-- === Stats Item 1 === -->
+                    <div class="col ">
+                        <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.3s">
+                            <div class="stat-item-icon">
+                                <i class="fa-solid fa-person-falling"></i>
+                            </div>
+                            <div class="stat-item-number">
+                                2
+                            </div>
+                            <div class="stat-item-text">
+                                Near Miss Cases
+                            </div>
+                        </div>
+                    </div> <!-- /.col -->
 
-            <!-- === Stats Item 2 === -->
-            <div class="col ">
-                <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                    <div class="stat-item-icon">
-                      <i class="fa-solid fa-kit-medical"></i>
-                    </div>
-                    <div class="stat-item-number">
-                        1
-                    </div>
-                    <div class="stat-item-text">
-                        First AID Cases
-                    </div>
-                </div>
-            </div> <!-- /.col -->
+                    <!-- === Stats Item 2 === -->
+                    <div class="col ">
+                        <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                            <div class="stat-item-icon">
+                                <i class="fa-solid fa-kit-medical"></i>
+                            </div>
+                            <div class="stat-item-number">
+                                1
+                            </div>
+                            <div class="stat-item-text">
+                                First AID Cases
+                            </div>
+                        </div>
+                    </div> <!-- /.col -->
 
-            <!-- === Stats Item 3 === -->
-            <div class="col ">
-                <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <div class="stat-item-icon">
-                      <i class="fa-solid fa-bed-pulse"></i>
-                    </div>
-                    <div class="stat-item-number">
-                        2
-                    </div>
-                    <div class="stat-item-text">
-                        Medical Treatment Cases
-                    </div>
-                </div>
-            </div> <!-- /.col -->
+                    <!-- === Stats Item 3 === -->
+                    <div class="col ">
+                        <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="stat-item-icon">
+                                <i class="fa-solid fa-bed-pulse"></i>
+                            </div>
+                            <div class="stat-item-number">
+                                2
+                            </div>
+                            <div class="stat-item-text">
+                                Medical Treatment Cases
+                            </div>
+                        </div>
+                    </div> <!-- /.col -->
 
-            <!-- === Stats Item 4 === -->
-            <div class="col ">
-                <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                    <div class="stat-item-icon">
-                      <i class="fa-solid fa-house-chimney-medical"></i>
-                    </div>
-                    <div class="stat-item-number">
-                        0
-                    </div>
-                    <div class="stat-item-text">
-                        Lost Work Days Cases
-                    </div>
-                </div>
-            </div> <!-- /.col -->
+                    <!-- === Stats Item 4 === -->
+                    <div class="col ">
+                        <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                            <div class="stat-item-icon">
+                                <i class="fa-solid fa-house-chimney-medical"></i>
+                            </div>
+                            <div class="stat-item-number">
+                                0
+                            </div>
+                            <div class="stat-item-text">
+                                Lost Work Days Cases
+                            </div>
+                        </div>
+                    </div> <!-- /.col -->
 
-            <!-- === Stats Item 5 === -->
-            <div class="col">
-              <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                  <div class="stat-item-icon">
-                    <i class="fa-solid fa-skull"></i>
-                  </div>
-                  <div class="stat-item-number">
-                      0
-                  </div>
-                  <div class="stat-item-text">
-                      Fatality Cases
-                  </div>
-              </div>
-          </div> <!-- /.col -->
+                    <!-- === Stats Item 5 === -->
+                    <div class="col">
+                        <div class="stat-item stat-item-type-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                            <div class="stat-item-icon">
+                                <i class="fa-solid fa-skull"></i>
+                            </div>
+                            <div class="stat-item-number">
+                                0
+                            </div>
+                            <div class="stat-item-text">
+                                Fatality Cases
+                            </div>
+                        </div>
+                    </div> <!-- /.col -->
 
 
 
-        </div> <!-- /.row -->
-    </div> <!-- /.container -->
-  </section>
-  <!-- End Stat -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </section>
+        <!-- End Stat -->
 
 
 
