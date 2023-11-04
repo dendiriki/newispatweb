@@ -1,0 +1,1 @@
+{"NearMiss":"2","FirstAIDCases":"6","MedicalTreatmentCases":"7","LostWorkdays":"89","FatalityCases":"12"}

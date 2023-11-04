@@ -1,68 +1,34 @@
 @extends('admin.tools.main')
 
 @section('content')
-
-    <style>
-        /* CSS untuk styling tabel */
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        /* CSS untuk tombol */
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
-
-    <table>
-        <tr>
-            <th>NearMiss</th>
-            <th>FirstAIDCases</th>
-            <th>MedicalTreatmentCases</th>
-            <th>LostWorkdays </th>
-        </tr>
-        <tr>
-            <td>{Data 1}</td>
-            <td>Data 2</td>
-            <td>Data 3</td>
-            <td>Data 4</td>
-        </tr>
+<div class="container mt-4">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="border-width: 2px;">NearMiss</th>
+                <th style="border-width: 2px;">FirstAIDCases</th>
+                <th style="border-width: 2px;">MedicalTreatmentCases</th>
+                <th style="border-width: 2px;">LostWorkdays</th>
+                <th style="border-width: 2px;">Fatality Cases</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border-width: 2px;">{{ $sheData['NearMiss'] }}</td>
+                <td style="border-width: 2px;">{{ $sheData['FirstAIDCases'] }}</td>
+                <td style="border-width: 2px;"> {{$sheData['MedicalTreatmentCases']}}</td>
+                <td style="border-width: 2px;">{{$sheData['LostWorkdays']}}</td>
+                <td style="border-width: 2px;">{{$sheData['FatalityCases']}}</td>
+            </tr>
+        </tbody>
     </table>
 
-    <div class="button-container">
-        <a href="{{ route('nearmiss') }}" class="button">NearMiss</a>
-        <a href="{{ route('firstaid') }}" class="button">FirstAIDCases</a>
-        <a href="{{ route('medical') }}" class="button">MedicalTreatmentCases</a>
-        <a href="{{ route('lostworkdays') }}" class="button">LostWorkdays</a>
+    <div class="text-center">
+        <a href="{{ route('nearmiss') }}" class="btn btn-primary">NearMiss</a>
+        <a href="{{ route('firstaid') }}" class="btn btn-primary">FirstAIDCases</a>
+        <a href="{{ route('medical') }}" class="btn btn-primary">MedicalTreatmentCases</a>
+        <a href="{{ route('lostworkdays') }}" class="btn btn-primary">LostWorkdays</a>
+        <a href="{{ route('fatalitycases') }}" class="btn btn-primary">Fatality Cases</a>
     </div>
-
-
-    @endsection
-
+</div>
+@endsection

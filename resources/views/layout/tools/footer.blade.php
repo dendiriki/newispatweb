@@ -7,7 +7,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 width: 50%; margin-bottom: 10px;">
-                <h4 class="text-center"  style="margin-top: 10px">PT. Ispat Indo</h4>
+                <h4 class=""  style="margin-top: 10px">PT. Ispat Indo</h4>
                 <p>
                     Ispat Indo, a steel industry pioneer,
                     redefines excellence, driving innovation and

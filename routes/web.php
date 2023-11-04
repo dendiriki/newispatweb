@@ -86,10 +86,18 @@ Route::resource('admin/customer', CustomerController::class)->middleware('auth')
 Route::resource('admin/news', NewsController::class)->middleware('auth');
 Route::get('admin/she',[SheController::class,'index'])->middleware('auth');
 Route::middleware(['auth'])->group(function () {
-    Route::get('admin/nearmiss', [DataController::class, 'NearMiss'])->name('nearmiss');
-    Route::get('admin/firstaid', [DataController::class, 'FirstAID'])->name('firstaid');
-    Route::get('admin/medical', [DataController::class, 'MedicalTreatment'])->name('medical');
-    Route::get('admin/lostworkdays', [DataController::class, 'LostWorkdays'])->name('lostworkdays');
+    Route::get('admin/nearmiss', [SheController::class, 'nearMiss'])->name('nearmiss');
+    Route::get('admin/firstaid', [SheController::class, 'FirstAID'])->name('firstaid');
+    Route::get('admin/medical', [SheController::class, 'MedicalTreatment'])->name('medical');
+    Route::get('admin/lostworkdays', [SheController::class, 'LostWorkdays'])->name('lostworkdays');
+    Route::get('admin/fatalitycases', [SheController::class, 'fatalitycases'])->name('fatalitycases');
+   Route::post('admin/nearmiss', [SheController::class, 'updateNearMiss'])->name('update.nearmiss');
+   Route::post('admin/firstaidcases', [SheController::class, 'updatefirstAID'])->name('update.firstaidcases');
+   Route::post('admin/update/medicaltreatment', [SheController::class, 'updateMedicalTreatment'])->name('update.medicaltreatment');
+   Route::post('admin/update/lostworkdays', [SheController::class, 'updateLostWorkdays'])->name('update.lostworkdays');
+    Route::post('admin/update/fatalitycases', [SheController::class, 'updateFatalityCases'])->name('update.fatalitycases');
+
+
 });
 
 
