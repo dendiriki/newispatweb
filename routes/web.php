@@ -34,6 +34,11 @@ Route::get('/',function(){
 });
 
 Route::get('home', function () {
+    $data = file_get_contents(public_path('assets/she.txt'));
+    $sheData = json_decode($data, true); // Ubah data dari JSON ke array
+
+    // Ubah array menjadi string sebelum mengirimkannya ke tampilan
+    $sheDataString = implode(', ', $sheData);
 
     $about  = English::firstWhere('slug','=','COMPANYPROFILE');
     $vision  = English::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES');
@@ -43,6 +48,7 @@ Route::get('home', function () {
         'quality' => $quality,
         'vision' => $vision,
         'about' => $about,
+        'shedata' => $sheData,
         'url' => 'home',
         'class' => '',
         'navbar' =>'',
@@ -51,6 +57,11 @@ Route::get('home', function () {
 })->name('home');
 
 Route::get('home_indo', function () {
+    $data = file_get_contents(public_path('assets/she.txt'));
+    $sheData = json_decode($data, true); // Ubah data dari JSON ke array
+
+    // Ubah array menjadi string sebelum mengirimkannya ke tampilan
+    $sheDataString = implode(', ', $sheData);
 
 
     $about  = English::firstWhere('slug','=','COMPANYPROFILE');
@@ -61,6 +72,7 @@ Route::get('home_indo', function () {
         'quality' => $quality,
         'vision' => $vision,
         'about' => $about,
+        'shedata' => $sheData,
         'url' =>'home',
         'class' => '',
         'navbar' =>'',

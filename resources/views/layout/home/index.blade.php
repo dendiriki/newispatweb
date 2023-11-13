@@ -616,7 +616,7 @@
                                 <i class="fa-solid fa-person-falling"></i>
                             </div>
                             <div class="stat-item-number">
-                                2
+                                {{ $shedata['NearMiss'] }}
                             </div>
                             <div class="stat-item-text">
                                 Near Miss Cases
@@ -631,7 +631,7 @@
                                 <i class="fa-solid fa-kit-medical"></i>
                             </div>
                             <div class="stat-item-number">
-                                1
+                                {{ $shedata['FirstAIDCases'] }}
                             </div>
                             <div class="stat-item-text">
                                 First AID Cases
@@ -646,7 +646,7 @@
                                 <i class="fa-solid fa-bed-pulse"></i>
                             </div>
                             <div class="stat-item-number">
-                                2
+                                {{$shedata['MedicalTreatmentCases']}}
                             </div>
                             <div class="stat-item-text">
                                 Medical Treatment Cases
@@ -661,7 +661,7 @@
                                 <i class="fa-solid fa-house-chimney-medical"></i>
                             </div>
                             <div class="stat-item-number">
-                                0
+                                {{$shedata['LostWorkdays']}}
                             </div>
                             <div class="stat-item-text">
                                 Lost Work Days Cases
@@ -676,7 +676,7 @@
                                 <i class="fa-solid fa-skull"></i>
                             </div>
                             <div class="stat-item-number">
-                                0
+                                {{$shedata['FatalityCases']}}
                             </div>
                             <div class="stat-item-text">
                                 Fatality Cases
