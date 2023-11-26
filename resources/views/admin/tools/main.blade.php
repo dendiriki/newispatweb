@@ -40,6 +40,31 @@
             $('#summernote').summernote();
         });
     </script>
+    <!-- Di dalam file admin.layout.englishedit.blade.php atau di file terpisah -->
+    <script>
+        function removeImage() {
+            // Mendapatkan URL gambar dari editor
+            var imageUrl = $('.note-editor img').attr('src');
+
+            // Kirim permintaan AJAX ke server untuk menghapus gambar
+            $.ajax({
+                url: '/admin/english/remove-image',
+                type: 'POST',
+                data: { imageUrl: imageUrl },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function (response) {
+                    console.log(response);
+                },
+                error: function (error) {
+                    console.error(error);
+                }
+            });
+
+        }
+    </script>
+
 </body>
 
 </html>

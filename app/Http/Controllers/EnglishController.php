@@ -199,4 +199,43 @@ class EnglishController extends Controller
         English::destroy($english->id);
         return redirect('/admin/english')->with('success',' Post has been deleted');
     }
+
+    // Di dalam EnglishController.php
+    public function removeImage(Request $request)
+    {
+        $imageUrl = $request->input('imageUrl');
+
+        // Lakukan logika penghapusan gambar berdasarkan URL
+        $this->deleteImageByURL($imageUrl);
+
+        return response()->json(['message' => 'Image removed successfully']);
+    }
+
+    protected function deleteImageByURL($content, $id)
+
+    {
+        $dom = new \DOMDocument;
+        $dom->loadHTML(html_entity_decode($content));
+        $dom->preserveWhiteSpace = false;
+        $imgs = $dom->getElementsByTagName("img");
+        $links = [];
+        $path = '../content/' . $id . '/';
+
+        // Hanya tambahkan URL gambar yang sesuai dengan URL yang dikirim dari client
+        for ($i = 0; $i < $imgs->length; $i++) {
+            $imgURL = $imgs->item($i)->getAttribute("src");
+            if ($imgURL === $imageUrl) {
+                $links[] = $imgURL;
+            }
+        }
+
+        $result = array_diff($files, $links);
+        foreach ($result as $deleteFile) {
+            if (file_exists($deleteFile)) {
+                array_map('unlink', glob($deleteFile));
+            }
+        }
+    }
+
+
 }
