@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog | Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
 </head>
 
 <body>
@@ -24,59 +23,81 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        $(document).ready(function() {
-            $('#summernote').summernote();
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            // Mendengarkan klik pada elemen dengan class note-remove
-            $('.note-remove button').on('click', function() {
-                // Mendapatkan URL gambar dari editor menggunakan JavaScript murni
-                var images = document.querySelectorAll('.note-editor img');
-                var imageUrl = images.length > 0 ? images[0].getAttribute('src') : null;
+        (function () {
+            // Ganti HOST dengan URL endpoint Anda
+            var HOST = "http://10.164.247.84:8085/admin/english/" + slug + "/images";
 
-                // Gantilah dengan nilai slug yang sesuai
-                var slug = '{{ $slug ?? '' }}';
 
-                // Tambahkan ini untuk memastikan bahwa nilai $slug terdefinisi
-                console.log('Slug:', slug);
 
-                // Buat formulir tersembunyi
-                var form = document.createElement('form');
-                form.method = 'POST';
-                form.action = '/admin/english/' + slug + '/remove-image';
-                form.style.display = 'none';
-
-                // Tambahkan input untuk imageUrl dan _token
-                var inputImageUrl = document.createElement('input');
-                inputImageUrl.type = 'hidden';
-                inputImageUrl.name = 'imageUrl';
-                inputImageUrl.value = imageUrl;
-
-                var inputToken = document.createElement('input');
-                inputToken.type = 'hidden';
-                inputToken.name = '_token';
-                inputToken.value = '{!! csrf_token() !!}';
-
-                // Tambahkan input ke dalam formulir
-                form.appendChild(inputImageUrl);
-                form.appendChild(inputToken);
-
-                // Tambahkan formulir ke dalam dokumen
-                document.body.appendChild(form);
-
-                // Kirim formulir
-                form.submit();
+            document.addEventListener("trix-attachment-add", function (event) {
+                if (event.attachment.file) {
+                    uploadFileAttachment(event.attachment);
+                }
             });
-        });
+
+            function uploadFileAttachment(attachment) {
+                uploadFile(attachment.file, setProgress, setAttributes);
+
+                function setProgress(progress) {
+                    attachment.setUploadProgress(progress);
+                }
+
+                function setAttributes(attributes) {
+                    // Mengganti 'content' dengan URL penyimpanan yang benar
+                    attachment.setAttributes({
+                        url: attributes.url,
+                        href: attributes.url,  // Menggunakan url sebagai URL gambar
+                        content: attributes.url // Menggunakan url sebagai URL gambar
+                    });
+                }
+            }
+
+            function uploadFile(file, progressCallback, successCallback) {
+                var key = createStorageKey(file);
+                var formData = createFormData(key, file);
+                var xhr = new XMLHttpRequest();
+
+                xhr.open("PUT", HOST, true);
+
+
+                xhr.upload.addEventListener("progress", function (event) {
+                    var progress = (event.loaded / event.total) * 100;
+                    progressCallback(progress);
+                });
+
+                xhr.addEventListener("load", function (event) {
+                    if (xhr.status === 200) { // Ganti ke 200 karena umumnya status 200 menunjukkan berhasil
+                        var response = JSON.parse(xhr.responseText);
+                        var attributes = {
+                            url: HOST + response.key,
+                            href: HOST + response.key + "?content-disposition=attachment"
+                        };
+                        successCallback(attributes);
+                    }
+                });
+
+                xhr.send(formData);
+            }
+
+            function createStorageKey(file) {
+                var date = new Date();
+                var day = date.toISOString().slice(0, 10);
+                var name = date.getTime() + "-" + file.name;
+                return ["tmp", day, name].join("/");
+            }
+
+            function createFormData(key, file) {
+                var data = new FormData();
+                data.append("key", key);
+                data.append("Content-Type", file.type);
+                data.append("file", file);
+                return data;
+            }
+        })();
     </script>
-
-
 
 </body>
 

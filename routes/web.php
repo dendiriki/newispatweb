@@ -96,7 +96,10 @@ Route::resource('admin/posts', PostController::class)->middleware('auth');
 Route::resource('admin/english',EnglishController::class)->middleware('auth');
 Route::resource('admin/customer', CustomerController::class)->middleware('auth');
 Route::resource('admin/news', NewsController::class)->middleware('auth');
-Route::post('/admin/english/{slug}/remove-image', [EnglishController::class, 'removeImage'])->middleware('auth');
+
+Route::post('admin/english/{slug}/images', [EnglishController::class, 'uploadFileAttachment'])->middleware('auth');
+
+
 Route::get('admin/she',[SheController::class,'index'])->middleware('auth');
 Route::middleware(['auth'])->group(function () {
     Route::get('admin/nearmiss', [SheController::class, 'nearMiss'])->name('nearmiss');
