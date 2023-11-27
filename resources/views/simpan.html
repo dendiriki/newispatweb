@@ -1,0 +1,16 @@
+<!-- Di dalam file admin.layout.englishedit.blade.php atau di file terpisah -->
+<div class="note-btn-group btn-group note-remove">
+    <button type="button" class="note-btn btn btn-default btn-sm" tabindex="-1" aria-label="Remove Image" data-bs-original-title="Remove Image">
+        <i class="note-icon-trash"></i>
+    </button>
+</div>
+
+<script>
+$(document).ready(function () {
+    // Mendengarkan klik pada elemen dengan class note-remove
+    $('.note-remove button').on('click', function () {
+        // Gantilah dengan logika penghapusan gambar yang sesuai
+        console.log('Tombol Remove Gambar Ditekan');
+    });
+});
+</script>

@@ -9,19 +9,13 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css">
-
-
-</head>
-
 </head>
 
 <body>
-
     @include('admin.tools.header')
 
     <div class="container-fluid">
         <div class="row">
-
             @include('admin.tools.sidebar')
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 @yield('content')
@@ -29,41 +23,60 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/dashboard.js"></script>
     <script>
         $(document).ready(function() {
             $('#summernote').summernote();
         });
     </script>
-    <!-- Di dalam file admin.layout.englishedit.blade.php atau di file terpisah -->
     <script>
-        function removeImage() {
-            // Mendapatkan URL gambar dari editor
-            var imageUrl = $('.note-editor img').attr('src');
+        $(document).ready(function() {
+            // Mendengarkan klik pada elemen dengan class note-remove
+            $('.note-remove button').on('click', function() {
+                // Mendapatkan URL gambar dari editor menggunakan JavaScript murni
+                var images = document.querySelectorAll('.note-editor img');
+                var imageUrl = images.length > 0 ? images[0].getAttribute('src') : null;
 
-            // Kirim permintaan AJAX ke server untuk menghapus gambar
-            $.ajax({
-                url: '/admin/english/remove-image',
-                type: 'POST',
-                data: { imageUrl: imageUrl },
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                success: function (response) {
-                    console.log(response);
-                },
-                error: function (error) {
-                    console.error(error);
-                }
+                // Gantilah dengan nilai slug yang sesuai
+                var slug = '{{ $slug ?? '' }}';
+
+                // Tambahkan ini untuk memastikan bahwa nilai $slug terdefinisi
+                console.log('Slug:', slug);
+
+                // Buat formulir tersembunyi
+                var form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '/admin/english/' + slug + '/remove-image';
+                form.style.display = 'none';
+
+                // Tambahkan input untuk imageUrl dan _token
+                var inputImageUrl = document.createElement('input');
+                inputImageUrl.type = 'hidden';
+                inputImageUrl.name = 'imageUrl';
+                inputImageUrl.value = imageUrl;
+
+                var inputToken = document.createElement('input');
+                inputToken.type = 'hidden';
+                inputToken.name = '_token';
+                inputToken.value = '{!! csrf_token() !!}';
+
+                // Tambahkan input ke dalam formulir
+                form.appendChild(inputImageUrl);
+                form.appendChild(inputToken);
+
+                // Tambahkan formulir ke dalam dokumen
+                document.body.appendChild(form);
+
+                // Kirim formulir
+                form.submit();
             });
-
-        }
+        });
     </script>
+
+
 
 </body>
 

@@ -50,10 +50,12 @@ class EnglishController extends Controller
             ->latest()
             ->paginate(7);
 
+        $english = English::all();
+
         return view('admin.layout.english', [
             'title' => 'My Posts In English',
             'posts' => $posts,
-            'user' => $user->name
+            'user' => $user->name,
         ]);
     }
 
@@ -136,7 +138,8 @@ class EnglishController extends Controller
     {
         Return view('admin.layout.englishedit',[
             'english' => $english,
-            'content' => $english->content
+            'content' => $english->content,
+            'slug' => $english->slug
          ]);
     }
 
@@ -196,30 +199,61 @@ class EnglishController extends Controller
      */
     public function destroy(English $english)
     {
-        English::destroy($english->id);
-        return redirect('/admin/english')->with('success',' Post has been deleted');
-    }
+        // Mengasumsikan Anda memiliki 'id' sebagai parameter rute
+        $id = $english->id;
+        $content = $english->content;
 
-    // Di dalam EnglishController.php
+        $this->deleteImageByContent($content, $id);
+
+        English::destroy($id);
+
+        return redirect('/admin/english')->with('success', 'Post has been deleted');
+    }
+// ...
+
     public function removeImage(Request $request)
     {
-        $imageUrl = $request->input('imageUrl');
+        try {
+            $content = $request->content;
+            $id = $request->id;
+            $imageUrl = $request->input('imageUrl');
 
-        // Lakukan logika penghapusan gambar berdasarkan URL
-        $this->deleteImageByURL($imageUrl);
+            // Debugging: Cetak nilai $content dan $id untuk memeriksa
+            // dd($content, $id);
 
-        return response()->json(['message' => 'Image removed successfully']);
+            // Lakukan logika penghapusan gambar berdasarkan URL
+            $this->deleteImageByURL($imageUrl, $content, $id);
+
+            return response()->json(['message' => 'Image removed successfully']);
+        } catch (\Exception $e) {
+            // Cetak pesan kesalahan untuk debugging
+            dd($e->getMessage());
+        }
     }
 
-    protected function deleteImageByURL($content, $id)
 
+// ...
+
+
+
+
+
+    protected function deleteImageByURL($imageUrl, $content, $id)
     {
+
+               // Debugging: Cetak nilai $imageUrl untuk memeriksa
+               dd($imageUrl);
+               // Debugging: Cetak nilai $content dan $id untuk memeriksa
+               dd($content, $id);
+               // Debugging: Cetak pesan atau nilai untuk memeriksa
+               dd("Trying to delete image:", $imageUrl, "Content:", $content, "ID:", $id);
+
         $dom = new \DOMDocument;
         $dom->loadHTML(html_entity_decode($content));
         $dom->preserveWhiteSpace = false;
         $imgs = $dom->getElementsByTagName("img");
         $links = [];
-        $path = '../content/' . $id . '/';
+        dd($dom);
 
         // Hanya tambahkan URL gambar yang sesuai dengan URL yang dikirim dari client
         for ($i = 0; $i < $imgs->length; $i++) {
@@ -229,13 +263,23 @@ class EnglishController extends Controller
             }
         }
 
-        $result = array_diff($files, $links);
+
+
+
+        // Mengasumsikan gambar disimpan dalam folder 'content' dengan ID pos sebagai subfolder
+        $path = public_path("file/content/{$id}/");
+
+        $files = scandir($path);
+        $result = array_intersect($files, $links);
+
         foreach ($result as $deleteFile) {
-            if (file_exists($deleteFile)) {
-                array_map('unlink', glob($deleteFile));
+            $deletePath = $path . $deleteFile;
+            if (file_exists($deletePath)) {
+                unlink($deletePath);
             }
         }
     }
+
 
 
 }
