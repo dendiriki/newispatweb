@@ -74,14 +74,9 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="content">Content</label>
-                <!-- Gunakan trix-editor untuk konten -->
-                <input id="content" type="hidden" name="content">
-                <trix-editor input="content"></trix-editor>
-                {{-- <label for="summernote" class="form-label">Content</label>
-                <textarea id="summernote" class="form-control" name="content">{{ $english->content }}</textarea> --}}
+                <label for="summernote" class="form-label">Content</label>
+                <textarea id="summernote" class="form-control" name="content">{{ $english->content }}</textarea>
             </div>
-
             <button type="submit" class="btn btn-primary">Upadate Post</button>
         </form>
     </div>

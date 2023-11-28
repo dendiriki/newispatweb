@@ -9,7 +9,6 @@ use App\Http\Requests\UpdateEnglishRequest;
 use Illuminate\Http\Request;
 use Path\To\DOMDocument;
 use Intervention\Image\ImageManagerStatic as Image;
-use Illuminate\Support\Facades\Storage;
 
 class EnglishController extends Controller
 {
@@ -51,12 +50,10 @@ class EnglishController extends Controller
             ->latest()
             ->paginate(7);
 
-        $english = English::all();
-
         return view('admin.layout.english', [
             'title' => 'My Posts In English',
             'posts' => $posts,
-            'user' => $user->name,
+            'user' => $user->name
         ]);
     }
 
@@ -77,27 +74,50 @@ class EnglishController extends Controller
      */
     public function store(Request $request)
     {
-        $rules = [
+        $rules=[
             'title' => ['required'],
-            'slug' => ['required', 'unique:englishes'],
+            'slug' => ['required','unique:englishes'],
             'content' => ['required']
         ];
 
-        $this->validate($request, $rules);
+        $this->validate($request,$rules);
 
-        // Pemanggilan fungsi uploadFileAttachment jika ada file attachment
-        $contentWithImages = $this->uploadFileAttachment($request->content);
+        $storage="file/content";
+        $dom=new \DOMDocument();
+        libxml_use_internal_errors(true);
+        $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
+        libxml_clear_errors();
+        $images=$dom->getElementsByTagName('img');
+        foreach($images as $img){
+            $src=$img->getAttribute('src');
+            if(preg_match('/data:image/',$src)){
+                preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
+                $mimetype=$groups['mime'];
+                $fileNameContent = uniqid();
+                $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
+                $filepath=("$storage/$fileNameContentRand.$mimetype");
+                $image = Image::make($src)
+                ->encode($mimetype,100)
+                ->save(public_path($filepath));
+                $new_src=asset($filepath);
+                $img->removeAttribute('src');
+                $img->setAttribute('src',$new_src);
+                $img->setAttribute('class','img-responsive');
+        }
 
-        $article = English::create([
-            'title' => $request->title,
-            'name' => auth()->user()->name,
-            'slug' => $request->slug,
-            'content' => $contentWithImages
-        ]);
-
-        return redirect('/admin/english');
     }
 
+    $article = English::create([
+        'title' => $request->title,
+        'name' => auth()->user()->name,
+        'slug' => $request->slug,
+        'content' => $dom->saveHTML()
+
+    ]);
+
+
+     return redirect('/admin/english');
+    }
 
     /**
      * Display the specified resource.
@@ -116,8 +136,7 @@ class EnglishController extends Controller
     {
         Return view('admin.layout.englishedit',[
             'english' => $english,
-            'content' => $english->content,
-            'slug' => $english->slug
+            'content' => $english->content
          ]);
     }
 
@@ -126,121 +145,58 @@ class EnglishController extends Controller
      */
     public function update(Request $request, English $english)
     {
-        $rules = [
+        $rules=[
             'title' => ['required'],
-            'slug' => ['required'],
-            'content' => ['required'],
+            'slug' => ['required',],
+            'content' => ['required']
         ];
 
-        $this->validate($request, $rules);
+        $this->validate($request,$rules);
 
-        // Pemanggilan fungsi uploadFileAttachment jika ada file attachment
-        $contentWithImages = $this->uploadFileAttachment($request->content);
+        $storage="file/content";
+        $dom=new \DOMDocument();
+        libxml_use_internal_errors(true);
+        $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
+        libxml_clear_errors();
+        $images=$dom->getElementsByTagName('img');
+        foreach($images as $img){
+            $src=$img->getAttribute('src');
+            if(preg_match('/data:image/',$src)){
+                preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
+                $mimetype=$groups['mime'];
+                $fileNameContent = uniqid();
+                $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
+                $filepath=("$storage/$fileNameContentRand.$mimetype");
+                $image = Image::make($src)
+                ->encode($mimetype,100)
+                ->save(public_path($filepath));
+                $new_src=asset($filepath);
+                $img->removeAttribute('src');
+                $img->setAttribute('src',$new_src);
+                $img->setAttribute('class','img-responsive');
+        }
 
-        // Pemanggilan fungsi updateImageInContent untuk memperbarui konten dengan URL yang sesuai
-        $contentWithImages = $this->updateImageInContent($contentWithImages, $english->content);
-
-        // Menggunakan slug sebagai kondisi pembaruan
-        English::where('slug', $english->slug)->update([
-            'title' => $request->title,
-            'name' => auth()->user()->name,
-            'slug' => $request->slug,
-            'content' => $contentWithImages,
-        ]);
-
-        return redirect('/admin/english');
     }
 
 
+    English::where('id',$english->id)->update([
+        'title' => $request->title,
+        'name' => auth()->user()->name,
+        'slug' => $request->slug,
+        'content' => $dom->saveHTML()
+
+    ]);
+
+    return
+    redirect('/admin/english');
+    }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(English $english)
     {
-
-        English::destroy($id);
-
-        return redirect('/admin/english')->with('success', 'Post has been deleted');
+        English::destroy($english->id);
+        return redirect('/admin/english')->with('success',' Post has been deleted');
     }
-
-    protected function uploadFileAttachment($content)
-    {
-        $images = collect(json_decode($content, true)['attachments'] ?? [])
-            ->filter(function ($attachment) {
-                return $attachment['type'] === 'file';
-            });
-
-        $images->each(function ($image) {
-            $dataURL = $image['content'];
-            $src = $this->uploadImageToStorage($dataURL);
-
-            // Mengganti 'content' dengan URL penyimpanan yang benar
-            $image['content'] = $src;
-        });
-
-        // Mengembalikan konten yang telah diperbarui dengan URL gambar yang benar
-        return json_encode(['document' => ['newAttachments' => $images]]);
-    }
-
-
-    protected function uploadImageToStorage($dataURL)
-    {
-        // Mengambil base64 data dari URL gambar
-        $base64_str = substr($dataURL, strpos($dataURL, ',') + 1);
-        $image_data = base64_decode($base64_str);
-
-        Storage::makeDirectory('file/content');
-
-        // Menyimpan gambar ke penyimpanan lokal atau awan
-        $path = Storage::put('file/content', $image_data);
-
-        // Mengembalikan URL penyimpanan
-        return asset($path);
-    }
-
-    protected function updateImageInContent($newContent, $oldContent)
-    {
-        $oldImages = collect(json_decode($oldContent, true)['attachments'] ?? [])
-            ->filter(function ($attachment) {
-                return $attachment['type'] === 'file';
-            });
-
-        $newImages = collect(json_decode($newContent, true)['attachments'] ?? [])
-            ->filter(function ($attachment) {
-                return $attachment['type'] === 'file';
-            });
-
-        $newImages->each(function ($newImage) use ($oldImages) {
-            // Membandingkan file attachment berdasarkan nama
-            $matchedOldImage = $oldImages->firstWhere('filename', $newImage['filename']);
-
-            if ($matchedOldImage) {
-                // Mengganti 'content' dengan URL penyimpanan yang baru
-                $newImage['content'] = $matchedOldImage['content'];
-            }
-        });
-
-        // Menggabungkan attachment lama dan baru ke dalam konten yang diperbarui
-        $newAttachments = $oldImages->merge($newImages);
-
-        // Mengembalikan konten yang telah diperbarui dengan URL gambar yang sesuai
-        return json_encode(['document' => compact('newAttachments')]);
-    }
-
-    public function handleFileUpload(Request $request)
-    {
-        $key = $request->key; // Pastikan bahwa 'key' adalah nama yang sesuai dengan kebutuhan Anda
-
-        // Simpan file ke penyimpanan lokal atau awan, seperti yang Anda lakukan sebelumnya
-        // ...
-
-        // Tambahkan pesan log
-        \Log::info("File uploaded successfully. Key: $key");
-
-        // Berikan respons yang sesuai
-        return response('', 204); // Atau respons sesuai kebutuhan Anda
-    }
-
-
 }
