@@ -1,4 +1,4 @@
-@extends('layout.tools.main')
+@extends('layout.tools.main_indo')
 
 {{-- @section('content')
     @if (session()->has('success'))

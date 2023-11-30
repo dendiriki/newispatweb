@@ -11,6 +11,7 @@ use App\Http\Controllers\GradeController;
 use App\Http\Controllers\LayoutIndoController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SheController;
+use App\Http\Controllers\CareerController;
 use App\Models\English;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -96,6 +97,7 @@ Route::resource('admin/posts', PostController::class)->middleware('auth');
 Route::resource('admin/english',EnglishController::class)->middleware('auth');
 Route::resource('admin/customer', CustomerController::class)->middleware('auth');
 Route::resource('admin/news', NewsController::class)->middleware('auth');
+Route::resource('admin/careers',CareerController::class)->middleware('auth');
 
 // Route::post('admin/english/{slug}/images', [EnglishController::class, 'uploadFileAttachment'])->middleware('auth');
 

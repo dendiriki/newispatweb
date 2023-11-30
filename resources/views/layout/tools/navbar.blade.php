@@ -106,14 +106,19 @@
                             </a>
                         </li>
                     </ul>
-
                     <ul class="navbar-nav  ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('karir')}}">
+                            <div class="dropdown">
+                              <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">
                                 <i class="fa fa-solid fa-suitcase" style="max-width: 1rem;"></i>
                                 Careers
-                            </a>
-                        </li>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{route('karir')}}">Job information</a>
+                                <a class="dropdown-item" href="#">Apply job</a>
+                              </div>
+                            </div>
+                          </li>
                         <li class="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">

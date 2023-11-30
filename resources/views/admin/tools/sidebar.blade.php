@@ -43,6 +43,23 @@
             </a>
           </li>
           @endcan
+          @can('she')
+          <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/she">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Safety Performance Board
+            </a>
+          </li>
+          @endcan
+          @can('personalia')
+          <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/careers">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Career
+            </a>
+          </li>
+          @endcan
+
           <li class="nav-item">
             <form action="/logout" method="POST">
                 @csrf

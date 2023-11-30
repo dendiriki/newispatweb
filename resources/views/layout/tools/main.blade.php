@@ -36,6 +36,7 @@
 
 <body class="{{ $class }}">
     @include('layout.tools.navbar')
+    @include('layout.tools.number')
 
     @yield('content')
 
@@ -48,6 +49,7 @@
     <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
     <!-- custom js -->
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </body>
 
 </html>

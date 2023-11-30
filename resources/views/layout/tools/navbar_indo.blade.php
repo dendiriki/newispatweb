@@ -7,7 +7,7 @@
                 class="navbar navbar-expand-lg custom_nav-container fixed-top navbar navbar-expand-lg navbar-light bg-light">
                 <div class="logo-container">
                     <div class="logo-wrap local-scroll">
-                        <a href="{{ route('home') }}">
+                        <a href="{{ route('home_indo') }}">
                             <img class="logo" src="{{ asset('assets/img/logoispat.png') }}" alt="logo" data-rjs="2"
                                 style="width: 70px; height: 50px; position: relative; bottom: 5px;">
                         </a>
@@ -116,15 +116,18 @@
                     </ul>
 
                     <ul class="navbar-nav  ml-auto">
-
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('karir_indo')}}}">
+                            <div class="dropdown">
+                              <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">
                                 <i class="fa fa-solid fa-suitcase" style="max-width: 1rem;"></i>
                                 Careers
-                            </a>
-                        </li>
-
-
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{route('karir_indo')}}">Job information</a>
+                                <a class="dropdown-item" href="#">Apply job</a>
+                              </div>
+                            </div>
+                          </li>
                         <li class="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">
