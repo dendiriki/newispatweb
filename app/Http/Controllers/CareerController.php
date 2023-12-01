@@ -12,8 +12,12 @@ class CareerController extends Controller
      */
     public function index()
     {
+
+        $user = auth()->user(); // Mengambil pengguna saat ini
+
         Return view('admin.layout.career.index',[
             'title' => 'My Post In News',
+            'user' => $user->name,
             'careers' => Career::latest()->paginate(7)
         ]);
     }
@@ -23,7 +27,7 @@ class CareerController extends Controller
      */
     public function create()
     {
-        //
+        return View('admin.layout.career.create');
     }
 
     /**
@@ -31,7 +35,19 @@ class CareerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+            $validatedData = $request->validate([
+                'name' => ['required','max:255'],
+                'salary' => ['required'],
+                'description' => ['required'],
+                'runninghour' => ['required'],
+                'tertiaryeducation' => ['required'],
+                'status' => ['required']
+            ]);
+
+            Career::create($validatedData);
+            return redirect('/admin/careers')->with('success','New Post has been created');
+
     }
 
     /**

@@ -4,7 +4,7 @@
 @section('content')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">{{ $title }}</h1>
-        <h2>Username :{{$user}} </h2>
+        <h2>Username :{{ $user }} </h2>
     </div>
 
     @if (session()->has('success'))
@@ -14,7 +14,7 @@
     @endif
 
     <div class="table-responsive col-lg-12">
-        <a href="/admin/posts/create" class="btn btn-primary mb-3"> Create New Post</a>
+        <a href="/admin/careers/create" class="btn btn-primary mb-3"> Create career</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
@@ -30,11 +30,11 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $career->name }}</td>
                         <td>{{ $career->salary }}</td>
-                        <td>{{ $career->description}}</td>
-                        <td>{{ $career->runninghour}}</td>
-                        <td>{{ $career->tertiaryeducation}}</td>
-                        <td>{{ $career->status}}</td>
-                        <td>{{ $career->created_at}}</td>
+                        <td>{{ $career->description }}</td>
+                        <td>{{ $career->runninghour }}</td>
+                        <td>{{ $career->tertiaryeducation }}</td>
+                        <td>{{ $career->status }}</td>
+                        <td>{{ $career->created_at }}</td>
                         <td>
                             {{-- <a href="/admin/careers/{{ $career->slug }}" class="btn btn-info">view
                                 <span></span>
@@ -54,5 +54,5 @@
             </tbody>
         </table>
     </div>
-    {{ $posts->appends(request()->input())->links() }}
+    {{ $careers->appends(request()->input())->links() }}
 @endsection
