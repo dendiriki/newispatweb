@@ -702,7 +702,9 @@ class LayoutController extends Controller
 
     }
 
-    public function applyjob(Career $career)
+    public function applyjob(Career $career){
+        return view ()
+    }
 
 }
 
