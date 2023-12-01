@@ -9,6 +9,7 @@ use App\Mail\SendEmail;
 use App\Models\English;
 use App\Models\news;
 use App\Models\Certificate;
+use App\Models\Career;
 
 class LayoutController extends Controller
 {
@@ -700,6 +701,8 @@ class LayoutController extends Controller
         ]);
 
     }
+
+    public function applyjob(Career $career)
 
 }
 
