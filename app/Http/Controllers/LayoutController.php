@@ -703,7 +703,12 @@ class LayoutController extends Controller
     }
 
     public function applyjob(Career $career){
-        return view ()
+        return view ('layout.karir.applyjob',[
+            'url'  => 'applyjob',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav',
+            'sub' => 'EN',
+        ]);
     }
 
 }

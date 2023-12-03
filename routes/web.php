@@ -168,8 +168,10 @@ Route::get('fasilitasbukitnaja',[LayoutController::class,'fasilitasbukitnaja'])-
 Route::get('fasilitaswire',[LayoutController::class,'fasilitaswire'])->middleware('guest')->name('fasilitaswire');
 
 Route::get('karir',[LayoutController::class,'karir'])->middleware('guest')->name('karir');
+Route::get('applyjob',[LayoutController::class,'applyjob'])->middleware('guest')->name('applyjob');
 Route::get('news',[LayoutController::class,'news'])->middleware('guest')->name('news');
 Route::get('detailnews/{news}',[LayoutController::class,'detailnews'])->middleware('guest')->name('detailnews');
+
 
 ////layout Rutes indonesia
 Route::get('/customer-center_indo',[LayoutIndoController::class,'customer_indo'])->middleware('guest')->name('customer_indo');
