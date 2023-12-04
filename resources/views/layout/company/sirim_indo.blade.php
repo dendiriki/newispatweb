@@ -4,12 +4,22 @@
 
   <!-- about section -->
 
+  <section class="job_section layout_padding bahaw-minus">
+    <div class="container">
+        <div class="heading_container col-md-12">
+            <div class="col row sub-heading">
+                <h2 class="text-left">
+                    <!-- AVAILABLE POSITIONS -->
+                    SIRIM Certificate
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
   <section class="achive layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2>
-            SIRIM Certificate
-        </h2>
         <div class="img-box">
         </div>
         <p>

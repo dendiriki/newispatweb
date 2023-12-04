@@ -4,12 +4,22 @@
 
   <!-- about section -->
 
+  <section class="job_section layout_padding bahaw-minus">
+    <div class="container">
+        <div class="heading_container col-md-12">
+            <div class="col row sub-heading">
+                <h2 class="text-left">
+                    <!-- AVAILABLE POSITIONS -->
+                    ISO 14001
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
   <section class="achive layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2>
-          ISO 14001
-        </h2>
         <div class="img-box">
           <img src="assets/img/logo/ISO_14001_NEW.png" alt="" style="max-width: 8rem;">
         </div>

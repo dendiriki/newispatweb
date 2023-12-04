@@ -7,7 +7,7 @@
                 <div class="col row sub-heading">
                     <h2 class="text-left">
                         <!-- AVAILABLE POSITIONS -->
-                        careers
+                        {{ $english->title }}
                     </h2>
                 </div>
             </div>
@@ -22,8 +22,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 ms-sm-auto col-lg-12 px-md-4">
-                            <h1>{{ $english->title }}</h1>
-                            <br><br>
                             <div>{!! $english->content !!}</div>
                         </div>
                     </div>

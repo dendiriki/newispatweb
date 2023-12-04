@@ -3,13 +3,22 @@
 @section('content')
 
   <!-- about section -->
+  <section class="job_section layout_padding bahaw-minus">
+    <div class="container">
+        <div class="heading_container col-md-12">
+            <div class="col row sub-heading">
+                <h2 class="text-left">
+                    <!-- AVAILABLE POSITIONS -->
+                    TKDN Certificate
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
 
   <section class="achive layout_padding">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-            TKDN Certificate
-        </h2>
+      <div class="">
         <div class="img-box">
         </div>
         "Our Achievements" at Ispat Indo showcase our notable accomplishments and successes that we have

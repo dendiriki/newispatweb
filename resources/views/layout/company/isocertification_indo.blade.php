@@ -2,20 +2,31 @@
 
 @section('content')
 
+
+
+<section class="job_section layout_padding bahaw-minus">
+    <div class="container">
+        <div class="heading_container col-md-12">
+            <div class="col row sub-heading">
+                <h2 class="text-left">
+                    <!-- AVAILABLE POSITIONS -->
+                    ISO Certification
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
   <!-- about section -->
 
   <section class="achive layout_padding">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-            ISO Certification
-        </h2>
+      <div class="">
         <div class="img-box">
         </div>
         <p>
             Di Ispat Indo, kami mengukir sejarah prestasi yang mencerminkan komitmen kami
             terhadap keunggulan, inovasi, dan kualitas tinggi:
-
 
         </p>
         <P>

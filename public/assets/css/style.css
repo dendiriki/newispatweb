@@ -3335,3 +3335,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+.bahaw-minus {
+
+    margin-bottom: -130px; /* Atur margin bawah sejauh 15 piksel */
+
+  }

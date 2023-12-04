@@ -31,7 +31,7 @@
             <div class="col-12">
                 <div class="heading_container  p-bottom-40">
                     <a href="{{ route('news') }}"
-                        style="position: absolute; top: 50px; left: 10px; font-size: 1.4em ; color:black">
+                        style="position: absolute; top: 100px; left: 10px; font-size: 1.4em ; color:black">
                         <div class="row">
                             <img src="{{ asset('assets/img/icon/fa-angel-left.png') }}"
                                 style="max-width: 1em; margin-right: 10px; ">
@@ -56,7 +56,7 @@
       </div>
     </div> --}}
 
-
+    <br><br><br>
     <section class="about_section layout_padding" style="min-height: 100vh;">
         <div class="container">
             <div class="row">

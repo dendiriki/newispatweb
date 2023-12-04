@@ -1,15 +1,24 @@
 @extends('layout.tools.main_indo')
 
 @section('content')
+<section class="job_section layout_padding">
+    <div class="container">
+        <div class="heading_container col-md-12">
+            <div class="col row sub-heading">
+                <h2 class="text-left">
+                    <!-- AVAILABLE POSITIONS -->
+                    NEWS
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
     <section class="about_section layout_padding">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-
                     <div class="heading_container heading_center p-bottom-0">
-                        <h2>
-                            NEWS
-                        </h2>
                         <p>
                             Explore the Latest Ispat Indo News and Updates in Detail.
                         </p>
