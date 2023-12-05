@@ -12,6 +12,7 @@ use App\Http\Controllers\LayoutIndoController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SheController;
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\NumberController;
 use App\Models\English;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -91,6 +92,7 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 //Admin routes
+Route::resource('admin/number', NumberController::class)->middleware('auth');
 Route::resource('admin/grade', GradeController::class)->middleware('auth');
 Route::resource('admin/certificate', CertificateController::class)->middleware('auth');
 Route::resource('admin/posts', PostController::class)->middleware('auth');

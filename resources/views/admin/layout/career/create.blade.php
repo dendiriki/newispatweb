@@ -25,7 +25,7 @@
                     name="description" required autofocus>
             </div>
             <div class="mb-3">
-                <label for="runninghour" class="form-label">runninghour</label>
+                <label for="runninghour" class="form-label">link</label>
                 <input type="text" class="form-control @error('runninghour') is-invalid @enderror" id="runninghour"
                     name="runninghour" required autofocus>
             </div>

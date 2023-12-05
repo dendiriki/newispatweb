@@ -31,6 +31,7 @@
 
 <body class="{{ $class }}">
     @include('layout.tools.navbar_indo')
+    @include('layout.tools.number')
 
     @yield('content')
 

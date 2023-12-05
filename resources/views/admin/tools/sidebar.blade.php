@@ -36,6 +36,12 @@
               Customer
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/number">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Number Call
+            </a>
+          </li>
           @endcan
 
           @can('int')
