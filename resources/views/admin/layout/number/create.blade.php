@@ -24,12 +24,9 @@
                         </div>
                     @enderror
                     <option value="">---</option>
-                    <option value="ISO">ISO</option>
-                    <option value="JIS">JIS</option>
-                    <option value="SNI">SNI</option>
-                    <option value="KAN">KAN</option>
-                    <option value="SIRIM">SIRIM</option>
-                    <option value="ZEROACCIDENT">ZERO ACCIDENT</option>
+                    <option value="INDO">INDO</option>
+                    <option value="IBB">IBB</option>
+                    <option value="IWP">IWP</option>
                 </select>
             </div>
             <div class="mb-3">

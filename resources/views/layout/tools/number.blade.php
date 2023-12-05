@@ -35,15 +35,15 @@
               <tbody>
                 <tr>
                   <th scope="row"> <i class="fa-solid fa-phone"></i> </th>
-                  <td>PT. Ispat Indo <br>  <a class="" href="">+62 1234 1234 123</a> </td>
+                  <td>PT. Ispat Indo <br>  <a class="" href="">{{$indo}}/a> </td>
                 </tr>
                 <tr style="border-top: 2px solid #24369d;">
                   <th scope="row"> <i class="fa-solid fa-phone"></i> </th>
-                  <td>PT. Ispat Indo <br>  <a class="" href="">+62 1234 1234 123</a> </td>
+                  <td>PT. Ispat Indo <br>  <a class="" href="">{{$ibb}}</a> </td>
                 </tr>
                 <tr style="border-bottom: 2px solid #24369d; border-top: 2px solid #24369d;">
                   <th scope="row"> <i class="fa-solid fa-phone"></i> </th>
-                  <td>PT. Ispat Indo <br>  <a class="" href="">+62 1234 1234 123</a> </td>
+                  <td>PT. Ispat Indo <br>  <a class="" href="">{{$iwp}}</a> </td>
                 </tr>
               </tbody>
             </table>
