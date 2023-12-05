@@ -14,6 +14,7 @@ use App\Http\Controllers\SheController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\NumberController;
 use App\Models\English;
+use App\Models\Number;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -36,6 +37,11 @@ Route::get('/',function(){
 });
 
 Route::get('home', function () {
+
+    $indo = Number::firstWhere('company','=','INDO');
+    $ibb = Number::firstWhere('company','=','IBB');
+    $iwp = Number::firstWhere('company','=','IWP');
+
     $data = file_get_contents(public_path('assets/she.txt'));
     $sheData = json_decode($data, true); // Ubah data dari JSON ke array
 
@@ -46,16 +52,41 @@ Route::get('home', function () {
     $vision  = English::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES');
     $quality   = English::firstWhere('slug','=','COMPANYGROUPVIDEO');
 
-    return view('layout.home.index',[
-        'quality' => $quality,
-        'vision' => $vision,
-        'about' => $about,
-        'shedata' => $sheData,
-        'url' => 'home',
-        'class' => '',
-        'navbar' =>'',
-        'sub' => 'EN',
-    ]);
+    if ($indo or $ibb or $iwp) {
+        // Jika data ada, gunakan data yang diambil
+        return view('layout.home.index', [
+           'indo' => $indo,
+           'ibb' => $ibb,
+           'iwp' => $iwp,
+           'quality' => $quality,
+           'vision' => $vision,
+           'about' => $about,
+           'shedata' => $sheData,
+           'url' => 'home',
+           'class' => '',
+           'navbar' =>'',
+           'sub' => 'EN',
+       ]);
+    } else {
+        // Jika data tidak ada, berikan nilai default
+        $defaultindo = 'NO INFORMATION' ;
+        $defaultibb = 'NO INFORMATION' ;
+        $defaultiwp = 'NO INFORMATION' ;
+
+        return view('layout.home.index', [
+           'indo' => $defaultindo,
+           'ibb' => $defaultibb,
+           'iwp' => $defaultiwp,
+           'quality' => $quality,
+           'vision' => $vision,
+           'about' => $about,
+           'shedata' => $sheData,
+           'url' => 'home',
+           'class' => '',
+           'navbar' =>'',
+           'sub' => 'EN',
+       ]);
+    }
 })->name('home');
 
 Route::get('home_indo', function () {
