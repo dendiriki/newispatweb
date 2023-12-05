@@ -8,7 +8,12 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     public function index(){
-        return view('admin.login.index');
+        return view('admin.login.index',[
+            'url' => 'login',
+            'class' => '',
+            'navbar' =>'hero_area',
+            'sub' => 'AM'
+        ]);
     }
 
     public function authenticate(Request $request ){
@@ -19,7 +24,7 @@ class LoginController extends Controller
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended('/admin/posts');
+            return redirect()->intended('/admin/english');
         }
 
         return back()->with('loginError','Maaf Email atau Kata Sandi Salah');
@@ -28,6 +33,8 @@ class LoginController extends Controller
     public function logout(Request $request){
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('home');
     }
 }
+
+

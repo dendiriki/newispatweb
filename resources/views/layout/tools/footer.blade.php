@@ -1,58 +1,142 @@
-<div class="text-pramiry">
-    <hr class="border border-primary border-3 opacity-75">
-</div>
-<style>
-    .foo {
-    color: #ffffff; /* Fallback for older browsers */
-    color: rgba(255, 255, 255, 0.1);
+<!-- info section -->
+<section class="info_section ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 ">
+                <img src="{{ asset('assets/img/logo-ispat.png') }}" style="max-width: 3em; display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%; margin-bottom: 10px;">
+                <h4 class=""  style="margin-top: 10px">PT. Ispat Indo</h4>
+                <p>
+                    Ispat Indo, a steel industry pioneer,
+                    redefines excellence, driving innovation and
+                    setting global
+                    standards.
+                </p>
+            </div>
 
-    font-size: 16pt;
-    font-family: Arial, sans-serif;
-}
-</style>
-<footer class="container py-5">
-    <div class="row">
-      <div class="col-12 col-md">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-        <small class="d-block mb-3 text-body-secondary">&copy; 2017–2023</small>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Features</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5 class="foo">.</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Resources</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-          <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-        </ul>
-      </div>
+            <div class="col-md-3 info_links">
+                <h5
+                    style="font-weight: bold;
+          font-size: 18px;
+          margin-bottom: 20px;
+          color: #ccc;">
+                    Mail To
+                </h5>
+                <ul>
+                    <li style="margin-bottom: 5px;">
+                        <a href="mailto:ispatindo@mittalsteel.com">
+                            Ispat Indo
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 5px;">
+                        <a href="mailto:marketing.indo@mittalsteel.com">
+                            Sales & Marketing
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 5px;">
+                        <a class="" href="mailto:custsupp.indo@mittalsteel.com">
+                            CS Team
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-2 info_links">
+                <h5
+                style="font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #ccc;">
+                Mail To
+            </h5>
+                <ul>
+
+                    <li style="margin-bottom: 5px;">
+                        <a class="" href="mailto:hrd.indo@mittalsteel.com">
+                            Careers
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 5px;">
+                        <a class="" href="mailto:webmaster.indo@mittalsteel.com">
+                            web master
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 5px;">
+                        <a class=""
+                            href="https://web.whatsapp.com/send?phone=628155152222&text=Hi%2c%20Ispatindo.com">
+                            Whatsapp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <div class="info_social">
+                    <h5
+                        style="font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ccc; margin-bottom: 25px;">
+                        Social Media
+                    </h5>
+                    <div class="social_container">
+                        <div>
+                            <a href="">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/company/pt-ispat-indo">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="https://instagram.com/ispatindo_group/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    {{-- <Div class="info_links">
+
+              <div class="row">
+              <div class="col">
+                <ul>
+                  <li style="margin-bottom: 5px;">
+                    <a href="">term of service</a>
+                  </li>
+                  <li style="margin-bottom: 5px;">
+                    <a href="">privacy policy</a>
+                  </li>
+                  <li style="margin-bottom: 5px;">
+                    <a href="">Cookies</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            </Div> --}}
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
+</section>
+<!-- end info_section -->
+
+<footer class="footer_section ">
+    <div class="container">
+        <p>
+            &copy; <span id="displayYear"></span> By
+            <a href="">PT. ISPAT INDO</a>
+            <br><br><br>
+        </p>
+    </div>
+</footer>

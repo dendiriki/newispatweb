@@ -3,7 +3,8 @@
 
 @section('content')
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">My Post</h1>
+        <h1 class="h2">{{ $title }}</h1>
+        <h2>Username :{{$user}} </h2>
     </div>
 
     @if (session()->has('success'))
@@ -12,7 +13,7 @@
         </div>
     @endif
 
-    <div class="table-responsive col-lg-8">
+    <div class="table-responsive col-lg-12">
         <a href="/admin/posts/create" class="btn btn-primary mb-3"> Create New Post</a>
         <table class="table table-striped table-sm">
             <thead>
@@ -49,4 +50,5 @@
             </tbody>
         </table>
     </div>
+    {{ $posts->appends(request()->input())->links() }}
 @endsection

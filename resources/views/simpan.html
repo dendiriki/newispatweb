@@ -1,0 +1,107 @@
+<!-- Di dalam file admin.layout.englishedit.blade.php atau di file terpisah -->
+<div class="note-btn-group btn-group note-remove">
+    <button type="button" class="note-btn btn btn-default btn-sm" tabindex="-1" aria-label="Remove Image" data-bs-original-title="Remove Image">
+        <i class="note-icon-trash"></i>
+    </button>
+</div>
+
+<script>
+$(document).ready(function () {
+    // Mendengarkan klik pada elemen dengan class note-remove
+    $('.note-remove button').on('click', function () {
+        // Gantilah dengan logika penghapusan gambar yang sesuai
+        console.log('Tombol Remove Gambar Ditekan');
+    });
+});
+</script>
+
+
+<script>
+    (function() {
+    // HOST adalah URL tempat Anda menyimpan file, bisa berupa server atau penyimpanan awan (cloud storage).
+    var HOST = "https://d13txem1unpe48.cloudfront.net/";
+
+    // Mendengarkan event "trix-attachment-add" yang terjadi ketika attachment (lampiran) ditambahkan ke editor Trix.
+    addEventListener("trix-attachment-add", function(event) {
+      // Jika file attachment tersedia, panggil fungsi uploadFileAttachment untuk mengunggahnya.
+      if (event.attachment.file) {
+        uploadFileAttachment(event.attachment);
+      }
+    });
+
+    // Fungsi untuk mengunggah file attachment.
+    function uploadFileAttachment(attachment) {
+      // Memanggil fungsi uploadFile dengan file attachment, serta dua callback untuk mengatur progres dan atribut attachment.
+      uploadFile(attachment.file, setProgress, setAttributes);
+
+      // Callback untuk mengatur progres upload.
+      function setProgress(progress) {
+        attachment.setUploadProgress(progress);
+      }
+
+      // Callback untuk mengatur atribut attachment setelah upload selesai.
+      function setAttributes(attributes) {
+        attachment.setAttributes(attributes);
+      }
+    }
+
+    // Fungsi untuk mengunggah file menggunakan XMLHttpRequest.
+    function uploadFile(file, progressCallback, successCallback) {
+      // Membuat kunci penyimpanan (storage key) untuk file.
+      var key = createStorageKey(file);
+
+      // Membuat objek FormData yang berisi informasi file yang akan diunggah.
+      var formData = createFormData(key, file);
+
+      // Membuat objek XMLHttpRequest untuk melakukan pengunggahan file.
+      var xhr = new XMLHttpRequest();
+
+      // Mengatur metode, URL, dan mode asynchronous untuk pengunggahan file.
+      xhr.open("POST", HOST, true);
+
+      // Mendengarkan event progress untuk memperbarui progres pengunggahan.
+      xhr.upload.addEventListener("progress", function(event) {
+        var progress = (event.loaded / event.total) * 100;
+        progressCallback(progress);
+      });
+
+      // Mendengarkan event load yang terjadi setelah pengunggahan selesai.
+      xhr.addEventListener("load", function(event) {
+        // Jika status response adalah 204 (No Content), mengartikan pengunggahan berhasil.
+        if (xhr.status == 204) {
+          // Membuat atribut yang berisi URL dan href (link) file yang telah diunggah.
+          var attributes = {
+            url: HOST + key,
+            href: HOST + key + "?content-disposition=attachment"
+          };
+          // Memanggil callback successCallback dengan atribut yang telah dibuat.
+          successCallback(attributes);
+        }
+      });
+
+      // Mengirim FormData yang berisi file untuk proses pengunggahan.
+      xhr.send(formData);
+    }
+
+    // Fungsi untuk membuat kunci penyimpanan (storage key) berdasarkan waktu dan nama file.
+    function createStorageKey(file) {
+      var date = new Date();
+      var day = date.toISOString().slice(0, 10);
+      var name = date.getTime() + "-" + file.name;
+      return ["tmp", day, name].join("/");
+    }
+
+    // Fungsi untuk membuat objek FormData yang berisi informasi file yang akan diunggah.
+    function createFormData(key, file) {
+      var data = new FormData();
+      data.append("key", key);
+      data.append("Content-Type", file.type);
+      data.append("file", file);
+      return data;
+    }
+  })();
+
+</script>
+
+
+Test isi samapah

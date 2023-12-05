@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
@@ -16,10 +17,63 @@ class PostController extends Controller
      */
     public function index()
     {
-        Return view('admin.layout.admin',[
-            'posts' => Post::all(),
-        ]);
-    }
+            $user = auth()->user(); // Mengambil pengguna saat ini
+
+            $requestedSlugs = [];
+
+
+            if (Gate::allows('superuser')) {
+                $requestedSlugs = ['COMPANYPROFILE', 'COMPANYBOARDOFDIRECTORS',
+                'COMPANYVISION,MISSION&VALUES','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'
+                ,'COMPANYKANCERTIFICATION','COMPANYJISCERTIFICATION','COMPANYSNICERTIFICATION',
+                'COMPANYSIRIMCERTIFICATION','COMPANYISOCERTIFICATION','COMPANYTKDNCERTIFICATION',
+                'COMPANYGROUPVIDEO','COMPANYMANAGEMENTSYSTEM','INDUSTRIALPROCESSFACILITAS',
+                'INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING',
+                'INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS',
+                'INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS','SUBSIDIARIESPT.ISPATWIREPRODUCT',
+                'SUBSIDIARIESPT.ISPATPANCAPUTRA','SUBSIDIARIESPT.ISPATBUKITBAJA',
+                'BROCHUREPT.ISPATINDO','BROCHUREPT.ISPATWIREPRODUCT','BROCHUREPT.ISPATPANCAPUTRA',
+                'BROCHUREPT.ISPATBUKITBAJA','ENVIRONMENT', 'COMPANYSHE','CAREERS','PRODUCTHIGHCARBONSTEEL', 'PRODUCTLOWCARBONSTEEL','PRODUCTCOLDHEADINGQUALITYSTEEL',
+                'PRODUCTGENERALPURPOSEWR','PRODUCTWELDINGELECTRODE','PRODUCTPLAINDEFORMBAR','PRODUCTGENERALSTRUCTURE',
+                'PRODUCTNAILS&NAILWIRE','PRODUCTSCRAPPROVIDER'];
+            } elseif (Gate::allows('admin')) {
+                $requestedSlugs = ['COMPANYPROFILE', 'COMPANYBOARDOFDIRECTORS',
+                'COMPANYVISION,MISSION&VALUES','COMPANYHIGHLIGHTS&ACHIEVEMENTSOVERVIEW'
+                ,'COMPANYKANCERTIFICATION','COMPANYJISCERTIFICATION','COMPANYSNICERTIFICATION',
+                'COMPANYSIRIMCERTIFICATION','COMPANYISOCERTIFICATION','COMPANYTKDNCERTIFICATION',
+                'COMPANYGROUPVIDEO','COMPANYMANAGEMENTSYSTEM','INDUSTRIALPROCESSFACILITAS',
+                'INDUSTRIALPROCESSFLOWCHARTOFSTEELMAKING','INDUSTRIALPROCESSFLOWCHARTOFWIRERODROLING',
+                'INDUSTRIALPROCESSISPATPANCAPUTRAFACILITAS','INDUSTRIALPROCESSISPATBUKITBAJAFACILITAS',
+                'INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS','SUBSIDIARIESPT.ISPATWIREPRODUCT',
+                'SUBSIDIARIESPT.ISPATPANCAPUTRA','SUBSIDIARIESPT.ISPATBUKITBAJA',
+                'BROCHUREPT.ISPATINDO','BROCHUREPT.ISPATWIREPRODUCT','BROCHUREPT.ISPATPANCAPUTRA',
+                'BROCHUREPT.ISPATBUKITBAJA'];
+            } elseif (Gate::allows('she')) {
+                $requestedSlugs = ['ENVIRONMENT', 'COMPANYSHE'];
+            } elseif (Gate::allows('personalia')) {
+                $requestedSlugs = ['CAREERS'];
+            } elseif (Gate::allows('qualitycontrol')) {
+                $requestedSlugs = ['PRODUCTHIGHCARBONSTEEL', 'PRODUCTLOWCARBONSTEEL','PRODUCTCOLDHEADINGQUALITYSTEEL',
+                'PRODUCTGENERALPURPOSEWR','PRODUCTWELDINGELECTRODE','PRODUCTPLAINDEFORMBAR','PRODUCTGENERALSTRUCTURE',
+                'PRODUCTNAILS&NAILWIRE','PRODUCTSCRAPPROVIDER'];
+            } else {
+                return redirect('/admin/news');
+            }
+
+            // Mengambil data English yang sesuai dengan slug dan name pengguna saat ini
+            $posts = Post::whereIn('slug', $requestedSlugs)
+                ->latest()
+                ->paginate(7);
+
+            return view('admin.layout.admin', [
+                'title' => 'My Posts In indonesia',
+                'posts' => $posts,
+                'user' => $user->name
+            ]);
+        }
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -40,14 +94,13 @@ class PostController extends Controller
         // dd($request);
         $rules=[
             'title' => ['required'],
-            'name' => ['required'] ,
             'slug' => ['required','unique:posts'],
             'content' => ['required']
         ];
 
         $this->validate($request,$rules);
 
-        $storage="storage/content";
+        $storage="file/content";
         $dom=new \DOMDocument();
         libxml_use_internal_errors(true);
         $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
@@ -74,7 +127,7 @@ class PostController extends Controller
 
     $article = Post::create([
         'title' => $request->title,
-        'name' => $request->name,
+        'name' => auth()->user()->name,
         'slug' => $request->slug,
         'content' => $dom->saveHTML()
 
@@ -113,14 +166,13 @@ class PostController extends Controller
     {
         $rules=[
             'title' => ['required'],
-            'name' => ['required'] ,
             'slug' => ['required',],
             'content' => ['required']
         ];
 
         $this->validate($request,$rules);
 
-        $storage="storage/content";
+        $storage="file/content";
         $dom=new \DOMDocument();
         libxml_use_internal_errors(true);
         $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
@@ -148,7 +200,7 @@ class PostController extends Controller
 
     Post::where('id',$post->id)->update([
         'title' => $request->title,
-        'name' => $request->name,
+        'name' => auth()->user()->name,
         'slug' => $request->slug,
         'content' => $dom->saveHTML()
 

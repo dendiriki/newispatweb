@@ -7,12 +7,16 @@
 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
     <div class="position-sticky pt-3 sidebar-sticky">
       <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link {{Request::is('dashboard') ? 'active' : ''}} "aria-current="page" href="/dashboard">
-            <span data-feather="home" class="align-text-bottom"></span>
-            Dashboard
-          </a>
-        </li>
+        @can('qualitycontrol')
+            <li class="nav-item">
+            <a class="nav-link {{Request::is('dashboard') ? 'active' : ''}} "aria-current="page" href="/admin/certificate">
+              <span data-feather="home" class="align-text-bottom"></span>
+              Certificate
+            </a>
+          </li>
+        @endcan
+
+
         <li class="nav-item">
           <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/posts">
             <span data-feather="file-text" class="align-text-bottom"></span>
@@ -20,11 +24,45 @@
           </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/customer">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/english">
               <span data-feather="file-text" class="align-text-bottom"></span>
-              Creatre Menu
+              My Post In English
             </a>
           </li>
+          @can('admin')
+           <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/customer">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Customer
+            </a>
+          </li>
+          @endcan
+
+          @can('int')
+          <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/news">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              News
+            </a>
+          </li>
+          @endcan
+          @can('she')
+          <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/she">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Safety Performance Board
+            </a>
+          </li>
+          @endcan
+          @can('personalia')
+          <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/careers">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Career
+            </a>
+          </li>
+          @endcan
+
           <li class="nav-item">
             <form action="/logout" method="POST">
                 @csrf

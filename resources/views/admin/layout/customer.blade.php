@@ -12,8 +12,7 @@
         </div>
     @endif
 
-    <div class="table-responsive col-lg-8">
-        <a href="/admin/slug/create" class="btn btn-primary mb-3"> Create New Menu</a>
+    <div class="table-responsive col-lg-12">
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
