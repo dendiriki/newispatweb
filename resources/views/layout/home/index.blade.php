@@ -28,6 +28,13 @@
         </div>
     @endif
 
+
+
+
+
+
+
+
     <!-- slider section -->
     <!-- slider section -->
     <div id="home-carousel" class="carousel slide" data-ride="carousel">
@@ -101,12 +108,10 @@
     </div>
 
 
-    </section><!-- End About Section -->
     <div class="timpahero"></div>
     <div>
 
 
-            <div class="row gy-4">
 
         <section class="about_section layout_padding ">
             <div class="container">
@@ -776,4 +781,3 @@
 
         </section><!-- End Contact Section -->
     @endsection
-
