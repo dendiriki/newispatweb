@@ -99,6 +99,7 @@ class PostController extends Controller
             'content' => ['required']
             ];
 
+        $this->validate($request,$rules);
         $content = $request->content;
 
         $dom = new DOMDocument();
@@ -204,6 +205,8 @@ class PostController extends Controller
             'slug' => ['required','unique:englishes'],
             'content' => ['required']
             ];
+
+        $this->validate($request,$rules);
 
         $content = $request->content;
 
