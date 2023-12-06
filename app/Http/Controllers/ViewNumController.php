@@ -11,8 +11,8 @@ class ViewNumController extends Controller
     {
              // Coba mengambil data dari database
              $indo = Number::firstWhere('company','=','INDO');
-             $ibb = Number::find('company','=','IBB');
-             $iwp = Number::find('company','=','IWP');
+             $ibb = Number::firstWhere('company','=','IBB');
+             $iwp = Number::firstWhere('company','=','IWP');
 
              // Periksa apakah data ada
              if ($indo or $ibb or $iwp) {
