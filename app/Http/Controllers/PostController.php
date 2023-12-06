@@ -7,8 +7,9 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
-use Path\To\DOMDocument;
-use Intervention\Image\ImageManagerStatic as Image;
+use DOMDocument;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -91,47 +92,80 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
+
         $rules=[
             'title' => ['required'],
             'slug' => ['required','unique:posts'],
             'content' => ['required']
-        ];
+            ];
 
-        $this->validate($request,$rules);
+        $content = $request->content;
 
-        $storage="file/content";
-        $dom=new \DOMDocument();
-        libxml_use_internal_errors(true);
-        $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
-        libxml_clear_errors();
-        $images=$dom->getElementsByTagName('img');
-        foreach($images as $img){
-            $src=$img->getAttribute('src');
-            if(preg_match('/data:image/',$src)){
-                preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
-                $mimetype=$groups['mime'];
-                $fileNameContent = uniqid();
-                $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
-                $filepath=("$storage/$fileNameContentRand.$mimetype");
-                $image = Image::make($src)
-                ->encode($mimetype,100)
-                ->save(public_path($filepath));
-                $new_src=asset($filepath);
-                $img->removeAttribute('src');
-                $img->setAttribute('src',$new_src);
-                $img->setAttribute('class','img-responsive');
+        $dom = new DOMDocument();
+        @$dom->loadHTML($content,9);
+
+        $images = $dom->getElementsByTagName('img');
+
+        foreach($images as $key => $img){
+            $data = base64_decode(explode(',',explode(';',$img->getAttribute('src'))[1])[1]);
+            $image_name = "/uplade/" . time(). $key. '.png';
+            file_put_contents(public_path().$image_name,$data);
+
+            $img->removeAttribute('src');
+            $img->setAttribute('src',$image_name);
         }
 
-    }
+        $content = $dom->saveHTML();
 
-    $article = Post::create([
-        'title' => $request->title,
-        'name' => auth()->user()->name,
-        'slug' => $request->slug,
-        'content' => $dom->saveHTML()
 
-    ]);
+
+        Post::create([
+            'title' => $request->title,
+            'name' => auth()->user()->name,
+            'slug' => $request->slug,
+            'content' => $content
+        ]);
+        // dd($request);
+    //     $rules=[
+    //         'title' => ['required'],
+    //         'slug' => ['required','unique:posts'],
+    //         'content' => ['required']
+    //     ];
+
+    //     $this->validate($request,$rules);
+
+    //     $storage="file/content";
+    //     $dom=new \DOMDocument();
+    //     libxml_use_internal_errors(true);
+    //     $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
+    //     libxml_clear_errors();
+    //     $images=$dom->getElementsByTagName('img');
+    //     foreach($images as $img){
+    //         $src=$img->getAttribute('src');
+    //         if(preg_match('/data:image/',$src)){
+    //             preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
+    //             $mimetype=$groups['mime'];
+    //             $fileNameContent = uniqid();
+    //             $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
+    //             $filepath=("$storage/$fileNameContentRand.$mimetype");
+    //             $image = Image::make($src)
+    //             ->encode($mimetype,100)
+    //             ->save(public_path($filepath));
+    //             $new_src=asset($filepath);
+    //             $img->removeAttribute('src');
+    //             $img->setAttribute('src',$new_src);
+    //             $img->setAttribute('class','img-responsive');
+    //     }
+
+    // }
+
+    // $article = Post::create([
+    //     'title' => $request->title,
+    //     'name' => auth()->user()->name,
+    //     'slug' => $request->slug,
+    //     'content' => $dom->saveHTML()
+
+    // ]);
 
 
      return redirect('/admin/posts');
@@ -164,47 +198,83 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+
         $rules=[
             'title' => ['required'],
-            'slug' => ['required',],
+            'slug' => ['required','unique:englishes'],
             'content' => ['required']
-        ];
+            ];
 
-        $this->validate($request,$rules);
+        $content = $request->content;
 
-        $storage="file/content";
-        $dom=new \DOMDocument();
-        libxml_use_internal_errors(true);
-        $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
-        libxml_clear_errors();
-        $images=$dom->getElementsByTagName('img');
-        foreach($images as $img){
-            $src=$img->getAttribute('src');
-            if(preg_match('/data:image/',$src)){
-                preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
-                $mimetype=$groups['mime'];
-                $fileNameContent = uniqid();
-                $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
-                $filepath=("$storage/$fileNameContentRand.$mimetype");
-                $image = Image::make($src)
-                ->encode($mimetype,100)
-                ->save(public_path($filepath));
-                $new_src=asset($filepath);
-                $img->removeAttribute('src');
-                $img->setAttribute('src',$new_src);
-                $img->setAttribute('class','img-responsive');
+        $dom = new DOMDocument();
+        @$dom->loadHTML($content,9);
+
+        $images = $dom->getElementsByTagName('img');
+
+        foreach($images as $key => $img){
+        if(strpos($img->getAttribute('src'),'data:image/png') === 0 ){
+                $data = base64_decode(explode(',',explode(';',$img->getAttribute('src'))[1])[1]);
+            $image_name = "/uplade/" . time(). $key. '.png';
+            file_put_contents(public_path().$image_name,$data);
+
+            $img->removeAttribute('src');
+            $img->setAttribute('src',$image_name);
         }
 
-    }
+        }
+
+        $content = $dom->saveHTML();
 
 
-    Post::where('id',$post->id)->update([
+        Post::where('id',$post->id)->update([
         'title' => $request->title,
         'name' => auth()->user()->name,
         'slug' => $request->slug,
-        'content' => $dom->saveHTML()
+        'content' => $content
 
     ]);
+    //     $rules=[
+    //         'title' => ['required'],
+    //         'slug' => ['required',],
+    //         'content' => ['required']
+    //     ];
+
+    //     $this->validate($request,$rules);
+
+    //     $storage="file/content";
+    //     $dom=new \DOMDocument();
+    //     libxml_use_internal_errors(true);
+    //     $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
+    //     libxml_clear_errors();
+    //     $images=$dom->getElementsByTagName('img');
+    //     foreach($images as $img){
+    //         $src=$img->getAttribute('src');
+    //         if(preg_match('/data:image/',$src)){
+    //             preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
+    //             $mimetype=$groups['mime'];
+    //             $fileNameContent = uniqid();
+    //             $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
+    //             $filepath=("$storage/$fileNameContentRand.$mimetype");
+    //             $image = Image::make($src)
+    //             ->encode($mimetype,100)
+    //             ->save(public_path($filepath));
+    //             $new_src=asset($filepath);
+    //             $img->removeAttribute('src');
+    //             $img->setAttribute('src',$new_src);
+    //             $img->setAttribute('class','img-responsive');
+    //     }
+
+    // }
+
+
+    // Post::where('id',$post->id)->update([
+    //     'title' => $request->title,
+    //     'name' => auth()->user()->name,
+    //     'slug' => $request->slug,
+    //     'content' => $dom->saveHTML()
+
+    // ]);
 
     return
     redirect('/admin/posts');
@@ -216,6 +286,19 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        $dom = new DOMDocument();
+        @$dom->loadHTML($post->content,9);
+        $images = $dom->getElementsByTagName('img');
+
+        foreach($images as $key => $img){
+            $path = $img->getAttribute('src');
+            $path = Str::of($path)->after('/');
+
+            if(File::exists($path)){
+                File::delete($path);
+            }
+        }
+
         Post::destroy($post->id);
         return redirect('/admin/posts')->with('success',' Post has been deleted');
     }

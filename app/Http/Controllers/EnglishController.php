@@ -107,7 +107,7 @@ class EnglishController extends Controller
 
         foreach($images as $key => $img){
             $data = base64_decode(explode(',',explode(';',$img->getAttribute('src'))[1])[1]);
-            $image_name = "/uplade/" . time(). $key. 'png';
+            $image_name = "/uplade/" . time(). $key. '.png';
             file_put_contents(public_path().$image_name,$data);
 
             $img->removeAttribute('src');
@@ -215,7 +215,7 @@ class EnglishController extends Controller
         foreach($images as $key => $img){
         if(strpos($img->getAttribute('src'),'data:image/png') === 0 ){
                 $data = base64_decode(explode(',',explode(';',$img->getAttribute('src'))[1])[1]);
-            $image_name = "/uplade/" . time(). $key. 'png';
+            $image_name = "/uplade/" . time(). $key. '.png';
             file_put_contents(public_path().$image_name,$data);
 
             $img->removeAttribute('src');
