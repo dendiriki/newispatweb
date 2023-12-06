@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <section class="layout_padding">
     <div class="container">
       <div class="heading_container heading_center" style="color: #08135c;">

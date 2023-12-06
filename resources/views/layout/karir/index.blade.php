@@ -1,7 +1,7 @@
 @extends('layout.tools.main')
 
 @section('content')
-    <section class="job_section layout_padding">
+    <section class="job_section layout_padding bahaw-minus">
         <div class="container">
             <div class="heading_container col-md-12">
                 <div class="col row sub-heading">
