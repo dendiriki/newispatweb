@@ -55,7 +55,7 @@ class CareerController extends Controller
      */
     public function show(Career $career)
     {
-        //
+
     }
 
     /**

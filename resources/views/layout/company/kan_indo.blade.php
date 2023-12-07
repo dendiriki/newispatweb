@@ -40,7 +40,9 @@
       <br><br><br><br><br><br>
 
       <!-- expert section -->
-      <li class="list-group-item"><a href="certificate/KAN Certificate.jpg">Accreditation Certificate from KAN</a></li>
+      @foreach ($certificates as $certificate)
+      <li class="list-group-item"><a href="{{ asset('storage/'. $certificate->file) }}">{{ $certificate->name }}</a></li>
+      @endforeach
   </section>
 
   <!-- end about section -->

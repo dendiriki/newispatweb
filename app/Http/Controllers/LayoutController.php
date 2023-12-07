@@ -192,20 +192,24 @@ class LayoutController extends Controller
     }
 
     Public function isocertification(){
+        $certificates = Certificate::where('type', 'ISO')->get();
         return view('layout.company.isocertification',[
                 'url'  => 'isocertification',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav',
                 'sub' => 'EN',
+                'certificates' => $certificates
         ]);
     }
 
     public function jisapproval(){
+        $certificates = Certificate::where('type', 'JIS')->get();
         return view('layout.company.jisapproval',[
                 'url'  => 'jisapproval',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav',
                 'sub' => 'EN',
+                'certificates' => $certificates
         ]);
     }
 

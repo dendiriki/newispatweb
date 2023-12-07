@@ -34,9 +34,9 @@
       <br><br><br><br><br><br>
 
       <!-- expert section -->
-      <li class="list-group-item"><a href="certificate/JIS/Certificate_PT. ISPAT INDOüiJQID08008üj.pdf">Certificate_PT. ISPAT INDOüiJQID08008üj</a></li>
-      <li class="list-group-item"><a href="certificate/JIS/Certificate_PT. ISPAT INDOüiJQID08009üj.pdf">Certificate_PT. ISPAT INDOüiJQID08009üj</a></li>
-      <li class="list-group-item"><a href="certificate/JIS/Certificate_PT. ISPAT INDOüiJQID08010üj.pdf">Certificate_PT. ISPAT INDOüiJQID08010üj</a></li>
+      @foreach ($certificates as $certificate)
+      <li class="list-group-item"><a href="{{ asset('storage/'. $certificate->file) }}">{{ $certificate->name }}</a></li>
+      @endforeach
   <!-- end expert section -->
   </section>
 

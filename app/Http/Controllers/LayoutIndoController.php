@@ -10,6 +10,8 @@ use App\Models\News;
 use Illuminate\Http\Request;
 use App\Mail\SendEmail;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Certificate;
+use App\Models\Career;
 
 
 class LayoutIndoController extends Controller
@@ -192,20 +194,24 @@ class LayoutIndoController extends Controller
 
 
     Public function isocertification_indo(){
+        $certificates = Certificate::where('type', 'ISO')->get();
         return view('layout.company.isocertification_indo',[
                 'url'  => 'isocertification',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav',
                 'sub' => 'IN',
+                'certificates' => $certificates
         ]);
     }
 
     public function jisapproval_indo(){
+        $certificates = Certificate::where('type', 'JIS')->get();
         return view('layout.company.jisapproval_indo',[
                 'url'  => 'jisapproval',
                 'class' => 'sub_page',
                 'navbar' =>'timpanav',
                 'sub' => 'IN',
+                'certificates' => $certificates
         ]);
     }
 
@@ -237,11 +243,13 @@ class LayoutIndoController extends Controller
     }
 
     public function sirim_indo(){
+        $certificates = Certificate::where('type', 'SIRIM')->get();
         return view('layout.company.sirim_indo',[
             'url'  => 'sirim',
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'IN',
+            'certificates' => $certificates
         ]);
     }
 

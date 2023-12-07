@@ -40,8 +40,9 @@
       <br><br><br><br><br><br>
 
       <!-- expert section -->
-      <li class="list-group-item"><a href="certificate/SIRIM CERTIFICATE_PC001611.pdf">SIRIM CERTIFICATE PC001611</a></li>
-      <li class="list-group-item"><a href="certificate/SIRIM CERTIFICATE_PC001612.pdf">SIRIM CERTIFICATE PC001612</a></li>
+      @foreach ($certificates as $certificate)
+      <li class="list-group-item"><a href="{{ asset('storage/'. $certificate->file) }}">{{ $certificate->name }}</a></li>
+      @endforeach
   </section>
 
   <!-- end about section -->
