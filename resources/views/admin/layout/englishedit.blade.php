@@ -13,7 +13,11 @@
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
                     name="title" value="{{ $english->title }}" required autofocus>
-
+                    @error('title')
+                    <div class="invalid-feedback">
+                        {{ messages }}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="slug" class="form-label">Slug</label>
@@ -72,10 +76,20 @@
                         <option value="CAREERS">CAREERS</option>
                     @endcan
                 </select>
+                @error('slug')
+                <div class="invalid-feedback">
+                    {{ messages }}
+                </div>
+            @enderror
             </div>
             <div class="mb-3">
                 <label for="summernote" class="form-label">Content</label>
                 <textarea id="summernote" class="form-control" name="content">{{ $english->content }}</textarea>
+                @error('content')
+                <div class="invalid-feedback">
+                    {{ messages }}
+                </div>
+            @enderror
             </div>
             <button type="submit" class="btn btn-primary">Upadate Post</button>
         </form>
