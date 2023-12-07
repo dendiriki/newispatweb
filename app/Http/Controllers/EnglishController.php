@@ -203,7 +203,7 @@ class EnglishController extends Controller
 
         $rules=[
             'title' => ['required'],
-            'slug' => ['required','unique:englishes'],
+            'slug' => ['required'],
             'content' => ['required']
             ];
 

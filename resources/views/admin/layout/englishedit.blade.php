@@ -15,7 +15,7 @@
                     name="title" value="{{ $english->title }}" required autofocus>
                     @error('title')
                     <div class="invalid-feedback">
-                        {{ messages }}
+                        {{ $message }}
                     </div>
                 @enderror
             </div>
@@ -78,7 +78,7 @@
                 </select>
                 @error('slug')
                 <div class="invalid-feedback">
-                    {{ messages }}
+                    {{ $message }}
                 </div>
             @enderror
             </div>
@@ -87,7 +87,7 @@
                 <textarea id="summernote" class="form-control" name="content">{{ $english->content }}</textarea>
                 @error('content')
                 <div class="invalid-feedback">
-                    {{ messages }}
+                    {{ $message }}
                 </div>
             @enderror
             </div>
