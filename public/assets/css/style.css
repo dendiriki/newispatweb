@@ -2499,31 +2499,37 @@ body {
     background-color: #3F58DD;
     padding: 0px 30px;
     border-radius: 10px 0 0 10px;
-    height: 1200px;
+    height: 1000px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 8px 0 rgba(0, 0, 0, 0.1);
   }
-  @media screen and (max-width: 900px) {
+  /* @media screen and (max-width: 900px) {
     .contact_detail .col [class*="col-"]{
-
+      height: 1600px;
       background-color: #3F58DD;
       padding: 0px 30px;
       margin-left: 15px;
       width: 100%;
+    }
+  } */
+  @media screen and (max-width: 991px) {
+    .contact_detail {
+      background-color: #3F58DD;
+      height: 1230px;
     }
   }
   @media screen and (max-width: 767px) {
     .contact_detail {
       background-color: #3F58DD;
       padding: 0px 30px;
-      margin-left: 15px;
       border-radius: 0 0 0 0;
+      height: 900px;
     }
   }
   .contact_detail .detail {
     padding-left: 15px;
   }
-
-
+  
+  
   .contact_detail .detail-info {
     display: -webkit-box;
     display: -moz-box;
@@ -2531,7 +2537,7 @@ body {
     display: flex;
     padding-left: 10px;
   }
-
+  
   .contact_detail .detail-info h5 {
     padding-left: 40px;
     padding-bottom: 10px;
@@ -2595,7 +2601,7 @@ body {
       opacity: 0.8;
     }
   }
-
+  
   .contact_detail .detail-info a:hover {
     border: none;
     opacity: 1;
@@ -2613,25 +2619,23 @@ body {
     color: #08135c;
   }
 
-
-
   .button-submit-from button{
-      display: inline-block;
-      padding: 10px 25px;
-      background-color: #3F58DD;
-      color: #ffffff;
-      border-radius: 5px;
-      -webkit-transition: all .3s;
-      -o-transition: all .3s;
-      -moz-transition: all .3s;
-      transition: all .3s;
-      border: 1px solid #3F58DD;
-      outline: none;
-  }
-  .button-submit-from button:hover {
-    background-color: transparent;
-    color: #3F58DD;
-  }
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #3F58DD;
+    color: #ffffff;
+    border-radius: 5px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    border: 1px solid #3F58DD;
+    outline: none;
+}
+.button-submit-from button:hover {
+  background-color: transparent;
+  color: #3F58DD;
+}
 
 
   .job_alet_section {

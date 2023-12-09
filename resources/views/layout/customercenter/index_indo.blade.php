@@ -9,8 +9,99 @@
       <div class="row">
         <div class="col">
 
+        <div class="col-md-12 row">
 
-          <div class="col-12">
+<div class="contact_detail col-md-4">
+    <br>
+    <h2 style="color: #fff;">Contact Details</h2>
+    <P style="color: #fff; font-size: 14px;">We' love to hear from you. Our friendly team is always here to chat.</P>
+
+    <br>
+    <div class="detail-info">
+      <div class="col">
+        <div class="row">
+          <i class="fa-solid fa-location-dot"></i>
+          <h5>
+            Office
+          </h5>
+        </div>
+        <p>Desa Kedungturi, Taman Sidoarjo PO BOX 1083 Surabaya 60010 - Indonesia</p>
+      </div>
+    </div>
+    <br>
+
+    <!-- <div class="detail-info">
+      <div class="col">
+        <div class="row">
+          <i class="fa-solid fa-clock"></i>
+          <h5>
+            Open hours
+          </h5>
+        </div>
+        <p>Monday - Friday <br>9.00 - 18.00 WIB</p>
+      </div>
+    </div>
+    <br> -->
+
+    <div class="detail-info">
+      <div class="col">
+        <div class="row">
+          <i class="fa-solid fa-envelope"></i>
+          <h5>
+            Email to us
+          </h5>
+        </div>
+        <p>Sales & Marketing : <br> <a href="">marketing.indo@mittalsteel.com</a> <br> <br>
+
+          Customer Support : <br> <a href="">custsupp.indo@mittalsteel.com</a> <br> <br>
+
+          Career : <br> <a href="">hrd.indo@mittalsteel.com</a> <br> <br>
+
+          Webmaster : <br> <a href="">webmaster.indo@mittalsteel.com</a></p>
+      </div>
+    </div>
+    <br>
+    
+    <div class="detail-info">
+      <div class="col">
+        <div class="row">
+          <i class="fa-solid fa-phone"></i>
+          <h5>
+            Call us
+          </h5>
+        </div>
+        <p>TELP : (62) 31-7887000 <br> <br>
+          FAX : (62) 31-7887500 (031) <br> <br>
+          Sales & Marketing(WA) : <br> <a href="">+62 81 5515 2222</a></p>
+      </div>
+    </div>
+    <br>
+
+    <div class="social">
+      <div class="col">
+        
+          <a href="">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+      </div>
+    </div>
+    <br>
+
+</div>
+
+
+
+<div class="col-md-8 customer">
             <br>
             <h2 class="hider-font">Customer Center</h2>
             <br>
@@ -325,8 +416,9 @@
                             </div>
                 </div>
               </div>
-              <button class="btn btn-primary" type="submit">Submit form</button>
-            </form>
+              <div class="button-submit-from">
+              <button type="submit">Submit form</button>
+            </div>
             <br>
         </div>
 
