@@ -11,6 +11,9 @@
                 </h2>
             </div>
         </div>
+        <p class="col-md-7" style="color: #252525;">
+            Jelajahi Berita dan Kabar Terbaru Ispat Indo Secara Detail.
+        </p>
     </div>
 </section>
 
@@ -18,12 +21,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="heading_container p-bottom-0">
-                        <p>
-                            Explore the Latest Ispat Indo News and Updates in Detail.
-                        </p>
-                        <br>
-                    </div>
 
 
 

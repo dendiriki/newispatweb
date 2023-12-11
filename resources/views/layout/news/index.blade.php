@@ -11,19 +11,16 @@
                 </h2>
             </div>
         </div>
+        <p class="col-md-7" style="color: #252525;">
+            Explore the Latest Ispat Indo News and Updates in Detail. 
+        </p>
     </div>
 </section>
 
-    <section class="about_section ">
+    <section class="about_section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="heading_container p-bottom-0">
-                        <p>
-                            Explore the Latest Ispat Indo News and Updates in Detail.
-                        </p>
-                        <br>
-                    </div>
 
 
 

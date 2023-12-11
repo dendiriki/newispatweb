@@ -6,7 +6,7 @@ body {
   }
 
   .layout_padding {
-    padding-top: 90px ;
+    padding: 90px 0;
   }
 
   .layout_padding2 {
@@ -1120,6 +1120,7 @@ body {
     .job_section {
       background-color: #fff;
       color: #3F58DD;
+      margin-bottom: -70px;
     }
 
     .job_section .heading_container {
