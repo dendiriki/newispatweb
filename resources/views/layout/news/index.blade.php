@@ -14,11 +14,11 @@
     </div>
 </section>
 
-    <section class="about_section layout_padding">
+    <section class="about_section ">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="heading_container heading_center p-bottom-0">
+                    <div class="heading_container p-bottom-0">
                         <p>
                             Explore the Latest Ispat Indo News and Updates in Detail.
                         </p>
