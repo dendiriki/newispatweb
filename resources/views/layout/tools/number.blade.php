@@ -31,7 +31,7 @@
                     <i class="fa-solid fa-headset" style="color: #24369d; font-size: 2.5em; padding-left: 5px;padding-top: 5px;"></i>
                   </div>
                   <h5>Need to speak with us ?</h5>
-                  <a href="">Contact us</a>
+                  <a href="{{ route('customer-center') }}">Contact us</a>
                   </div>
 
           </div>

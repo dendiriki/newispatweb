@@ -124,7 +124,7 @@
                                     <i class="fa fa-solid fa-globe"></i>
                                     {{ $sub }}
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuButton">
                                     @if (request()->routeIs('detailnews', 'detailnews_indo'))
                                         <a class="dropdown-item"
                                             href="{{ route($url, ['news' => $news->link]) }}">ENGLISH</a>
