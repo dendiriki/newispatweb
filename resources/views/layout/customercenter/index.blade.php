@@ -388,7 +388,7 @@
                     </select>
                     </div>
                     <div class="col-md-4 mb-3">
-                      <h6>Grade</h6>
+                      <h6  class="add-space"> Grade</h6>
                       <input type="text" class="form-control" name="grade2" id="validationDefault02" placeholder="Grade" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                     </div>
                     <div class="col-md-4 mb-3">

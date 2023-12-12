@@ -3265,7 +3265,7 @@ body {
 
   .popup-content .head a {
     position: relative;
-    left: 25%;
+    left: 27%;
     font-size: 16px;
     color: #24369d;
     font-weight: 500;
@@ -3347,3 +3347,9 @@ body {
     margin-bottom: -130px; /* Atur margin bawah sejauh 15 piksel */
 
   }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .add-space {
+    margin-bottom: 27px;
+  }
+}
