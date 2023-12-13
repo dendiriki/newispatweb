@@ -50,7 +50,9 @@ class NumberController extends Controller
      */
     public function show(Number $number)
     {
-        //
+        return View ('admin.layout.number.show',[
+            'number' => $number
+        ]);
     }
 
     /**

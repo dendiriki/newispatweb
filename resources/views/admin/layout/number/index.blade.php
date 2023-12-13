@@ -34,17 +34,15 @@
                         <td>{{ $num->number }}</td>
                         <td>{{ $num->email }}</td>
                         <td>
-                            {{-- <a href="/admin/careers/{{ $career->slug }}" class="btn btn-info">view
+                            <a href="/admin/number/{{ $num->id }}" class="btn btn-info">view
                                 <span></span>
                             </a>
-                            <a href="/admin/careers/{{ $career->slug}}/edit" class="btn btn-warning">edit
-                                <span></span>
-                            </a>
-                            <form action="/admin/careers/{{ $career->slug}}" method="post" class="d-inline">
+                            <form action="/admin/number/{{ $num->id }}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
-                                <button class="border-0 btn btn-danger" onclick="return confirm('yakin mau hapus')">hapus</button>
-                            </form> --}}
+                                <button class="border-0 btn btn-danger"
+                                    onclick="return confirm('yakin mau hapus')">hapus</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
