@@ -639,7 +639,8 @@ class LayoutIndoController extends Controller
             'post' => Post::firstWhere('slug','=','INDUSTRIALPROCESSISPATWIREPRODUCTSFACILITAS'),
             'url'  => 'fasilitaswire',
             'class' => 'sub_page',
-            'navbar' =>'timpanav'
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
         ]);
         }else{
             return view('layout.notfound.index_indo',[
