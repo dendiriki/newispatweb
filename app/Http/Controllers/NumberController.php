@@ -76,6 +76,7 @@ class NumberController extends Controller
      */
     public function destroy(Number $number)
     {
-        //
+        Number::destroy($number->id);
+        return redirect('/admin/number')->with('success',' Post has been deleted');
     }
 }

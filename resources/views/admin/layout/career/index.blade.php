@@ -19,9 +19,13 @@
             <thead>
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Slug</th>
+                    <th scope="col">name</th>
+                    <th scope="col">salary</th>
+                    <th scope="col">description</th>
+                    <th scope="col">link</th>
+                    <th scope="col">tertiaryeducation</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">date of create</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,17 +40,17 @@
                         <td>{{ $career->status }}</td>
                         <td>{{ $career->created_at }}</td>
                         <td>
-                            {{-- <a href="/admin/careers/{{ $career->slug }}" class="btn btn-info">view
+                            <a href="/admin/careers/{{ $career->id }}" class="btn btn-info">view
                                 <span></span>
                             </a>
-                            <a href="/admin/careers/{{ $career->slug}}/edit" class="btn btn-warning">edit
+                            <a href="/admin/careers/{{ $career->id}}/edit" class="btn btn-warning">edit
                                 <span></span>
                             </a>
-                            <form action="/admin/careers/{{ $career->slug}}" method="post" class="d-inline">
+                            <form action="/admin/careers/{{ $career->id}}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
                                 <button class="border-0 btn btn-danger" onclick="return confirm('yakin mau hapus')">hapus</button>
-                            </form> --}}
+                            </form>
                         </td>
                     </tr>
                 @endforeach

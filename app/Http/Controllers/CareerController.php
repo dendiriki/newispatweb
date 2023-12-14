@@ -46,7 +46,7 @@ class CareerController extends Controller
             ]);
 
             Career::create($validatedData);
-            return redirect('/admin/careers')->with('success','New Post has been created');
+            return redirect('/admin/careers')->with('success','New Job has been created');
 
     }
 
@@ -55,7 +55,9 @@ class CareerController extends Controller
      */
     public function show(Career $career)
     {
-
+        return View ('admin.layout.career.show',[
+            'career' => $career
+        ]);
     }
 
     /**
@@ -63,7 +65,9 @@ class CareerController extends Controller
      */
     public function edit(Career $career)
     {
-        //
+        return View('admin.layout.career.edit',[
+            'career' => $career
+        ]);
     }
 
     /**
@@ -71,7 +75,17 @@ class CareerController extends Controller
      */
     public function update(Request $request, Career $career)
     {
-        //
+         $validatedData = $request->validate([
+            'name' => ['required','max:255'],
+            'salary' => ['required'],
+            'description' => ['required'],
+            'runninghour' => ['required'],
+            'tertiaryeducation' => ['required'],
+            'status' => ['required']
+        ]);
+
+        Career::where('id',$career->id)->update($validatedData);
+        return redirect('/admin/careers')->with('success','Job has been Updated');
     }
 
     /**
@@ -79,6 +93,7 @@ class CareerController extends Controller
      */
     public function destroy(Career $career)
     {
-        //
+        Career::destroy($career->id);
+        return redirect('/admin/careers')->with('success',' Post has been deleted');
     }
 }
