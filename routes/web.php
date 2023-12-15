@@ -222,6 +222,7 @@ Route::get('rolling_indo',[LayoutIndoController::class,'rolling_indo'])->middlew
 Route::get('fasilitaspancaputra_indo',[LayoutIndoController::class,'fasilitaspancaputra_indo'])->middleware('guest')->name('fasilitaspancaputra_indo');
 Route::get('fasilitasbukitnaja_indo',[LayoutIndoController::class,'fasilitasbukitnaja_indo'])->middleware('guest')->name('fasilitasbukitnaja_indo');
 Route::get('fasilitaswire_indo',[LayoutIndoController::class,'fasilitaswire_indo'])->middleware('guest')->name('fasilitaswire_indo');
+Route::get('applyjob_indo',[LayoutIndoController::class,'applyjob_indo'])->middleware('guest')->name('applyjob_indo');
 Route::get('karir_indo',[LayoutIndoController::class,'karir_indo'])->middleware('guest')->name('karir_indo');
 Route::get('news_indo',[LayoutIndoController::class,'news_indo'])->middleware('guest')->name('news_indo');
 Route::get('detailnews_indo/{news}',[LayoutIndoController::class,'detailnews_indo'])->middleware('guest')->name('detailnews_indo');

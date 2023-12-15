@@ -709,7 +709,18 @@ class LayoutIndoController extends Controller
     }
 
 
+    public function applyjob_indo(Career $career){
 
+        $job = Career::all();
+
+        return view ('layout.karir.applyjob_indo',[
+            'url'  => 'applyjob',
+            'class' => 'sub_page',
+            'navbar' =>'timpanav',
+            'sub' => 'IN',
+            'jobs' => $job
+        ]);
+    }
 
 
 

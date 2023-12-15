@@ -3,11 +3,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 ">
-                <img src="{{ asset('assets/img/logo-ispat.png') }}" style="max-width: 3em; display: block;
-                margin-left: auto;
-                margin-right: auto;
+                <img src="{{ asset('assets/img/logo-ispat.png') }}"
+                    style="max-width: 3em; display: block;
                 width: 50%; margin-bottom: 10px;">
-                <h4 class=""  style="margin-top: 10px">PT. Ispat Indo</h4>
+                <h4 class="" style="margin-top: 10px">PT. Ispat Indo</h4>
                 <p>
                     Ispat Indo, a steel industry pioneer,
                     redefines excellence, driving innovation and
@@ -44,13 +43,12 @@
             </div>
 
             <div class="col-md-2 info_links">
-                <h5
-                style="font-weight: bold;
+                <h5 style="font-weight: bold;
       font-size: 18px;
       margin-bottom: 20px;
       color: #ccc;">
-                Mail To
-            </h5>
+                    Mail To
+                </h5>
                 <ul>
 
                     <li style="margin-bottom: 5px;">
