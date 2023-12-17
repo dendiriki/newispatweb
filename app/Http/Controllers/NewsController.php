@@ -12,7 +12,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        Return view('admin.layout.news',[
+        Return view('admin.layout.news.news',[
             'title' => 'My Post In News',
             'new' => News::latest()->paginate(7)
         ]);
@@ -23,7 +23,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        Return view('admin.layout.createnews',[
+        Return view('admin.layout.news.createnews',[
         ]);
     }
 
@@ -49,7 +49,7 @@ class NewsController extends Controller
      */
     public function show(News $news)
     {
-        return View ('admin.layout.newsshow',[
+        return View ('admin.layout.news.newsshow',[
             'news' => $news
         ]);
     }
@@ -59,7 +59,7 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        return View ('admin.layout.newsedit',[
+        return View ('admin.layout.news.newsedit',[
             'news' => $news
         ]);
     }

@@ -66,7 +66,7 @@ class PostController extends Controller
                 ->latest()
                 ->paginate(7);
 
-            return view('admin.layout.admin', [
+            return view('admin.layout.postindo.admin', [
                 'title' => 'My Posts In indonesia',
                 'posts' => $posts,
                 'user' => $user->name
@@ -81,7 +81,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        Return view('admin.layout.create',[
+        Return view('admin.layout.postindo.create',[
         ]);
     }
 
@@ -178,7 +178,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return View ('admin.layout.show',[
+        return View ('admin.layout.postindo.show',[
             'post' => $post
         ]);
     }

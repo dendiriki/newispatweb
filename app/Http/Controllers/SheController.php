@@ -15,7 +15,7 @@ class SheController extends Controller
     // Ubah array menjadi string sebelum mengirimkannya ke tampilan
     $sheDataString = implode(', ', $sheData);
 
-    return view('admin.layout.she', [
+    return view('admin.layout.she.she', [
         'sheData' => $sheData, // Kirim data ke tampilan
     ]);
 }
@@ -24,33 +24,33 @@ class SheController extends Controller
 
     public function nearMiss()
     {
-        return view('admin.layout.nearmiss',[
+        return view('admin.layout.she.nearmiss',[
 
         ]);
     }
 
     public function firstAID()
     {
-        return view('admin.layout.firstaidcases',[
+        return view('admin.layout.she.firstaidcases',[
 
         ]);
     }
 
     public function medicalTreatment()
     {
-        return view('admin.layout.medicaltreatmentcases',[
+        return view('admin.layout.she.medicaltreatmentcases',[
 
         ]);
     }
 
     public function lostWorkdays()
     {
-        return view('admin.layout.lostworkdays',[]);
+        return view('admin.layout.she.lostworkdays',[]);
     }
 
     public function fatalityCases()
     {
-        return view('admin.layout.fatalitycases',[]);
+        return view('admin.layout.she.fatalitycases',[]);
     }
 
     public function updateNearMiss(Request $request)
@@ -68,7 +68,7 @@ class SheController extends Controller
         file_put_contents(public_path('assets/she.txt'), $data);
 
         // Kembali ke halaman sebelumnya atau tampilkan konfirmasi pembaruan
-        return back()->with('success', 'Data Near Miss berhasil diperbarui');
+        return redirect('admin/she')->with('success', 'Data Near Miss berhasil diperbarui');
     }
 
     public function updateFirstAID(Request $request)
@@ -89,7 +89,7 @@ class SheController extends Controller
         file_put_contents(public_path('assets/she.txt'), $updatedData);
 
         // Kembali ke halaman sebelumnya atau tampilkan konfirmasi pembaruan
-        return back()->with('success', 'Data FirstAIDCases berhasil diperbarui');
+        return redirect('admin/she')->with('success', 'Data FirstAIDCases berhasil diperbarui');
     }
 
     public function updateMedicalTreatment(Request $request)
@@ -110,7 +110,7 @@ class SheController extends Controller
     file_put_contents(public_path('assets/she.txt'), $updatedData);
 
     // Kembali ke halaman sebelumnya atau tampilkan konfirmasi pembaruan
-    return back()->with('success', 'Data Medical Treatment Cases berhasil diperbarui');
+    return redirect('admin/she')->with('success', 'Data Medical Treatment Cases berhasil diperbarui');
 }
 
 public function updateLostWorkdays(Request $request)
@@ -131,7 +131,7 @@ public function updateLostWorkdays(Request $request)
     file_put_contents(public_path('assets/she.txt'), $updatedData);
 
     // Kembali ke halaman sebelumnya atau tampilkan konfirmasi pembaruan
-    return back()->with('success', 'Data Lost Workdays berhasil diperbarui');
+    return redirect('admin/she')->with('success', 'Data Lost Workdays berhasil diperbarui');
 }
 
 public function updateFatalityCases(Request $request)
@@ -152,7 +152,7 @@ public function updateFatalityCases(Request $request)
     file_put_contents(public_path('assets/she.txt'), $updatedData);
 
     // Kembali ke halaman sebelumnya atau tampilkan konfirmasi pembaruan
-    return back()->with('success', 'Data Fatality Cases berhasil diperbarui');
+    return redirect('admin/she')->with('success', 'Data Fatality Cases berhasil diperbarui');
 }
 
 

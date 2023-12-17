@@ -105,7 +105,7 @@ Route::resource('admin/careers',CareerController::class)->middleware('auth');
 // Route::post('admin/english/{slug}/images', [EnglishController::class, 'uploadFileAttachment'])->middleware('auth');
 
 
-Route::get('admin/she',[SheController::class,'index'])->middleware('auth');
+Route::get('admin/she',[SheController::class,'index'])->middleware('auth')->name('she');
 Route::middleware(['auth'])->group(function () {
     Route::get('admin/nearmiss', [SheController::class, 'nearMiss'])->name('nearmiss');
     Route::get('admin/firstaid', [SheController::class, 'FirstAID'])->name('firstaid');

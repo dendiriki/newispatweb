@@ -16,7 +16,7 @@ class GradeController extends Controller
      */
     public function index()
     {
-        Return view('admin.layout.grade',[
+        Return view('admin.layout.grade.grade',[
             'title' => 'List Grade Products',
             'grades' => Grade::all(),
         ]);
@@ -27,7 +27,7 @@ class GradeController extends Controller
      */
     public function create()
     {
-        Return view('admin.layout.gradecreate',[
+        Return view('admin.layout.grade.gradecreate',[
         ]);
     }
 
@@ -86,7 +86,7 @@ class GradeController extends Controller
      */
     public function show(Grade $grade)
     {
-        return View ('admin.layout.gradeshow',[
+        return View ('admin.layout.grade.gradeshow',[
             'grade' => $grade
         ]);
     }
@@ -96,7 +96,7 @@ class GradeController extends Controller
      */
     public function edit(Grade $grade)
     {
-        Return view('admin.layout.gradeedit',[
+        Return view('admin.layout.grade.gradeedit',[
             'grade' => $grade
 
          ]);

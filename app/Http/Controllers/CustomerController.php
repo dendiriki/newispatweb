@@ -17,7 +17,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return view('admin.layout.customer',[
+        return view('admin.layout.customer.customer',[
         'customers'=> Customer::latest()->get()
         ]);
     }
@@ -69,7 +69,7 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        return View ('admin.layout.customershow',[
+        return View ('admin.layout.customer.customershow',[
             'customer' => $customer
         ]);
     }

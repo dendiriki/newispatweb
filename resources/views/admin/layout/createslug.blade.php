@@ -65,8 +65,6 @@
                     <option value="BROCHUREPT.ISPATPANCAPUTRA">BROCHURE PT. ISPAT PANCA PUTRA</option>
                     <option value="BROCHUREPT.ISPATBUKITBAJA">BROCHURE PT. ISPAT BUKIT BAJA</option>
                     <option value="CAREERS">CAREERS</option>
-
-
                 </select>
             </div> --}}
 

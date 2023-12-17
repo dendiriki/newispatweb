@@ -67,7 +67,7 @@ class EnglishController extends Controller
             ->latest()
             ->paginate(7);
 
-        return view('admin.layout.english', [
+        return view('admin.layout.posting.english', [
             'title' => 'My Posts In English',
             'posts' => $posts,
             'user' => $user->name
@@ -82,7 +82,7 @@ class EnglishController extends Controller
      */
     public function create()
     {
-        Return view('admin.layout.createenglish',[
+        Return view('admin.layout.posting.createenglish',[
         ]);
     }
 
@@ -179,7 +179,7 @@ class EnglishController extends Controller
      */
     public function show(English $english)
     {
-        return View ('admin.layout.englishshow',[
+        return View ('admin.layout.posting.englishshow',[
             'english' => $english
         ]);
     }
@@ -189,7 +189,7 @@ class EnglishController extends Controller
      */
     public function edit(English $english)
     {
-        Return view('admin.layout.englishedit',[
+        Return view('admin.layout.posting.englishedit',[
             'english' => $english,
             'content' => $english->content
          ]);

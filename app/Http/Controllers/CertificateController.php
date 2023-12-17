@@ -15,7 +15,7 @@ class CertificateController extends Controller
      */
     public function index()
     {
-        Return view('admin.layout.certificates',[
+        Return view('admin.layout.certificates.certificates',[
             'title' => 'My Post In Certificates',
             'certificates' => Certificate::latest()->paginate(7),
         ]);
@@ -26,7 +26,7 @@ class CertificateController extends Controller
      */
     public function create()
     {
-        Return view('admin.layout.certificatescreate',[
+        Return view('admin.layout.certificates.certificatescreate',[
         ]);
     }
 
