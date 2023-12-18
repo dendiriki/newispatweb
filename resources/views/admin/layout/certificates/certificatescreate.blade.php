@@ -13,21 +13,31 @@
                 <label for="title" class="form-label">name</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
                     name="name" required autofocus>
+                    @error('name')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
 
             </div>
             <div class="mb-3">
                 <label for="file">Upload File Certificate</label>
                 <input type="file" class="form-control-file" @error('file') is-invalid @enderror id="file" name="file">
             </div>
+            @error('file')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+        @enderror
             <div class="mb-3">
                 <label for="type" class="form-label">type</label>
                 <select type="text" class="form-control @error('type') is-invalid @enderror" id="type"
                     name="type" required>
                     @error('type')
-                        <div class="invalid-feedback">
-                            {{ messages }}
-                        </div>
-                    @enderror
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
                     <option value="">---</option>
                     <option value="ISO">ISO</option>
                     <option value="JIS">JIS</option>

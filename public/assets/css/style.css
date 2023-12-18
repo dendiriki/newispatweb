@@ -2529,8 +2529,8 @@ body {
   .contact_detail .detail {
     padding-left: 15px;
   }
-  
-  
+
+
   .contact_detail .detail-info {
     display: -webkit-box;
     display: -moz-box;
@@ -2538,7 +2538,7 @@ body {
     display: flex;
     padding-left: 10px;
   }
-  
+
   .contact_detail .detail-info h5 {
     padding-left: 40px;
     padding-bottom: 10px;
@@ -2602,7 +2602,7 @@ body {
       opacity: 0.8;
     }
   }
-  
+
   .contact_detail .detail-info a:hover {
     border: none;
     opacity: 1;
@@ -3355,3 +3355,15 @@ body {
     margin-bottom: 27px;
   }
 }
+
+
+p.MsoNormal img[data-filename] {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+/* div img[data-filename] {
+    max-width: 100%;
+    height: auto;
+  } */

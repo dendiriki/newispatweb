@@ -114,6 +114,8 @@ class EnglishController extends Controller
 
             $img->removeAttribute('src');
             $img->setAttribute('src',$image_name);
+            $existingClass = $img->getAttribute('class');
+            $img->setAttribute('class', $existingClass . ' img-fluid');
         }
 
         $content = $dom->saveHTML();
@@ -126,51 +128,6 @@ class EnglishController extends Controller
             'slug' => $request->slug,
             'content' => $content
         ]);
-
-
-
-    //     $rules=[
-    //         'title' => ['required'],
-    //         'slug' => ['required','unique:englishes'],
-    //         'content' => ['required']
-    //     ];
-
-    //     $this->validate($request,$rules);
-
-    //     $storage="file/content";
-    //     $dom=new \DOMDocument();
-    //     libxml_use_internal_errors(true);
-    //     $dom->loadHTML($request->content,LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NOIMPLIED);
-    //     libxml_clear_errors();
-    //     $images=$dom->getElementsByTagName('img');
-    //     foreach($images as $img){
-    //         $src=$img->getAttribute('src');
-    //         if(preg_match('/data:image/',$src)){
-    //             preg_match('/data:image\/(?<mime>.*?)\;/',$src,$groups);
-    //             $mimetype=$groups['mime'];
-    //             $fileNameContent = uniqid();
-    //             $fileNameContentRand=substr(md5($fileNameContent),6,6).'_'.time();
-    //             $filepath=("$storage/$fileNameContentRand.$mimetype");
-    //             $image = Image::make($src)
-    //             ->encode($mimetype,100)
-    //             ->save(public_path($filepath));
-    //             $new_src=asset($filepath);
-    //             $img->removeAttribute('src');
-    //             $img->setAttribute('src',$new_src);
-    //             $img->setAttribute('class','img-responsive');
-    //     }
-
-    // }
-
-    // $article = English::create([
-    //     'title' => $request->title,
-    //     'name' => auth()->user()->name,
-    //     'slug' => $request->slug,
-    //     'content' => $dom->saveHTML()
-
-    // ]);
-
-
      return redirect('/admin/english');
     }
 
@@ -224,6 +181,10 @@ class EnglishController extends Controller
 
             $img->removeAttribute('src');
             $img->setAttribute('src',$image_name);
+
+            // Menambahkan kelas "img-fluid"
+            $existingClass = $img->getAttribute('class');
+            $img->setAttribute('class', $existingClass . ' img-fluid');
         }
 
         }
