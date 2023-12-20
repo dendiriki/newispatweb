@@ -51,7 +51,7 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">The Industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <h2 >Indonesia's Leading Steel wire Manufacturing With 2 Subsidiaries And 8 Exceptional Products</h2> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <h2 >Indonesia's Leading Steel wire Manufacturing With 2 Subsidiaries And 8 Exceptional Products</h2> -->
                                             <a href="{{ route('profilindo') }}">Discovery Our Company</a>
 
                                         </div>
@@ -70,7 +70,7 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">The Industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <h2 >Premier Steel wire Factory Sets New Standards for Excellence</h2> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <h2 >Premier Steel wire Factory Sets New Standards for Excellence</h2> -->
                                             <a href="{{ route('profilindo') }}">Discovery Our Company</a>
 
                                         </div>
@@ -89,7 +89,7 @@
                                             <h2 style="font-size: 77px; font-weight: 700;">Ispat Indo Group</h2>
                                             <h1 style="font-size: 35px;">The Industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <h2 >sells 70% of  products to domestic market and 30% to export markets of Asia-Pacific region.</h2> -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <h2 >sells 70% of  products to domestic market and 30% to export markets of Asia-Pacific region.</h2> -->
                                             <a href="{{ route('profilindo') }}">Discovery Our Company</a>
 
                                         </div>
@@ -166,7 +166,7 @@
                 </div>
                 <br>
                 <p>
-                    {!! Str::limit(preg_replace('/<img[^>]*>/', '', $vision->content), 1000, '...') !!}
+                    {!! Str::limit(preg_replace('/<img[^>]*>/', '', $vision->content), 10000, '...') !!}
                 </p>
             </div> <!-- /.container -->
         </section>
@@ -174,28 +174,18 @@
 
 
 
-        <section style="background-color: #3F58DD; height: 600px;">
+        <!-- HTML -->
+        <section class="custom-section" style="background-color: #3F58DD; height: 600px;">
             <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
                 <div class="col text-center" style="padding: 25px 45px; border-radius: 2px;">
                     <i class="fa-solid fa-hand-holding-droplet"
                         style="color: #fff; font-size: 4rem; padding-bottom: 15px;"></i>
                     <h1 class="text-center" style="color: #fff; font-weight: 510; padding-bottom: 15px;">Quality Policy</h1>
 
+                    <p class="white-text">
+                        {!! Str::limit(preg_replace('/<img[^>]*>/', '', $quality->content), 10000, '...') !!}
+                    </p>
                 </div>
-                @php
-                    $content = $quality->content;
-                    $content = preg_replace('/<h4><b>.*?<\/b><\/h4>/', '', $content); // Menghapus tag <h4><b> ... </b></h4
-                    preg_match_all('/<h[1-5]>(.*?)<\/h[1-5]|<p>(.*?)<\/p>/', $content, $matches); // Mengambil teks dalam tag <h1> sampai <h5> dan <p>
-                @endphp
-
-                @foreach ($matches[0] as $tag)
-                    @if (Str::startsWith($tag, '<h'))
-                        {!! $tag !!}
-                    @else
-                        <p class="text-light">{!! Str::limit(strip_tags($tag), 1000, '...') !!}</p>
-                    @endif
-                @endforeach
-
             </div>
         </section>
 
@@ -646,7 +636,7 @@
                                 <i class="fa-solid fa-bed-pulse"></i>
                             </div>
                             <div class="stat-item-number">
-                                {{$shedata['MedicalTreatmentCases']}}
+                                {{ $shedata['MedicalTreatmentCases'] }}
                             </div>
                             <div class="stat-item-text">
                                 Medical Treatment Cases
@@ -661,7 +651,7 @@
                                 <i class="fa-solid fa-house-chimney-medical"></i>
                             </div>
                             <div class="stat-item-number">
-                                {{$shedata['LostWorkdays']}}
+                                {{ $shedata['LostWorkdays'] }}
                             </div>
                             <div class="stat-item-text">
                                 Lost Work Days Cases
@@ -676,7 +666,7 @@
                                 <i class="fa-solid fa-skull"></i>
                             </div>
                             <div class="stat-item-number">
-                                {{$shedata['FatalityCases']}}
+                                {{ $shedata['FatalityCases'] }}
                             </div>
                             <div class="stat-item-text">
                                 Fatality Cases

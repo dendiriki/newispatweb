@@ -3367,3 +3367,8 @@ p.MsoNormal img[data-filename] {
     max-width: 100%;
     height: auto;
   } */
+
+
+  .custom-section .white-text p {
+    color: white;
+}
