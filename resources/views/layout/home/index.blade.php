@@ -137,10 +137,12 @@
                                     </h2>
                                 </div>
                             </div>
-                            <p>
-                                {!! Str::limit(preg_replace('/<img[^>]*>/', '', $about->content), 320, '...') !!}
-                            </p>
-                            <a href="{{ route('profilindo') }}">
+                            <br>
+
+                            {!! '<span class="white-text">' . Str::limit(htmlspecialchars(strip_tags($about->content)), 213, '...') . '</span>' !!}
+
+                            <br> <br>
+                            <a style="font-family: 'Poppins', sans-serif;" href="{{ route('profilindo') }}">
                                 More on Our History
                             </a>
                         </div>
@@ -154,40 +156,33 @@
         <!-- end about section -->
 
         <!-- Start client -->
-        <section id="service" class="p-top-80 p-bottom-80 p-bottom-40">
-            <div class="container">
+        <section id="service" class="p-top-80 p-bottom-80 p-bottom-40" style="background: #3F58DD; padding-top: 40px; padding-bottom: 40px; border-radius: 3px;">
+            <div class="container product_section" >
 
-                <div class="heading_container col-md-12">
-                    <div class="col row sub-heading">
-                        <h2 class="text-left">
+            <div class="detail-box" style="margin-left:-15px;">
+                <div class="heading_container container">
+                    <div class="col row">
+                        <div class="sub-heading"></div>
+                        <h2>
                             Vision & Mision
                         </h2>
                     </div>
                 </div>
+            </div>
                 <br>
-                <p>
-                    {!! Str::limit(preg_replace('/<img[^>]*>/', '', $vision->content), 10000, '...') !!}
-                </p>
+
+                {!! '<span class="white-text">' . Str::limit(preg_replace('/<img[^>]*>/', '', $vision->content), 10000, '...') . '</span>' !!}
+
+
+
+
             </div> <!-- /.container -->
         </section>
         <!-- End Service -->
 
 
 
-        <!-- HTML -->
-        <section class="custom-section" style="background-color: #3F58DD; height: 600px;">
-            <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
-                <div class="col text-center" style="padding: 25px 45px; border-radius: 2px;">
-                    <i class="fa-solid fa-hand-holding-droplet"
-                        style="color: #fff; font-size: 4rem; padding-bottom: 15px;"></i>
-                    <h1 class="text-center" style="color: #fff; font-weight: 510; padding-bottom: 15px;">Quality Policy</h1>
 
-                    <p class="white-text">
-                        {!! Str::limit(preg_replace('/<img[^>]*>/', '', $quality->content), 10000, '...') !!}
-                    </p>
-                </div>
-            </div>
-        </section>
 
 
 
@@ -364,13 +359,16 @@
 
 
         <!-- expert section -->
-        <section class="expert_section layout_padding">
+        <section class="padding-top90" >
             <div class="container">
-                <div class="heading_container heading_center">
-                    <h2>
+                <div class="heading_container col-md-12">
+                    <div class="col row sub-heading">
+                        <h2 class="text-left">
                         Our Achivements
-                    </h2>
-                    <p>
+                        </h2>
+                    </div>
+                </div>
+                <p class="col-md-12" style="color: #252525;">
                         "Our Achievements" at Ispat Indo showcase our notable accomplishments and successes that we have
                         attained over the years.
                         These accomplishments reflect our dedication to excellence, innovation, and a commitment to
@@ -381,7 +379,14 @@
                         a testament to our team's hard work, strategic vision, and unwavering pursuit of excellence in the
                         steel
                         industry.
-                    </p>
+                </p>
+            </div>
+        </section>
+        
+        <section class="expert_section padding-bot90">
+            <div class="container">
+                <div class="heading_container heading_center">
+                   
                 </div>
                 <div class="row">
                     <div class="col d-flex justify-content-center">
@@ -757,7 +762,9 @@
 
                                 <div class="col-md-12 text-center">
                                     <img>
-                                    <a href="{{ route('customer-center') }}" class="btn btn-primary">Send Message</a>
+
+                                    <div class="contact-btn"></div>
+                                    <a href="{{ route('customer-center') }}" class="btn ">Send Message</a>
                                 </div>
 
 
@@ -770,4 +777,20 @@
             </div>
 
         </section><!-- End Contact Section -->
+
+
+                <!-- HTML -->
+                <section class="vision-section">
+            <div class="container">
+                <div class="col text-center">
+                    <i class="fa-solid fa-hand-holding-droplet"
+                       ></i>
+                    <h1 class="text-center">Quality Policy</h1>
+
+                    {!! '<span class="highlighted-text">' . Str::limit(strip_tags($quality->content), 10000, '...') . '</span>' !!}
+
+                </div>
+            </div>
+        </section>
+
     @endsection

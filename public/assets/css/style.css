@@ -2973,7 +2973,7 @@ body {
   }
 
 
-  .contact .php-email-form button[type=submit] {
+  .contact .php-email-form a {
     background-color: #3F58DD;
     color: #fff;
     border: 0;
@@ -2986,7 +2986,7 @@ body {
     bottom: 75px; */
   }
 
-  .contact .php-email-form button[type=submit]:hover {
+  .contact .php-email-form a:hover {
     color: #3F58DD;
     background-color: transparent;
   }
@@ -3368,7 +3368,53 @@ p.MsoNormal img[data-filename] {
     height: auto;
   } */
 
+  .vision-section {
+    background-color: #3F58DD; height: 400px;
+  }
+  .vision-section .container{
+    padding-top: 40px; padding-bottom: 40px;
+  }
+  .vision-section .col{
+    padding: 25px 45px; border-radius: 2px;
+  }
+  .vision-section .col i{
+    color: #fff; font-size: 4rem; padding-bottom: 15px;
+  }
+    .vision-section .col h1{
+    color: #fff; font-weight: 510; padding-bottom: 15px;
+  }
 
-  .custom-section .white-text p {
-    color: white;
+  .vision-section .highlighted-text {
+    color: #fff;
+    font-size: 16px;
+}
+
+.black-text {
+  font-family: 'Poppins', sans-serif !important;
+  color: #252525 !important;
+
+}
+
+.white-text {
+  font-family: 'Poppins', sans-serif !important;
+  color: #fff !important;
+}
+.white-text p{
+  font-family: 'Poppins', sans-serif !important;
+  color: #fff !important;
+}
+.white-text span{
+  font-family: 'Poppins', sans-serif !important;
+  color: #fff !important;
+}
+.white-text font{
+  font-family: 'Poppins', sans-serif !important;
+  color: #fff !important;
+}
+
+.padding-top90 {
+  padding-top: 90px;
+}
+.padding-bot90 {
+  padding-bottom: 90px;
 }

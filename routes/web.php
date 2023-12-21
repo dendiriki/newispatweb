@@ -14,6 +14,7 @@ use App\Http\Controllers\SheController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\NumberController;
 use App\Models\English;
+use App\Models\Post;
 use App\Models\Number;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -67,9 +68,9 @@ Route::get('home_indo', function () {
     $sheDataString = implode(', ', $sheData);
 
 
-    $about  = English::firstWhere('slug','=','COMPANYPROFILE');
-    $vision  = English::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES');
-    $quality   = English::firstWhere('slug','=','COMPANYGROUPVIDEO');
+    $about  = Post::firstWhere('slug','=','COMPANYPROFILE');
+    $vision  = Post::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES');
+    $quality   = Post::firstWhere('slug','=','COMPANYGROUPVIDEO');
 
     return view('layout.home.index_indo',[
         'quality' => $quality,
