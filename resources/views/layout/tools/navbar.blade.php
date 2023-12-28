@@ -24,12 +24,11 @@
                                 <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">Company</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="{{ route('profilindo') }}">Profile</a>
-                                    <a class="dropdown-item" href="{{ route('bod') }}">Board od Directors</a>
-                                    <a class="dropdown-item" href="{{ route('vision') }}">Visin, Mision & Value</a>
-                                    <a class="dropdown-item" href="{{ route('highlight') }}">Achivements</a>
+                                    <a class="dropdown-item" href="{{ route('bod') }}">Board of Directors</a>
+                                    <a class="dropdown-item" href="{{ route('vision') }}">Vision, Mision, and Values</a>
+                                    <a class="dropdown-item" href="{{ route('highlight') }}">Achievements</a>
                                     <a class="dropdown-item" href="{{ route('milestone') }}">Management System</a>
-                                    <a class="dropdown-item" href="{{ route('she') }}">Safety, Healty and
-                                        Environment</a>
+                                    <a class="dropdown-item" href="{{ route('she') }}">Safety, Health, and Environment</a>
                                 </div>
                             </div>
                         </li>
@@ -69,8 +68,8 @@
                                         Steel Making</a>
                                     <a class="dropdown-item" href="{{ route('rolling') }}">Process Flowchart of Wire
                                         Rod Rolling</a>
-                                    <a class="dropdown-item" href="{{ route('fasilitaspancaputra') }}">Process Ispat
-                                        Panca Putera Facilities</a>
+                                    {{-- <a class="dropdown-item" href="{{ route('fasilitaspancaputra') }}">Process Ispat
+                                        Panca Putera Facilities</a> --}}
                                     <a class="dropdown-item" href="{{ route('fasilitasbukitnaja') }}">Process Ispat
                                         Bukit Baja Facilities</a>
                                     <a class="dropdown-item" href="{{ route('fasilitaswire') }}">Process Ispat Wire
@@ -129,15 +128,15 @@
                                         <a class="dropdown-item"
                                             href="{{ route($url, ['news' => $news->link]) }}">ENGLISH</a>
                                         <a class="dropdown-item"
-                                            href="{{ route($url . '_indo', ['news' => $news->link]) }}">INDONESIAN</a>
+                                            href="{{ route($url . '_indo', ['news' => $news->link]) }}">BAHASA</a>
                                     @elseif (request()->routeIs('detailproduk', 'detailproduk_indo'))
                                         <a class="dropdown-item"
                                             href="{{ route($url, ['grade' => $grade->name]) }}">ENGLISH</a>
                                         <a class="dropdown-item"
-                                            href="{{ route($url . '_indo', ['grade' => $grade->name]) }}">INDONESIAN</a>
+                                            href="{{ route($url . '_indo', ['grade' => $grade->name]) }}">BAHASA</a>
                                     @else
                                         <a class="dropdown-item" href="{{ route($url) }}">ENGLISH</a>
-                                        <a class="dropdown-item" href="{{ route($url) }}_indo">INDONESIAN</a>
+                                        <a class="dropdown-item" href="{{ route($url) }}_indo">BAHASA</a>
                                     @endif
                                 </div>
                             </div>

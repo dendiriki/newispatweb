@@ -2,15 +2,21 @@
 
 @section('content')
 
-
-<section class="layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center" style="color: #08135c;">
-        <h2>
-          environment
-        </h2>
+<section class="job_section padding-top90">
+  <div class="container">
+      <div class="heading_container col-md-12">
+          <div class="col row sub-heading">
+              <h2 class="text-left">
+                  <!-- AVAILABLE POSITIONS -->
+                  environment
+              </h2>
+          </div>
       </div>
-      <br>
+  </div>
+</section>
+
+<section class="padding-bot90">
+    <div class="container">
       <div class="job_container">
         <h4 class="job_heading">
           Safety, Health & Environment

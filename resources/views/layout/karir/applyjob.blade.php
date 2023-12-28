@@ -27,9 +27,12 @@
                 </h4>
                 <br><br><br>
                 <div class="row">
+        
+
+     
 
 
-                    @foreach ($jobs as $job)
+         @foreach ($jobs as $job)
 
 
         <div class="col-lg-6">
@@ -104,9 +107,9 @@
               <div class="row">
 
                 <div class="col " style="margin-left: 25px;">
-                  <div class="row availabe-box">
-                    <i class="fa-solid fa-check"></i>
-                    <H6>Available</H6>
+                  <div class="row {{$tombol}}">
+                    <i class="fa-solid {{$icon}}"></i>
+                    <H6>{{$job->status}}</H6>
                   </div>
                 </div>
 
