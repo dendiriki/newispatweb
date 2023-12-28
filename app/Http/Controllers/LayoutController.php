@@ -710,12 +710,29 @@ class LayoutController extends Controller
 
         $job = Career::all();
 
+        $isexist = Career::select("*")
+        ->where("status","available")->exists();
+
+        // if($isexist){
+        //     $tombol = 'availabe-box';
+        //     $icon =  'check';
+        // }else{
+        //     $tombol = 'unavailabe-box';
+        //     $icon =  'xmark';
+        // }
+
+        $tombol = "availabe-box";
+        $icon =  "check";
+
         return view ('layout.karir.applyjob',[
             'url'  => 'applyjob',
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'EN',
-            'jobs' => $job
+            'jobs' => $job,
+            'tombol' => $tombol,
+            'icon' => $icon,
+            'isexist' => $isexist
         ]);
     }
 

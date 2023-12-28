@@ -80,7 +80,7 @@ Route::get('home_indo', function () {
         'url' =>'home',
         'class' => '',
         'navbar' =>'',
-        'sub' => 'IN',
+        'sub' => 'ID',
     ]);
 })->name('home_indo');
 
@@ -199,7 +199,7 @@ route::get('environment_indo', function(){
         'url' =>'environment',
         'class' => 'sub_page',
         'navbar' =>'timpanav',
-        'sub' => 'IN',
+        'sub' => 'ID',
     ]);
 })->name('environment_indo');
 

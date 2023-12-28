@@ -1,7 +1,7 @@
 @extends('layout.tools.main_indo')
 
 @section('content')
-<section class="job_section layout_padding">
+<section class="job_section padding-top90">
     <div class="container">
         <div class="heading_container col-md-12">
             <div class="col row sub-heading">
@@ -34,12 +34,12 @@
                                         src="https://www.youtube.com/embed/{{ $new->link }}"></iframe>
                                     <div class="card-body">
                                         <h5 class="card-title">{{ substr(strip_tags($new->title), 0, 20) }}
-                                            @if (strlen(strip_tags($new->title)) > 20)
+                                            @if (strlen(strip_tags($new->title)) > 25)
                                                 ...
                                             @endif
                                         </h5>
                                         <p class="card-text">{{ substr(strip_tags($new->description), 0, 120) }}
-                                            @if (strlen(strip_tags($new->description)) > 120)
+                                            @if (strlen(strip_tags($new->description)) > 110)
                                                 ...
                                             @endif
 

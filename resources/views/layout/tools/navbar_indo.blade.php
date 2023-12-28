@@ -25,12 +25,11 @@
                                 <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown">Company</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="{{ route('profilindo_indo') }}">Profile</a>
-                                    <a class="dropdown-item" href="{{ route('bod_indo') }}">Board od Directors</a>
-                                    <a class="dropdown-item" href="{{ route('vision_indo') }}">Visin, Mision & Value</a>
-                                    <a class="dropdown-item" href="{{ route('highlight_indo') }}">Achivements</a>
+                                    <a class="dropdown-item" href="{{ route('bod_indo') }}">Board of Directors</a>
+                                    <a class="dropdown-item" href="{{ route('vision_indo') }}">Vision, Mision, and Values</a>
+                                    <a class="dropdown-item" href="{{ route('highlight_indo') }}">Achievements</a>
                                     <a class="dropdown-item" href="{{ route('milestone_indo') }}">Management System</a>
-                                    <a class="dropdown-item" href="{{ route('she_indo') }}">Safety, Healty and
-                                        Environment</a>
+                                    <a class="dropdown-item" href="{{ route('she_indo') }}">Safety, Health, and Environmen</a>
                                 </div>
                             </div>
                         </li>
@@ -75,9 +74,9 @@
                                     <a class="dropdown-item" href="{{ route('rolling_indo') }}">Process Flowchart of
                                         Wire
                                         Rod Rolling</a>
-                                    <a class="dropdown-item" href="{{ route('fasilitaspancaputra_indo') }}">Process
+                                    {{-- <a class="dropdown-item" href="{{ route('fasilitaspancaputra_indo') }}">Process
                                         Ispat
-                                        Panca Putera Facilities</a>
+                                        Panca Putera Facilities</a> --}}
                                     <a class="dropdown-item" href="{{ route('fasilitasbukitnaja_indo') }}">Process
                                         Ispat
                                         Bukit Baja Facilities</a>
@@ -134,20 +133,20 @@
                                     <i class="fa fa-solid fa-globe"></i>
                                     {{ $sub }}
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuButton">
                                     @if (request()->routeIs('detailnews', 'detailnews_indo'))
                                         <a class="dropdown-item"
                                             href="{{ route($url, ['news' => $news->link]) }}">ENGLISH</a>
                                         <a class="dropdown-item"
-                                            href="{{ route($url . '_indo', ['news' => $news->link]) }}">INDONESIAN</a>
+                                            href="{{ route($url . '_indo', ['news' => $news->link]) }}">BAHASA</a>
                                     @elseif (request()->routeIs('detailproduk', 'detailproduk_indo'))
                                         <a class="dropdown-item"
                                             href="{{ route($url, ['grade' => $grade->name]) }}">ENGLISH</a>
                                         <a class="dropdown-item"
-                                            href="{{ route($url . '_indo', ['grade' => $grade->name]) }}">INDONESIAN</a>
+                                            href="{{ route($url . '_indo', ['grade' => $grade->name]) }}">BAHASA</a>
                                     @else
                                         <a class="dropdown-item" href="{{ route($url) }}">ENGLISH</a>
-                                        <a class="dropdown-item" href="{{ route($url) }}_indo">INDONESIAN</a>
+                                        <a class="dropdown-item" href="{{ route($url) }}_indo">BAHASA</a>
                                     @endif
                                 </div>
                             </div>

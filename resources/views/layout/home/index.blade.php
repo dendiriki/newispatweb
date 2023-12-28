@@ -52,7 +52,7 @@
                                             <h1 style="font-size: 35px;">The Industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <h2 >Indonesia's Leading Steel wire Manufacturing With 2 Subsidiaries And 8 Exceptional Products</h2> -->
-                                            <a href="{{ route('profilindo') }}">Discovery Our Company</a>
+                                            <a href="{{ route('profilindo') }}">Discover our company</a>
 
                                         </div>
                                     </div>
@@ -71,7 +71,7 @@
                                             <h1 style="font-size: 35px;">The Industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <h2 >Premier Steel wire Factory Sets New Standards for Excellence</h2> -->
-                                            <a href="{{ route('profilindo') }}">Discovery Our Company</a>
+                                            <a href="{{ route('profilindo') }}">Discover our company</a>
 
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@
                                             <h1 style="font-size: 35px;">The Industry for Industries</h1>
                                             <!-- <h1 >Ispat Indo group</h1>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <h2 >sells 70% of  products to domestic market and 30% to export markets of Asia-Pacific region.</h2> -->
-                                            <a href="{{ route('profilindo') }}">Discovery Our Company</a>
+                                            <a href="{{ route('profilindo') }}">Discover our company</a>
 
                                         </div>
                                     </div>
