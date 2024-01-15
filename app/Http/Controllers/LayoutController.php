@@ -730,9 +730,7 @@ class LayoutController extends Controller
             'navbar' =>'timpanav',
             'sub' => 'EN',
             'jobs' => $job,
-            'tombol' => $tombol,
-            'icon' => $icon,
-            'isexist' => $isexist
+
         ]);
     }
 
