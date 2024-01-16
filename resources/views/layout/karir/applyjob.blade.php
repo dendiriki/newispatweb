@@ -107,8 +107,8 @@
               <div class="row">
 
                 <div class="col " style="margin-left: 25px;">
-                  <div class="row availabe-box">
-                    <i class="fa-solid fa-check"></i>
+                  <div class="row ">
+                    <i class=""></i>
                     <H6>{{$job->status}}</H6>
                   </div>
                 </div>
