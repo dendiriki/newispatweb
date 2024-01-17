@@ -214,29 +214,35 @@ class LayoutController extends Controller
     }
 
     public function sni(){
+        $certificates = Certificate::where('type', 'SNI')->get();
         return view('layout.company.sni',[
             'url'  => 'sni',
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'EN',
+            'certificates' => $certificates
         ]);
     }
 
     public function kan(){
+        $certificates = Certificate::where('type', 'KAN')->get();
         return view('layout.company.kan',[
             'url'  => 'kan',
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'EN',
+            'certificates' => $certificates
         ]);
     }
 
     public function tkdn(){
+        $certificates = Certificate::where('type', 'ZEROACCIDENT')->get();
         return view('layout.company.tkdn',[
             'url'  => 'tkdn',
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'EN',
+            'certificates' => $certificates
         ]);
     }
 

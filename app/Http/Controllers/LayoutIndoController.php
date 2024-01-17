@@ -216,29 +216,35 @@ class LayoutIndoController extends Controller
     }
 
     public function sni_indo(){
+        $certificates = Certificate::where('type', 'SNI')->get();
         return view('layout.company.sni_indo',[
             'url'  => 'sni',
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'ID',
+            'certificates' => $certificates
         ]);
     }
 
     public function kan_indo(){
+        $certificates = Certificate::where('type', 'KAN')->get();
         return view('layout.company.kan_indo',[
             'url'  => 'kan',
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'ID',
+            'certificates' => $certificates
         ]);
     }
 
     public function tkdn_indo(){
+        $certificates = Certificate::where('type', 'ZEROACCIDENT')->get();
         return view('layout.company.tkdn_indo',[
             'url'  => 'tkdn',
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'ID',
+            'certificates' => $certificates
         ]);
     }
 
