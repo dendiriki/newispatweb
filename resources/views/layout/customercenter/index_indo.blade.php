@@ -44,60 +44,60 @@
     <br> -->
 
     <div class="detail-info">
-      <div class="col">
-        <div class="row">
-          <i class="fa-solid fa-envelope"></i>
-          <h5>
-            Email to us
-          </h5>
+        <div class="col">
+          <div class="row">
+            <i class="fa-solid fa-envelope"></i>
+            <h5>
+              Email to us
+            </h5>
+          </div>
+          <p>Sales & Marketing : <br> <a href="mailto:marketing.indo@mittalsteel.com">marketing.indo@mittalsteel.com</a> <br> <br>
+
+            Customer Support : <br> <a href="mailto:marketing.indo@mittalsteel.com">custsupp.indo@mittalsteel.com</a> <br> <br>
+
+            Career : <br> <a href="mailto:hrd.indo@mittalsteel.com">hrd.indo@mittalsteel.com</a> <br> <br>
+
+            Webmaster : <br> <a href="mailto:webmaster.indo@mittalsteel.com">webmaster.indo@mittalsteel.com</a></p>
         </div>
-        <p>Sales & Marketing : <br> <a href="">marketing.indo@mittalsteel.com</a> <br> <br>
-
-          Customer Support : <br> <a href="">custsupp.indo@mittalsteel.com</a> <br> <br>
-
-          Career : <br> <a href="">hrd.indo@mittalsteel.com</a> <br> <br>
-
-          Webmaster : <br> <a href="">webmaster.indo@mittalsteel.com</a></p>
       </div>
-    </div>
-    <br>
-    
-    <div class="detail-info">
-      <div class="col">
-        <div class="row">
-          <i class="fa-solid fa-phone"></i>
-          <h5>
-            Call us
-          </h5>
+      <br>
+
+      <div class="detail-info">
+        <div class="col">
+          <div class="row">
+            <i class="fa-solid fa-phone"></i>
+            <h5>
+              Call us
+            </h5>
+          </div>
+          <p>TELP : (62) 31-7887000 <br> <br>
+            FAX : (62) 31-7887500 (031) <br> <br>
+            Sales & Marketing(WA) : <br> +62 81 5515 2222</p>
         </div>
-        <p>TELP : (62) 31-7887000 <br> <br>
-          FAX : (62) 31-7887500 (031) <br> <br>
-          Sales & Marketing(WA) : <br> <a href="">+62 81 5515 2222</a></p>
       </div>
-    </div>
-    <br>
+      <br>
 
-    <div class="social">
-      <div class="col">
-        
-          <a href="">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
+      <div class="social">
+        <div class="col">
 
+            <a href="">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/pt-ispat-indo">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://instagram.com/ispatindo_group/">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://m.youtube.com/@IspatNow">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+        </div>
       </div>
-    </div>
-    <br>
+      <br>
 
-</div>
+  </div>
 
 
 

@@ -97,7 +97,7 @@
                             </a>
                         </div>
                         <div>
-                            <a href="">
+                            <a href="https://m.youtube.com/@IspatNow">
                                 <i class="fa-brands fa-youtube"></i>
                             </a>
                         </div>

@@ -133,7 +133,7 @@
                                 <div class="col row" style="background-color: transparent;">
                                     <div class="sub-heading"></div>
                                     <h2>
-                                        About Us
+                                        Tentang kami
                                     </h2>
                                 </div>
                             </div>
@@ -142,7 +142,7 @@
                             {!! '<span class="white-text">' . Str::limit(htmlspecialchars(strip_tags($about->content)), 213, '...') . '</span>' !!}
 
                             <br> <br>
-                            
+
                             <a href="{{ route('profilindo_indo') }}">
                                 More on Our History
                             </a>
@@ -165,7 +165,7 @@
                     <div class="col row">
                         <div class="sub-heading"></div>
                         <h2>
-                            Vision & Mision
+                            Visi & Misi
                         </h2>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                         <div class="heading_container col-md-12">
                             <div class="col row sub-heading">
                                 <h2 class="text-left">
-                                    Our Group
+                                    Group Kami
                                 </h2>
                             </div>
                         </div>
@@ -253,7 +253,7 @@
                     <div class="col row">
                         <div class="sub-heading"></div>
                         <h2>
-                            Our Product
+                            Produk kami
                         </h2>
                     </div>
                 </div>
@@ -379,10 +379,10 @@
                 </p>
             </div>
         </section>
-        
+
         <section class="expert_section padding-bot90">
             <div class="container">
-                
+
                 <div class="row">
                     <div class="col d-flex justify-content-center">
                         <div class="card text-center">
