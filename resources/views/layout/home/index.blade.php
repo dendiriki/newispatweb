@@ -214,10 +214,8 @@
                                     </div>
                                     <div class="col-md-12 position-static">
                                         <h4 class="mt-0">PT. Ispat Wire Products</h4>
-                                        <p>PT. Ispat Wire Products was established in 1991 which is the largest nail
-                                            producer in Indonesia. Our working philosophy is guided towards continuous
-                                            improvement in the quality of our products and services so as to surpass the
-                                            best standards in the industry...</p>
+                                        {!! '<p class="white-black">' . Str::limit(htmlspecialchars(strip_tags($grupiwp->content)), 250, '...') . '</p>' !!}
+
                                         <a href="{{ route('ispatwireproduct') }}">Read more</a>
                                     </div>
                                 </div>
@@ -231,10 +229,8 @@
                                     </div>
                                     <div class="col-md-12 position-static">
                                         <h4 class="mt-0">PT. Ispat Bukit Baja</h4>
-                                        <p>PT. Ispat Bukit Baja was established in 1994 to produce Steel Angles and Channels
-                                            for domestic and export requirements. Our working philosophy is aimed at
-                                            continuous improvement in the quality of products and services so as to surpass
-                                            the best standards...</p>
+                                        {!! '<p class="white-black">' . Str::limit(htmlspecialchars(strip_tags($grupibb->content)), 250, '...') . '</p>' !!}
+
                                         <a href="{{ route('ispatbukitbaja') }}">Read more</a>
                                     </div>
                                 </div>
@@ -382,11 +378,11 @@
                 </p>
             </div>
         </section>
-        
+
         <section class="expert_section padding-bot90">
             <div class="container">
                 <div class="heading_container heading_center">
-                   
+
                 </div>
                 <div class="row">
                     <div class="col d-flex justify-content-center">

@@ -47,12 +47,16 @@ Route::get('home', function () {
     $about  = English::firstWhere('slug','=','COMPANYPROFILE');
     $vision  = English::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES');
     $quality   = English::firstWhere('slug','=','COMPANYGROUPVIDEO');
+    $grupiwp = English::firstWhere('slug','SUBSIDIARIESPT.ISPATWIREPRODUCT');
+    $grupibb = English::firstWhere('slug','SUBSIDIARIESPT.ISPATBUKITBAJA');
 
     return view('layout.home.index',[
         'quality' => $quality,
         'vision' => $vision,
         'about' => $about,
         'shedata' => $sheData,
+        'grupiwp' => $grupiwp,
+        'grupibb' => $grupibb,
         'url' => 'home',
         'class' => '',
         'navbar' =>'',
@@ -71,12 +75,16 @@ Route::get('home_indo', function () {
     $about  = Post::firstWhere('slug','=','COMPANYPROFILE');
     $vision  = Post::firstWhere('slug','=','COMPANYVISION,MISSION&VALUES');
     $quality   = Post::firstWhere('slug','=','COMPANYGROUPVIDEO');
+    $grupiwp = Post::firstWhere('slug','SUBSIDIARIESPT.ISPATWIREPRODUCT');
+    $grupibb = Post::firstWhere('slug','SUBSIDIARIESPT.ISPATBUKITBAJA');
 
     return view('layout.home.index_indo',[
         'quality' => $quality,
         'vision' => $vision,
         'about' => $about,
         'shedata' => $sheData,
+        'grupiwp' => $grupiwp,
+        'grupibb' => $grupibb,
         'url' =>'home',
         'class' => '',
         'navbar' =>'',
