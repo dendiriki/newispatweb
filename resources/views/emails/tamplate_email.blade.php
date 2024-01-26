@@ -67,15 +67,15 @@
             <td>{{ $customer->issue }}</td>
         </tr>
         <tr>
-            <td>Grade 1</td>
+            <td>Wire Rod Product</td>
             <td>{{ $customer->grade1 }}</td>
         </tr>
         <tr>
-            <td>Grade 2</td>
+            <td>Grade</td>
             <td>{{ $customer->grade2 }}</td>
         </tr>
         <tr>
-            <td>Grade 3</td>
+            <td>Total Quantity in MT</td>
             <td>{{ $customer->grade3 }}</td>
         </tr>
         <tr>

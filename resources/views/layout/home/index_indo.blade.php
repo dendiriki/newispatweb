@@ -1,41 +1,7 @@
 @extends('layout.tools.main_indo')
 
-{{-- @section('content')
-    @if (session()->has('success'))
-      <div class="alert alert-primary alert-dismissible fade show" role="alert">
-        {{ session('success') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-    @endif --}}
-
-<!-- end about section -->
 @section('content')
-    @if (session()->has('success'))
-        <div class="Message Message--green alert" role="alert">
-            <div class="Message-icon">
-                <i class="fa fa-check"></i>
-            </div>
-            <div class="Message-body">
-                <h4>Success!</h4>
-                <p> {{ session('success') }}</p>
-            </div>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    @endif
 
-
-
-
-
-
-
-
-    <!-- slider section -->
     <!-- slider section -->
     <div id="home-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">

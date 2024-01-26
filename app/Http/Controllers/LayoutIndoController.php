@@ -50,7 +50,7 @@ class LayoutIndoController extends Controller
         $data = Customer::create($validatedData);
 
         Mail::to('dendirikirahmawan@gmail.com')->cc(['dendi.riki@mittalsteel.com'])->send(new SendEmail($data));
-        return redirect('home_indo')->with('success','Successfully send massage');
+        return redirect('home_indo');
     }
 
     // marketing.indo@mittalsteel.com
