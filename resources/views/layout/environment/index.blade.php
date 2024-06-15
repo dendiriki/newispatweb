@@ -23,20 +23,7 @@
         </h4>
         <div class="row">
           <div class="detail">
-            <iframe allowfullscreen  src="https://www.youtube.com/embed/tgbNymZ7vqY" ></iframe>
-            </div>
-        </div>
-      </div>
-
-      <br>
-
-      <div class="job_container">
-        <h4 class="job_heading">
-          Environmental Consciousness
-        </h4>
-        <div class="row">
-          <div class="detail">
-            <iframe allowfullscreen  src="https://www.youtube.com/embed/tgbNymZ7vqY" ></iframe>
+            <iframe allowfullscreen  src="https://www.youtube.com/embed/2j4dBRn5UJ8" ></iframe>
             </div>
         </div>
       </div>

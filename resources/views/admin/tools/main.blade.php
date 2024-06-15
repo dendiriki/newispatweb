@@ -37,7 +37,61 @@
     <script src="/js/dashboard.js"></script>
     <script>
         $(document).ready(function() {
-            $('#summernote').summernote();
+            $('#summernote').summernote({
+                height: 300,
+                focus: true,
+                fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Verdana'],
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'clear']],
+                    ['fontname', ['fontname']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ],
+                callbacks: {
+                    onInit: function() {
+                        // Set default table styling on table creation
+                        $('#summernote').on('summernote.change', function() {
+                            var content = $('#summernote').summernote('code');
+                            var $content = $('<div />').html(content);
+                            $content.find('table').each(function() {
+                                var $table = $(this);
+                                // Apply custom classes
+                                $table.addClass('custom-table custom-table-bordered');
+                                $table.css({
+                                    'border': '2px solid #000',
+                                    'border-collapse': 'collapse'
+                                });
+                                $table.find('td').css({
+                                    'border': '2px solid #000',
+                                    'padding': '0.75pt'
+                                });
+                                $table.find('thead').css({
+                                    'background-color': 'blue',
+                                    'color': 'white'
+                                });
+                                $table.find('th').css({
+                                    'background-color': 'blue',
+                                    'color': 'white'
+                                });
+
+                                $table.find('tr:first').addClass('table-primary');
+
+                                // Wrap table in custom responsive div
+                                if (!$table.parent().hasClass('custom-table-responsive')) {
+                                    $table.wrap('<div class="custom-table-responsive"></div>');
+                                }
+                            });
+                            $('#summernote').summernote('code', $content.html());
+                        });
+                    }
+                }
+            });
         });
     </script>
 </body>
