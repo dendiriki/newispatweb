@@ -111,7 +111,7 @@
                 </div>
 
                 <div class=" option-box">
-                  <a href="" class="apply-btn">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfeGCBrrrJXEQaLkpDm4fcLbpnPPPCZCGm_9umL0hQps9eN7Q/viewform?usp=sf_link" class="apply-btn">
                     Apply Now
                   </a>
                 </div>
