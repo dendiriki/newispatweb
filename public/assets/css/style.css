@@ -1121,20 +1121,20 @@ body {
     background-color: #fff;
     color: #3F58DD;
   }
-  
+
   .job_section .heading_container {
     margin-bottom: 15px;
   }
-  
+
   .job_section .job_container {
     margin-top: 45px;
   }
-  
+
   .job_section .job_heading {
     margin-bottom: 0;
     text-transform: uppercase;
   }
-  
+
   .job_section .box {
     display: -webkit-box;
     display: -moz-box;
@@ -1156,7 +1156,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 8px 0 rgba(0, 0, 0, 0.1);
   }
-  
+
   .job_section .box .job_content-box {
     display: -webkit-box;
     display: -moz-box;
@@ -1167,13 +1167,13 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  
+
   .job_content-box .wrapper{
     width:100px;
     height:100px;
     margin:0 auto;
   }
-  
+
   .job_section .box .img-box {
     width: 100px;
     height: 100px;
@@ -1194,18 +1194,18 @@ body {
     border: 1px solid transparent;
     background-color: transparent;
   }
-  
+
   .job_section .box .img-box img {
     width: 100%;
   }
-  
+
   .job_section .box .detail-box h5 {
     font-weight: 600;
     font-size: 24px;
     padding-bottom: 10px;
     color: #252525;
   }
-  
+
   .job_section .box .detail-box .detail-info {
     display: -webkit-box;
     display: -moz-box;
@@ -1213,11 +1213,11 @@ body {
     display: flex;
     padding-left: 10px;
   }
-  
+
   .job_section .box .detail-box .detail-info h6 {
     margin: 0;
     padding-left: 30px;
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
     color: #252525;
   }
   .job_section .box .detail-box .detail-info i {
@@ -1225,7 +1225,7 @@ body {
     margin-right: 15px;
     position: absolute;
   }
-  
+
   .job_section .box .option-box {
     display: -webkit-box;
     display: -moz-box;
@@ -1236,14 +1236,14 @@ body {
     height: 46px;
     width: 176.24px;
   }
-  
+
   .job_section .box .option-box .fav-btn {
     border: none;
     background: none;
     outline: none;
     font-size: 20px;
   }
-  
+
   .job_section .box .option-box .apply-btn {
     display: inline-block;
     padding: 10px 45px;
@@ -1257,7 +1257,7 @@ body {
     border: 1px solid #3F58DD;
     outline: none;
   }
-  
+
   .job_section .box .option-box .apply-btn:hover {
     background-color: transparent;
     color: #3F58DD;
@@ -1286,9 +1286,9 @@ body {
     color: #155724;
   }
 .alert-availabe {
-  border-top: 10px solid transparent; 
-  position: relative; 
-  top: 35px; 
+  border-top: 10px solid transparent;
+  position: relative;
+  top: 35px;
   border-radius: 5px 5px 0 0;
 }
 
@@ -1314,9 +1314,9 @@ body {
   color: #721c24;
 }
 .alert-unavailabe {
-  border-top: 10px solid #ea6c76; 
-  position: relative; 
-  top: 35px; 
+  border-top: 10px solid #ea6c76;
+  position: relative;
+  top: 35px;
   border-radius: 5px 5px 0 0;
 }
 
@@ -1331,7 +1331,7 @@ body {
             justify-content: center;
     margin-top: 45px;
   }
-  
+
   .job_section .btn-box a {
     display: inline-block;
     padding: 10px 45px;
@@ -1345,7 +1345,7 @@ body {
     border: 1px solid #3F58DD;
     outline: none;
   }
-  
+
   .job_section .btn-box a:hover {
     background-color: transparent;
     color: #3F58DD;
@@ -3425,25 +3425,60 @@ p.MsoNormal img[data-filename] {
   } */
 
   .vision-section {
-    background-color: #3F58DD; height: 400px;
-  }
-  .vision-section .container{
-    padding-top: 40px; padding-bottom: 40px;
-  }
-  .vision-section .col{
-    padding: 25px 45px; border-radius: 2px;
-  }
-  .vision-section .col i{
-    color: #fff; font-size: 4rem; padding-bottom: 15px;
-  }
-    .vision-section .col h1{
-    color: #fff; font-weight: 510; padding-bottom: 15px;
-  }
+    background-color: #3F58DD;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
-  .vision-section .highlighted-text {
+.vision-section .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.vision-section .col {
+    padding: 25px 45px;
+    border-radius: 2px;
+}
+
+.vision-section .col i {
+    color: #fff;
+    font-size: 4rem;
+    padding-bottom: 15px;
+}
+
+.vision-section .col h1 {
+    color: #fff;
+    font-weight: 510;
+    padding-bottom: 15px;
+}
+
+.vision-section .highlighted-text {
     color: #fff;
     font-size: 16px;
+    word-wrap: break-word;
+    overflow: hidden;
 }
+
+/* Menambahkan responsivitas */
+@media (max-width: 768px) {
+    .vision-section .col {
+        padding: 15px 20px;
+    }
+
+    .vision-section .col i {
+        font-size: 3rem;
+    }
+
+    .vision-section .col h1 {
+        font-size: 1.5rem;
+    }
+
+    .vision-section .highlighted-text {
+        font-size: 14px;
+    }
+}
+
+
 
 .black-text {
   font-family: 'Poppins', sans-serif !important;
