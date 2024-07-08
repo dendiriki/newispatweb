@@ -87,7 +87,7 @@
                                     $table.wrap('<div class="custom-table-responsive"></div>');
                                 }
                             });
-                            $('#summernote').summernote('code', $content.html());
+                            // $('#summernote').summernote('code', $content.html());
                         });
                     }
                 }

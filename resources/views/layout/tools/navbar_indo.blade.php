@@ -123,7 +123,7 @@
                               </a>
                               <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="{{route('karir_indo')}}">Job information</a>
-                                <a class="dropdown-item" href="#">Apply job</a>
+                                <a class="dropdown-item" href="{{route('applyjob_indo')}}">Apply job</a>
                               </div>
                             </div>
                           </li>
