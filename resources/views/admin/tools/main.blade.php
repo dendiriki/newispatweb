@@ -36,7 +36,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/dashboard.js"></script>
     <script>
-        $(document).ready(function() {
+    $(document).ready(function() {
             $('#summernote').summernote({
                 height: 300,
                 focus: true,
@@ -54,41 +54,27 @@
                     ['view', ['fullscreen', 'codeview', 'help']]
                 ],
                 callbacks: {
-                    onInit: function() {
-                        // Set default table styling on table creation
-                        $('#summernote').on('summernote.change', function() {
-                            var content = $('#summernote').summernote('code');
-                            var $content = $('<div />').html(content);
-                            $content.find('table').each(function() {
-                                var $table = $(this);
-                                // Apply custom classes
-                                $table.addClass('custom-table custom-table-bordered');
-                                $table.css({
-                                    'border': '2px solid #000',
-                                    'border-collapse': 'collapse'
-                                });
-                                $table.find('td').css({
-                                    'border': '2px solid #000',
-                                    'padding': '0.75pt'
-                                });
-                                $table.find('thead').css({
-                                    'background-color': 'blue',
-                                    'color': 'white'
-                                });
-                                $table.find('th').css({
-                                    'background-color': 'blue',
-                                    'color': 'white'
-                                });
+                    onChange: function(contents, $editable) {
+                        var $content = $('<div />').html(contents);
+                        $content.find('table').each(function() {
+                            var $table = $(this);
+                            // Remove unwanted classes
+                            $table.removeClass('MsoNormalTable custom-table custom-table-bordered');
+                            // Remove unwanted attributes
+                            $table.removeAttr('border')
+                                  .removeAttr('cellspacing')
+                                  .removeAttr('cellpadding')
+                                  .removeAttr('width')
+                                  .removeAttr('style');
+                            // Add desired class
+                            $table.addClass('table');
 
-                                $table.find('tr:first').addClass('table-primary');
-
-                                // Wrap table in custom responsive div
-                                if (!$table.parent().hasClass('custom-table-responsive')) {
-                                    $table.wrap('<div class="custom-table-responsive"></div>');
-                                }
-                            });
-                            // $('#summernote').summernote('code', $content.html());
+                            // Wrap table in custom responsive div
+                            if (!$table.parent().hasClass('table-responsive')) {
+                                $table.wrap('<div class="table-responsive"></div>');
+                            }
                         });
+                        // $('#summernote').summernote('code', $content.html());
                     }
                 }
             });

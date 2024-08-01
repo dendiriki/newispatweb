@@ -26,7 +26,7 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
     <!-- responsive style -->
-    <link href="{{ asset('assets/css/responsive.css') }}" rel rel="stylesheet" />
+    <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
 </head>
 
 <body class="{{ $class }}">
