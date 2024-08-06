@@ -13,6 +13,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SheController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\NumberController;
+use App\Http\Controllers\LelalangController;
 use App\Models\English;
 use App\Models\Post;
 use App\Models\Number;
@@ -183,6 +184,8 @@ Route::get('karir',[LayoutController::class,'karir'])->middleware('guest')->name
 Route::get('applyjob',[LayoutController::class,'applyjob'])->middleware('guest')->name('applyjob');
 Route::get('news',[LayoutController::class,'news'])->middleware('guest')->name('news');
 Route::get('detailnews/{news}',[LayoutController::class,'detailnews'])->middleware('guest')->name('detailnews');
+
+Route::get('lelang',[LelalangController::class,'view'])->middleware('guest')->name('lelang');
 
 
 ////layout Rutes indonesia
