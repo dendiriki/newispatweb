@@ -56,13 +56,13 @@
         </div>
     </div>
     </section>
-   
+
     <br><br>
     <section>
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-6">
-                <a href="your-product-url.html" class="text-decoration-none">
+                <a href="{{route('detail-lelang')}}" class="text-decoration-none">
                     <div class="product-box">
                         <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-img">
                         <div class="product-title">Product Title</div>
@@ -73,7 +73,7 @@
             </div>
             <!-- You can duplicate the above col-md-4 col-sm-6 div for more products -->
             <div class="col-md-4 col-sm-6">
-                <a href="your-product-url.html" class="text-decoration-none">
+                <a href="{{route('detail-lelang')}}" class="text-decoration-none">
                     <div class="product-box">
                         <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-img">
                         <div class="product-title">Product Title</div>
@@ -84,7 +84,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <a href="your-product-url.html" class="text-decoration-none">
+                <a href="{{route('detail-lelang')}}" class="text-decoration-none">
                     <div class="product-box">
                         <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-img">
                         <div class="product-title">Product Title</div>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <a href="your-product-url.html" class="text-decoration-none">
+                <a href="{{route('detail-lelang')}}" class="text-decoration-none">
                     <div class="product-box">
                         <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-img">
                         <div class="product-title">Product Title</div>
@@ -106,7 +106,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <a href="your-product-url.html" class="text-decoration-none">
+                <a href="{{route('detail-lelang')}}" class="text-decoration-none">
                     <div class="product-box">
                         <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-img">
                         <div class="product-title">Product Title</div>
@@ -117,7 +117,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <a href="your-product-url.html" class="text-decoration-none">
+                <a href="{{route('detail-lelang')}}" class="text-decoration-none">
                     <div class="product-box">
                         <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-img">
                         <div class="product-title">Product Title</div>
@@ -128,7 +128,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <a href="your-product-url.html" class="text-decoration-none">
+                <a href="{{route('detail-lelang')}}" class="text-decoration-none">
                     <div class="product-box">
                         <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-img">
                         <div class="product-title">Product Title</div>
@@ -139,7 +139,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <a href="your-product-url.html" class="text-decoration-none">
+                <a href="{{route('detail-lelang')}}" class="text-decoration-none">
                     <div class="product-box">
                         <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-img">
                         <div class="product-title">Product Title</div>
@@ -150,7 +150,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <a href="your-product-url.html" class="text-decoration-none">
+                <a href="{{route('detail-lelang')}}" class="text-decoration-none">
                     <div class="product-box">
                         <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-img">
                         <div class="product-title">Product Title</div>
@@ -161,7 +161,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6">
-                <a href="your-product-url.html" class="text-decoration-none">
+                <a href="{{route('detail-lelang')}}" class="text-decoration-none">
                     <div class="product-box">
                         <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-img">
                         <div class="product-title">Product Title</div>

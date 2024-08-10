@@ -14,6 +14,7 @@ use App\Http\Controllers\SheController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\NumberController;
 use App\Http\Controllers\LelalangController;
+use App\Http\Controllers\AdminlelangController;
 use App\Models\English;
 use App\Models\Post;
 use App\Models\Number;
@@ -111,6 +112,7 @@ Route::resource('admin/english',EnglishController::class)->middleware('auth');
 Route::resource('admin/customer', CustomerController::class)->middleware('auth');
 Route::resource('admin/news', NewsController::class)->middleware('auth');
 Route::resource('admin/careers',CareerController::class)->middleware('auth');
+Route::resource('admin/lelang', AdminlelangController::class)->middleware('auth');
 
 // Route::post('admin/english/{slug}/images', [EnglishController::class, 'uploadFileAttachment'])->middleware('auth');
 
@@ -186,6 +188,7 @@ Route::get('news',[LayoutController::class,'news'])->middleware('guest')->name('
 Route::get('detailnews/{news}',[LayoutController::class,'detailnews'])->middleware('guest')->name('detailnews');
 
 Route::get('lelang',[LelalangController::class,'view'])->middleware('guest')->name('lelang');
+Route::get('lelang/detail',[LelalangController::class, 'detail'])->middleware('guest')->name('detail-lelang');
 
 
 ////layout Rutes indonesia

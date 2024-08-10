@@ -92,6 +92,13 @@
                             </div>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('lelang') }}">
+                                <span>
+                                    AUCTION
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('environment') }}">
                                 <span>
                                     ENVIRONMENT

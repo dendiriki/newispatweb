@@ -74,6 +74,14 @@
             </a>
           </li>
           @endcan
+          @can('store')
+          <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/lelang">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Lelang
+            </a>
+          </li>
+          @endcan
 
           <li class="nav-item">
             <form action="/logout" method="POST">

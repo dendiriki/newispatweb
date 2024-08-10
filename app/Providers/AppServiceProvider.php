@@ -47,6 +47,10 @@ class AppServiceProvider extends ServiceProvider
             return $user->name === 'DendiRiki';
         });
 
+        Gate::define('store', function(User $user){
+            return $user->name === 'StoreUser' || $user->name === 'DendiRiki';
+        });
+
         Paginator::useBootstrap();
 
 
