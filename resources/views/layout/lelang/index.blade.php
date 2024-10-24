@@ -63,7 +63,7 @@
         <div class="row">
             @foreach ($lelangs as $key => $lelang)
                 <div class="col-md-4 col-sm-6">
-                    <a href="{{ route('detail-lelang', $lelang) }}" class="text-decoration-none">
+                    <a href="{{ route('lelangdetail', $lelang->id) }}" class="text-decoration-none">
                         <div class="product-box">
                             <img src="{{ asset($lelang->picture) }}" alt="Product Image" class="product-img">
                             <div class="product-title">{{ Str::limit($lelang->title, 20, '...') }}</div> <!-- Batasi judul -->

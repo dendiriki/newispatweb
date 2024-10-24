@@ -131,7 +131,17 @@
                                     {{ $sub }}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuButton">
-                                    @if (request()->routeIs('detailnews', 'detailnews_indo'))
+                                    @if (request()->routeIs('lelangdetail', 'lelangdetail_indo'))
+                                        <a class="dropdown-item"
+                                            href="{{ route($url, ['lelang' => $lelang->id]) }}">ENGLISH</a>
+                                        {{-- <a class="dropdown-item"
+                                        href="{{ route($url . '_indo', ['lelang' => $lelang->id]) }}">BAHASA</a> --}}
+                                    @elseif (request()->routeIs('lelangdetail', 'lelangdetail_indo'))
+                                        <a class="dropdown-item"
+                                            href="{{ route($url, ['lelang' => $lelang->id]) }}">ENGLISH</a>
+                                        {{-- <a class="dropdown-item"
+                                            href="{{ route($url . '_indo', ['lelang' => $lelang->id]) }}">BAHASA</a> --}}
+                                    @elseif (request()->routeIs('detailnews', 'detailnews_indo'))
                                         <a class="dropdown-item"
                                             href="{{ route($url, ['news' => $news->link]) }}">ENGLISH</a>
                                         <a class="dropdown-item"

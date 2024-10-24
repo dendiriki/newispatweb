@@ -689,16 +689,18 @@ class LayoutController extends Controller
     }
 
     public function detailnews(News $news) {
-        return view('layout.news.detail',[
-            'news' =>$news,
-            'url'  => 'detailnews',
+        $url = 'detailnews'; // Nilai dari URL
+        dd($url); // Menampilkan nilai dari $url
+
+        return view('layout.news.detail', [
+            'news' => $news,
+            'url' => $url,
             'class' => 'sub_page',
-            'navbar' =>'timpanav',
+            'navbar' => 'timpanav',
             'sub' => 'EN',
-
         ]);
-
     }
+
 
     public function detailproduk(Grade $grade) {
         return view('layout.product.detailproduk',[

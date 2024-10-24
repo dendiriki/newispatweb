@@ -81,7 +81,7 @@
         </div>
         <div class="col-md-6 product-info">
             <div class="product-title">{{ $lelang->title }}</div> <!-- Menampilkan judul produk -->
-            <div class="product-description">{!! nl2br(e($lelang->content)) !!}</div> <!-- Menampilkan deskripsi produk -->
+            <div class="product-description">{!! $lelang->content !!}</div> <!-- Menampilkan deskripsi produk -->
             <button class="btn btn-submit">Submit Lelang</button>
         </div>
     </div>

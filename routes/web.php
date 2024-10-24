@@ -15,6 +15,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\NumberController;
 use App\Http\Controllers\LelalangController;
 use App\Http\Controllers\AdminlelangController;
+use App\Http\Controllers\BuyerController;
 use App\Models\English;
 use App\Models\Post;
 use App\Models\Number;
@@ -186,9 +187,10 @@ Route::get('karir',[LayoutController::class,'karir'])->middleware('guest')->name
 Route::get('applyjob',[LayoutController::class,'applyjob'])->middleware('guest')->name('applyjob');
 Route::get('news',[LayoutController::class,'news'])->middleware('guest')->name('news');
 Route::get('detailnews/{news}',[LayoutController::class,'detailnews'])->middleware('guest')->name('detailnews');
+Route::get('booking/{lelang}',[BuyerController::class,'index'])->middleware('guest')->name('booking');
 
 Route::get('lelang',[LelalangController::class,'view'])->middleware('guest')->name('lelang');
-Route::get('lelang/detail/{lelang}', [LelalangController::class, 'detail'])->middleware('guest')->name('detail-lelang');
+Route::get('lelangdetail/{lelang}', [LelalangController::class, 'detail'])->middleware('guest')->name('lelangdetail');
 
 
 

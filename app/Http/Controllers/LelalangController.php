@@ -18,19 +18,16 @@ class LelalangController extends Controller
         ]);
     }
     public function detail(Lelang $lelang) {
-        
-        
-
         return view('layout.lelang.detail', [
-            'url' => route('detail-lelang', ['lelang' => $lelang->id]), // Menggunakan route()
+            'url' => 'lelangdetail',
             'class' => 'sub_page',
             'navbar' => 'timpanav',
             'sub' => 'EN',
             'lelang' => $lelang // Mengirimkan data lelang ke view
         ]);
     }
-    
-    
-    
+
+
+
 
 }
