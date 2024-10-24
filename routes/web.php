@@ -188,7 +188,9 @@ Route::get('news',[LayoutController::class,'news'])->middleware('guest')->name('
 Route::get('detailnews/{news}',[LayoutController::class,'detailnews'])->middleware('guest')->name('detailnews');
 
 Route::get('lelang',[LelalangController::class,'view'])->middleware('guest')->name('lelang');
-Route::get('lelang/detail',[LelalangController::class, 'detail'])->middleware('guest')->name('detail-lelang');
+Route::get('lelang/detail/{lelang}', [LelalangController::class, 'detail'])->middleware('guest')->name('detail-lelang');
+
+
 
 
 ////layout Rutes indonesia

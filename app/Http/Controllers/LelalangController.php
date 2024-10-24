@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Lelang;
 
 class LelalangController extends Controller
 {
@@ -13,16 +14,23 @@ class LelalangController extends Controller
             'class' => 'sub_page',
             'navbar' =>'timpanav',
             'sub' => 'EN',
+            'lelangs' => Lelang::latest()->paginate(7)
         ]);
     }
+    public function detail(Lelang $lelang) {
+        
+        
 
-    public function detail(){
-        return view('layout.lelang.detail',[
-            'url' => 'detail-lelang',
+        return view('layout.lelang.detail', [
+            'url' => route('detail-lelang', ['lelang' => $lelang->id]), // Menggunakan route()
             'class' => 'sub_page',
-            'navbar' =>'timpanav',
+            'navbar' => 'timpanav',
             'sub' => 'EN',
+            'lelang' => $lelang // Mengirimkan data lelang ke view
         ]);
     }
+    
+    
+    
 
 }

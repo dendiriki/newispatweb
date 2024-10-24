@@ -22,10 +22,27 @@
                 <label for="picture">Unggah Gambar</label>
                 <input type="file" class="form-control" id="picture" name="picture">
             </div>
+
             <div class="form-group">
-                <label for="satuan">Satuan</label>
-                <input type="text" class="form-control" id="satuan" name="satuan">
+                <label for="uom">Uom</label>
+                <select class="form-control" id="uom" name="uom">
+                    <option value="" disabled selected>Pilih uom</option>
+                    <option value="Kg">Kg</option>
+                    <option value="Drum">Drum</option>
+                    <option value="Pcs">Pcs</option>
+                    <option value="Lot">Lot</option>
+                </select>
             </div>
+
+            <div class="form-group">
+                <label for="limbah">Limbah B3</label>
+                <select class="form-control" id="limbah" name="limbah">
+                    <option value="" disabled selected> limbah</option>
+                    <option value="yes">yes</option>
+                    <option value="no">no</option>
+                </select>
+            </div>
+
 
             <div class="mb-3">
                 <label for="summernote" class="form-label">Content</label>

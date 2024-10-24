@@ -66,24 +66,22 @@
         <div class="heading_container col-md-12">
             <div class="col row sub-heading">
                 <h2 class="text-left">
-                    <!-- AVAILABLE POSITIONS -->
                     Detail Lelang
                 </h2>
             </div>
         </div>
     </div>
-    </section>
-<br><br><br>ß
-<div class="container detail-container">
+</section>
 
+<br><br><br>
+<div class="container detail-container">
     <div class="row">
         <div class="col-md-6">
-            <img src="{{ asset('assets/img/anjik.jpg') }}" alt="Product Image" class="product-image">
+            <img src="{{ asset($lelang->picture) }}" alt="Product Image" class="product-image">
         </div>
         <div class="col-md-6 product-info">
-            <div class="product-title">Product Title</div>
-            <div class="product-description">Deskripsi lengkap dari produk ini. Ini adalah teks placeholder untuk menjelaskan detail produk secara menyeluruh. Deskripsi lengkap dari produk ini. Ini adalah teks placeholder untuk menjelaskan detail produk secara menyeluruh. Deskripsi lengkap dari produk ini. Ini adalah teks placeholder untuk menjelaskan detail produk secara menyeluruh. Deskripsi lengkap dari produk ini. Ini adalah teks placeholder untuk menjelaskan detail produk secara menyeluruh.</div>
-            <div class="product-price">$19.99</div>
+            <div class="product-title">{{ $lelang->title }}</div> <!-- Menampilkan judul produk -->
+            <div class="product-description">{!! nl2br(e($lelang->content)) !!}</div> <!-- Menampilkan deskripsi produk -->
             <button class="btn btn-submit">Submit Lelang</button>
         </div>
     </div>

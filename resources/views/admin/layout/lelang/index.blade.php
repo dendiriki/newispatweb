@@ -1,53 +1,48 @@
 @extends('admin.tools.main')
 
-
 @section('content')
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">{{ $title }}</h1>
-    </div>
+<div class="container mt-4">
+    <h1 class="mb-4">{{ $title }}</h1>
 
-    @if (session()->has('success'))
-        <div class="alert alert-success " role="alert">
+    @if (session('success'))
+        <div class="alert alert-success">
             {{ session('success') }}
         </div>
     @endif
 
-    <div class="table-responsive col-lg-12">
-        <a href="/admin/lelang/create" class="btn btn-primary mb-3"> Create new lelang</a>
-        <table class="table table-striped table-sm">
-            <thead>
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">link</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($lelangs as $lelang)
-                    <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $lelang->title }}</td>
-                        <td>{{ $lelang->link }}</td>
-                        <td>
-                            <a href="/admin/lelang/{{ $lelang->link }}" class="btn btn-info">view
-                                <span></span>
-                            </a>
-                            <a href="/admin/lelang/{{ $lelang->link }}/edit" class="btn btn-warning">edit
-                                <span></span>
-                            </a>
-                            <form action="/admin/lelang/{{ $lelang->link }}" method="post" class="d-inline">
-                                @method('delete')
-                                @csrf
-                                <button class="border-0 btn btn-danger"
-                                    onclick="return confirm('yakin mau hapus')">hapus</button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
+    <a href="/admin/lelang/create" class="btn btn-primary mb-3">Tambah Lelang</a>
 
-            </tbody>
-        </table>
-    </div>
-    {{ $lelangs->appends(request()->input())->links() }}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Judul</th>
+                <th>Gambar</th>
+                <th>Status</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($lelangs as $key => $lelang)
+                <tr>
+                    <td>{{ $lelangs->firstItem() + $key }}</td>
+                    <td>{{ $lelang->title }}</td>
+                    <td><img src="{{ asset($lelang->picture) }}" alt="{{ $lelang->title }}" class="img-thumbnail" style="width: 100px;"></td>
+                    <td>{{ $lelang->status }}</td>
+                    <td>
+                        <a href="/admin/lelang/{{ $lelang->id }}" class="btn btn-info">Lihat</a>
+                        <a href="/admin/lelang/{{ $lelang->id }}/edit" class="btn btn-warning">Edit</a>
+                        <form action="/admin/lelang/{{ $lelang->id }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus?')">Hapus</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+
+    {{ $lelangs->links() }} <!-- Pagination -->
+</div>
 @endsection

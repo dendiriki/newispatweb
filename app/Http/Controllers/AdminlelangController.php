@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Lelang;
 use DOMDocument;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth; // Menggunakan Auth untuk otentikasi pengguna
 
 class AdminlelangController extends Controller
 {
@@ -65,22 +66,26 @@ class AdminlelangController extends Controller
         $content = $dom->saveHTML();
 
         // Menyimpan gambar
+        $picture_name = null; // Initialize variable untuk nama file gambar
         if ($request->hasFile('picture')) {
             $file = $request->file('picture');
-            $namaFile = time().'_'.$file->getClientOriginalName();
+            $picture_name = time() . '_' . $file->getClientOriginalName();
             $tujuanUpload = 'file/lelang'; // Path untuk menyimpan gambar
-            $file->move(public_path($tujuanUpload), $namaFile);
-
-            // Anda dapat menyimpan nama file ke database di sini jika diperlukan
+            $file->move(public_path($tujuanUpload), $picture_name); // Simpan gambar
+    
+            // Sekarang $picture_name berisi nama file yang benar
         }
 
         Lelang::create([
             'title' => $request->title,
-            'picture' => $request->picture,
+            'picture' => $tujuanUpload . '/' . $picture_name, // Simpan path yang benar ke database
             'content' => $content,
             'status' => 'open',
-            'satuan' => $request->satuan,
+            'uom' => $request->uom,
+            'limbah' => $request->limbah,
             'links' => 'defult',
+            'description' => 'defult',
+            'buyer' => 'not sold yet',
             'created_by' => auth()->user()->name
         ]);
      return redirect('/admin/lelang')->with('success', 'Gambar berhasil diunggah');
@@ -92,30 +97,74 @@ class AdminlelangController extends Controller
      */
     public function show(Lelang $lelang)
     {
-        //
+        return view('admin.layout.lelang.show', [
+            'title' => 'Detail Lelang',
+            'lelang' => $lelang,
+        ]);
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
+    
     public function edit(Lelang $lelang)
     {
-        //
+        return view('admin.layout.lelang.edit', [
+            'title' => 'Edit Lelang',
+            'lelang' => $lelang,
+        ]);
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
+    
     public function update(Request $request, Lelang $lelang)
     {
-        //
+        $rules = [
+            'title' => ['required'],
+            'picture' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'content' => ['required']
+        ];
+    
+        $this->validate($request, $rules);
+    
+        $content = $request->content;
+        $dom = new DOMDocument();
+        @$dom->loadHTML($content, 9);
+    
+        $images = $dom->getElementsByTagName('img');
+    
+        foreach ($images as $key => $img) {
+            $data = base64_decode(explode(',', explode(';', $img->getAttribute('src'))[1])[1]);
+            $image_name = "/uplade/" . time() . $key . '.png';
+            file_put_contents(public_path() . $image_name, $data);
+    
+            $img->removeAttribute('src');
+            $img->setAttribute('src', $image_name);
+            $existingClass = $img->getAttribute('class');
+            $img->setAttribute('class', $existingClass . ' img-fluid');
+        }
+    
+        $content = $dom->saveHTML();
+    
+        if ($request->hasFile('picture')) {
+            $file = $request->file('picture');
+            $picture_name = time() . '_' . $file->getClientOriginalName();
+            $tujuanUpload = 'file/lelang';
+            $file->move(public_path($tujuanUpload), $picture_name);
+            $lelang->picture = $tujuanUpload . '/' . $picture_name;
+        }
+    
+        $lelang->title = $request->title;
+        $lelang->content = $content;
+        $lelang->uom = $request->uom;
+        $lelang->save();
+    
+        return redirect('/admin/lelang')->with('success', 'Data lelang berhasil diperbarui');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
+    
     public function destroy(Lelang $lelang)
     {
-        //
+        // Menghapus gambar jika ada
+        if (file_exists(public_path($lelang->picture))) {
+            unlink(public_path($lelang->picture));
+        }
+    
+        $lelang->delete();
+        return redirect('/admin/lelang')->with('success', 'Data lelang berhasil dihapus');
     }
+    
 }
