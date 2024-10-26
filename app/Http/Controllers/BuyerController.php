@@ -4,30 +4,77 @@ namespace App\Http\Controllers;
 
 use App\Models\Buyer;
 use App\Models\Lelang;
+use App\Models\Pelelang;
 use Illuminate\Http\Request;
 
 class BuyerController extends Controller
 {
-    public function index()
+    public function index($lelangId)
     {
-        $buyers = Buyer::all(); // Mengambil semua data buyer
-        return response()->json($buyers);
+        // Mengambil data lelang berdasarkan ID
+        $lelang = Lelang::findOrFail($lelangId);
+
+        // Menampilkan form dengan data lelang yang relevan
+        return view('layout.lelang.submit', [
+            'url' => 'booking',
+            'class' => 'sub_page',
+            'navbar' => 'timpanav',
+            'sub' => 'EN',
+            'lelang' => $lelang
+        ]);
     }
 
-    public function store(Request $request)
+    public function store(Request $request, Lelang $lelang)
     {
-        $validatedData = $request->validate([
+        // Validasi input
+        $request->validate([
             'nama' => 'required|string|max:255',
-            'alamat' => 'required|string|max:255',
-            'npwp' => 'required|string|max:20|unique:buyers', // Validasi NPWP
-            'nomor_telepon' => 'required|string|max:15',
-            'email' => 'required|string|email|max:255|unique:buyers', // Validasi email
-            'status' => 'nullable|string|max:10',
+            'email' => 'required|string',
+            'alamat' => 'required|string',
+            'nomor_telepon' => 'required|string|max:20',
+            'npwp' => 'required|string|max:20',
+            'penawaran' => 'required|integer',
         ]);
 
-        $buyer = Buyer::create($validatedData);
-        return response()->json($buyer, 201);
+        // Cek apakah buyer sudah ada berdasarkan email atau NPWP
+        $buyer = Buyer::where('email', $request->email)
+            ->orWhere('npwp', $request->npwp)
+            ->first();
+
+        if (!$buyer) {
+            // Jika tidak ada buyer, buat buyer baru
+            $buyer = Buyer::create([
+                'nama' => $request->nama,
+                'alamat' => $request->alamat,
+                'nomor_telepon' => $request->nomor_telepon,
+                'npwp' => $request->npwp,
+                'email' => $request->email,
+                'status' => 'active',
+            ]);
+
+            $type = 'new buyer';
+        } else {
+            // Jika buyer sudah ada
+            $type = 'normal buyer';
+        }
+
+        // Simpan data pelelang ke tabel pelelang
+        Pelelang::create([
+            'no_lelang' => $lelang->id, // Pastikan ini adalah ID yang benar
+            'id_buyer' => $buyer->id,
+            'penawaran' => $request->penawaran,
+            'status' => 'active',
+            'type' => $type,
+            'created_at' => now(), // Menggunakan waktu saat ini
+            'updated_at' => now(), // Menggunakan waktu saat ini
+        ]);
+
+        return redirect()->route('lelangdetail', ['lelang' => $lelang->id])
+            ->with('success', 'Pendaftaran lelang berhasil disimpan!');
     }
+
+
+
 
     public function show($id)
     {

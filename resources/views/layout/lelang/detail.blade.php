@@ -21,13 +21,13 @@
     }
 
     .product-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: bold;
         margin-bottom: 10px;
     }
 
     .product-description {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 10px;
     }
 
@@ -44,6 +44,9 @@
         padding: 10px 20px;
         border: none;
         cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
     }
 
     .btn-submit:hover {
@@ -73,6 +76,24 @@
     </div>
 </section>
 
+<!-- Menampilkan pesan sukses -->
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+<!-- Menampilkan pesan error -->
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <br><br><br>
 <div class="container detail-container">
     <div class="row">
@@ -82,7 +103,7 @@
         <div class="col-md-6 product-info">
             <div class="product-title">{{ $lelang->title }}</div> <!-- Menampilkan judul produk -->
             <div class="product-description">{!! $lelang->content !!}</div> <!-- Menampilkan deskripsi produk -->
-            <button class="btn btn-submit">Submit Lelang</button>
+            <a href="{{ route('booking', $lelang->id) }}" class="btn btn-submit">Submit Lelang</a>
         </div>
     </div>
 </div>

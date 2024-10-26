@@ -131,7 +131,7 @@
                                     {{ $sub }}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuButton">
-                                    @if (request()->routeIs('lelangdetail', 'lelangdetail_indo'))
+                                    @if (request()->routeIs('booking', 'booking_indo'))
                                         <a class="dropdown-item"
                                             href="{{ route($url, ['lelang' => $lelang->id]) }}">ENGLISH</a>
                                         {{-- <a class="dropdown-item"

@@ -15,6 +15,7 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\NumberController;
 use App\Http\Controllers\LelalangController;
 use App\Http\Controllers\AdminlelangController;
+use App\Http\Controllers\AdminBuyerController;
 use App\Http\Controllers\BuyerController;
 use App\Models\English;
 use App\Models\Post;
@@ -114,6 +115,7 @@ Route::resource('admin/customer', CustomerController::class)->middleware('auth')
 Route::resource('admin/news', NewsController::class)->middleware('auth');
 Route::resource('admin/careers',CareerController::class)->middleware('auth');
 Route::resource('admin/lelang', AdminlelangController::class)->middleware('auth');
+Route::resource('admin/buyer',AdminBuyerController::class)->middleware('auth');
 
 // Route::post('admin/english/{slug}/images', [EnglishController::class, 'uploadFileAttachment'])->middleware('auth');
 
@@ -188,6 +190,7 @@ Route::get('applyjob',[LayoutController::class,'applyjob'])->middleware('guest')
 Route::get('news',[LayoutController::class,'news'])->middleware('guest')->name('news');
 Route::get('detailnews/{news}',[LayoutController::class,'detailnews'])->middleware('guest')->name('detailnews');
 Route::get('booking/{lelang}',[BuyerController::class,'index'])->middleware('guest')->name('booking');
+Route::post('pelelang/store/{lelang}', [BuyerController::class, 'store'])->name('pelelang.store');
 
 Route::get('lelang',[LelalangController::class,'view'])->middleware('guest')->name('lelang');
 Route::get('lelangdetail/{lelang}', [LelalangController::class, 'detail'])->middleware('guest')->name('lelangdetail');

@@ -19,6 +19,7 @@ class CreatePelelangTable extends Migration
             $table->unsignedBigInteger('id_buyer'); // Kolom id_buyer sebagai relasi ke tabel buyer
             $table->integer('penawaran'); // Kolom penawaran untuk menyimpan jumlah penawaran
             $table->string('status')->default('aktif'); // Kolom status dengan default 'aktif'
+            $table->string('type');
             $table->timestamps(); // Kolom created_at dan updated_at
 
             // Mendefinisikan relasi ke tabel lelang dan buyer

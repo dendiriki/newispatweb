@@ -81,6 +81,12 @@
               Lelang
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/buyer">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Buyer
+            </a>
+          </li>
           @endcan
 
           <li class="nav-item">

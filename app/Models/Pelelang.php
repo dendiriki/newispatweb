@@ -16,6 +16,7 @@ class Pelelang extends Model
         'id_buyer',
         'penawaran',
         'status',
+        'type'
     ];
 
     // Mendefinisikan relasi dengan model Lelang
