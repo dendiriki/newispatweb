@@ -74,6 +74,7 @@
             </a>
           </li>
           @endcan
+
           @can('store')
           <li class="nav-item">
             <a class="nav-link  {{Request::is('dashboard/posts*') ? 'active' : ''}} " href="/admin/lelang">

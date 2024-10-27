@@ -8,40 +8,35 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-use App\Models\Customer;
+use App\Models\Buyer;
+use App\Models\Lelang;
+use App\Models\Pelelang;
 
-class SendEmail extends Mailable
+class NotifyAuction extends Mailable
 {
     use Queueable, SerializesModels;
 
-
-
-
-    /**
-     *  @var \App\Models\CustomerCreate
-     *
-     */
-
-        public $customer;
-
+    public $lelang;
+    public $pelelang;
+    public $buyer;
 
     /**
-     * @param \App\Models\Customer $customer
-     * @return void
+     * Create a new message instance.
      */
-
-    public function __construct(Customer $customer)
+    public function __construct(Lelang $lelang, Pelelang $pelelang, Buyer $buyer)
     {
-        $this->customer = $customer;
+        $this->lelang = $lelang;
+        $this->pelelang = $pelelang;
+        $this->buyer = $buyer;
     }
 
     /**
-     * @return $this
+     * Get the message envelope.
      */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Notify Customer',
+            subject: 'Notify Auction',
         );
     }
 
@@ -51,7 +46,7 @@ class SendEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.tamplate_email',
+            view: 'emails.auction',
         );
     }
 

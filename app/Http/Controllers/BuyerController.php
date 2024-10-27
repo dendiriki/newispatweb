@@ -6,6 +6,8 @@ use App\Models\Buyer;
 use App\Models\Lelang;
 use App\Models\Pelelang;
 use Illuminate\Http\Request;
+use App\Mail\NotifyAuction;
+use Illuminate\Support\Facades\Mail;
 
 class BuyerController extends Controller
 {
@@ -24,9 +26,15 @@ class BuyerController extends Controller
         ]);
     }
 
+
     public function store(Request $request, Lelang $lelang)
     {
+        // Preprocess penawaran to remove any commas or dots
+        $penawaran = preg_replace('/[^\d]/', '', $request->penawaran);
+
         // Validasi input
+        $request->merge(['penawaran' => $penawaran]);
+
         $request->validate([
             'nama' => 'required|string|max:255',
             'email' => 'required|string',
@@ -54,25 +62,34 @@ class BuyerController extends Controller
 
             $type = 'new buyer';
         } else {
-            // Jika buyer sudah ada
             $type = 'normal buyer';
         }
 
         // Simpan data pelelang ke tabel pelelang
-        Pelelang::create([
-            'no_lelang' => $lelang->id, // Pastikan ini adalah ID yang benar
+        $pelelang = Pelelang::create([
+            'no_lelang' => $lelang->id,
             'id_buyer' => $buyer->id,
-            'penawaran' => $request->penawaran,
+            'penawaran' => $penawaran,
             'status' => 'active',
             'type' => $type,
-            'created_at' => now(), // Menggunakan waktu saat ini
-            'updated_at' => now(), // Menggunakan waktu saat ini
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
 
-        return redirect()->route('lelangdetail', ['lelang' => $lelang->id])
-            ->with('success', 'Pendaftaran lelang berhasil disimpan!');
-    }
 
+        $recipients = [
+            '18410100087@dinamika.ac.id',
+            'beny.dwi@mittalsteel.com',
+            'dendi.riki@mittalsteel.com',
+            'dendirikirahmawan@gmail.com'
+        ];
+
+        // Kirim email notifikasi lelang
+        Mail::to($recipients)->send(new NotifyAuction($lelang, $pelelang, $buyer));
+
+        return redirect()->route('lelangdetail', ['lelang' => $lelang->id])
+            ->with('success', 'Pendaftaran lelang berhasil disimpan dan email notifikasi telah dikirim!');
+    }
 
 
 

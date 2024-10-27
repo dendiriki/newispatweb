@@ -55,6 +55,12 @@ class AdminUserSeeder extends Seeder
             'password' => bcrypt('qualitypassword'),
         ]);
 
+           User::create([
+            'name' => 'StoreUser',
+            'email' => 'storeuser@gmail.com',
+            'password' => bcrypt('qualitypassword'),
+        ]);
+
 
 
     }

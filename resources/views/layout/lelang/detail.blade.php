@@ -64,6 +64,27 @@
     }
 </style>
 
+{{-- @if(session('success'))
+<br><br><br>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
+<!-- Menampilkan pesan error -->
+@if ($errors->any())
+<br><br><br>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif --}}
+
 <section class="job_section layout_padding bahaw-minus">
     <div class="container">
         <div class="heading_container col-md-12">
@@ -77,22 +98,8 @@
 </section>
 
 <!-- Menampilkan pesan sukses -->
-@if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
 
-<!-- Menampilkan pesan error -->
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+
 
 <br><br><br>
 <div class="container detail-container">

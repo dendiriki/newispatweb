@@ -53,7 +53,7 @@
 
         <div class="form-group">
             <label for="penawaran">Harga Penawaran (Rp/Kg, termasuk pajak)</label>
-            <input type="number" class="form-control" id="penawaran" name="penawaran" value="{{ old('penawaran') }}" required>
+            <input type="text" class="form-control" id="penawaran" name="penawaran" value="{{ old('penawaran') }}" required oninput="formatInput(this)">
             <small class="form-text text-muted">
                 UoM akan disesuaikan sesuai pilihan yang diunggah di situs.
             </small>
@@ -66,4 +66,14 @@
         <button type="submit" class="btn btn-primary">Save</button>
     </form>
 </div>
+
+<script>
+    function formatInput(input) {
+        // Remove non-numeric characters except commas and dots
+        let value = input.value.replace(/[^0-9]/g, '');
+
+        // Format number with dots as thousand separators
+        input.value = new Intl.NumberFormat('id-ID').format(value);
+    }
+</script>
 @endsection
